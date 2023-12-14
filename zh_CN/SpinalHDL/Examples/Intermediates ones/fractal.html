@@ -243,7 +243,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/bits.html#maskedliteral">掩码字面量</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/Int.html">UInt/Sint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/Int.html">UInt/SInt</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/Int.html#declaration">声明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/Int.html#operators">运算符</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Data%20types/Int.html#logic">逻辑运算</a></li>
@@ -254,10 +254,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Data%20types/Int.html#misc">杂项</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Data%20types/Int.html#fixpoint-operations">定点操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Data%20types/Int.html#fixpoint-operations">定点小数操作</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Data%20types/Int.html#lower-bit-operations">低位运算</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Data%20types/Int.html#high-bit-operations">高位操作</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Data%20types/Int.html#fixto-function">修复函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Data%20types/Int.html#fixto-function">fixTo 函数</a></li>
 </ul>
 </li>
 </ul>
@@ -277,7 +277,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/bundle.html">线束</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/bundle.html">Bundle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/bundle.html#description">描述</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/bundle.html#declaration">声明</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Data%20types/bundle.html#conditional-signals">条件信号</a></li>
@@ -296,7 +296,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/Vec.html">向量</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/Vec.html">Vec</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/Vec.html#description">描述</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/Vec.html#declaration">声明</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Data%20types/Vec.html#examples">示例</a></li>
@@ -376,7 +376,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Structuring/area.html">区域</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Structuring/function.html">功能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Structuring/function.html">函数</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/function.html#rgb-to-gray">RGB转灰度</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/function.html#valid-ready-payload-bus">有效就绪有效负载总线</a></li>
 </ul>
@@ -944,8 +944,8 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">分形计算器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#introduction">介绍</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#specification">规范</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#elaboration-parameters-generics">细化参数（仿制药）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bundle-definition">捆绑定义</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#elaboration-parameters-generics">细化参数（泛型）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bundle-definition">Bundle定义</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#component-implementation">组件实现</a></li>
 </ul>
 </li>
@@ -1062,7 +1062,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../miscelenea/core/core_components.html#when-switch">何时/切换</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../miscelenea/core/core_components.html#component-hierarchy">组件/层次结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../miscelenea/core/core_components.html#area">区域</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../miscelenea/core/core_components.html#function">功能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../miscelenea/core/core_components.html#function">函数</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../miscelenea/core/core_components.html#rgb-to-gray">RGB转灰度</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../miscelenea/core/core_components.html#valid-ready-payload-bus">有效就绪有效负载总线</a></li>
 </ul>
@@ -1132,8 +1132,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bits">Bits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#uint-sint">UInt、SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bool-bits-uint-sint">布尔型、位、UInt、SInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#vec">向量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bundle">线束</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#vec">Vec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bundle">Bundle</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Developers%20area/types.html#simple-example-rgb-vga">简单示例（RGB/VGA）</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Developers%20area/types.html#interface-example-apb">接口示例（APB）</a></li>
 </ul>
@@ -1180,12 +1180,12 @@
 <h1>分形计算器<a class="headerlink" href="#fractal-calculator" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>介绍<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
-<p>此示例将展示使用数据流和定点计算的 Mandelbrot 分形计算器的简单实现（未经优化）。</p>
+<p>此示例将展示使用数据流和定点计算实现一个未经优化的Mandelbrot分形计算器。</p>
 </section>
 <section id="specification">
 <h2>规范<a class="headerlink" href="#specification" title="此标题的永久链接"></a></h2>
-<p>该组件将接收一个像素任务“Stream”（其中包含 Mandelbrot 空间中的 XY 坐标），并将生成一个像素结果“Stream”（其中包含为相应任务完成的迭代次数）。</p>
-<p>让我们指定组件的 IO：</p>
+<p>该组件将接收像素任务的一个 <code class="docutils literal notranslate"><span class="pre">Stream</span></code> （其中包含Mandelbrot空间中的XY坐标），并将生成一个像素结果的一个 <code class="docutils literal notranslate"><span class="pre">Stream</span></code> （包含对应任务的迭代次数）。</p>
+<p>定义组件的IO为：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -1201,15 +1201,15 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>指令</p></td>
-<td><p>奴隶</p></td>
+<tr class="row-even"><td><p>cmd</p></td>
+<td><p>slave</p></td>
 <td><p>Stream[PixelTask]</p></td>
-<td><p>提供XY坐标进行处理</p></td>
+<td><p>提供XY坐标来处理</p></td>
 </tr>
-<tr class="row-odd"><td><p>RSP</p></td>
-<td><p>掌握</p></td>
-<td><p>流[像素结果]</p></td>
-<td><p>返回对应cmd事务所需的迭代次数</p></td>
+<tr class="row-odd"><td><p>rsp</p></td>
+<td><p>master</p></td>
+<td><p>Stream[PixelResult]</p></td>
+<td><p>返回对应cmd交换所需的迭代次数</p></td>
 </tr>
 </tbody>
 </table>
@@ -1221,23 +1221,23 @@
 <col style="width: 71%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>元素名称</p></th>
+<tr class="row-odd"><th class="head"><p>单元名称</p></th>
 <th class="head"><p>类型</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>X</p></td>
+<tr class="row-even"><td><p>x</p></td>
 <td><p>SFix</p></td>
-<td><p>曼德尔布罗空间中的坐标</p></td>
+<td><p>Mandelbrot空间中的坐标</p></td>
 </tr>
 <tr class="row-odd"><td><p>y</p></td>
 <td><p>SFix</p></td>
-<td><p>曼德尔布罗空间中的坐标</p></td>
+<td><p>Mandelbrot空间中的坐标</p></td>
 </tr>
 </tbody>
 </table>
-<p>让我们指定 PixelResult <code class="docutils literal notranslate"><span class="pre">Bundle</span></code>：</p>
+<p>定义PixelResult <code class="docutils literal notranslate"><span class="pre">Bundle</span></code> ：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 14%" />
@@ -1245,22 +1245,22 @@
 <col style="width: 71%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>元素名称</p></th>
+<tr class="row-odd"><th class="head"><p>单元名称</p></th>
 <th class="head"><p>类型</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>迭代</p></td>
+<tr class="row-even"><td><p>iteration</p></td>
 <td><p>UInt</p></td>
-<td><p>求解 Mandelbrot 坐标所需的迭代次数</p></td>
+<td><p>求解Mandelbrot坐标所需的迭代次数</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="elaboration-parameters-generics">
-<h2>细化参数（仿制药）<a class="headerlink" href="#elaboration-parameters-generics" title="此标题的永久链接"></a></h2>
-<p>让我们定义将提供系统构造参数的类：</p>
+<h2>细化参数（泛型）<a class="headerlink" href="#elaboration-parameters-generics" title="此标题的永久链接"></a></h2>
+<p>让我们定义为系统提供构造参数的类：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PixelSolverGenerics</span><span class="p">(</span><span class="n">fixAmplitude</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span>
 <span class="w">                               </span><span class="n">fixResolution</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span>
 <span class="w">                               </span><span class="n">iterationLimit</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1275,11 +1275,11 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>iterationType 和 fixType 是您可以调用来实例化新信号的函数。它就像 C 中的 typedef。</p>
+<p>iterationType和fixType是可以调用来实例化新信号的函数，它就像C语言中的typedef。</p>
 </div>
 </section>
 <section id="bundle-definition">
-<h2>捆绑定义<a class="headerlink" href="#bundle-definition" title="此标题的永久链接"></a></h2>
+<h2>Bundle定义<a class="headerlink" href="#bundle-definition" title="此标题的永久链接"></a></h2>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PixelTask</span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="w"> </span><span class="nc">PixelSolverGenerics</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">fixType</span>
 <span class="p">}</span>
@@ -1292,7 +1292,7 @@
 </section>
 <section id="component-implementation">
 <h2>组件实现<a class="headerlink" href="#component-implementation" title="此标题的永久链接"></a></h2>
-<p>现在实施。下面是一个非常简单的，没有管道/多线程。</p>
+<p>现在进行实现。下面是一个非常简单的实现，没有使用流水线处理/多线程技术。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">PixelSolver</span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="w"> </span><span class="nc">PixelSolverGenerics</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slave</span><span class="w">  </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">PixelTask</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>

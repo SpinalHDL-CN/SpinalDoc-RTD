@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>向量 &mdash; SpinalHDL  文档</title>
+  <title>Vec &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="UFix/SFix" href="Fix.html" />
-    <link rel="prev" title="线束" href="bundle.html" />
+    <link rel="prev" title="Bundle" href="bundle.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -243,7 +243,7 @@
 <li class="toctree-l3"><a class="reference internal" href="bits.html#maskedliteral">掩码字面量</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Int.html">UInt/Sint</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Int.html">UInt/SInt</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Int.html#declaration">声明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Int.html#operators">运算符</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Int.html#logic">逻辑运算</a></li>
@@ -254,10 +254,10 @@
 <li class="toctree-l4"><a class="reference internal" href="Int.html#misc">杂项</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Int.html#fixpoint-operations">定点操作</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Int.html#fixpoint-operations">定点小数操作</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Int.html#lower-bit-operations">低位运算</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Int.html#high-bit-operations">高位操作</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Int.html#fixto-function">修复函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Int.html#fixto-function">fixTo 函数</a></li>
 </ul>
 </li>
 </ul>
@@ -277,7 +277,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bundle.html">线束</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bundle.html">Bundle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bundle.html#description">描述</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bundle.html#declaration">声明</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="bundle.html#conditional-signals">条件信号</a></li>
@@ -296,7 +296,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">向量</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vec</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#description">描述</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#declaration">声明</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#examples">示例</a></li>
@@ -376,7 +376,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Structuring/area.html">区域</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Structuring/function.html">功能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Structuring/function.html">函数</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Structuring/function.html#rgb-to-gray">RGB转灰度</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Structuring/function.html#valid-ready-payload-bus">有效就绪有效负载总线</a></li>
 </ul>
@@ -944,8 +944,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Intermediates%20ones/fractal.html">分形计算器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/fractal.html#introduction">介绍</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/fractal.html#specification">规范</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/fractal.html#elaboration-parameters-generics">细化参数（仿制药）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/fractal.html#bundle-definition">捆绑定义</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/fractal.html#elaboration-parameters-generics">细化参数（泛型）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/fractal.html#bundle-definition">Bundle定义</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/fractal.html#component-implementation">组件实现</a></li>
 </ul>
 </li>
@@ -1062,7 +1062,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#when-switch">何时/切换</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#component-hierarchy">组件/层次结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">区域</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#function">功能</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#function">函数</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB转灰度</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#valid-ready-payload-bus">有效就绪有效负载总线</a></li>
 </ul>
@@ -1132,8 +1132,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#bits">Bits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#uint-sint">UInt、SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#bool-bits-uint-sint">布尔型、位、UInt、SInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#vec">向量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#bundle">线束</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#vec">Vec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#bundle">Bundle</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Developers%20area/types.html#simple-example-rgb-vga">简单示例（RGB/VGA）</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Developers%20area/types.html#interface-example-apb">接口示例（APB）</a></li>
 </ul>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">数据类型</a></li>
-      <li class="breadcrumb-item active">向量</li>
+      <li class="breadcrumb-item active">Vec</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Data types/Vec.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,10 +1176,10 @@
 
 
   <section id="vec">
-<span id="id1"></span><h1>向量<a class="headerlink" href="#vec" title="此标题的永久链接"></a></h1>
+<span id="id1"></span><h1>Vec<a class="headerlink" href="#vec" title="此标题的永久链接"></a></h1>
 <section id="description">
 <h2>描述<a class="headerlink" href="#description" title="此标题的永久链接"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">Vec</span></code> 是一种复合类型，它在单个名称下定义一组索引信号（任何 SpinalHDL 基本类型）。</p>
+<p><code class="docutils literal notranslate"><span class="pre">Vec</span></code> 是一种复合类型，它在一个变量中定义一组可索引的信号（任何 SpinalHDL 基本类型）。</p>
 </section>
 <section id="declaration">
 <h2>声明<a class="headerlink" href="#declaration" title="此标题的永久链接"></a></h2>
@@ -1195,14 +1195,14 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Vec.fill（大小：Int）（类型：数据）</p></td>
-<td><p>Create a vector of <code class="docutils literal notranslate"><span class="pre">size</span></code> elements of type <code class="docutils literal notranslate"><span class="pre">Data</span></code></p></td>
+<tr class="row-even"><td><p>Vec.fill(size: Int)(type: Data)</p></td>
+<td><p>创建一个包含 <code class="docutils literal notranslate"><span class="pre">size</span></code> 个元素的 <code class="docutils literal notranslate"><span class="pre">Data</span></code> 类型向量</p></td>
 </tr>
 <tr class="row-odd"><td><p>Vec(x, y, …)</p></td>
 <td><div class="line-block">
-<div class="line">创建一个向量，其中索引指向所提供的元素。</div>
-<div class="line">不创建新的硬件信号。</div>
-<div class="line">此构造函数支持混合元素宽度。</div>
+<div class="line">创建一个向量，其中索引指向提供的元素。</div>
+<div class="line">不会创建新的硬件信号。</div>
+<div class="line">此构造函数支持混合宽度的元素。</div>
 </div>
 </td>
 </tr>
@@ -1237,7 +1237,7 @@
 </section>
 <section id="operators">
 <h2>运算符<a class="headerlink" href="#operators" title="此标题的永久链接"></a></h2>
-<p>以下运算符可用于“Vec”类型：</p>
+<p>以下运算符可用于 <code class="docutils literal notranslate"><span class="pre">Vec</span></code> 类型：</p>
 <section id="comparison">
 <h3>比较运算<a class="headerlink" href="#comparison" title="此标题的永久链接"></a></h3>
 <table class="docutils align-default">
@@ -1323,7 +1323,7 @@
 <h3>库辅助函数<a class="headerlink" href="#lib-helper-functions" title="此标题的永久链接"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>您需要导入``import spin.lib._``以将这些函数置于作用域中。</p>
+<p>您需要以 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">spinal.lib._</span></code> 导入库，以将这些函数置于作用域中。</p>
 </div>
 <table class="docutils align-default">
 <colgroup>
@@ -1338,33 +1338,33 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>x.sCount(条件: T =&gt; Bool)</p></td>
-<td><p>计算 Vec 中与给定条件匹配的出现次数。</p></td>
+<tr class="row-even"><td><p>x.sCount(condition: T =&gt; Bool)</p></td>
+<td><p>计算 Vec 中与给定条件匹配的次数。</p></td>
 <td><p>UInt</p></td>
 </tr>
-<tr class="row-odd"><td><p>x.sCount(值：T)</p></td>
+<tr class="row-odd"><td><p>x.sCount(value: T)</p></td>
 <td><p>计算 Vec 中某个值出现的次数。</p></td>
 <td><p>UInt</p></td>
 </tr>
-<tr class="row-even"><td><p>x.sExists(条件: T =&gt; Bool)</p></td>
-<td><p>检查Vec中是否有匹配条件。</p></td>
+<tr class="row-even"><td><p>x.sExists(condition: T =&gt; Bool)</p></td>
+<td><p>检查Vec中是否存在匹配条件的元素。</p></td>
 <td><p>Bool</p></td>
 </tr>
-<tr class="row-odd"><td><p>x.sContains(值：T)</p></td>
+<tr class="row-odd"><td><p>x.sContains(value: T)</p></td>
 <td><p>检查 Vec 中是否存在具有给定值的元素。</p></td>
 <td><p>Bool</p></td>
 </tr>
-<tr class="row-even"><td><p>x.sFindFirst(条件: T =&gt; Bool)</p></td>
+<tr class="row-even"><td><p>x.sFindFirst(condition: T =&gt; Bool)</p></td>
 <td><p>查找 Vec 中与给定条件匹配的第一个元素，返回该元素的索引。</p></td>
 <td><p>UInt</p></td>
 </tr>
-<tr class="row-odd"><td><p>x.reduceBalancedTree(操作: (T, T) =&gt; T)</p></td>
-<td><p>平衡reduce函数，尽量减少所得电路的深度。 <code class="docutils literal notranslate"><span class="pre">op</span></code> 应该是可交换的和结合的。</p></td>
-<td><p>时间</p></td>
+<tr class="row-odd"><td><p>x.reduceBalancedTree(op: (T, T) =&gt; T)</p></td>
+<td><p>具有自动平衡功能的reduce函数，尽量减少生成电路的深度。 <code class="docutils literal notranslate"><span class="pre">op</span></code> 应该是具有可交换性和可结合性的。</p></td>
+<td><p>T</p></td>
 </tr>
 <tr class="row-even"><td><p>x.shuffle(indexMapping: Int =&gt; Int)</p></td>
-<td><p>使用将旧索引映射到新索引的函数对 Vec 进行混洗。</p></td>
-<td><p>向量[T]</p></td>
+<td><p>使用将旧索引映射到新索引的函数对 Vec 进行混洗（shuffle）。</p></td>
+<td><p>Vec[T]</p></td>
 </tr>
 </tbody>
 </table>
@@ -1387,7 +1387,7 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>sXXX 前缀用于消除接受 lambda 函数作为参数的同名 Scala 函数的歧义。</p>
+<p>sXXX 前缀用于消除使用 lambda 函数作为参数的同名 Scala 函数带来的歧义。</p>
 </div>
 </section>
 </section>
@@ -1404,7 +1404,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="bundle.html" class="btn btn-neutral float-left" title="线束" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="bundle.html" class="btn btn-neutral float-left" title="Bundle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="Fix.html" class="btn btn-neutral float-right" title="UFix/SFix" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
