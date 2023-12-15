@@ -371,7 +371,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Structuring/components_hierarchy.html">组件和层次结构</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Structuring/components_hierarchy.html#input-output-definition">输入/输出定义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Structuring/components_hierarchy.html#pruned-signals">修剪信号</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Structuring/components_hierarchy.html#parametrized-hardware-generic-in-vhdl-parameter-in-verilog">参数化硬件（VHDL 中的“通用”，Verilog 中的“参数”）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Structuring/components_hierarchy.html#parametrized-hardware-generic-in-vhdl-parameter-in-verilog">参数化硬件（VHDL 中的“Generic”，Verilog 中的“Parameter”）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Structuring/components_hierarchy.html#synthesized-component-names">合成的组件名称</a></li>
 </ul>
 </li>
@@ -583,7 +583,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Other%20language%20features/index.html">其他语言功能</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Other%20language%20features/utils.html">实用程序</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Other%20language%20features/utils.html#general">一般的</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Other%20language%20features/utils.html#general">介绍</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Other%20language%20features/utils.html#cat">Cat</a></li>
 </ul>
 </li>
@@ -767,7 +767,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Com/index.html">康姆</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Com/uart.html">串口</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Com/uart.html#bus-definition">总线定义</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Com/uart.html#uartctrl">串口控制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Com/uart.html#uartctrl">UartCtrl</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Com/usb_device.html">USB设备</a><ul>
@@ -890,31 +890,31 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Formal%20verification/index.html">形式验证</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#general">一般的</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#formal-backend">正式后台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Formal%20verification/index.html">形式化验证</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#general">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#formal-backend">形式化验证后端</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#installing-requirements">安装要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#example">示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#external-assertions">外部断言</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#internal-assertions">内部断言</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#external-stimulus">外部刺激</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#more-assertions-past">更多断言/过去</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#assuming-memory-content">假设内存内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#external-stimulus">外部激励</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#more-assertions-past">更多关于断言/past（以前某个时钟内的状态）的例子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#assuming-memory-content">假设内存中的内容</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#utilities-and-primitives">实用程序和原语</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#utilities-and-primitives">实用工具和原语</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#assertions-clock-reset">断言/时钟/复位</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#specifying-the-initial-value-of-a-signal">指定信号的初始值</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#specifying-a-initial-assumption">指定初始假设</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#memory-content-mem">内存内容（Mem）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#specifying-assertion-in-the-reset-scope">在重置范围内指定断言</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#formal-primitives">形式原语</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#memory-content-mem">内存内容（Mem）检查</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#specifying-assertion-in-the-reset-scope">在复位的时候进行断言检查，可以这样做</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#formal-primitives">形式化验证的原语</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#naming-polices">命名政策</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Formal%20verification/index.html#naming-polices">命名策略</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#for-component">对于组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#for-interfaces-implement-imasterslave">对于接口实现 IMasterSlave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Formal%20verification/index.html#for-interfaces-implement-imasterslave">对于实现 IMasterSlave的接口</a></li>
 </ul>
 </li>
 </ul>
@@ -953,9 +953,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#data-structures">数据结构</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#implementation">实现</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#simple-usage">使用简单</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#example-with-test-bench">Example with test bench</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#bonus-having-fun-with-stream">奖励：享受 Stream 带来的乐趣</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#simple-usage">简单应用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#example-with-test-bench">带TestBench的例子</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Examples/Intermediates%20ones/uart.html#bonus-having-fun-with-stream">额外奖励：享受 Stream 带来的乐趣</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Intermediates%20ones/vga.html">VGA</a><ul>

@@ -371,7 +371,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Structuring/components_hierarchy.html">组件和层次结构</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#input-output-definition">输入/输出定义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#pruned-signals">修剪信号</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#parametrized-hardware-generic-in-vhdl-parameter-in-verilog">参数化硬件（VHDL 中的“通用”，Verilog 中的“参数”）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#parametrized-hardware-generic-in-vhdl-parameter-in-verilog">参数化硬件（VHDL 中的“Generic”，Verilog 中的“Parameter”）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#synthesized-component-names">合成的组件名称</a></li>
 </ul>
 </li>
@@ -583,7 +583,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Other%20language%20features/index.html">其他语言功能</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Other%20language%20features/utils.html">实用程序</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Other%20language%20features/utils.html#general">一般的</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Other%20language%20features/utils.html#general">介绍</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Other%20language%20features/utils.html#cat">Cat</a></li>
 </ul>
 </li>
@@ -767,7 +767,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/Com/index.html">康姆</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Com/uart.html">串口</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/uart.html#bus-definition">总线定义</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/uart.html#uartctrl">串口控制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/uart.html#uartctrl">UartCtrl</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Com/usb_device.html">USB设备</a><ul>
@@ -890,31 +890,31 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Formal%20verification/index.html">形式验证</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#general">一般的</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#formal-backend">正式后台</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Formal%20verification/index.html">形式化验证</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#general">介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#formal-backend">形式化验证后端</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#installing-requirements">安装要求</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#example">示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#external-assertions">外部断言</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#internal-assertions">内部断言</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#external-stimulus">外部刺激</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#more-assertions-past">更多断言/过去</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#assuming-memory-content">假设内存内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#external-stimulus">外部激励</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#more-assertions-past">更多关于断言/past（以前某个时钟内的状态）的例子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#assuming-memory-content">假设内存中的内容</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#utilities-and-primitives">实用程序和原语</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#utilities-and-primitives">实用工具和原语</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#assertions-clock-reset">断言/时钟/复位</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#specifying-the-initial-value-of-a-signal">指定信号的初始值</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#specifying-a-initial-assumption">指定初始假设</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#memory-content-mem">内存内容（Mem）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#specifying-assertion-in-the-reset-scope">在重置范围内指定断言</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#formal-primitives">形式原语</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#memory-content-mem">内存内容（Mem）检查</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#specifying-assertion-in-the-reset-scope">在复位的时候进行断言检查，可以这样做</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#formal-primitives">形式化验证的原语</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#limitations">局限性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#naming-polices">命名政策</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Formal%20verification/index.html#naming-polices">命名策略</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#for-component">对于组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#for-interfaces-implement-imasterslave">对于接口实现 IMasterSlave</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Formal%20verification/index.html#for-interfaces-implement-imasterslave">对于实现 IMasterSlave的接口</a></li>
 </ul>
 </li>
 </ul>
@@ -953,9 +953,9 @@
 <li class="toctree-l4"><a class="reference internal" href="#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#data-structures">数据结构</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#implementation">实现</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#simple-usage">使用简单</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#example-with-test-bench">Example with test bench</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bonus-having-fun-with-stream">奖励：享受 Stream 带来的乐趣</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#simple-usage">简单应用</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example-with-test-bench">带TestBench的例子</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bonus-having-fun-with-stream">额外奖励：享受 Stream 带来的乐趣</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="vga.html">VGA</a><ul>
@@ -1181,12 +1181,12 @@
 <section id="specification">
 <h2>规范<a class="headerlink" href="#specification" title="此标题的永久链接"></a></h2>
 <p>本UART控制器教程基于 <a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/tree/master/lib/src/main/scala/spinal/lib/com/uart">此</a> 实现。</p>
-<p>该实现的特点是：</p>
+<p>该实现的特征有：</p>
 <ul class="simple">
-<li><p>ClockDivider/Parity/StopBit/DataLength 配置由组件输入设置。</p></li>
-<li><p>RXD 输入通过使用 N 个样本的采样窗口和多数投票进行过滤。</p></li>
+<li><p>ClockDivider/Parity/StopBit/DataLength的配置由组件输入设置。</p></li>
+<li><p>RXD输入通过使用N个样本的采样窗口和多数投票法进行滤波。</p></li>
 </ul>
-<p>Interfaces of this UartCtrl are:</p>
+<p>该UartCtrl控制端口为：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -1200,28 +1200,28 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>配置</p></td>
-<td><p>串口控制配置</p></td>
-<td><p>将所有配置交给控制器</p></td>
+<tr class="row-even"><td><p>config</p></td>
+<td><p>UartCtrlConfig</p></td>
+<td><p>将所有配置发给控制器</p></td>
 </tr>
-<tr class="row-odd"><td><p>写</p></td>
-<td><p>流[位]</p></td>
-<td><p>系统用于向控制器发出传输命令的端口</p></td>
+<tr class="row-odd"><td><p>write</p></td>
+<td><p>Stream[Bits]</p></td>
+<td><p>系统向控制器发送传输顺序所用的端口</p></td>
 </tr>
-<tr class="row-even"><td><p>读</p></td>
-<td><p>流量[位]</p></td>
-<td><p>控制器用于通知系统已成功接收帧的端口</p></td>
+<tr class="row-even"><td><p>read</p></td>
+<td><p>Flow[Bits]</p></td>
+<td><p>控制器发送已成功接收帧给系统所用的端口</p></td>
 </tr>
-<tr class="row-odd"><td><p>串口</p></td>
-<td><p>串口</p></td>
-<td><p>带 rxd / txd 的 Uart 接口</p></td>
+<tr class="row-odd"><td><p>uart</p></td>
+<td><p>Uart</p></td>
+<td><p>带rxd/txd的Uart接口</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="data-structures">
 <h2>数据结构<a class="headerlink" href="#data-structures" title="此标题的永久链接"></a></h2>
-<p>在实现控制器本身之前，我们需要定义一些数据结构。</p>
+<p>在实现控制器本体之前，我们需要定义一些数据结构。</p>
 <section id="controller-construction-parameters">
 <h3>控制器构造参数<a class="headerlink" href="#controller-construction-parameters" title="此标题的永久链接"></a></h3>
 <table class="docutils align-default">
@@ -1239,28 +1239,28 @@
 <tbody>
 <tr class="row-even"><td><p>dataWidthMax</p></td>
 <td><p>Int</p></td>
-<td><p>使用单个 UART 帧可以发送的最大数据位数</p></td>
+<td><p>使用单个UART帧可以发送的最大数据位数</p></td>
 </tr>
-<tr class="row-odd"><td><p>时钟分频器宽度</p></td>
+<tr class="row-odd"><td><p>clockDividerWidth</p></td>
 <td><p>Int</p></td>
 <td><p>时钟分频器的位数</p></td>
 </tr>
-<tr class="row-even"><td><p>预采样大小</p></td>
+<tr class="row-even"><td><p>preSamplingSize</p></td>
 <td><p>Int</p></td>
 <td><p>采样窗口开始时要丢弃的样本数</p></td>
 </tr>
-<tr class="row-odd"><td><p>采样尺寸</p></td>
+<tr class="row-odd"><td><p>samplingSize</p></td>
 <td><p>Int</p></td>
 <td><p>使用多个窗口中部的样本来获得过滤后的 RXD 值</p></td>
 </tr>
-<tr class="row-even"><td><p>后采样大小</p></td>
+<tr class="row-even"><td><p>postSamplingSize</p></td>
 <td><p>Int</p></td>
 <td><p>采样窗口结束时丢弃的样本数</p></td>
 </tr>
 </tbody>
 </table>
-<p>为了使实现更容易，我们假设“preSamplingSize + SampleSize + postSamplingSize”始终是 2 的幂。如果是这样，我们可以跳过在一些地方重置计数器。</p>
-<p>我们可以将它们分组到一个类中，该类将用作“UartCtrl”的单个参数，而不是将每个构造参数（泛型）一一添加到“UartCtrl”中。</p>
+<p>为了使实现更容易，我们假设 <code class="docutils literal notranslate"><span class="pre">preSamplingSize</span> <span class="pre">+</span> <span class="pre">samplingSize</span> <span class="pre">+</span> <span class="pre">postSamplingSize</span></code> 始终是 2 的幂次方。这样做可以在一些地方跳过计数器清零操作。</p>
+<p>同时，不需要将每个构造参数（泛型）一一添加到 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code> 中，我们可以将它们分组到一个类中，该类将用作 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code> 的单个参数。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrlGenerics</span><span class="p">(</span><span class="n">dataWidthMax</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
 <span class="w">                            </span><span class="n">clockDividerWidth</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="c1">// baudrate = Fclk / rxSamplePerBit / clockDividerWidth</span>
 <span class="w">                            </span><span class="n">preSamplingSize</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
@@ -1275,8 +1275,8 @@
 </div>
 </section>
 <section id="uart-interface">
-<h3>串口接口<a class="headerlink" href="#uart-interface" title="此标题的永久链接"></a></h3>
-<p>让我们定义一个没有流量控制的 UART 接口包。</p>
+<h3>UART接口<a class="headerlink" href="#uart-interface" title="此标题的永久链接"></a></h3>
+<p>让我们定义一个没有流量控制的UART接口线束。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Uart</span><span class="p">()</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">IMasterSlave</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">txd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">rxd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
@@ -1290,7 +1290,7 @@
 </div>
 </section>
 <section id="uart-configuration-enums">
-<h3>UART 配置枚举<a class="headerlink" href="#uart-configuration-enums" title="此标题的永久链接"></a></h3>
+<h3>UART配置枚举<a class="headerlink" href="#uart-configuration-enums" title="此标题的永久链接"></a></h3>
 <p>让我们定义奇偶校验和停止位枚举。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span><span class="w"> </span><span class="nc">UartParityType</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">SpinalEnum</span><span class="p">(</span><span class="n">binarySequential</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nc">NONE</span><span class="p">,</span><span class="w"> </span><span class="nc">EVEN</span><span class="p">,</span><span class="w"> </span><span class="nc">ODD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newElement</span><span class="p">()</span>
@@ -1304,8 +1304,8 @@
 </div>
 </section>
 <section id="uartctrl-configuration-bundles">
-<h3>UartCtrl 配置包<a class="headerlink" href="#uartctrl-configuration-bundles" title="此标题的永久链接"></a></h3>
-<p>让我们定义将用作 IO 元素的包来设置“UartCtrl”。</p>
+<h3>UartCtrl配置线束<a class="headerlink" href="#uartctrl-configuration-bundles" title="此标题的永久链接"></a></h3>
+<p>让我们定义一些线束，它们将被用于设置 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code> 的IO单元。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrlFrameConfig</span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="w"> </span><span class="nc">UartCtrlGenerics</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">dataLength</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="n">log2Up</span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">dataWidthMax</span><span class="p">)</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span><span class="w"> </span><span class="c1">//Bit count = dataLength + 1</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">stop</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nc">UartStopType</span><span class="p">()</span>
@@ -1326,15 +1326,15 @@
 </section>
 <section id="implementation">
 <h2>实现<a class="headerlink" href="#implementation" title="此标题的永久链接"></a></h2>
-<p>在 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code>中，将实例化 3 个东西：</p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code> 中会实例化3个东西 ：</p>
 <ul class="simple">
-<li><p>一个时钟分频器，以 UART RX 采样率生成滴答脉冲。</p></li>
-<li><p>一个“UartCtrlTx”组件</p></li>
-<li><p>一个“UartCtrlRx”组件</p></li>
+<li><p>一个时钟分频器，以UART RX采样率产生采样脉冲。</p></li>
+<li><p>一个 <code class="docutils literal notranslate"><span class="pre">UartCtrlTx</span></code> 组件</p></li>
+<li><p>一个 <code class="docutils literal notranslate"><span class="pre">UartCtrlRx</span></code> 组件</p></li>
 </ul>
 <section id="uartctrltx">
 <h3>UARTCtrlTx<a class="headerlink" href="#uartctrltx" title="此标题的永久链接"></a></h3>
-<p>该“组件”的接口如下：</p>
+<p>该 <code class="docutils literal notranslate"><span class="pre">Component</span></code> 的接口如下：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -1348,31 +1348,31 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>配置帧</p></td>
-<td><p>UartCtrl帧配置</p></td>
-<td><p>包含数据位宽计数和方/停止位配置</p></td>
+<tr class="row-even"><td><p>configFrame</p></td>
+<td><p>UartCtrlFrameConfig</p></td>
+<td><p>包含数据位宽计数和奇偶校验位/停止位配置</p></td>
 </tr>
-<tr class="row-odd"><td><p>采样刻度</p></td>
+<tr class="row-odd"><td><p>samplingTick</p></td>
 <td><p>Bool</p></td>
-<td><p>每个 UART 波特率脉冲“rxSamplePerBit”次的时间参考</p></td>
+<td><p>以每UART波特 <code class="docutils literal notranslate"><span class="pre">rxSamplePerBit</span></code> 次脉冲为时间参考</p></td>
 </tr>
-<tr class="row-even"><td><p>写</p></td>
-<td><p>流[位]</p></td>
-<td><p>系统用于向控制器发出传输命令的端口</p></td>
+<tr class="row-even"><td><p>write</p></td>
+<td><p>Stream[Bits]</p></td>
+<td><p>系统向控制器发出传输命令的端口</p></td>
 </tr>
 <tr class="row-odd"><td><p>txd</p></td>
 <td><p>Bool</p></td>
-<td><p>UART 发送引脚</p></td>
+<td><p>UART txd引脚</p></td>
 </tr>
 </tbody>
 </table>
-<p>让我们定义用于存储 <code class="docutils literal notranslate"><span class="pre">UartCtrlTx</span></code>状态的枚举：</p>
+<p>让我们定义用于存储 <code class="docutils literal notranslate"><span class="pre">UartCtrlTx</span></code> 状态的枚举：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span><span class="w"> </span><span class="nc">UartCtrlTxState</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">SpinalEnum</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nc">IDLE</span><span class="p">,</span><span class="w"> </span><span class="nc">START</span><span class="p">,</span><span class="w"> </span><span class="nc">DATA</span><span class="p">,</span><span class="w"> </span><span class="nc">PARITY</span><span class="p">,</span><span class="w"> </span><span class="nc">STOP</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newElement</span><span class="p">()</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>让我们定义 <code class="docutils literal notranslate"><span class="pre">UartCtrlTx</span></code>的骨架：</p>
+<p>让我们定义 <code class="docutils literal notranslate"><span class="pre">UartCtrlTx</span></code> 的框架：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrlTx</span><span class="p">(</span><span class="n">g</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">UartCtrlGenerics</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="nn">g</span><span class="p">.</span><span class="n">_</span>
 
@@ -1414,7 +1414,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这是完整的实现：</p>
+<p>完整实现如下：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrlTx</span><span class="p">(</span><span class="n">g</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">UartCtrlGenerics</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="nn">g</span><span class="p">.</span><span class="n">_</span>
 
@@ -1509,8 +1509,8 @@
 </div>
 </section>
 <section id="uartctrlrx">
-<h3>UARTCtrlRx<a class="headerlink" href="#uartctrlrx" title="此标题的永久链接"></a></h3>
-<p>该“Component”的接口如下：</p>
+<h3>UartCtrlRx<a class="headerlink" href="#uartctrlrx" title="此标题的永久链接"></a></h3>
+<p>该 <code class="docutils literal notranslate"><span class="pre">Component</span></code> 的接口如下：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -1524,25 +1524,25 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>配置帧</p></td>
-<td><p>UartCtrl帧配置</p></td>
-<td><p>包含数据位宽度和方/停止位配置</p></td>
+<tr class="row-even"><td><p>configFrame</p></td>
+<td><p>UartCtrlFrameConfig</p></td>
+<td><p>包含数据位宽和奇偶校验/停止位配置</p></td>
 </tr>
-<tr class="row-odd"><td><p>采样刻度</p></td>
+<tr class="row-odd"><td><p>samplingTick</p></td>
 <td><p>Bool</p></td>
-<td><p>每个 UART 波特率脉冲“rxSamplePerBit”次的时间参考</p></td>
+<td><p>以每UART波特 <code class="docutils literal notranslate"><span class="pre">rxSamplePerBit</span></code> 次脉冲为时间参考</p></td>
 </tr>
-<tr class="row-even"><td><p>读</p></td>
-<td><p>流量[位]</p></td>
-<td><p>控制器用于通知系统已成功接收帧的端口</p></td>
+<tr class="row-even"><td><p>read</p></td>
+<td><p>Flow[Bits]</p></td>
+<td><p>控制器发送已成功接收帧给系统所用的端口</p></td>
 </tr>
-<tr class="row-odd"><td><p>接收</p></td>
+<tr class="row-odd"><td><p>rxd</p></td>
 <td><p>Bool</p></td>
 <td><p>UART rxd 引脚，与当前时钟域不同步</p></td>
 </tr>
 </tbody>
 </table>
-<p>让我们定义用于存储 <code class="docutils literal notranslate"><span class="pre">UartCtrlTx</span></code>状态的枚举：</p>
+<p>让我们定义用于存储 <code class="docutils literal notranslate"><span class="pre">UartCtrlTx</span></code> 状态的枚举：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
@@ -1551,7 +1551,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>让我们定义 UartCtrlRx 的骨架：</p>
+<p>让我们定义 UartCtrlRx 的框架：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrlRx</span><span class="p">(</span><span class="n">g</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">UartCtrlGenerics</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="nn">g</span><span class="p">.</span><span class="n">_</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
@@ -1601,7 +1601,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这是完整的实现：</p>
+<p>完整实现如下：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrlRx</span><span class="p">(</span><span class="n">g</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">UartCtrlGenerics</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">import</span><span class="w"> </span><span class="nn">g</span><span class="p">.</span><span class="n">_</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
@@ -1714,8 +1714,8 @@
 </div>
 </section>
 <section id="uartctrl">
-<h3>串口控制<a class="headerlink" href="#uartctrl" title="此标题的永久链接"></a></h3>
-<p>让我们编写“UartCtrl”来实例化“UartCtrlRx”和“UartCtrlTx”部分，生成时钟分频器逻辑，并将它们相互连接。</p>
+<h3>UartCtrl<a class="headerlink" href="#uartctrl" title="此标题的永久链接"></a></h3>
+<p>让我们编写 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code> 来实例化 <code class="docutils literal notranslate"><span class="pre">UartCtrlRx</span></code> 和 <code class="docutils literal notranslate"><span class="pre">UartCtrlTx</span></code> 部分，生成时钟分频器逻辑，并将它们相互连接。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrl</span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="w"> </span><span class="nc">UartCtrlGenerics</span><span class="o">=</span><span class="nc">UartCtrlGenerics</span><span class="p">())</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="p">(</span><span class="nc">UartCtrlConfig</span><span class="p">(</span><span class="n">g</span><span class="p">))</span>
@@ -1752,10 +1752,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>To make it easier to use the UART with fixed settings, we introduce an companion object for <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code>. It allows us to provide
-additional ways of instantiating a UartCtrl component with different sets of parameters. Here we define a <code class="docutils literal notranslate"><span class="pre">UartCtrlInitConfig</span></code>
-holding the settings for a component that is not runtime configurable. Note that it is still possible to instantiate the UartCtrl
-manually like all other components, which one would do if a runtime-configurable UART is needed (via <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">uart</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">UartCtrl()</span></code>).</p>
+<p>为了更简单地使用具有固定设置的 UART，我们引入了 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code> 的伴生对象。这使我们能够以不同的参数集实例化UartCtrl组件，提供了额外的实例化方式。这里我们定义了 <code class="docutils literal notranslate"><span class="pre">UartCtrlInitConfig</span></code> ，用它保存那些无法在运行时配置的组件的设置。请注意，如果需要一个能在运行时进行配置的UART，您仍然可以像所有其他组件一样（通过 <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">uart</span> <span class="pre">=</span> <span class="pre">new</span> <span class="pre">UartCtrl()</span></code> ）手动实例化UartCtrl。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrlInitConfig</span><span class="p">(</span><span class="n">baudrate</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
 <span class="w">                              </span><span class="n">dataLength</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <span class="w">                              </span><span class="n">parity</span><span class="p">:</span><span class="w"> </span><span class="nc">UartParityType</span><span class="p">.</span><span class="nc">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
@@ -1790,8 +1787,8 @@ manually like all other components, which one would do if a runtime-configurable
 </section>
 </section>
 <section id="simple-usage">
-<h2>使用简单<a class="headerlink" href="#simple-usage" title="此标题的永久链接"></a></h2>
-<p>将“UartCtrl”合成为“115200-N-8-1”：</p>
+<h2>简单应用<a class="headerlink" href="#simple-usage" title="此标题的永久链接"></a></h2>
+<p>用 <code class="docutils literal notranslate"><span class="pre">115200-N-8-1</span></code> 的参数综合 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code> ：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">uartCtrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UartCtrl</span><span class="p">(</span>
 <span class="w">    </span><span class="n">config</span><span class="o">=</span><span class="nc">UartCtrlInitConfig</span><span class="p">(</span>
 <span class="w">      </span><span class="n">baudrate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">115200</span><span class="p">,</span>
@@ -1802,12 +1799,12 @@ manually like all other components, which one would do if a runtime-configurable
 <span class="w">  </span><span class="p">)</span>
 </pre></div>
 </div>
-<p>如果您仅使用“txd”引脚，请添加：</p>
+<p>如果您仅使用 <code class="docutils literal notranslate"><span class="pre">txd</span></code> 引脚，请添加：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="n">uartCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">uart</span><span class="p">.</span><span class="n">rxd</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nc">True</span>
 <span class="w">  </span><span class="n">io</span><span class="p">.</span><span class="n">tx</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">uartCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">uart</span><span class="p">.</span><span class="n">txd</span>
 </pre></div>
 </div>
-<p>相反，如果您仅使用“rxd”引脚：</p>
+<p>相反，如果您仅使用 <code class="docutils literal notranslate"><span class="pre">rxd</span></code> 引脚：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">uartCtrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UartCtrl</span><span class="p">(</span>
 <span class="w">    </span><span class="n">config</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UartCtrlInitConfig</span><span class="p">(</span>
 <span class="w">      </span><span class="n">baudrate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">115200</span><span class="p">,</span>
@@ -1821,12 +1818,12 @@ manually like all other components, which one would do if a runtime-configurable
 </div>
 </section>
 <section id="example-with-test-bench">
-<h2>Example with test bench<a class="headerlink" href="#example-with-test-bench" title="此标题的永久链接"></a></h2>
-<p>这是一个顶级示例，它执行以下操作：</p>
+<h2>带TestBench的例子<a class="headerlink" href="#example-with-test-bench" title="此标题的永久链接"></a></h2>
+<p>下面是一个顶层的示例，它执行以下操作：</p>
 <ul class="simple">
-<li><p>实例化“UartCtrl”并将其配置设置为 921600 波特/秒，无奇偶校验，1 个停止位。</p></li>
-<li><p>每次从 UART 接收到一个字节时，它都会将其写入 LED 输出。</p></li>
-<li><p>每 2000 个周期，它将开关输入值发送到 UART。</p></li>
+<li><p>实例化 <code class="docutils literal notranslate"><span class="pre">UartCtrl</span></code> 并将其配置设置为 921600 baud/s，无奇偶校验，1 个停止位。</p></li>
+<li><p>每次从 UART 接收到一个字节时，它都会将其写到 LED 输出上。</p></li>
+<li><p>把switches输入值以每2000个周期发送到 UART。</p></li>
 </ul>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrlUsageExample</span><span class="p">()</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="p">{</span>
@@ -1860,21 +1857,21 @@ manually like all other components, which one would do if a runtime-configurable
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/master/tester/src/test/resources/UartCtrlUsageExample_tb.vhd">在这里</a> 您可以为这个小“UartCtrlUsageExample”获得一个简单的 VHDL 测试平台。</p>
+<p>您可以在`这里 &lt;<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/master/tester/src/test/resources/UartCtrlUsageExample_tb.vhd">https://github.com/SpinalHDL/SpinalHDL/blob/master/tester/src/test/resources/UartCtrlUsageExample_tb.vhd</a>&gt;`_ 为这个小 <code class="docutils literal notranslate"><span class="pre">UartCtrlUsageExample</span></code> 获取一个简单的 VHDL 测试文件。</p>
 </section>
 <section id="bonus-having-fun-with-stream">
-<h2>奖励：享受 Stream 带来的乐趣<a class="headerlink" href="#bonus-having-fun-with-stream" title="此标题的永久链接"></a></h2>
-<p>如果您想对从 UART 接收的数据进行排队：</p>
+<h2>额外奖励：享受 Stream 带来的乐趣<a class="headerlink" href="#bonus-having-fun-with-stream" title="此标题的永久链接"></a></h2>
+<p>如果您想将从 UART 接收到的数据入队：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">queuedReads</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uartCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">read</span><span class="p">.</span><span class="n">toStream</span><span class="p">.</span><span class="n">queue</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>如果要在写接口上添加队列并进行一些流量控制：</p>
+<p>如果要在写接口上添加一个队列并做一些流控制：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">writeCmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">stopIt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="w">  </span><span class="n">writeCmd</span><span class="p">.</span><span class="n">queue</span><span class="p">(</span><span class="mi">16</span><span class="p">).</span><span class="n">haltWhen</span><span class="p">(</span><span class="n">stopIt</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">uartCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">write</span>
 </pre></div>
 </div>
-<p>如果您想在发送开关值之前发送 0x55 标头，可以将上例中的写入生成器替换为：</p>
+<p>如果您想在发送switches值之前发送 0x55 标头，可以将上例中的写生成器替换为：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">write</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Fragment</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)))</span>
 <span class="w">  </span><span class="n">write</span><span class="p">.</span><span class="n">valid</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nc">CounterFreeRun</span><span class="p">(</span><span class="mi">4000</span><span class="p">).</span><span class="n">willOverflow</span>
 <span class="w">  </span><span class="n">write</span><span class="p">.</span><span class="n">fragment</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">switches</span>
