@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VHDL比较 &mdash; SpinalHDL  文档</title>
+  <title>与VHDL对比 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
@@ -32,8 +32,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="VHDL 等效项" href="vhdl_perspective.html" />
-    <link rel="prev" title="对 VHDL 用户的帮助" href="index.html" />
+    <link rel="next" title="VHDL 等效语法" href="vhdl_perspective.html" />
+    <link rel="prev" title="VHDL 用户入门" href="index.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -87,7 +87,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">介绍</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">简介</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Introduction/SpinalHDL.html">关于 SpinalHDL</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Introduction/SpinalHDL.html#what-is-spinalhdl">什么是SpinalHDL？</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Introduction/SpinalHDL.html#what-spinalhdl-is-not">SpinalHDL 不是什么</a></li>
@@ -157,12 +157,12 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Scala%20Guide/coding_conventions.html">编码约定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/coding_conventions.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/coding_conventions.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/coding_conventions.html#class-vs-case-class">类与案例类</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Scala%20Guide/interaction.html">相互作用</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/interaction.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/interaction.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/interaction.html#how-spinalhdl-works-behind-the-api">SpinalHDL 在 API 背后的工作原理</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/interaction.html#everything-is-a-reference">一切都是参考</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/interaction.html#hardware-types">硬件类型</a></li>
@@ -172,45 +172,45 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Scala%20Guide/index.html#id1">斯卡拉指南</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/index.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Scala%20Guide/index.html#introduction">简介</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">对 VHDL 用户的帮助</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">VHDL比较</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#introduction">介绍</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#process">过程</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#implicit-vs-explicit-definitions">隐式与显式定义</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">VHDL 用户入门</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">与VHDL对比</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#introduction">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#process">过程（Process）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#implicit-vs-explicit-definitions">隐式与显式定义对比</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#clock-domains">时钟域</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#component-s-internal-organization">组件的内部组织</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#safety">安全</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#component-s-internal-organization">组件的内部组织方式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#safety">安全性</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#functions-and-procedures">功能与流程</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#buses-and-interfaces">总线和接口</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#signal-declaration">信号声明</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#component-instantiation">组件实例化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#casting">铸件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#resizing">调整大小</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#casting">类型转换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resizing">调整位宽</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parameterization">参数化</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#meta-hardware-description">元硬件描述</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="vhdl_perspective.html">VHDL 等效项</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vhdl_perspective.html">VHDL 等效语法</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#entity-and-architecture">实体和架构</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#data-types">数据类型</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#signal">信号</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#assignments">赋值</a></li>
-<li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#literals">文字</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#literals">字面量（Literals）</a></li>
 <li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#registers">寄存器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#process-blocks">流程块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vhdl_perspective.html#process-blocks">过程块</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Cheatsheets/index.html">备忘单</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Cheatsheets/core.html">核</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Cheatsheets/lib.html">库</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Cheatsheets/symbolic.html">象征性的</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Cheatsheets/index.html">快速参考</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Cheatsheets/core.html">Core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Cheatsheets/lib.html">Lib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Cheatsheets/symbolic.html">Symbolic</a></li>
 </ul>
 </li>
 </ul>
@@ -382,7 +382,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Structuring/clock_domain.html">时钟域</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/clock_domain.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/clock_domain.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/clock_domain.html#instantiation">实例化</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Structuring/clock_domain.html#configuration">配置</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Structuring/clock_domain.html#internal-clock">内部时钟</a></li>
@@ -491,12 +491,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Design%20errors/index.html">设计错误</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/assignment_overlap.html">赋值覆盖(Assignment overlap)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/assignment_overlap.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/assignment_overlap.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/assignment_overlap.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/clock_crossing_violation.html">跨时钟域违例(Clock crossing violation)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/clock_crossing_violation.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/clock_crossing_violation.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/clock_crossing_violation.html#example">示例</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Design%20errors/clock_crossing_violation.html#crossclockdomain-tag">crossClockDomain标签</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Design%20errors/clock_crossing_violation.html#setsynchronouswith">setSynchronousWith</a></li>
@@ -506,34 +506,34 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/combinatorial_loop.html">组合逻辑环(Combinatorial loop)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/combinatorial_loop.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/combinatorial_loop.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/combinatorial_loop.html#example">示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/combinatorial_loop.html#false-positives">误报</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/hierarchy_violation.html">层次违例(Hierarchy violation)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/hierarchy_violation.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/hierarchy_violation.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/hierarchy_violation.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/iobundle.html">IO线束</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/iobundle.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/iobundle.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/iobundle.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/latch_detected.html">锁存器检测(Latch detected)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/latch_detected.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/latch_detected.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/latch_detected.html#example">示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/latch_detected.html#due-to-mux">因多路复用器产生的错误</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/no_driver_on.html">无驱动检测(No driver on)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/no_driver_on.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/no_driver_on.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/no_driver_on.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/nullpointerexception.html">空指针异常(NullPointerException)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/nullpointerexception.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/nullpointerexception.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/nullpointerexception.html#example">示例</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Design%20errors/nullpointerexception.html#issue-explanation">问题说明</a></li>
 </ul>
@@ -541,40 +541,40 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/out_of_range_constant.html">超出范围的常数(Out of Range Constant)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/out_of_range_constant.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/out_of_range_constant.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/out_of_range_constant.html#example">示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/out_of_range_constant.html#specifying-exceptions">特殊情况</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/register_defined_as_component_input.html">定义为组件输入的寄存器(Register defined as component input)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/register_defined_as_component_input.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/register_defined_as_component_input.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/register_defined_as_component_input.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/scope_violation.html">作用域违例(Scope violation)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/scope_violation.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/scope_violation.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/scope_violation.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/spinal_cant_clone.html">Spinal无法克隆类(Spinal can’t clone class)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/spinal_cant_clone.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/spinal_cant_clone.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/spinal_cant_clone.html#example-1">例子1</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/spinal_cant_clone.html#example-2">例子2</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/unassigned_register.html">未赋值的寄存器(Unassigned register)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/unassigned_register.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/unassigned_register.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/unassigned_register.html#example">示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/unassigned_register.html#register-with-only-init">只有初始化(init)的寄存器</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/unreachable_is_statement.html">无法访问的is语句(Unreachable is statement)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/unreachable_is_statement.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/unreachable_is_statement.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/unreachable_is_statement.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Design%20errors/width_mismatch.html">位宽不匹配(Width mismatch)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/width_mismatch.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/width_mismatch.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/width_mismatch.html#assignment-example">赋值示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Design%20errors/width_mismatch.html#operator-example">运算操作示例</a></li>
 </ul>
@@ -602,7 +602,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Other%20language%20features/report.html">报告</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Other%20language%20features/scope_property.html">范围属性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Other%20language%20features/analog_inout.html">模拟和输入输出</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Other%20language%20features/analog_inout.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Other%20language%20features/analog_inout.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Other%20language%20features/analog_inout.html#analog">模拟</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Other%20language%20features/analog_inout.html#inout">进出</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Other%20language%20features/analog_inout.html#inoutwrapper">输入输出包装器</a></li>
@@ -672,7 +672,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/fsm.html">状态机</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fsm.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fsm.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/fsm.html#statemachine">状态机</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/fsm.html#entry-point">入口点</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/fsm.html#transitions">过渡</a></li>
@@ -690,7 +690,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/vexriscv.html">VexRiscv（RV32IM CPU）</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/bus_slave_factory.html">总线从属工厂</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/bus_slave_factory.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/bus_slave_factory.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/bus_slave_factory.html#functionality">功能性</a></li>
 </ul>
 </li>
@@ -842,7 +842,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Simulation/bootstraps.html">启动模拟</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Simulation/bootstraps.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Simulation/bootstraps.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Simulation/bootstraps.html#configuration">配置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Simulation/bootstraps.html#running-multiple-tests-on-the-same-hardware">在同一硬件上运行多个测试</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Simulation/bootstraps.html#throw-success-or-failure-of-the-simulation-from-a-thread">从线程中抛出模拟的成功或失败</a></li>
@@ -922,7 +922,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Examples/index.html">示例</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Examples/Simple%20ones/index.html">简单实例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Simple%20ones/apb3.html">APB3定义</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Examples/Simple%20ones/apb3.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Examples/Simple%20ones/apb3.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Simple%20ones/apb3.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Simple%20ones/apb3.html#implementation">实现</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Simple%20ones/apb3.html#usage">用法</a></li>
@@ -942,7 +942,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Examples/Intermediates%20ones/index.html">中级示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Intermediates%20ones/fractal.html">分形计算器</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/fractal.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/fractal.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/fractal.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/fractal.html#elaboration-parameters-generics">细化参数（泛型）</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/fractal.html#bundle-definition">Bundle定义</a></li>
@@ -959,7 +959,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Intermediates%20ones/vga.html">VGA</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/vga.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/vga.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/vga.html#data-structures">数据结构</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Intermediates%20ones/vga.html#vga-controller">VGA控制器</a></li>
 </ul>
@@ -968,28 +968,28 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Examples/Advanced%20ones/index.html">高级示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html">JTAG TAP</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#jtag-bus">JTAG总线</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#jtag-state-machine">JTAG状态机</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#id1">JTAG TAP</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#jtag-instructions">Jtag指令</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#user-friendly-wrapper">用户友好的包装器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#user-friendly-wrapper">用户友好型包装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#usage-demonstration">使用演示</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射 UART</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/memory_mapped_uart.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/memory_mapped_uart.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/memory_mapped_uart.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/memory_mapped_uart.html#implementation">实现</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Advanced%20ones/pinesec.html">松塞克</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Advanced%20ones/slots.html">老虎机</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/slots.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/slots.html#introduction">简介</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Advanced%20ones/timer.html">计时器</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/timer.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/timer.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/timer.html#id2">计时器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Advanced%20ones/timer.html#bridging-function">桥接功能</a></li>
 </ul>
@@ -999,7 +999,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Examples/index.html#getting-started">入门</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Legacy/index.html">遗产</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Legacy/index.html">历史遗留</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Legacy/riscv.html">瑞斯克病毒</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Legacy/riscv.html#features">特征</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Legacy/riscv.html#base-fpga-project">基础 FPGA 项目</a></li>
@@ -1009,13 +1009,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Legacy/pinsec/index.html">针秒</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Legacy/pinsec/introduction.html">介绍</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/introduction.html#id1">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Legacy/pinsec/introduction.html">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/introduction.html#id1">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/introduction.html#board-support">董事会支持</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Legacy/pinsec/hardware.html">硬件</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware.html#riscv">RISCV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware.html#axi4">AXI4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware.html#apb3">APB3</a></li>
@@ -1023,7 +1023,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Legacy/pinsec/hardware_toplevel.html">SoC 顶层 (Pinsec)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware_toplevel.html#introduction">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware_toplevel.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware_toplevel.html#defining-all-io">定义所有IO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware_toplevel.html#clock-and-resets">时钟和重置</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Legacy/pinsec/hardware_toplevel.html#main-components">主要成分</a></li>
@@ -1078,7 +1078,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Developers%20area/index.html">开发商专区</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Developers%20area/bus_slave_factory_impl.html">总线从站工厂实现</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/bus_slave_factory_impl.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/bus_slave_factory_impl.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/bus_slave_factory_impl.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/bus_slave_factory_impl.html#implementation">实现</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Developers%20area/bus_slave_factory_impl.html#busslavefactory">总线从属工厂</a></li>
@@ -1107,7 +1107,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Developers%20area/spinalhdl_datamodel.html">SpinalHDL 内部数据模型</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/spinalhdl_datamodel.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/spinalhdl_datamodel.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/spinalhdl_datamodel.html#general-structure">总体结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/spinalhdl_datamodel.html#exploring-the-datamodel">探索数据模型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/spinalhdl_datamodel.html#compilation-phases">编译阶段</a></li>
@@ -1117,7 +1117,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Developers%20area/types.html">类型</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#introduction">介绍</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bool">Bool</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Developers%20area/types.html#declaration">声明</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Developers%20area/types.html#operators">运算符</a></li>
@@ -1163,8 +1163,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">入门</a></li>
-          <li class="breadcrumb-item"><a href="index.html">对 VHDL 用户的帮助</a></li>
-      <li class="breadcrumb-item active">VHDL比较</li>
+          <li class="breadcrumb-item"><a href="index.html">VHDL 用户入门</a></li>
+      <li class="breadcrumb-item active">与VHDL对比</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Getting Started/Help for VHDL people/vhdl_comp.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1177,15 +1177,15 @@
 
 
   <section id="vhdl-comparison">
-<h1>VHDL比较<a class="headerlink" href="#vhdl-comparison" title="此标题的永久链接"></a></h1>
+<h1>与VHDL对比<a class="headerlink" href="#vhdl-comparison" title="此标题的永久链接"></a></h1>
 <section id="introduction">
-<h2>介绍<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
-<p>本页将显示 VHDL 和 SpinalHDL 之间的主要区别。事情不会深入解释。</p>
+<h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
+<p>本页将讨论 VHDL 和 SpinalHDL 之间的主要区别。但不会深入解释。</p>
 </section>
 <section id="process">
-<h2>过程<a class="headerlink" href="#process" title="此标题的永久链接"></a></h2>
-<p>编写 RTL 时通常需要进程，但是它们的语义使用起来可能很笨拙。由于它们在 VHDL 中的工作方式，它们可能会迫使您拆分代码并重复内容。</p>
-<p>生成以下 RTL：</p>
+<h2>过程（Process）<a class="headerlink" href="#process" title="此标题的永久链接"></a></h2>
+<p>通常编写 RTL 时需要用到过程，但是它们的语义使用起来可能很笨拙。由于它们在 VHDL 中的工作方式，可能会迫使您拆分代码并重复编写。</p>
+<p>要生成以下 RTL：</p>
 <img alt="../../../_images/process_rtl.svg" src="../../../_images/process_rtl.svg" /><p>您必须编写以下 VHDL：</p>
 <div class="highlight-ada notranslate"><div class="highlight"><pre><span></span>  <span class="n">signal</span> <span class="n">mySignal</span> <span class="p">:</span> <span class="n">std_logic</span><span class="p">;</span>
   <span class="n">signal</span> <span class="n">myRegister</span> <span class="p">:</span> <span class="n">std_logic_vector</span><span class="p">(</span><span class="mi">3</span> <span class="n">downto</span> <span class="mi">0</span><span class="p">);</span>
@@ -1235,14 +1235,14 @@
 </div>
 </section>
 <section id="implicit-vs-explicit-definitions">
-<h2>隐式与显式定义<a class="headerlink" href="#implicit-vs-explicit-definitions" title="此标题的永久链接"></a></h2>
-<p>在 VHDL 中，当声明一个信号时，您无需指定它是组合信号还是寄存器。分配给它的位置和方式决定了它是组合的还是注册的。</p>
-<p>在 SpinalHDL 中，这些事情是明确的。寄存器直接在其声明中定义为寄存器。</p>
+<h2>隐式与显式定义对比<a class="headerlink" href="#implicit-vs-explicit-definitions" title="此标题的永久链接"></a></h2>
+<p>在 VHDL 中，当声明一个信号时，您无需指定它是组合信号还是寄存器。给它赋值的位置和方式决定了它是组合电路还是寄存器。</p>
+<p>在 SpinalHDL 中，这些事情是明确的。寄存器直接在其声明中就定义为寄存器。</p>
 </section>
 <section id="clock-domains">
 <h2>时钟域<a class="headerlink" href="#clock-domains" title="此标题的永久链接"></a></h2>
-<p>在 VHDL 中，每次想要定义一堆寄存器时，都需要将时钟和复位线传送到它们。此外，您必须在各处硬编码如何使用这些时钟和复位信号（时钟沿、复位极性、复位性质（异步、同步））。</p>
-<p>在 SpinalHDL 中，您可以定义“ClockDomain”，然后定义使用它的硬件区域。</p>
+<p>在 VHDL 中，每次想要定义一堆寄存器时，都需要将时钟和复位信号传递给它们。此外，您必须在各处硬编码如何使用这些时钟和复位信号（包括它们的属性时钟沿、复位极性、复位性质（异步、同步））。</p>
+<p>在 SpinalHDL 中，您可以定义 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code>，然后定义使用它的硬件区域。</p>
 <p>例如：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">coreClockDomain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">(</span>
 <span class="w">  </span><span class="n">clock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">coreClk</span><span class="p">,</span>
@@ -1263,9 +1263,9 @@
 </div>
 </section>
 <section id="component-s-internal-organization">
-<h2>组件的内部组织<a class="headerlink" href="#component-s-internal-organization" title="此标题的永久链接"></a></h2>
-<p>在 VHDL 中，有一个“块”功能，允许您在组件内定义逻辑子区域。然而，几乎没有人使用这一功能，因为大多数人不了解它们，也因为这些区域内定义的所有信号都无法从外部读取。</p>
-<p>在 SpinalHDL 中，你有一个“Area”功能，可以更好地实现这个概念：</p>
+<h2>组件的内部组织方式<a class="headerlink" href="#component-s-internal-organization" title="此标题的永久链接"></a></h2>
+<p>在 VHDL 中，有一个 <code class="docutils literal notranslate"><span class="pre">block</span></code> 功能，允许您在组件内定义逻辑子区域。然而，几乎没有人使用这一功能，因为大多数人不了解它们，也因为这些区域内定义的所有信号都无法从外部读取、使用。</p>
+<p>在 SpinalHDL 中，你有一个 <code class="docutils literal notranslate"><span class="pre">Area</span></code> 功能，可以更好地实现这个概念：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Area</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">overflow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">False</span>
@@ -1283,24 +1283,24 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>在“Area”内部定义的变量和信号可以在组件的其他地方访问，包括其他“Area”区域。</p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">Area</span></code> 内部定义的变量和信号可以在组件的其他地方访问，包括其他 <code class="docutils literal notranslate"><span class="pre">Area</span></code> 区域内。</p>
 </section>
 <section id="safety">
-<h2>安全<a class="headerlink" href="#safety" title="此标题的永久链接"></a></h2>
-<p>在 VHDL 中，就像在 SpinalHDL 中一样，很容易编写组合循环，或者通过忘记驱动进程路径中的信号来推断锁存器。</p>
-<p>然后，为了检测这些问题，您可以使用一些“lint”工具来分析您的 VHDL，但这些工具不是免费的。在 SpinalHDL 中，“lint”过程集成在编译器内部，并且在一切正常之前它不会生成 RTL 代码。它还检查时钟域交叉。</p>
+<h2>安全性<a class="headerlink" href="#safety" title="此标题的永久链接"></a></h2>
+<p>在 VHDL 中，就像在 SpinalHDL 中一样，很容易编写出组合逻辑环，或者因为忘记给路径中的信号驱动而得到一个锁存器（latch）。</p>
+<p>然后，为了检测这些问题，您可以使用一些 <code class="docutils literal notranslate"><span class="pre">lint</span></code> 工具来分析您的 VHDL，但这些工具不是免费的。在 SpinalHDL 中， <code class="docutils literal notranslate"><span class="pre">lint</span></code> 过程集成在编译器内部，并且在一切正常之前它不会生成 RTL 代码。此外，它还会检查跨时钟域信号。</p>
 </section>
 <section id="functions-and-procedures">
 <h2>功能与流程<a class="headerlink" href="#functions-and-procedures" title="此标题的永久链接"></a></h2>
-<p>函数和过程在 VHDL 中不经常使用，可能是因为它们非常有限：</p>
+<p>函数和过程在 VHDL 中不经常使用，可能是因为它们的功能非常有限：</p>
 <ul class="simple">
-<li><p>您只能定义一块组合硬件，或者只能定义一块寄存器（如果您在时钟进程内调用函数/过程）。</p></li>
+<li><p>您只能定义一块组合逻辑硬件，或者只能定义一块寄存器（如果您在时钟进程内调用函数/过程）。</p></li>
 <li><p>您无法在其中定义流程。</p></li>
 <li><p>您无法在其中实例化组件。</p></li>
-<li><p>您可以在其中读/写的范围是有限的。</p></li>
+<li><p>在这里面，您可以读/写的范围是有限的。</p></li>
 </ul>
 <p>在 SpinalHDL 中，所有这些限制都被消除了。</p>
-<p>在单个函数中混合组合逻辑和寄存器的示例：</p>
+<p>在单个函数中混合使用组合逻辑和寄存器的示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">simpleAluPipeline</span><span class="p">(</span><span class="n">op</span><span class="p">:</span><span class="w"> </span><span class="nc">Bits</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">:</span><span class="w"> </span><span class="nc">UInt</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="nc">UInt</span><span class="p">):</span><span class="w"> </span><span class="nc">UInt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 
@@ -1314,7 +1314,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Stream Bundle 内的队列函数示例（握手）。该函数实例化一个 FIFO 组件：</p>
+<p>Stream线束内的队列函数示例（带握手）。该函数实例化一个 FIFO 组件：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Stream</span><span class="p">[</span><span class="nc">T</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="nc">Data</span><span class="p">](</span><span class="n">dataType</span><span class="p">:</span><span class="w">  </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">IMasterSlave</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">DataCarrier</span><span class="p">[</span><span class="nc">T</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">valid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">ready</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
@@ -1328,7 +1328,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>函数分配在其外部定义的信号的示例：</p>
+<p>为在外部定义的信号赋值的示例函数：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">counter</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
 
@@ -1358,17 +1358,17 @@
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
-<li><p>使用记录但丢失参数化（静态固定在包中），并且您必须为每个方向定义一个：</p></li>
+<li><p>使用记录但无法参数化（静态固定在包中），并且您必须为每个信号定义方向：</p></li>
 </ol>
 <div class="highlight-ada notranslate"><div class="highlight"><pre><span></span><span class="n">P_m</span> <span class="p">:</span> <span class="ow">in</span> <span class="n">APB_M</span><span class="p">;</span>
 <span class="n">P_s</span> <span class="p">:</span> <span class="kr">out</span> <span class="n">APB_S</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>SpinalHDL 对具有无限参数化的总线和接口声明提供非常强大的支持：</p>
+<p>SpinalHDL 对参数化总线和接口的声明提供非常强大的支持：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="nc">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slave</span><span class="p">(</span><span class="nc">Apb3</span><span class="p">(</span><span class="n">addressWidth</span><span class="p">,</span><span class="w"> </span><span class="n">dataWidth</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>您还可以使用面向对象编程来定义配置对象：</p>
+<p>您还可以使用面向对象编程来定义专门的配置对象：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">coreConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">CoreConfig</span><span class="p">(</span>
 <span class="w">  </span><span class="n">pcWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
 <span class="w">  </span><span class="n">addrWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
@@ -1435,7 +1435,7 @@
 <span class="n">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">&amp;</span><span class="w"> </span><span class="n">y</span>
 </pre></div>
 </div>
-<p>它还允许您在一行中定义和分配信号。</p>
+<p>它还允许您在一行中定义和赋值信号。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="n">&amp;</span><span class="w"> </span><span class="n">y</span>
 </pre></div>
 </div>
@@ -1467,7 +1467,7 @@
 <span class="w">  </span><span class="p">);</span>
 </pre></div>
 </div>
-<p>SpinalHDL 删除了这一点，并允许您以面向对象的方式访问子组件的 IO。</p>
+<p>SpinalHDL 在这方面做出了很大提升，并允许您以面向对象的方式访问子组件的 IO。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">divider</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">UnsignedDivider</span><span class="p">()</span>
 
 <span class="c1">// And then if you want to access IO signals of that divider:</span>
@@ -1477,20 +1477,20 @@
 </div>
 </section>
 <section id="casting">
-<h2>铸件<a class="headerlink" href="#casting" title="此标题的永久链接"></a></h2>
+<h2>类型转换<a class="headerlink" href="#casting" title="此标题的永久链接"></a></h2>
 <p>VHDL 中有两种烦人的转换方法：</p>
 <ul class="simple">
-<li><p>boolean &lt;&gt; std_logic （例如：使用“mySignal &lt;= myValue &lt; 10`` 等条件分配信号是不合法的）</p></li>
-<li><p>无符号 &lt;&gt; 整数（例如：访问数组）</p></li>
+<li><p>boolean &lt;&gt; std_logic （例如：使用 <code class="docutils literal notranslate"><span class="pre">mySignal</span> <span class="pre">&lt;=</span> <span class="pre">myValue</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> 等条件赋值信号是不合法的）</p></li>
+<li><p>unsigned &lt;&gt; integer（例如：访问数组）</p></li>
 </ul>
-<p>SpinalHDL 通过统一事物来消除这些类型。</p>
-<p>布尔/std_logic：</p>
+<p>SpinalHDL 通过统一化对象来转换这些类型。</p>
+<p>boolean/std_logic:</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">valueBiggerThanTwo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="n">valueBiggerThanTwo</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">2</span><span class="w">  </span><span class="c1">// value &gt; 2 return a Bool</span>
 </pre></div>
 </div>
-<p>无符号/整数：</p>
+<p>unsigned/integer:</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Vec</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">),</span><span class="mi">8</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">sel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">arraySel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">array</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span><span class="w"> </span><span class="c1">// Arrays are indexed directly by using UInt</span>
@@ -1498,8 +1498,8 @@
 </div>
 </section>
 <section id="resizing">
-<h2>调整大小<a class="headerlink" href="#resizing" title="此标题的永久链接"></a></h2>
-<p>VHDL 对位大小严格这一事实可能是一件好事。</p>
+<h2>调整位宽<a class="headerlink" href="#resizing" title="此标题的永久链接"></a></h2>
+<p>VHDL 对位宽限制严格可能是一件好事。</p>
 <div class="highlight-ada notranslate"><div class="highlight"><pre><span></span><span class="n">my8BitsSignal</span> <span class="o">&lt;=</span> <span class="n">resize</span><span class="p">(</span><span class="n">my4BitsSignal</span><span class="p">,</span> <span class="mi">8</span><span class="p">);</span>
 </pre></div>
 </div>
@@ -1516,9 +1516,9 @@
 <h2>参数化<a class="headerlink" href="#parameterization" title="此标题的永久链接"></a></h2>
 <div class="line-block">
 <div class="line">2008 年修订版之前的 VHDL 在泛型方面存在许多问题。例如，您不能参数化记录，不能参数化实体中的数组，并且不能具有类型参数。</div>
-<div class="line">然后 VHDL 2008 出现并解决了这些问题。但根据供应商的不同，VHDL 2008 的 RTL 工具支持确实很弱。</div>
+<div class="line">然后 VHDL 2008 出现并解决了这些问题。但根据供应商的不同，RTL 工具对VHDL 2008 的支持确实很弱。</div>
 </div>
-<p>SpinalHDL 完全支持在其编译器中本地集成的泛型，并且它不依赖于 VHDL 泛型。</p>
+<p>SpinalHDL 完全支持在其编译器中自然的集成泛型，并且它不依赖于 VHDL 泛型。</p>
 <p>这是参数化数据结构的示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">colorStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Color</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">colorFifo</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamFifo</span><span class="p">(</span><span class="nc">Color</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">),</span><span class="w"> </span><span class="n">depth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">128</span><span class="p">)</span>
@@ -1538,9 +1538,9 @@
 </section>
 <section id="meta-hardware-description">
 <h2>元硬件描述<a class="headerlink" href="#meta-hardware-description" title="此标题的永久链接"></a></h2>
-<p>VHDL 具有某种封闭语法。您无法在其上添加抽象层。</p>
-<p>SpinalHDL 因为它构建在 Scala 之上，所以非常灵活，并且允许您非常轻松地定义新的抽象层。</p>
-<p>这种灵活性的一些示例包括 FSM &lt;state_machine&gt;` 库、BusSlaveFactory &lt;bus_slave_factory&gt;` 库以及 JTAG &lt;jtag&gt;` 库。</p>
+<p>VHDL 具有某种封闭的语法。您无法在其上添加抽象层。</p>
+<p>而SpinalHDL， 由于它构建在 Scala 之上，所以非常灵活，并且允许您非常轻松地定义新的抽象层。</p>
+<p>这种灵活性在后面的库中表现突出： <a class="reference internal" href="../../Libraries/fsm.html#state-machine"><span class="std std-ref">FSM</span></a> 库、 <a class="reference internal" href="../../Libraries/bus_slave_factory.html#bus-slave-factory"><span class="std std-ref">BusSlaveFactory</span></a> 库以及 <a class="reference internal" href="../../Examples/Advanced%20ones/jtag.html#jtag"><span class="std std-ref">JTAG</span></a> 库。</p>
 </section>
 </section>
 
@@ -1555,8 +1555,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="index.html" class="btn btn-neutral float-left" title="对 VHDL 用户的帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="vhdl_perspective.html" class="btn btn-neutral float-right" title="VHDL 等效项" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="VHDL 用户入门" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="vhdl_perspective.html" class="btn btn-neutral float-right" title="VHDL 等效语法" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
