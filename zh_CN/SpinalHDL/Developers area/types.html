@@ -1140,7 +1140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#enum">Enum</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#data-bool-bits-uint-sint-enum-bundle-vec">Data (Bool, Bits, UInt, SInt, Enum, Bundle, Vec)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#literals-as-signal-declaration">使用字面量声明信号</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#continuous-assignment-literals-as-signal-declaration">Continuous Assignment Literals as signal declaration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#continuous-assignment-literals-as-signal-declaration">用连续赋值字面量作来声明信号</a></li>
 </ul>
 </li>
 </ul>
@@ -2040,7 +2040,7 @@
 <li><p>当条件 <cite>cond =/= True</cite> 满足的时钟周期，将信号重新设置为常量</p></li>
 <li><p>由于最后一条语句获胜规则，满足 <cite>cond === True</cite> 条件的时钟周期将导致信号具有“red”值。</p></li>
 </ul>
-<p>实例:</p>
+<p>实例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">cond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">red</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="p">...</span>
@@ -2054,14 +2054,14 @@
 </div>
 </section>
 <section id="continuous-assignment-literals-as-signal-declaration">
-<h2>Continuous Assignment Literals as signal declaration<a class="headerlink" href="#continuous-assignment-literals-as-signal-declaration" title="此标题的永久链接"></a></h2>
-<p>您还可以在表达式中使用它们来同时执行三件事：</p>
+<h2>用连续赋值字面量作来声明信号<a class="headerlink" href="#continuous-assignment-literals-as-signal-declaration" title="此标题的永久链接"></a></h2>
+<p>您还可以在表达式中使用它们来同时达成三件事：</p>
 <ul class="simple">
-<li><p>定义一条电线</p></li>
-<li><p>使用常量值和另一个信号在硬件逻辑实现中维护相等运算的结果</p></li>
+<li><p>定义一个信号（一条线）</p></li>
+<li><p>在硬件逻辑实现中，保持等价性比较运算结果的常数值和另一信号的结果</p></li>
 <li><p>设置推断类型：Bool，因为使用 === 相等运算符，其结果为 Bool 类型</p></li>
 </ul>
-<p>有一个例子：</p>
+<p>这里是一个例子：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">(</span><span class="nc">False</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">blue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="p">...</span>
