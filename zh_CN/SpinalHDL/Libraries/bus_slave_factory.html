@@ -1077,7 +1077,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Developers%20area/index.html">开发商专区</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Developers%20area/bus_slave_factory_impl.html">总线从站工厂实现</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Developers%20area/bus_slave_factory_impl.html">总线从端（Factory）实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/bus_slave_factory_impl.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/bus_slave_factory_impl.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/bus_slave_factory_impl.html#implementation">实现</a><ul>
@@ -1202,63 +1202,63 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>总线数据宽度</p></td>
+<tr class="row-even"><td><p>busDataWidth</p></td>
 <td><p>Int</p></td>
 <td><p>返回总线的数据宽度</p></td>
 </tr>
-<tr class="row-odd"><td><p>读取（那个，地址，位偏移量）</p></td>
+<tr class="row-odd"><td><p>read(that,address,bitOffset)</p></td>
 <td></td>
-<td><p>当总线读取``address``时，在``bitOffset``处用``that``填充响应</p></td>
+<td><p>当通过总线读取地址 <code class="docutils literal notranslate"><span class="pre">address</span></code> 时，用 <code class="docutils literal notranslate"><span class="pre">that</span></code> 中 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置的数据填充响应。</p></td>
 </tr>
-<tr class="row-even"><td><p>写（那个，地址，位偏移量）</p></td>
+<tr class="row-even"><td><p>write(that,address,bitOffset)</p></td>
 <td></td>
-<td><p>当总线写入``address``时，将``bitOffset``中的总线数据分配给``that``</p></td>
+<td><p>当通过总线写入地址 <code class="docutils literal notranslate"><span class="pre">address</span></code> 时，将总线上 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置的数据赋值 <code class="docutils literal notranslate"><span class="pre">that</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>onWrite(地址)(doThat)</p></td>
+<tr class="row-odd"><td><p>onWrite(address)(doThat)</p></td>
 <td></td>
-<td><p>当“address”上发生写事务时调用“doThat”</p></td>
+<td><p>当 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址上发生写操作（出现写事务）时调用 <code class="docutils literal notranslate"><span class="pre">doThat</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>onRead(地址)(doThat)</p></td>
+<tr class="row-even"><td><p>onRead(address)(doThat)</p></td>
 <td></td>
-<td><p>当“address”上发生读事务时调用“doThat”</p></td>
+<td><p>当 <code class="docutils literal notranslate"><span class="pre">address</span></code> 上发生读操作（出现读事务）时调用 <code class="docutils literal notranslate"><span class="pre">doThat</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>nonStopWrite（即，bitOffset）</p></td>
+<tr class="row-odd"><td><p>nonStopWrite(that,bitOffset)</p></td>
 <td></td>
-<td><p>通过总线从“bitOffset”写入数据永久分配“that”</p></td>
+<td><p>将通过总线写入的 <code class="docutils literal notranslate"><span class="pre">bitOffset``的数据赋值到</span> <span class="pre">``that</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>readAndWrite(那个,地址,bitOffset)</p></td>
+<tr class="row-even"><td><p>readAndWrite(that,address,bitOffset)</p></td>
 <td></td>
-<td><p>使“that”在“address”处可读可写，并放置在单词中的“bitOffset”处</p></td>
+<td><p>使 <code class="docutils literal notranslate"><span class="pre">that</span></code> 信号可通过 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址读写，并且该信号放置在数据的 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置</p></td>
 </tr>
-<tr class="row-odd"><td><p>readMultiWord(那个，地址)</p></td>
+<tr class="row-odd"><td><p>readMultiWord(that,address)</p></td>
 <td></td>
 <td><div class="line-block">
 <div class="line">创建内存映射以从“地址”读取“that”。</div>
-<div class="line">如果“that”大于一个字，它将在以下地址上扩展寄存器</div>
+<div class="line">如果``that`` 的位宽大于一个字（32位），它将在以下地址上扩展寄存器</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>writeMultiWord(那个，地址)</p></td>
+<tr class="row-even"><td><p>writeMultiWord(that,address)</p></td>
 <td></td>
 <td><div class="line-block">
 <div class="line">创建内存映射以在“地址”处写入“that”。</div>
-<div class="line">如果“that”大于一个字，它将在以下地址上扩展寄存器</div>
+<div class="line">如果``that`` 的位宽大于一个字（32位），它将在以下地址上扩展寄存器</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>createWriteOnly(数据类型,地址,bitOffset)</p></td>
+<tr class="row-odd"><td><p>createWriteOnly(dataType,address,bitOffset)</p></td>
 <td><p>T</p></td>
-<td><p>在“address”处创建一个“dataType”类型的只写寄存器，并将其放置在字中的“bitOffset”处</p></td>
+<td><p>在 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址处创建一个 <code class="docutils literal notranslate"><span class="pre">dataType</span></code> 类型的只写寄存器，并将其放置在字中的 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置</p></td>
 </tr>
-<tr class="row-even"><td><p>createReadWrite(数据类型,地址,bitOffset)</p></td>
+<tr class="row-even"><td><p>createReadWrite(dataType,address,bitOffset)</p></td>
 <td><p>T</p></td>
-<td><p>在“address”处创建一个“dataType”类型的读写寄存器，并将其放置在字中的“bitOffset”处</p></td>
+<td><p>在 <code class="docutils literal notranslate"><span class="pre">address</span></code> 处创建一个 <code class="docutils literal notranslate"><span class="pre">dataType</span></code> 类型的读写寄存器，并将其放置在字中的 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置</p></td>
 </tr>
-<tr class="row-odd"><td><p>createAndDriveFlow（数据类型，地址，bitOffset）</p></td>
-<td><p>流量[T]</p></td>
-<td><p>在“address”处创建一个“dataType”类型的可写流寄存器，并将其放置在字中的“bitOffset”处</p></td>
+<tr class="row-odd"><td><p>createAndDriveFlow(dataType,address,bitOffset)</p></td>
+<td><p>Flow[T]</p></td>
+<td><p>在 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址处创建一个 <code class="docutils literal notranslate"><span class="pre">dataType</span></code> 类型的可写流（Flow）寄存器，并将其放置在字中的 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置</p></td>
 </tr>
-<tr class="row-even"><td><p>驱动器（那个，地址，bitOffset）</p></td>
+<tr class="row-even"><td><p>drive(that,address,bitOffset)</p></td>
 <td></td>
 <td><p>使用位于字中“bitOffset”处的“address”处可写的寄存器驱动“that”</p></td>
 </tr>
