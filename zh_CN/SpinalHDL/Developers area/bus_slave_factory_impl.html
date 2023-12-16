@@ -32,8 +32,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="如何破解此文档" href="howtodocument.html" />
-    <link rel="prev" title="开发商专区" href="index.html" />
+    <link rel="next" title="如何修改本文档" href="howtodocument.html" />
+    <link rel="prev" title="开发者专区" href="index.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -1076,33 +1076,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../miscelenea/core/elements.html#range">范围</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">开发商专区</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">开发者专区</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">总线从端（Factory）实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#implementation">实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#busslavefactory">总线从属工厂</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#busslavefactorydelayed">总线从属工厂延迟</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#avalonmmslavefactory">Avalon MMSlaveFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#busslavefactory">BusSlaveFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#busslavefactorydelayed">BusSlaveFactoryDelayed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#avalonmmslavefactory">AvalonMMSlaveFactory</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#conclusion">结论</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="howtodocument.html">如何破解此文档</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howtodocument.html">如何修改本文档</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="howtodocument.html#title-convention">标题约定</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howtodocument.html#wavedrom-integration">Wavedrom 集成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howtodocument.html#new-section">新版块</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="howtodocument.html#example">例子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howtodocument.html#wavedrom-integration">Wavedrom 的集成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howtodocument.html#new-section">新章节</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="howtodocument.html#example">示例</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="mill%20support.html">通过工厂建造</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="mill%20support.html#compile-the-library">Compile the library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mill%20support.html">通过Mill构建（输出）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mill%20support.html#compile-the-library">编译SpinalHDL库</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mill%20support.html#run-all-test-suites">运行所有测试套件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mill%20support.html#run-a-specified-test-suite">运行指定的测试套件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mill%20support.html#run-a-specified-app">运行指定App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mill%20support.html#run-a-specified-app">运行指定程序（App）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mill%20support.html#publish-locally">本地发布</a></li>
 </ul>
 </li>
@@ -1126,21 +1126,21 @@
 <li class="toctree-l3"><a class="reference internal" href="types.html#the-bitvector-family-bits-uint-sint">BitVector 系列 - (<code class="docutils literal notranslate"><span class="pre">Bits</span></code>, <code class="docutils literal notranslate"><span class="pre">UInt</span></code>, <code class="docutils literal notranslate"><span class="pre">SInt</span></code>)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="types.html#declaration-syntax">声明语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="types.html#id1">运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="types.html#masked-comparison">Masked comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types.html#masked-comparison">掩码过滤结果比较</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#bits">Bits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#uint-sint">UInt、SInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="types.html#bool-bits-uint-sint">布尔型、位、UInt、SInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#bool-bits-uint-sint">Bool, Bits, UInt, SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#vec">Vec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#bundle">Bundle</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="types.html#simple-example-rgb-vga">简单示例（RGB/VGA）</a></li>
 <li class="toctree-l4"><a class="reference internal" href="types.html#interface-example-apb">接口示例（APB）</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="types.html#enum">枚举</a></li>
-<li class="toctree-l3"><a class="reference internal" href="types.html#data-bool-bits-uint-sint-enum-bundle-vec">数据（Bool、Bits、UInt、SInt、Enum、Bundle、Vec）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="types.html#literals-as-signal-declaration">文字作为信号声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#enum">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#data-bool-bits-uint-sint-enum-bundle-vec">Data (Bool, Bits, UInt, SInt, Enum, Bundle, Vec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#literals-as-signal-declaration">使用字面量声明信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#continuous-assignment-literals-as-signal-declaration">Continuous Assignment Literals as signal declaration</a></li>
 </ul>
 </li>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">开发商专区</a></li>
+          <li class="breadcrumb-item"><a href="index.html">开发者专区</a></li>
       <li class="breadcrumb-item active">总线从端（Factory）实现</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Developers area/bus_slave_factory_impl.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1264,39 +1264,39 @@
 </tr>
 <tr class="row-even"><td><p>drive(that,address,bitOffset)</p></td>
 <td></td>
-<td><p>使用位于字中“bitOffset”处的“address”处可写的寄存器驱动“that”</p></td>
+<td><p>使用位于 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址的可写寄存器中 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置的信号驱动 <code class="docutils literal notranslate"><span class="pre">that</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>driveAndRead(那个,地址,bitOffset)</p></td>
+<tr class="row-odd"><td><p>driveAndRead(that,address,bitOffset)</p></td>
 <td></td>
-<td><p>使用位于字中“bitOffset”处的“address”处可写和可读的寄存器驱动“that”</p></td>
+<td><p>使用位于 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址的可读写寄存器中 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置的信号驱动 <code class="docutils literal notranslate"><span class="pre">that</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p>驱动流（那个，地址，bitOffset）</p></td>
+<tr class="row-even"><td><p>driveFlow(that,address,bitOffset)</p></td>
 <td></td>
-<td><p>当写入发生在“address”时，通过使用位于字中“bitOffset”处的数据，在“that”上发出事务</p></td>
+<td><p>当对 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址写入时，通过使用位于 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位的数据，在 <code class="docutils literal notranslate"><span class="pre">that</span></code> 流（Flow）上发出事务</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
-<div class="line">readStreamNonBlocking（那个，地址，</div>
-<div class="line">有效位偏移量、有效负载位偏移量）</div>
+<div class="line">readStreamNonBlocking(that,address,</div>
+<div class="line">validBitOffset,payloadBitOffset)</div>
 </div>
 </td>
 <td></td>
 <td><div class="line-block">
-<div class="line">读取“that”并在“address”发生读取时消耗事务。</div>
-<div class="line">有效 &lt;= validBitOffset 位</div>
-<div class="line">Payload &lt;= PayloadBitOffset+widthOf(payload) 直至“payloadBitOffset”</div>
+<div class="line">读取 <code class="docutils literal notranslate"><span class="pre">that</span></code> 信号并在读取 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址时消耗事务。</div>
+<div class="line">valid &lt;= validBitOffset bit</div>
+<div class="line">payload &lt;= payloadBitOffset+widthOf(payload) downto <code class="docutils literal notranslate"><span class="pre">payloadBitOffset</span></code></div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
 <div class="line">doBitsAccumulationAndClearOnRead</div>
-<div class="line">（即，地址，位偏移量）</div>
+<div class="line">(that,address,bitOffset)</div>
 </div>
 </td>
 <td></td>
 <td><div class="line-block">
-<div class="line">Instantiate an internal register which at each cycle do :</div>
-<div class="line">reg := reg <a href="#id1"><span class="problematic" id="id2">|</span></a>那</div>
-<div class="line">然后，当发生读取时，寄存器被清除。该寄存器在“address”处可读，并放置在字中的“bitOffset”处</div>
+<div class="line">实例化一个内部寄存器，该寄存器在每个周期执行以下操作：</div>
+<div class="line">reg := reg | that</div>
+<div class="line">然后，当发生读取时，寄存器被清除。该寄存器可通过 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址读取，并放置在字中的 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置</div>
 </div>
 </td>
 </tr>
@@ -1307,7 +1307,7 @@
 <section id="implementation">
 <h2>实现<a class="headerlink" href="#implementation" title="此标题的永久链接"></a></h2>
 <section id="busslavefactory">
-<h3>总线从属工厂<a class="headerlink" href="#busslavefactory" title="此标题的永久链接"></a></h3>
+<h3>BusSlaveFactory<a class="headerlink" href="#busslavefactory" title="此标题的永久链接"></a></h3>
 <p>让我们来描述一下原语抽象函数：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">trait</span><span class="w"> </span><span class="nc">BusSlaveFactory</span><span class="w">  </span><span class="k">extends</span><span class="w"> </span><span class="nc">Area</span><span class="p">{</span>
 
@@ -1331,7 +1331,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>然后让我们施展魔法来实现基于它们的所有实用程序：</p>
+<p>然后让我们利用这些来实现一些有用的工具：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">trait</span><span class="w"> </span><span class="nc">BusSlaveFactory</span><span class="w">  </span><span class="k">extends</span><span class="w"> </span><span class="nc">Area</span><span class="p">{</span>
 <span class="w">  </span><span class="c1">//...</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">readAndWrite</span><span class="p">(</span><span class="n">that</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">Data</span><span class="p">,</span>
@@ -1443,8 +1443,8 @@
 </div>
 </section>
 <section id="busslavefactorydelayed">
-<h3>总线从属工厂延迟<a class="headerlink" href="#busslavefactorydelayed" title="此标题的永久链接"></a></h3>
-<p>让我们实现用于存储基元的类：</p>
+<h3>BusSlaveFactoryDelayed<a class="headerlink" href="#busslavefactorydelayed" title="此标题的永久链接"></a></h3>
+<p>让我们实现用于存储原语的类：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">trait</span><span class="w"> </span><span class="nc">BusSlaveFactoryElement</span>
 
 <span class="c1">// Ask to make `that` readable when a access is done on `address`.</span>
@@ -1523,8 +1523,8 @@
 </div>
 </section>
 <section id="avalonmmslavefactory">
-<h3>Avalon MMSlaveFactory<a class="headerlink" href="#avalonmmslavefactory" title="此标题的永久链接"></a></h3>
-<p>首先让我们实现提供兼容 AvalonMM 配置对象的伴随对象，对应于下表：</p>
+<h3>AvalonMMSlaveFactory<a class="headerlink" href="#avalonmmslavefactory" title="此标题的永久链接"></a></h3>
+<p>首先，让我们实现提供兼容 AvalonMM 配置对象的伴随对象，对应于下表：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 22%" />
@@ -1532,7 +1532,7 @@
 <col style="width: 44%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>引脚名称</p></th>
+<tr class="row-odd"><th class="head"><p>信号名称</p></th>
 <th class="head"><p>类型</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
@@ -1540,25 +1540,25 @@
 <tbody>
 <tr class="row-even"><td><p>read</p></td>
 <td><p>Bool</p></td>
-<td><p>高一个周期产生读请求</p></td>
+<td><p>保持一个周期高电平来产生一个读请求</p></td>
 </tr>
 <tr class="row-odd"><td><p>write</p></td>
 <td><p>Bool</p></td>
-<td><p>高一周期产生写请求</p></td>
+<td><p>保持一个周期高电平来产生一个写请求</p></td>
 </tr>
 <tr class="row-even"><td><p>address</p></td>
 <td><p>UInt(addressWidth bits)</p></td>
-<td><p>字节粒度但字对齐</p></td>
+<td><p>字节为粒度但是字对齐的</p></td>
 </tr>
-<tr class="row-odd"><td><p>写数据</p></td>
+<tr class="row-odd"><td><p>writeData</p></td>
 <td><p>Bits(dataWidth bits)</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>读取数据有效</p></td>
+<tr class="row-even"><td><p>readDataValid</p></td>
 <td><p>Bool</p></td>
-<td><p>高电平响应读命令</p></td>
+<td><p>保持高电平来响应读命令</p></td>
 </tr>
-<tr class="row-odd"><td><p>读取数据</p></td>
+<tr class="row-odd"><td><p>readData</p></td>
 <td><p>Bits(dataWidth bits)</p></td>
 <td><p>readDataValid 为高时有效</p></td>
 </tr>
@@ -1632,7 +1632,7 @@
 </section>
 <section id="conclusion">
 <h2>结论<a class="headerlink" href="#conclusion" title="此标题的永久链接"></a></h2>
-<p>That’s all, you can check one example that use this <code class="docutils literal notranslate"><span class="pre">Apb3SlaveFactory</span></code> to create an Apb3UartCtrl <a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#memory-mapped-uart"><span class="std std-ref">here</span></a>.</p>
+<p>就这些了，您可以在此处查看一个使用 <code class="docutils literal notranslate"><span class="pre">Apb3SlaveFactory</span></code> 来创建 Apb3UartCtrl 的 <a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#memory-mapped-uart"><span class="std std-ref">示例</span></a>。</p>
 <p>如果您想添加对新内存总线的支持，非常简单，您只需继承、实现 <code class="docutils literal notranslate"><span class="pre">BusSlaveFactoryDelayed</span></code> 特征（trait）的另一个变体即可。 <code class="docutils literal notranslate"><span class="pre">Apb3SlaveFactory</span></code> 可能是一个很好的参考：D</p>
 </section>
 </section>
@@ -1648,8 +1648,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="index.html" class="btn btn-neutral float-left" title="开发商专区" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="howtodocument.html" class="btn btn-neutral float-right" title="如何破解此文档" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="开发者专区" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="howtodocument.html" class="btn btn-neutral float-right" title="如何修改本文档" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

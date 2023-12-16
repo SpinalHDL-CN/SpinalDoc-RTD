@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>如何破解此文档 &mdash; SpinalHDL  文档</title>
+  <title>如何修改本文档 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -32,7 +32,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="通过工厂建造" href="mill%20support.html" />
+    <link rel="next" title="通过Mill构建（输出）" href="mill%20support.html" />
     <link rel="prev" title="总线从端（Factory）实现" href="bus_slave_factory_impl.html" />
      
     <!-- source/_templates/layout.html -->
@@ -1076,33 +1076,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../miscelenea/core/elements.html#range">范围</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">开发商专区</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">开发者专区</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="bus_slave_factory_impl.html">总线从端（Factory）实现</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bus_slave_factory_impl.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bus_slave_factory_impl.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bus_slave_factory_impl.html#implementation">实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="bus_slave_factory_impl.html#busslavefactory">总线从属工厂</a></li>
-<li class="toctree-l4"><a class="reference internal" href="bus_slave_factory_impl.html#busslavefactorydelayed">总线从属工厂延迟</a></li>
-<li class="toctree-l4"><a class="reference internal" href="bus_slave_factory_impl.html#avalonmmslavefactory">Avalon MMSlaveFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bus_slave_factory_impl.html#busslavefactory">BusSlaveFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bus_slave_factory_impl.html#busslavefactorydelayed">BusSlaveFactoryDelayed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bus_slave_factory_impl.html#avalonmmslavefactory">AvalonMMSlaveFactory</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="bus_slave_factory_impl.html#conclusion">结论</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">如何破解此文档</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">如何修改本文档</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#title-convention">标题约定</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wavedrom-integration">Wavedrom 集成</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#new-section">新版块</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#example">例子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wavedrom-integration">Wavedrom 的集成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-section">新章节</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">示例</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="mill%20support.html">通过工厂建造</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="mill%20support.html#compile-the-library">Compile the library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mill%20support.html">通过Mill构建（输出）</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mill%20support.html#compile-the-library">编译SpinalHDL库</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mill%20support.html#run-all-test-suites">运行所有测试套件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mill%20support.html#run-a-specified-test-suite">运行指定的测试套件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mill%20support.html#run-a-specified-app">运行指定App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mill%20support.html#run-a-specified-app">运行指定程序（App）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mill%20support.html#publish-locally">本地发布</a></li>
 </ul>
 </li>
@@ -1126,21 +1126,21 @@
 <li class="toctree-l3"><a class="reference internal" href="types.html#the-bitvector-family-bits-uint-sint">BitVector 系列 - (<code class="docutils literal notranslate"><span class="pre">Bits</span></code>, <code class="docutils literal notranslate"><span class="pre">UInt</span></code>, <code class="docutils literal notranslate"><span class="pre">SInt</span></code>)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="types.html#declaration-syntax">声明语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="types.html#id1">运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="types.html#masked-comparison">Masked comparison</a></li>
+<li class="toctree-l4"><a class="reference internal" href="types.html#masked-comparison">掩码过滤结果比较</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#bits">Bits</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#uint-sint">UInt、SInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="types.html#bool-bits-uint-sint">布尔型、位、UInt、SInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#bool-bits-uint-sint">Bool, Bits, UInt, SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#vec">Vec</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#bundle">Bundle</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="types.html#simple-example-rgb-vga">简单示例（RGB/VGA）</a></li>
 <li class="toctree-l4"><a class="reference internal" href="types.html#interface-example-apb">接口示例（APB）</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="types.html#enum">枚举</a></li>
-<li class="toctree-l3"><a class="reference internal" href="types.html#data-bool-bits-uint-sint-enum-bundle-vec">数据（Bool、Bits、UInt、SInt、Enum、Bundle、Vec）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="types.html#literals-as-signal-declaration">文字作为信号声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#enum">Enum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#data-bool-bits-uint-sint-enum-bundle-vec">Data (Bool, Bits, UInt, SInt, Enum, Bundle, Vec)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html#literals-as-signal-declaration">使用字面量声明信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="types.html#continuous-assignment-literals-as-signal-declaration">Continuous Assignment Literals as signal declaration</a></li>
 </ul>
 </li>
@@ -1162,8 +1162,8 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">开发商专区</a></li>
-      <li class="breadcrumb-item active">如何破解此文档</li>
+          <li class="breadcrumb-item"><a href="index.html">开发者专区</a></li>
+      <li class="breadcrumb-item active">如何修改本文档</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Developers area/howtodocument.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,25 +1176,24 @@
 
 
   <section id="how-to-hack-this-documentation">
-<h1>如何破解此文档<a class="headerlink" href="#how-to-hack-this-documentation" title="此标题的永久链接"></a></h1>
-<p>如果您想将页面添加到此文档中，您需要在适当的部分中添加源文件。我选择创建一个结构来重新采样文档的各个部分，这并不是绝对必要的，但为了清楚起见，强烈鼓励。</p>
-<p>This documentation uses a recursive index tree: every folder have a special <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> files
-that tell sphinx which file, and in what order to put it in the documentation tree.</p>
+<h1>如何修改本文档<a class="headerlink" href="#how-to-hack-this-documentation" title="此标题的永久链接"></a></h1>
+<p>如果您希望将您的页面添加到此文档中，需要将源文件添加到适当的部分。我选择创建一个结构来重新整理文档的各个部分，这并不是严格必要的，但为了清晰性，强烈建议这样做。</p>
+<p>本文档使用递归索引树：每个文件夹都有一个特殊的 <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> 文件，告诉 sphinx 哪个文件存在、以什么顺序将其放入文档树中。</p>
 <section id="title-convention">
 <h2>标题约定<a class="headerlink" href="#title-convention" title="此标题的永久链接"></a></h2>
-<p>Sphinx 非常智能，文档结构是根据您如何使用非字母数字字符（例如：<code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">-</span> <span class="pre">`</span> <span class="pre">:</span> <span class="pre">'</span> <span class="pre">&quot;</span> <span class="pre">~</span> <span class="pre">^</span> <span class="pre">_</span> <span class="pre">*</span> <span class="pre">+</span> <span class="pre">#</span> <span class="pre">&lt;</span> <span class="pre">&gt;</span></code>）推导出来的，您只需要保持一致即可。不过，为了保持一致性，我们使用这个级数：</p>
+<p>Sphinx 非常智能，文档结构是根据您如何使用非字母数字字符（例如：<code class="docutils literal notranslate"><span class="pre">=</span> <span class="pre">-</span> <span class="pre">`</span> <span class="pre">:</span> <span class="pre">'</span> <span class="pre">&quot;</span> <span class="pre">~</span> <span class="pre">^</span> <span class="pre">_</span> <span class="pre">*</span> <span class="pre">+</span> <span class="pre">#</span> <span class="pre">&lt;</span> <span class="pre">&gt;</span></code>）推导出来的，您只需要保持一致即可。不过，为了保持一致性，我们使用这些约定：</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>章节标题的上划线和下划线</p></li>
-<li><p>标题的“=”下划线</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> 段落下划线</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">^</span></code> 表示小段</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">=</span></code> 用于章节标题的前后行</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">=</span></code> 标题的下划线</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code> 段落的下划线</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^</span></code> 表示子段落</p></li>
 </ul>
 </div></blockquote>
 </section>
 <section id="wavedrom-integration">
-<h2>Wavedrom 集成<a class="headerlink" href="#wavedrom-integration" title="此标题的永久链接"></a></h2>
-<p>本文档使用了“sphinxcontrib-wavedrom”插件，因此您可以使用 <a class="reference external" href="https://github.com/wavedrom/wavedrom/wiki/WaveJSON">WaveJSON</a> 语法指定时序图或寄存器描述，如下所示：</p>
+<h2>Wavedrom 的集成<a class="headerlink" href="#wavedrom-integration" title="此标题的永久链接"></a></h2>
+<p>本文档使用了 <code class="docutils literal notranslate"><span class="pre">sphinxcontrib-wavedrom</span></code> 插件，因此您可以使用 <a class="reference external" href="https://github.com/wavedrom/wavedrom/wiki/WaveJSON">WaveJSON</a> 语法指定时序图或寄存器描述，如下所示：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">..</span><span class="w"> </span><span class="nx">wavedrom</span><span class="o">::</span>
 
 <span class="w">   </span><span class="p">{</span><span class="w"> </span><span class="s2">&quot;signal&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
@@ -1211,7 +1210,7 @@ that tell sphinx which file, and in what order to put it in the documentation tr
 <span class="w">   </span><span class="p">]}</span>
 </pre></div>
 </div>
-<p>你得到：</p>
+<p>你可以得到：</p>
 
 <div style="overflow-x:auto">
 <script type="WaveDrom">
@@ -1231,7 +1230,7 @@ that tell sphinx which file, and in what order to put it in the documentation tr
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果您希望 Wavedrom 图出现在 pdf 导出中，则需要使用“非宽松”JSON 方言。长话短说，没有 javascript 代码并在键值周围使用 <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> （例如 <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;</span></code> ）。</p>
+<p>如果您希望 Wavedrom 图出现在 pdf 导出中，则需要使用 “non relaxed” JSON 方言。长话短说，就是没有使用 javascript 代码并使用 <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> 包围键值（例如 <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;</span></code> ）。</p>
 </div>
 <p>您可以使用相同的语法描述寄存器映射：</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;reg&quot;</span><span class="o">:</span><span class="p">[</span>
@@ -1257,12 +1256,12 @@ that tell sphinx which file, and in what order to put it in the documentation tr
 </div>
 </section>
 <section id="new-section">
-<h2>新版块<a class="headerlink" href="#new-section" title="此标题的永久链接"></a></h2>
+<h2>新章节<a class="headerlink" href="#new-section" title="此标题的永久链接"></a></h2>
 <p>如果你想添加一个新的节，你需要在顶部索引中指定新节的索引文件。我建议将文件夹命名为节名称，但这不是必需的； Sphinx 将从索引文件的标题中获取该部分的名称。</p>
 <section id="example">
-<h3>例子<a class="headerlink" href="#example" title="此标题的永久链接"></a></h3>
-<p>我想记录 SpinalHDL 中的新功能，并且我想为其创建一个部分；我们称之为“奶酪”</p>
-<p>所以我需要创建一个名为“Cheese”的文件夹（名称并不重要），并在其中创建一个索引文件，例如：</p>
+<h3>示例<a class="headerlink" href="#example" title="此标题的永久链接"></a></h3>
+<p>我想记录 SpinalHDL 中的新功能，并且我想为其创建一个章节；我们称之为 <code class="docutils literal notranslate"><span class="pre">Cheese</span></code></p>
+<p>所以我需要创建一个名为 <code class="docutils literal notranslate"><span class="pre">Cheese</span></code> 的文件夹（名称并不重要），并在其中创建一个索引文件，例如：</p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="gh">======</span>
 <span class="gh">Cheese</span>
 <span class="gh">======</span>
@@ -1286,8 +1285,8 @@ introduction
 <p class="admonition-title">备注</p>
 <p><code class="docutils literal notranslate"><span class="pre">introduction.rst</span></code> 将始终是列表中的第一个，因为它是在索引文件中指定的。其他文件将按字母顺序排列。</p>
 </div>
-<p>现在我可以添加``introduction.rst``和其他文件，例如``cheddar.rst``，<a href="#id1"><span class="problematic" id="id2">``</span></a>stilton.rst``等。</p>
-<p>剩下要做的唯一一件事就是将奶酪添加到顶部索引文件中，如下所示：</p>
+<p>现在我可以添加 <code class="docutils literal notranslate"><span class="pre">introduction.rst</span></code> 和其他文件，比如 <code class="docutils literal notranslate"><span class="pre">cheddar.rst</span></code>，<code class="docutils literal notranslate"><span class="pre">stilton.rst</span></code> 等。</p>
+<p>剩下要做的唯一一件事就是将 <code class="docutils literal notranslate"><span class="pre">cheese</span></code> 添加到顶部索引文件中，如下所示：</p>
 <div class="highlight-ReST notranslate"><div class="highlight"><pre><span></span><span class="gh">Welcome to SpinalHDL&#39;s documentation!</span>
 <span class="gh">=====================================</span>
 
@@ -1311,7 +1310,7 @@ introduction
    rst/Cheese/index
 </pre></div>
 </div>
-<p>就是这样，现在您可以在奶酪中添加您想要的所有内容，所有页面都将显示在文档中。</p>
+<p>就是这样，现在您可以在 <code class="docutils literal notranslate"><span class="pre">cheese</span></code> 中添加您想要的所有内容，所有页面都将显示在文档中。</p>
 </section>
 </section>
 </section>
@@ -1328,7 +1327,7 @@ introduction
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
         <a href="bus_slave_factory_impl.html" class="btn btn-neutral float-left" title="总线从端（Factory）实现" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="mill%20support.html" class="btn btn-neutral float-right" title="通过工厂建造" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mill%20support.html" class="btn btn-neutral float-right" title="通过Mill构建（输出）" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
