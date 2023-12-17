@@ -129,8 +129,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#linux-installation">Linux安装</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mac-os-x-installation">Mac OS X 安装</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#windows-installation">Windows安装</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#msys2-verilator-for-simulation">用于仿真的 MSYS2 验证器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#msys2-for-formal-verification">MSYS2用于形式验证</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#msys2-verilator-for-simulation">用于仿真的 MSYS2 verilator工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#msys2-for-formal-verification">用 MSYS2 实施形式化验证</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#oci-container">OCI容器</a></li>
@@ -139,7 +139,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#create-a-first-spinalhdl-project">创建第一个 SpinalHDL 项目</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#the-directory-structure-of-a-project">项目的目录结构</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-spinal-on-spinalhdl-code">在 SpinalHDL 代码上使用 Spinal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-spinal-on-spinalhdl-code">在 SpinalHDL 代码中使用 Spinal</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="SBT.html">将 CLI 中的 Spinal 与 SBT 结合使用</a></li>
@@ -1110,10 +1110,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#general-structure">总体结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#exploring-the-datamodel">探索数据模型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#compilation-phases">编译阶段</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#modifying-a-netlist-as-a-user-without-plugins">在不使用插件的情况下以用户身份修改网表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#compilation-phases">编译环节</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#modifying-a-netlist-as-a-user-without-plugins">在不使用插件的情况下，以用户身份修改网表</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#user-space-netlist-analysis">用户空间网表分析</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#enumerating-every-clockdomain-in-use">Enumerating every ClockDomain in use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/spinalhdl_datamodel.html#enumerating-every-clockdomain-in-use">遍历、枚举正在使用的每个时钟域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Developers%20area/types.html">类型</a><ul>
@@ -1184,7 +1184,7 @@
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.oracle.com/java/technologies/downloads/">Java JDK</a>，Java 环境</p></li>
 <li><p><a class="reference external" href="https://www.scala-lang.org/">Scala 2</a>，编译器和库</p></li>
-<li><p><a class="reference external" href="https://www.scala-sbt.org/download.html">SBT</a> ，Scala 构建工具</p></li>
+<li><p><a class="reference external" href="https://www.scala-sbt.org/download.html">SBT</a> ，Scala 程序构建工具</p></li>
 </ul>
 <p>这些工具可以支持使用 Spinal生成代码；但在没有任何其他工具的情况下，它仅限于HDL代码生成。</p>
 <p>要启用更多功能，我们建议：</p>
@@ -1192,24 +1192,24 @@
 <li><p>一个 IDE（例如当前推荐的带有 Scala 插件的 IntelliJ &lt;<a class="reference external" href="https://www.jetbrains.com/idea/">https://www.jetbrains.com/idea/</a>&gt;`_ 或带有 Metals 扩展的 VSCodium &lt;<a class="reference external" href="https://vscodium.com/">https://vscodium.com/</a>&gt;`_）可获得如下功能：</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>代码建议/完成</p></li>
-<li><p>自动构建，代码中存在语法错误</p></li>
-<li><p>单击即可生成代码</p></li>
-<li><p>单击即可运行模拟/测试（如果设置了支持的模拟器）</p></li>
+<li><p>代码建议/自动完成</p></li>
+<li><p>自动构建，在代码中显示存在语法错误</p></li>
+<li><p>通过单击生成代码</p></li>
+<li><p>单击即可运行仿真/测试（如果设置了支持的仿真器）</p></li>
 </ul>
 </div></blockquote>
 </li>
-<li><p>支持的模拟器，例如“Verilator &lt;<a class="reference external" href="https://www.veripool.org/verilator/">https://www.veripool.org/verilator/</a>&gt;”，可以直接从 SpinalHDL 测试设计。</p></li>
-<li><p><a class="reference external" href="https://gtkwave.sourceforge.net/">Gtkwave</a> 查看 Verilator 在模拟过程中生成的波形。</p></li>
-<li><p><a class="reference external" href="https://git-scm.com/">Git</a> 用于版本控制系统</p></li>
-<li><p>使用 Verilator 进行模拟所需的 C++ 工具链</p></li>
-<li><p>一个 linux shell，需要使用 Verilator 进行模拟</p></li>
+<li><p>支持的仿真器，例如 <a class="reference external" href="https://www.veripool.org/verilator/">Verilator</a> ，可以直接从 SpinalHDL 测试设计。</p></li>
+<li><p><a class="reference external" href="https://gtkwave.sourceforge.net/">Gtkwave</a> 查看 Verilator 在仿真过程中生成的波形。</p></li>
+<li><p><a class="reference external" href="https://git-scm.com/">Git</a> 版本控制系统</p></li>
+<li><p>用 Verilator 进行仿真所需的 C++ 工具链</p></li>
+<li><p>一个 linux shell，需要使用 Verilator 进行仿真</p></li>
 </ul>
 </section>
 <section id="linux-installation">
 <h2>Linux安装<a class="headerlink" href="#linux-installation" title="此标题的永久链接"></a></h2>
-<p>在撰写本文时，安装 Scala 和 SBT 的推荐方法是通过 <a class="reference external" href="https://get-coursier.io/docs/cli-installation">Coursier</a>。除了 scala 工具之外，Coursier 还能够安装 Java JDK 来使用，在下面的示例中，我们从包管理器安装 Java。由于与所使用的 Scala 版本兼容，我们建议安装 JDK 17 (LTS)。</p>
-<p>对于 Debian 或 Ubuntu，我们运行：</p>
+<p>在撰写本文时，推荐的 Scala 和 SBT 安装方法是通过 <a class="reference external" href="https://get-coursier.io/docs/cli-installation">Coursier</a>。除了 scala 工具之外，Coursier 还能够安装 Java JDK ，在下面的示例中，我们通过包管理器安装 Java。出于 Scala 版本兼容的考量，我们建议安装 JDK 17 (LTS)。</p>
+<p>对于 Debian 或 Ubuntu，运行：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
 sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>openjdk-17-jdk-headless<span class="w"> </span>curl<span class="w"> </span>git
 curl<span class="w"> </span>-fL<span class="w"> </span><span class="s2">&quot;https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>gzip<span class="w"> </span>-d<span class="w"> </span>&gt;<span class="w"> </span>cs
@@ -1219,15 +1219,15 @@ chmod<span class="w"> </span>+x<span class="w"> </span>cs
 <span class="nb">source</span><span class="w"> </span>~/.profile
 </pre></div>
 </div>
-<p>如果您想安装用于模拟和/或形式证明的工具，我们推荐`oss-cad-suite &lt;<a class="reference external" href="https://github.com/YosysHQ/oss-cad-suite-build">https://github.com/YosysHQ/oss-cad-suite-build</a>&gt;`_。它包含波形查看器（gtkWave）、verilog模拟器（verilator和iverilog）、VHDL模拟器（GHDL）和其他工具。如果您想自己构建工具，请查看旧版模拟工具：ref:<cite>安装说明 &lt;sim backend install&gt;</cite>。</p>
-<p>我们首先安装所需的C++工具链并下载oss-cad-suite。要使用它，我们必须为要在其中使用它的每个 shell 加载 oss-cad-suite 环境。请注意，oss-cad-suite 包含一个 Python 3 解释器，如果永久加载，可能会干扰系统 Python 安装。</p>
-<p>前往 oss-cad-suite <a class="reference external" href="https://github.com/YosysHQ/oss-cad-suite-build/releases/latest">发布页面</a> 获取最新版本的下载链接。您可以将 oss-cad-suite 下载/解压到您选择的文件夹中。 （oss-cad-suite 的最后测试版本是“2023-10-22”，但最近的版本很可能也可以工作）</p>
+<p>如果您想安装用于仿真和/或形式化证明的工具，我们推荐 <a class="reference external" href="https://github.com/YosysHQ/oss-cad-suite-build">oss-cad-suite</a>。它包含波形查看器（gtkWave）、verilog仿真器（verilator和iverilog）、VHDL仿真器（GHDL）以及一些其他工具。如果您想自己构建工具，请查看旧版仿真工具 <a class="reference internal" href="../Simulation/install/index.html#sim-backend-install"><span class="std std-ref">安装说明</span></a>。</p>
+<p>首先，我们安装所需的C++工具链并下载oss-cad-suite。要使用它，我们必须为每个我们想要使用它的shell加载oss-cad-suite环境。请注意，oss-cad-suite包含一个可能会干扰系统Python安装的Python 3解释器，如果永久加载（loaded permanently）它。</p>
+<p>前往 oss-cad-suite <a class="reference external" href="https://github.com/YosysHQ/oss-cad-suite-build/releases/latest">发布页面</a> 获取最新版本的下载链接。您可以将 oss-cad-suite 下载/解压到您选择的文件夹中。 （oss-cad-suite 的最后测试版本是 <cite>2023-10-22</cite>，但最新的版本可能也可以工作）</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>make<span class="w"> </span>gcc<span class="w"> </span>g++<span class="w"> </span>zlib1g-dev
 curl<span class="w"> </span>-fLO<span class="w"> </span>&lt;download<span class="w"> </span>link&gt;
 tar<span class="w"> </span>xzf<span class="w"> </span>&lt;file<span class="w"> </span>that<span class="w"> </span>you<span class="w"> </span>downloaded&gt;
 </pre></div>
 </div>
-<p>要在 shell 中使用 oss-cad-suite，您需要加载它的环境，例如通过“souce &lt;oss-cad-suite的路径&gt;/environment”。</p>
+<p>要在 shell 中使用 oss-cad-suite，您需要加载它的环境，例如通过 <code class="docutils literal notranslate"><span class="pre">souce</span> <span class="pre">&lt;path</span> <span class="pre">to</span> <span class="pre">oss-cad-suite&gt;/environment</span></code> 实现。</p>
 </section>
 <section id="mac-os-x-installation">
 <h2>Mac OS X 安装<a class="headerlink" href="#mac-os-x-installation" title="此标题的永久链接"></a></h2>
@@ -1235,7 +1235,7 @@ tar<span class="w"> </span>xzf<span class="w"> </span>&lt;file<span class="w"> <
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>openjdk@17
 </pre></div>
 </div>
-<p>然后将其添加到您的路径中。</p>
+<p>然后，将其添加到您的路径（path）中。</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;/opt/homebrew/opt/openjdk@17/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
@@ -1243,7 +1243,7 @@ tar<span class="w"> </span>xzf<span class="w"> </span>&lt;file<span class="w"> <
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>jenv
 </pre></div>
 </div>
-<p>Jenv 将这些行添加到我的 .bash_profile 中</p>
+<p>Jenv 将这些行添加到 .bash_profile 中</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.jenv/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 <span class="nb">eval</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>jenv<span class="w"> </span>init<span class="w"> </span>-<span class="k">)</span><span class="s2">&quot;</span>
 </pre></div>
@@ -1253,26 +1253,26 @@ tar<span class="w"> </span>xzf<span class="w"> </span>&lt;file<span class="w"> <
 </pre></div>
 </div>
 <p>如果这对您有用，请告诉我们。如果这对您不起作用，您可以在此处阅读有关 Mac o SX 安装的 github 问题。 <a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/issues/1216">https://github.com/SpinalHDL/SpinalHDL/issues/1216</a></p>
-<p>如果您想安装用于模拟和/或形式证明的工具，我们推荐`oss-cad-suite &lt;<a class="reference external" href="https://github.com/YosysHQ/oss-cad-suite-build">https://github.com/YosysHQ/oss-cad-suite-build</a>&gt;`_。</p>
+<p>如果您想安装用于仿真和/或形式化证明的工具，我们推荐 <a class="reference external" href="https://github.com/YosysHQ/oss-cad-suite-build">oss-cad-suite</a>。</p>
 </section>
 <section id="windows-installation">
 <h2>Windows安装<a class="headerlink" href="#windows-installation" title="此标题的永久链接"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>虽然可以进行本机安装，但更简单且目前推荐的方法是在 Windows 上使用 WSL。如果您想使用 WSL，请安装您选择的发行版 &lt;<a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">https://learn.microsoft.com/en-us/windows/wsl/install</a>&gt;`_，并按照 Linux 安装说明进行操作。可以从“\wsl$”下的窗口访问 WSL 实例中的数据。如果您想使用 IntelliJ，则必须将 Linux 版本下载到 WSL，如果您想使用 VSCode，则可以使用 Windows 版本在 WSL 中远程编辑。</p>
+<p>虽然可以进行本机安装，但更简单且目前推荐的方法是在 Windows 上使用 WSL。如果您想使用 WSL，请安装您选择的 <a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">发行版</a>，并按照 Linux 安装说明进行操作。WSL 实例中的数据可以从Windows访问，在 <a href="#id2"><span class="problematic" id="id3">``</span></a>\wsl$``路径下。如果您想使用 IntelliJ，则必须将 Linux 版本下载到 WSL，如果您想使用 VSCode，则可以使用 Windows 版本远程编辑WSL中的数据。</p>
 </div>
-<p>在撰写本文时，安装 Scala 和 SBT 的推荐方法是通过 <a class="reference external" href="https://get-coursier.io/docs/cli-installation">Coursier</a>。除了 scala 工具之外，Coursier 还能够安装 Java JDK 来使用，在下面的示例中我们手动安装 Java。由于与 Scala 的兼容性，我们建议安装 JDK 17 (LTS)。</p>
-<p>首先下载并安装“Adoptium JDK 17 &lt;<a class="reference external" href="https://adoptium.net/temurin/releases/?os=windows&amp;version=17">https://adoptium.net/temurin/releases/?os=windows&amp;version=17</a>&gt;”_。下载、解压并运行 <a class="reference external" href="https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-win32.zip">Coursier 安装程序</a>，当询问是否同意更新您的 <code class="docutils literal notranslate"><span class="pre">PATH</span> <span class="pre">时</span></code> 变量。重新启动以强制更新“PATH”。</p>
-<p>这足以生成硬件。对于模拟，请继续选择以下任一选项。如果您想自己构建工具，请查看旧版模拟工具：ref:<cite>安装说明 &lt;sim backend install&gt;</cite>。</p>
+<p>在撰写本文时，推荐的安装 Scala 和 SBT 方法是通过 <a class="reference external" href="https://get-coursier.io/docs/cli-installation">Coursier</a>。除了 scala 工具之外，Coursier 还能够安装 Java JDK 来使用，在下面的示例中我们手动安装 Java。由于 Scala 兼容性原因，我们建议安装 JDK 17 (LTS)。</p>
+<p>首先，下载并安装 <a class="reference external" href="https://adoptium.net/temurin/releases/?os=windows&amp;version=17">Adoptium JDK 17</a>。下载、解压并运行 <a class="reference external" href="https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-win32.zip">Coursier 安装程序</a>，当询问是否更新您的 <code class="docutils literal notranslate"><span class="pre">PATH</span></code> 变量时，选择同意。重新启动以强制更新 <code class="docutils literal notranslate"><span class="pre">PATH</span></code>。</p>
+<p>这足以生成硬件。对于仿真，请继续选择以下任一选项。如果您想自己构建仿真工具，请查看旧版仿真工具 <a class="reference internal" href="../Simulation/install/index.html#sim-backend-install"><span class="std std-ref">安装说明</span></a>。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>SpinalHDL 维护者“Readon &lt;<a class="reference external" href="https://github.com/Readon">https://github.com/Readon</a>&gt;”提供的一体化解决方案可用于安装和运行 SpinalHDL，并通过 SymbiYosys 进行 Verilator 模拟和形式验证。下载`it &lt;<a class="reference external" href="https://github.com/Readon/msys2-installer/releases">https://github.com/Readon/msys2-installer/releases</a>&gt;`_并将环境安装在磁盘上的任何位置。单击“开始”菜单中的 MSYS2-MINGW64 图标启动构建环境，并使用 MSYS2 默认控制台。另一种方法是使用 Windows 终端或类似 Tabby 的应用程序，并使用启动命令 <code class="docutils literal notranslate"><span class="pre">%MSYS2_ROOT%\msys2_shell.cmd</span> <span class="pre">-defterm</span> <span class="pre">-here</span> <span class="pre">-no-start</span> <span class="pre">-mingw64</span></code>，其中 <a href="#id1"><span class="problematic" id="id2">``</span></a>%MSYS2_ROOT%` ` 是 msys2 安装的位置。值得注意的是，如果要离线使用，要仔细选择项目所依赖的库，否则需要手动下载包。有关更多详细信息，请参阅存储库的自述文件。</p>
+<p>SpinalHDL 维护者 <cite>Readon &lt;https://github.com/Readon&gt;</cite> 提供的一体化解决方案可用于安装和运行 SpinalHDL，并通过 Verilator 仿真、通过 SymbiYosys 进行形式化验证。下载 <a class="reference external" href="https://github.com/Readon/msys2-installer/releases">安装程序</a> 并将该环境安装在磁盘上的任何位置。单击“开始”菜单中的 MSYS2-MINGW64 图标启动构建环境，并使用 MSYS2 默认控制台。另一种方法是使用“Windows Terminal”或类似 Tabby 的应用程序，并使用启动命令 <code class="docutils literal notranslate"><span class="pre">%MSYS2_ROOT%\msys2_shell.cmd</span> <span class="pre">-defterm</span> <span class="pre">-here</span> <span class="pre">-no-start</span> <span class="pre">-mingw64</span></code>，其中 <code class="docutils literal notranslate"><span class="pre">%MSYS2_ROOT%</span></code> 是 msys2 安装的位置。值得注意的是，如果要离线使用，要仔细选择项目所依赖的库，否则需要手动下载安装包。有关更多详细信息，请参阅对应仓库的自述文件。</p>
 </div>
 <section id="msys2-verilator-for-simulation">
-<h3>用于仿真的 MSYS2 验证器<a class="headerlink" href="#msys2-verilator-for-simulation" title="此标题的永久链接"></a></h3>
-<p>我们建议通过“MSYS2 &lt;<a class="reference external" href="https://www.msys2.org">https://www.msys2.org</a>&gt;”安装编译器/验证器。其他安装 gcc/make/shell 的方法（例如 Chocolatey、scoop 等）也可能有效，但未经测试。</p>
-<p>SpinalHDL 维护者 <cite>Readon &lt;https://github.com/Readon&gt;</cite> 正在维护一个 MSYS2 分支，默认安装所有需要的官方可用和自定义构建的软件包（也由 Readon <cite>此处维护 &lt;https://github.com/Readon/ MINGW-SpinalHDL&gt;</cite>) 用于模拟和形式验证。可以在“此处 &lt;<a class="reference external" href="https://github.com/Readon/msys2-installer">https://github.com/Readon/msys2-installer</a>&gt;”找到。如果使用，则已经安装了下面通过 pacman 安装的软件包，并且可以跳过这些安装步骤。</p>
-<p>目前 verilator 4.228 是已知可以工作的最新可用版本。</p>
+<h3>用于仿真的 MSYS2 verilator工具<a class="headerlink" href="#msys2-verilator-for-simulation" title="此标题的永久链接"></a></h3>
+<p>我们建议通过 <cite>MSYS2 &lt;https://www.msys2.org&gt;</cite> 安装编译器/仿真器。其他安装 gcc/make/shell 的方法（例如 Chocolatey、scoop 等）也可能有效，但未经测试。</p>
+<p>SpinalHDL 维护者 <cite>Readon &lt;https://github.com/Readon&gt;</cite> 正在维护一个 MSYS2 分支，默认安装所有需要的官方可用和自定义构建的软件包（也由 Readon 在 <cite>此处 &lt;https://github.com/Readon/ MINGW-SpinalHDL&gt;</cite> 维护) 用于仿真和形式化验证。可以在 <cite>此处 &lt;https://github.com/Readon/msys2-installer&gt;</cite> 找到。如果使用该安装包，则已经安装了下面通过 pacman 安装的软件包，并且可以跳过这些安装步骤。</p>
+<p>目前 verilator 4.228 是已知可以工作的最新版本。</p>
 <p>下载最新的安装程序并使用默认设置安装 MSYS2。安装结束后你应该会得到一个 MSYS2 终端，运行：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pacman<span class="w"> </span>-Syuu
 <span class="c1"># will (request) close down terminal</span>
@@ -1289,11 +1289,11 @@ pacman<span class="w"> </span>-U<span class="w"> </span>mingw-w64-x86_64-verilat
 <span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span>/c/Users/User/AppData/Local/Coursier/data/bin:<span class="nv">$PATH</span>
 </pre></div>
 </div>
-<p>有了这个，您应该能够从 MSYS2 终端运行 sbt/verilator 模拟（通过调用 <code class="docutils literal notranslate"><span class="pre">sbt.bat</span></code> 进行使用）。</p>
+<p>有了这个，您应该能够从 MSYS2 终端运行 sbt/verilator 仿真（通过调用 <code class="docutils literal notranslate"><span class="pre">sbt.bat</span></code> 使用）。</p>
 </section>
 <section id="msys2-for-formal-verification">
-<h3>MSYS2用于形式验证<a class="headerlink" href="#msys2-for-formal-verification" title="此标题的永久链接"></a></h3>
-<p>除了上面的步骤之外，我们还需要安装yosys、sby、z3和yices。 yosys(yosys-smtbmc workable) 和 sby 均不作为官方 MSYS2 软件包提供，但软件包由 Readon &lt;<a class="reference external" href="https://github.com/Readon">https://github.com/Readon</a>&gt; 提供。如果您使用他们的安装程序，则不需要这些步骤（您应该检查是否有更新的软件包可用）。</p>
+<h3>用 MSYS2 实施形式化验证<a class="headerlink" href="#msys2-for-formal-verification" title="此标题的永久链接"></a></h3>
+<p>除了上面的步骤之外，我们还需要安装yosys、sby、z3和yices。 yosys(可用的yosys-smtbmc) 和 sby 并不使用 MSYS2 官方提供的包（无法使用），而是由 <cite>Readon &lt;https://github.com/Readon&gt;</cite> 提供。如果您使用他们的安装程序，则不需要后面这些步骤（您应该检查是否有更新的软件包可用）。</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pacman<span class="w"> </span>-S<span class="w"> </span>mingw-w64-x86_64-z3<span class="w"> </span>mingw-w64-x86_64-yices<span class="w"> </span>mingw-w64-x86_64-autotools<span class="w"> </span>mingw-w64-x86_64-python3-pip
 python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>click
 curl<span class="w"> </span>-OL<span class="w"> </span>https://github.com/Readon/MINGW-SpinalHDL/releases/download/v0.4.9/mingw-w64-x86_64-yosys-0.31-1-any.pkg.tar.zst
@@ -1306,35 +1306,35 @@ pacman<span class="w"> </span>-U<span class="w"> </span>*-python-sby-*.pkg.tar*
 </section>
 <section id="oci-container">
 <h2>OCI容器<a class="headerlink" href="#oci-container" title="此标题的永久链接"></a></h2>
-<p>还提供用于 SpinalHDL 开发的容器。该容器托管在“ghcr.io/spinalhdl/docker:master”，可以与 Docker/Podman/Github Codespaces 一起使用。它用于 SpinalHDL CI 回归，因此可以成为本地运行 CI 命令的简单方法。</p>
-<p>要运行容器，请运行例如SpinalHDL 项目根目录中的 <code class="docutils literal notranslate"><span class="pre">podman</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">.:/workspace</span> <span class="pre">-it</span> <span class="pre">ghcr.io/spinalhdl/docker:master</span></code> ，使项目目录在 <code class="docutils literal notranslate"><span class="pre">/workspace</span></code> 中可用。</p>
-<p>请查阅您的发行版（Linux、WSL）或 Docker (Windows) 的文档，了解如何安装您想要使用的容器运行时。多个编辑器/IDE（例如 VSCode、IntelliJ、Neovide）允许在容器中进行远程开发。如何进行远程开发请查阅小编的文档。</p>
+<p>也可以使用 SpinalHDL 开发容器。该容器托管在 <code class="docutils literal notranslate"><span class="pre">ghcr.io/spinalhdl/docker:master</span></code> ，可以与 Docker/Podman/Github Codespaces 一起使用。它用于 SpinalHDL CI 测试，因此，也可以成为本地运行的简单方法。</p>
+<p>要使用容器，请运行例如SpinalHDL 项目根目录中的 <code class="docutils literal notranslate"><span class="pre">podman</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">.:/workspace</span> <span class="pre">-it</span> <span class="pre">ghcr.io/spinalhdl/docker:master</span></code> ，使项目目录在 <code class="docutils literal notranslate"><span class="pre">/workspace</span></code> 中可用。</p>
+<p>请查阅您的发行版（Linux、WSL）或 Docker (Windows) 的文档，了解如何安装您想要使用容器的运行时依赖。多个编辑器/IDE（例如 VSCode、IntelliJ、Neovide）允许对容器进行远程开发。如何进行远程开发请查阅相应编辑器的文档。</p>
 </section>
 <section id="installing-sbt-in-an-internet-free-linux-environment">
 <h2>在无网络的 Linux 环境中安装 SBT<a class="headerlink" href="#installing-sbt-in-an-internet-free-linux-environment" title="此标题的永久链接"></a></h2>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果您不使用气隙环境，我们建议您使用正常的 Linux 安装。 （这是气隙环境安装的子集）</p>
+<p>如果您不使用无网环境，我们建议您使用正常的 Linux 安装。 （这里是无网环境安装的方法）</p>
 </div>
-<p>通常，SBT 使用在线存储库来下载和缓存项目依赖项。该缓存位于几个文件夹中：</p>
+<p>通常，SBT 使用在线仓库来下载和缓存项目的依赖项。该缓存位于几个文件夹中：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">~/.sbt</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">~/.cache/JNA</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">~/.cache/cousier</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">~/.cache/coursier</span></code></p></li>
 </ul>
 <p>要设置无互联网环境，您可以：</p>
 <ol class="arabic simple">
 <li><p>在有互联网的场景下配置环境（见上文）</p></li>
-<li><p>启动 Spinal 命令（请参阅：ref:<cite>使用 SBT</cite>）来获取依赖项（例如使用`入门 &lt;<a class="reference external" href="https://github.com/SpinalHDL/SpinalTemplateSbt">https://github.com/SpinalHDL/SpinalTemplateSbt</a>&gt;`_ 存储库）</p></li>
+<li><p>启动 Spinal 命令（请参阅 <a class="reference internal" href="SBT.html#using-sbt"><span class="std std-ref">将 CLI 中的 Spinal 与 SBT 结合使用</span></a>）来获取依赖项（例如使用 <a class="reference external" href="https://github.com/SpinalHDL/SpinalTemplateSbt">入门</a> 仓库）</p></li>
 <li><p>将缓存复制到无互联网环境。</p></li>
 </ol>
 </section>
 </section>
 <section id="create-a-first-spinalhdl-project">
 <span id="template"></span><h1>创建第一个 SpinalHDL 项目<a class="headerlink" href="#create-a-first-spinalhdl-project" title="此标题的永久链接"></a></h1>
-<p>我们为您准备了一个现成的项目：<a class="reference external" href="https://github.com/SpinalHDL/SpinalTemplateSbt">入门</a> 存储库。</p>
-<p>您可以下载 &lt;<a class="reference external" href="https://codeload.github.com/SpinalHDL/SpinalTemplateSbt/zip/master">https://codeload.github.com/SpinalHDL/SpinalTemplateSbt/zip/master</a>&gt;`_ 它，或克隆它。</p>
-<p>以下命令将项目克隆到名为“MySpinalProject”的新目录中，并初始化新的“git”历史记录：</p>
+<p>我们为您准备了一个现成的项目：<a class="reference external" href="https://github.com/SpinalHDL/SpinalTemplateSbt">入门</a> 仓库。</p>
+<p>您可以 <a class="reference external" href="https://codeload.github.com/SpinalHDL/SpinalTemplateSbt/zip/master">下载</a> 它，或克隆它。</p>
+<p>以下命令将项目克隆到名为 <code class="docutils literal notranslate"><span class="pre">MySpinalProject</span></code> 的新目录中，并初始化新的 <code class="docutils literal notranslate"><span class="pre">git</span></code> 历史记录：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w"> </span>https://github.com/SpinalHDL/SpinalTemplateSbt.git<span class="w"> </span>MySpinalProject
 <span class="nb">cd</span><span class="w"> </span>MySpinalProject
 rm<span class="w"> </span>-rf<span class="w"> </span>.git
@@ -1360,22 +1360,22 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">build.sbt</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">sbt</span></code> 的 Scala 配置</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">构建.sc</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">build.sc</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">mill</span></code> 是一个 <code class="docutils literal notranslate"><span class="pre">sbt</span></code> 的替代品，它的配置方法是</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">hw/</span></code></p></td>
 <td><p>包含硬件描述的文件夹</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">项目/</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">project/</span></code></p></td>
 <td><p>更多 Scala 配置</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">自述文件.md</span></code></p></td>
-<td><p>描述您的项目的“text/markdown”文件</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">README.md</span></code></p></td>
+<td><p>描述您的项目的 <code class="docutils literal notranslate"><span class="pre">text/markdown</span></code> 文件</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.gitignore</span></code></p></td>
 <td><p>版本控制中要忽略的文件列表</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.mill-版本</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">.mill-version</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">mill</span></code> 的更多配置</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">.scalafmt.conf</span></code></p></td>
@@ -1383,21 +1383,21 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 </tr>
 </tbody>
 </table>
-<p>正如您可能猜到的，这里有趣的是“hw/”。它包含四个文件夹：“spinal/”、“verilog/” 和“vhdl/” 用于您的 IP，“gen/” 用于使用 Spinal 生成的 IP。</p>
+<p>正如您可能猜到的，这里有趣的是 <code class="docutils literal notranslate"><span class="pre">hw/</span></code>。它包含四个文件夹： <code class="docutils literal notranslate"><span class="pre">spinal/</span></code>、 <code class="docutils literal notranslate"><span class="pre">verilog/</span></code> 和 <code class="docutils literal notranslate"><span class="pre">vhdl/</span></code> 保存您的 IP， <code class="docutils literal notranslate"><span class="pre">gen/</span></code> 保存 Spinal 生成的 IP。</p>
 <p><code class="docutils literal notranslate"><span class="pre">hw/spinal/</span></code> 包含一个以您的项目名称命名的文件夹。该名称以及公司名称必须在 <code class="docutils literal notranslate"><span class="pre">build.sbt</span></code> 和 <code class="docutils literal notranslate"><span class="pre">build.sc</span></code> 中设置；并且这个名称必须在 <code class="docutils literal notranslate"><span class="pre">.scala</span></code> 文件开头以 <code class="docutils literal notranslate"><span class="pre">package</span> <span class="pre">yourprojectname</span></code> 的形式给出。</p>
-<p>在``hw/spinal/yourprojectname/<a href="#id1"><span class="problematic" id="id2">``</span></a>中，是你的IP的描述，模拟测试，正式测试；还有“Config.scala”，其中包含“Spinal”的配置。</p>
+<p>在 <code class="docutils literal notranslate"><span class="pre">hw/spinal/yourprojectname/</span></code> 中，是你的IP描述，仿真测试，形式化验证测试；还有 <code class="docutils literal notranslate"><span class="pre">Config.scala</span></code>，其中包含 <a href="#id1"><span class="problematic" id="id2">``</span></a>Spinal``的配置。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p><code class="docutils literal notranslate"><span class="pre">sbt</span></code> 必须且**仅**在项目的根目录中使用，该目录包含 <code class="docutils literal notranslate"><span class="pre">build.sbt</span></code> 文件。</p>
 </div>
 </section>
 <section id="using-spinal-on-spinalhdl-code">
-<h2>在 SpinalHDL 代码上使用 Spinal<a class="headerlink" href="#using-spinal-on-spinalhdl-code" title="此标题的永久链接"></a></h2>
-<p>现在，教程展示了如何根据您的开发环境在 SpinalHDL 代码上使用 Spinal：</p>
+<h2>在 SpinalHDL 代码中使用 Spinal<a class="headerlink" href="#using-spinal-on-spinalhdl-code" title="此标题的永久链接"></a></h2>
+<p>现在，教程展示了如何根据您的开发环境在 SpinalHDL 代码中使用 Spinal：</p>
 <ul class="simple">
-<li><p><span class="xref std std-ref">使用 SBT</span></p></li>
-<li><p><span class="xref std std-ref">使用 VSCodium</span></p></li>
-<li><p><span class="xref std std-ref">使用 IntelliJ</span></p></li>
+<li><p><a class="reference internal" href="SBT.html#using-sbt"><span class="std std-ref">将 CLI 中的 Spinal 与 SBT 结合使用</span></a></p></li>
+<li><p><a class="reference internal" href="VSCodium.html#using-vscodium"><span class="std std-ref">使用 VSCodium 的 Spinal</span></a></p></li>
+<li><p><a class="reference internal" href="IntelliJ.html#using-intellij"><span class="std std-ref">使用 IntelliJ IDEA 中的 Spinal</span></a></p></li>
 </ul>
 </section>
 </section>

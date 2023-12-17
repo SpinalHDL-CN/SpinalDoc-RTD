@@ -129,8 +129,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#linux-installation">Linux安装</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#mac-os-x-installation">Mac OS X 安装</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#windows-installation">Windows安装</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#msys2-verilator-for-simulation">用于仿真的 MSYS2 验证器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#msys2-for-formal-verification">MSYS2用于形式验证</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#msys2-verilator-for-simulation">用于仿真的 MSYS2 verilator工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#msys2-for-formal-verification">用 MSYS2 实施形式化验证</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#oci-container">OCI容器</a></li>
@@ -139,7 +139,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#create-a-first-spinalhdl-project">创建第一个 SpinalHDL 项目</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#the-directory-structure-of-a-project">项目的目录结构</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#using-spinal-on-spinalhdl-code">在 SpinalHDL 代码上使用 Spinal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Install%20and%20setup.html#using-spinal-on-spinalhdl-code">在 SpinalHDL 代码中使用 Spinal</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/SBT.html">将 CLI 中的 Spinal 与 SBT 结合使用</a></li>
@@ -1110,10 +1110,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#general-structure">总体结构</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#exploring-the-datamodel">探索数据模型</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#compilation-phases">编译阶段</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#modifying-a-netlist-as-a-user-without-plugins">在不使用插件的情况下以用户身份修改网表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#compilation-phases">编译环节</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modifying-a-netlist-as-a-user-without-plugins">在不使用插件的情况下，以用户身份修改网表</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#user-space-netlist-analysis">用户空间网表分析</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#enumerating-every-clockdomain-in-use">Enumerating every ClockDomain in use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enumerating-every-clockdomain-in-use">遍历、枚举正在使用的每个时钟域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="types.html">类型</a><ul>
@@ -1179,31 +1179,31 @@
 <h1>SpinalHDL 内部数据模型<a class="headerlink" href="#spinalhdl-internal-datamodel" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
-<p>This page provides documentation on the internal data structure utilized by SpinalHDL for storing and modifying the netlist described by users via the SpinalHDL API.</p>
+<p>本页面提供有关 SpinalHDL 使用的内部数据结构的文档，用于存储和修改用户通过 SpinalHDL API 描述的网表。</p>
 </section>
 <section id="general-structure">
 <h2>总体结构<a class="headerlink" href="#general-structure" title="此标题的永久链接"></a></h2>
 <p>下图遵循 UML 命名法：</p>
 <ul class="simple">
-<li><p>带有白色箭头的链接表示“基本扩展目标”</p></li>
-<li><p>带有黑色菱形的链接表示“基础包含目标”</p></li>
-<li><p>带有白色菱形的链接意味着“基地有对目标的引用”</p></li>
+<li><p>带有白色箭头的链接表示“源继承目标”</p></li>
+<li><p>带有黑色菱形的链接表示“源包含目标”</p></li>
+<li><p>带有白色菱形的链接意味着“源中有一个对目标的引用”</p></li>
 <li><p>The * symbol mean “multiple”</p></li>
 </ul>
-<p>The majority of the data structures are stored using double-linked lists, which facilitate the insertion and removal of elements.</p>
+<p>大多数数据结构都是使用双向链表存储，这方便了元素的插入和删除。</p>
 <p>全局数据结构图如下：</p>
 <img alt="../../_images/astGlobal.png" class="align-center" src="../../_images/astGlobal.png" />
-<p>And here more details about the <cite>Statement</cite> class :</p>
+<p>这里是关于 <cite>Statement</cite> 类的更多细节：</p>
 <img alt="../../_images/astStatement.png" class="align-center" src="../../_images/astStatement.png" />
-<p>In general, when an element within the data model utilizes other expressions or statements, that element typically includes functions for iterating over these usages. For example, each Expression is equipped with a <em>foreachExpression</em> function.</p>
-<p>When using these iteration functions, you have the option to remove the current element from the tree.</p>
-<p>Additionally, as a side note, while the <em>foreachXXX</em> functions iterate only one level deep, there are often corresponding <em>walkXXX</em> functions that perform recursive iteration. For instance, using <em>myExpression.walkExpression</em> on <em>((a+b)+c)+d</em> will traverse the entire tree of addition operations.</p>
-<p>There are also utilities like <em>myExpression.remapExpressions(Expression =&gt; Expression),</em> which iterate through all the expressions used within <em>myExpression</em> and replace them with the one you provide.</p>
-<p>更一般地说，SpinalHDL 完成的大多数图形检查和转换都位于 &lt;<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/dev/core/src/main/scala/spinal/core/internals/Phase.scala">https://github.com/SpinalHDL/SpinalHDL/blob/dev/core/src/main/scala/spinal/core/internals/Phase.scala</a> &gt;</p>
+<p>一般来说，当数据模型内的元素使用其他表达式或语句时，该元素通常包括迭代这些用法的函数。例如，每个表达式都配有一个 <em>foreachExpression</em> 函数。</p>
+<p>使用这些迭代函数时，您也可以从树中删除当前元素。</p>
+<p>此外，作为旁注，虽然 <em>foreachXXX</em> 函数仅迭代一层深度，但通常有相应的 <em>walkXXX</em> 函数执行递归迭代。例如，在 <em>((a+b)+c)+d</em> 表达式上使用 <em>myExpression.walkExpression</em> ，这将遍历整个加法运算树。</p>
+<p>还有像 <em>myExpression.remapExpressions(Expression =&gt; Expression),</em> 这样的实用工具，它会迭代 <em>myExpression</em> 中使用的所有表达式，并将它们替换为您提供的表达式。</p>
+<p>通常来说，SpinalHDL 完成的大多数图(graph)关系检查和转换都位于 &lt;<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/dev/core/src/main/scala/spinal/core/internals/Phase.scala">https://github.com/SpinalHDL/SpinalHDL/blob/dev/core/src/main/scala/spinal/core/internals/Phase.scala</a> &gt;</p>
 </section>
 <section id="exploring-the-datamodel">
 <h2>探索数据模型<a class="headerlink" href="#exploring-the-datamodel" title="此标题的永久链接"></a></h2>
-<p>Here is an example that identifies all adders within the netlist without utilizing shortcuts. :</p>
+<p>在不使用快捷方式的情况下，识别网表中所有加法器的示例如下 ：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span><span class="w"> </span><span class="nc">FindAllAddersManualy</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">Toplevel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1260,7 +1260,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这将产生：</p>
+<p>这将生成：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[Runtime] SpinalHDL v1.6.1    git head : 3100c81b37a04715d05d9b9873c3df07a0786a9b
 [Runtime] JVM max memory : 8044.0MiB
 [Runtime] Current date : 2021.10.16 20:31:33
@@ -1276,7 +1276,7 @@ Found (toplevel/a : in UInt[8 bits]) + (toplevel/b : in UInt[8 bits])
 [Done] at 0.218
 </pre></div>
 </div>
-<p>Please note that in many cases, shortcuts are available. All the recursive processes mentioned earlier could have been replaced by a single one. :</p>
+<p>请注意，在许多情况下，都可以使用快捷方式。前面提到的所有递归过程，都可以用一个递归过程代替。 ：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">override</span><span class="w"> </span><span class="k">def</span><span class="w"> </span><span class="nf">impl</span><span class="p">(</span><span class="n">pc</span><span class="p">:</span><span class="w"> </span><span class="nc">PhaseContext</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">println</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
 <span class="w">  </span><span class="n">pc</span><span class="p">.</span><span class="n">walkExpression</span><span class="p">{</span>
@@ -1288,24 +1288,24 @@ Found (toplevel/a : in UInt[8 bits]) + (toplevel/b : in UInt[8 bits])
 </div>
 </section>
 <section id="compilation-phases">
-<h2>编译阶段<a class="headerlink" href="#compilation-phases" title="此标题的永久链接"></a></h2>
-<p>Here is the complete list of default phases, arranged in order, that are employed to modify, check, and generate Verilog code from a top-level component. :</p>
+<h2>编译环节<a class="headerlink" href="#compilation-phases" title="此标题的永久链接"></a></h2>
+<p>以下是按顺序排列的默认环节的完整列表，用于从顶级组件修改、检查和生成 Verilog 代码。 ：</p>
 <p>&lt;<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/ec8cd9f513566b43cbbdb08d0df4dee1f0fee655/core/src/main/scala/spinal/core/internals/Phase.scala#L2487">https://github.com/SpinalHDL/SpinalHDL/blob/ec8cd9f513566b43cbbdb08d0df4dee1f0fee655/core/src/main/scala/spinal/core/internals/Phase.scala#L2487</a>&gt;</p>
-<p>If you, as a user, add a new compilation phase by using <em>SpinalConfig.addTransformationPhase(new MyPhase())</em>, this phase will be inserted immediately after the user component elaboration process, which is relatively early in the compilation sequence. During this phase, you can still make use of the complete SpinalHDL user API to introduce elements into the netlist.</p>
-<p>If you choose to use the SpinalConfig.phasesInserters API, it’s essential to exercise caution and ensure that any modifications made to the netlist align with the phases that have already been executed. For instance, if you insert your phase after the <em>PhaseInferWidth</em>, you must specify the width of each node you introduce.</p>
+<p>如果您作为用户使用 <em>SpinalConfig.addTransformationPhase(new MyPhase())</em> 添加新的编译环节，则该环节将在用户组件实例细化后立即插入，这在编译序列中相对较早。在此环节，您仍然可以使用完整的 SpinalHDL 用户 API 将元素引入网表。</p>
+<p>如果您选择使用 SpinalConfig.phasesInserters API，则必须谨慎行事并确保对网表所做的任何修改与已执行的阶段保持一致。例如，如果您在 <em>PhaseInferWidth</em> 之后插入环节，则必须指定引入的每个节点的位宽。</p>
 </section>
 <section id="modifying-a-netlist-as-a-user-without-plugins">
-<h2>在不使用插件的情况下以用户身份修改网表<a class="headerlink" href="#modifying-a-netlist-as-a-user-without-plugins" title="此标题的永久链接"></a></h2>
-<p>There are several user APIs that enable you to make modifications during the user elaboration phase. :</p>
+<h2>在不使用插件的情况下，以用户身份修改网表<a class="headerlink" href="#modifying-a-netlist-as-a-user-without-plugins" title="此标题的永久链接"></a></h2>
+<p>有多个用户 API 使您能够在用户实例细化环节进行修改。 ：</p>
 <ul class="simple">
-<li><p>mySignal.removeAssignments ：将删除所有先前影响给定信号的 <cite>:=</cite></p></li>
-<li><p>mySignal.remove 语句：将使信号的存在无效</p></li>
-<li><p>mySignal.setAsDirectionLess ：将输入/输出信号转换为内部信号</p></li>
+<li><p>mySignal.removeAssignments ：将删除所有先前对给定信号的赋值 <cite>:=</cite></p></li>
+<li><p>mySignal.removeStatement：将消除存在的信号</p></li>
+<li><p>mySignal.setAsDirectionLess ：将输入/输出信号转换为内部信号（无方向）</p></li>
 <li><p>mySignal.setName ：在信号上强制指定名称（还有许多其他变体）</p></li>
 <li><p>mySubComponent.mySignal.pull() ：将提供给定信号的可读副本，即使该信号位于层次结构中的其他位置</p></li>
 <li><p>myComponent.rework{ myCode } ：在 <cite>myComponent</cite> 上下文中执行 <cite>myCode</cite>，允许使用用户 API 修改它</p></li>
 </ul>
-<p>For example, the following code can be used to modify a top-level component by adding a three-stage shift register to each input and output of the component. This is particularly useful for synthesis testing.</p>
+<p>例如，以下代码可用于修改顶级组件，向组件的每个输入和输出添加三级移位寄存器。这对于综合器测试特别有用。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">ffIo</span><span class="p">[</span><span class="nc">T</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="nc">Component</span><span class="p">](</span><span class="n">c</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">):</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">=</span><span class="p">{</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">buf1</span><span class="p">[</span><span class="nc">T</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="nc">Data</span><span class="p">](</span><span class="n">that</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">KeepAttribute</span><span class="p">(</span><span class="nc">RegNext</span><span class="p">(</span><span class="n">that</span><span class="p">)).</span><span class="n">addAttribute</span><span class="p">(</span><span class="s">&quot;DONT_TOUCH&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">buf</span><span class="p">[</span><span class="nc">T</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="nc">Data</span><span class="p">](</span><span class="n">that</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buf1</span><span class="p">(</span><span class="n">buf1</span><span class="p">(</span><span class="n">buf1</span><span class="p">(</span><span class="n">that</span><span class="p">)))</span>
@@ -1327,11 +1327,11 @@ Found (toplevel/a : in UInt[8 bits]) + (toplevel/b : in UInt[8 bits])
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>You can use the code in the following manner: :</p>
+<p>您可以通过以下方式使用该代码：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">SpinalVerilog</span><span class="p">(</span><span class="n">ffIo</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="nc">MyToplevel</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Here is a function that enables you to execute the body code as if the current component’s context did not exist. This can be particularly useful for defining new signals without the influence of the current conditional scope (such as when or switch).</p>
+<p>这是一个函数，使您能够执行主体代码，就好像当前组件的上下文不存在一样。这对于定义新信号特别有用，这样信号不受当前条件范围（例如when或switch）的影响。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">atBeginingOfCurrentComponent</span><span class="p">[</span><span class="nc">T</span><span class="p">](</span><span class="n">body</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nc">T</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">body</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Component</span><span class="p">.</span><span class="n">current</span><span class="p">.</span><span class="n">dslBody</span><span class="w">  </span><span class="c1">// Get the head of the current component symbols tree (AST in other words)</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">body</span><span class="p">.</span><span class="n">push</span><span class="p">()</span><span class="w">                 </span><span class="c1">// Now all access to the SpinalHDL API will be append to it (instead of the current context)</span>
@@ -1359,11 +1359,11 @@ Found (toplevel/a : in UInt[8 bits]) + (toplevel/b : in UInt[8 bits])
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This kind of functionality is, for instance, employed in the VexRiscv pipeline to dynamically create components or elements as needed.</p>
+<p>例如，这种功能被用在 VexRiscv 管道中，以根据需要动态创建组件或元素。</p>
 </section>
 <section id="user-space-netlist-analysis">
 <h2>用户空间网表分析<a class="headerlink" href="#user-space-netlist-analysis" title="此标题的永久链接"></a></h2>
-<p>The SpinalHDL data model is also accessible and can be read during user-time elaboration. Here’s an example that can help find the shortest logical path (in terms of clock cycles) to traverse a list of signals. In this specific case, it is being used to analyze the latency of the VexRiscv FPU design.</p>
+<p>SpinalHDL 的数据模型也是可访问的，并且可以在用户实力细化时读取。下面的示例可以帮助找到遍历信号列表的最短逻辑路径（就时钟周期而言）。在本例中，它用于分析 VexRiscv FPU 设计的延迟。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">println</span><span class="p">(</span><span class="s">&quot;cpuDecode to fpuDispatch &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nc">LatencyAnalysis</span><span class="p">(</span><span class="n">vex</span><span class="p">.</span><span class="n">decode</span><span class="p">.</span><span class="n">arbitration</span><span class="p">.</span><span class="n">isValid</span><span class="p">,</span><span class="w"> </span><span class="n">logic</span><span class="p">.</span><span class="n">decode</span><span class="p">.</span><span class="n">input</span><span class="p">.</span><span class="n">valid</span><span class="p">))</span>
 <span class="n">println</span><span class="p">(</span><span class="s">&quot;fpuDispatch to cpuRsp    &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nc">LatencyAnalysis</span><span class="p">(</span><span class="n">logic</span><span class="p">.</span><span class="n">decode</span><span class="p">.</span><span class="n">input</span><span class="p">.</span><span class="n">valid</span><span class="p">,</span><span class="w"> </span><span class="n">plugin</span><span class="p">.</span><span class="n">port</span><span class="p">.</span><span class="n">rsp</span><span class="p">.</span><span class="n">valid</span><span class="p">))</span>
 
@@ -1378,8 +1378,8 @@ Found (toplevel/a : in UInt[8 bits]) + (toplevel/b : in UInt[8 bits])
 <p>在这里您可以找到该 LatencyAnalysis 工具的实现：&lt;<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/3b87c898cb94dc08456b4fe2b1e8b145e6c86f63/lib/src/main/scala/spinal/lib/Utils.scala#L620">https://github.com/SpinalHDL/SpinalHDL/blob/3b87c898cb94dc08456b4fe2b1e8b145e6c86f63/lib/src/main/scala/spinal/lib/Utils.scala#L620</a>&gt;</p>
 </section>
 <section id="enumerating-every-clockdomain-in-use">
-<h2>Enumerating every ClockDomain in use<a class="headerlink" href="#enumerating-every-clockdomain-in-use" title="此标题的永久链接"></a></h2>
-<p>In this case, this is accomplished after the elaboration process by utilizing the SpinalHDL report.</p>
+<h2>遍历、枚举正在使用的每个时钟域<a class="headerlink" href="#enumerating-every-clockdomain-in-use" title="此标题的永久链接"></a></h2>
+<p>在本例中，这是在实例细化完成之后利用 SpinalHDL 报告完成的。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span><span class="w"> </span><span class="nc">MyTopLevelVerilog</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">App</span><span class="p">{</span>
 <span class="w">  </span><span class="k">class</span><span class="w"> </span><span class="nc">MyTopLevel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">cdA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">.</span><span class="n">external</span><span class="p">(</span><span class="s">&quot;rawrr&quot;</span><span class="p">)</span>
@@ -1412,7 +1412,7 @@ Found (toplevel/a : in UInt[8 bits]) + (toplevel/b : in UInt[8 bits])
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>会打印出来</p>
+<p>打印信息是</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ClockDomains</span> <span class="p">:</span> <span class="n">rawrr_clk</span><span class="p">,</span> <span class="n">miaou_clk</span><span class="p">,</span> <span class="n">clkC</span>
 <span class="n">Externals</span> <span class="p">:</span> <span class="n">rawrr_clk</span><span class="p">,</span> <span class="n">miaou_clk</span>
 </pre></div>
