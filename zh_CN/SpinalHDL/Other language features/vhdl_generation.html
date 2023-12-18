@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="图书馆" href="../Libraries/index.html" />
-    <link rel="prev" title="模拟和输入输出" href="analog_inout.html" />
+    <link rel="prev" title="模拟信号和输入输出" href="analog_inout.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -375,10 +375,10 @@
 <li class="toctree-l3"><a class="reference internal" href="../Structuring/components_hierarchy.html#synthesized-component-names">合成的组件名称</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Structuring/area.html">区域</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Structuring/area.html">逻辑区</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Structuring/function.html">函数</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Structuring/function.html#rgb-to-gray">RGB转灰度</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Structuring/function.html#valid-ready-payload-bus">有效就绪有效负载总线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Structuring/function.html#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Structuring/function.html#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Structuring/clock_domain.html">时钟域</a><ul>
@@ -582,7 +582,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">其他语言功能</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="utils.html">实用程序</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">实用工具</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="utils.html#general">介绍</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="utils.html#cat">Cat</a></li>
 </ul>
@@ -598,15 +598,15 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="stub.html">存根（Stub）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assertion.html">断言</a></li>
-<li class="toctree-l2"><a class="reference internal" href="report.html">报告</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scope_property.html">范围属性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="analog_inout.html">模拟和输入输出</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="assertion.html">Assertions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="report.html">Report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scope_property.html">ScopeProperty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="analog_inout.html">模拟信号和输入输出</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="analog_inout.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analog_inout.html#analog">模拟</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analog_inout.html#inout">进出</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analog_inout.html#inoutwrapper">输入输出包装器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="analog_inout.html#manually-driving-analog-bundles">手动驱动模拟包</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analog_inout.html#analog">模拟信号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analog_inout.html#inout">输入/出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analog_inout.html#inoutwrapper">输入/出包装器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="analog_inout.html#manually-driving-analog-bundles">手动驱动模拟线束</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">VHDL 和 Verilog 生成</a><ul>
@@ -627,7 +627,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Libraries/index.html">图书馆</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/utils.html">实用程序</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/utils.html">实用工具</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/utils.html#state-less-utilities">无状态公用事业</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/utils.html#state-full-utilities">State full utilities</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/utils.html#counter">柜台</a></li>
@@ -642,7 +642,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#semantics">语义学</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#functions">功能</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#utils">实用程序</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#utils">实用工具</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/stream.html#streamfifo">流先进先出</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/stream.html#streamfifocc">流FifoCC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/stream.html#streamccbytoggle">StreamCCByToggle</a></li>
@@ -936,7 +936,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Simple%20ones/pll_resetctrl.html#toplevel-definition">TopLevel定义</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/rgb_to_gray.html">RGB转灰度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/rgb_to_gray.html">RGB转灰度值</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/sinus_rom.html">正弦rom</a></li>
 </ul>
 </li>
@@ -1042,12 +1042,12 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../miscelenea/index.html">杂项</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../miscelenea/frequent_errors.html">经常出错</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../miscelenea/frequent_errors.html#exception-in-thread-main-java-lang-nullpointerexception">线程“main”中的异常 java.lang.NullPointerException</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscelenea/frequent_errors.html">常见错误</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscelenea/frequent_errors.html#exception-in-thread-main-java-lang-nullpointerexception">“main”线程中异常 java.lang.NullPointerException</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../miscelenea/frequent_errors.html#hierarchy-violation">层次违例(Hierarchy violation)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/frequent_errors.html#signal-x-can-t-be-assigned-by-y">信号 X 不能由 Y 分配</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/frequent_errors.html#input-signal-x-can-t-be-assigned-by-y">输入信号X不能被Y分配</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/frequent_errors.html#output-signal-x-can-t-be-assigned-by-y">输出信号X不能由Y分配</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/frequent_errors.html#signal-x-can-t-be-assigned-by-y">Signal X can’t be assigned by Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/frequent_errors.html#input-signal-x-can-t-be-assigned-by-y">Input signal X can’t be assigned by Y</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/frequent_errors.html#output-signal-x-can-t-be-assigned-by-y">Output signal X can’t be assigned by Y</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../miscelenea/core/core_components.html"><code class="docutils literal notranslate"><span class="pre">spinal.core</span></code> 组件</a><ul>
@@ -1055,24 +1055,24 @@
 <li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#clock-domain-syntax">时钟域语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#clock-configuration">时钟配置</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#external-clock">外部时钟</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#cross-clock-domain">跨时钟域</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#cross-clock-domain">跨时钟域设计</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#assignments">赋值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#when-switch">何时/切换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#when-switch">When / Switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#component-hierarchy">组件/层次结构</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">区域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">逻辑区</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#function">函数</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB转灰度</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#valid-ready-payload-bus">有效就绪有效负载总线</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#vhdl-generation">VHDL生成</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#instantiate-vhdl-and-verilog-ip">实例化 VHDL 和 Verilog IP</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#utils">实用程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#utils">实用工具</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../miscelenea/core/elements.html">元素</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../miscelenea/core/elements.html">Element</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../miscelenea/core/elements.html#range">范围</a></li>
 </ul>
 </li>
@@ -1179,8 +1179,8 @@
 <h1>VHDL 和 Verilog 生成<a class="headerlink" href="#vhdl-and-verilog-generation" title="此标题的永久链接"></a></h1>
 <section id="generate-vhdl-and-verilog-from-a-spinalhdl-component">
 <h2>从 SpinalHDL 组件生成 VHDL 和 Verilog<a class="headerlink" href="#generate-vhdl-and-verilog-from-a-spinalhdl-component" title="此标题的永久链接"></a></h2>
-<p>要从 SpinalHDL 组件生成 VHDL，您只需在 Scala main 中调用 SpinalVhdl(new YourComponent) 即可。</p>
-<p>生成 Verilog 完全相同，但用“SpinalVerilog”代替“SpinalVHDL”</p>
+<p>要从 SpinalHDL 组件生成 VHDL，您只需在 Scala <code class="docutils literal notranslate"><span class="pre">main</span></code> 函数中调用 <code class="docutils literal notranslate"><span class="pre">SpinalVhdl(new</span> <span class="pre">YourComponent)</span></code> 即可。</p>
+<p>生成 Verilog 完全相同，但用 <code class="docutils literal notranslate"><span class="pre">SpinalVerilog</span></code> 代替 <code class="docutils literal notranslate"><span class="pre">SpinalVHDL</span></code></p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">core</span><span class="p">.</span><span class="n">_</span>
 
 <span class="c1">// A simple component definition.</span>
@@ -1207,12 +1207,12 @@
 </div>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>“SpinalVhdl” 和 “SpinalVerilog” 可能需要创建组件类的多个实例，因此第一个参数不是“Component” 引用，而是返回新组件的函数。</p>
+<p><code class="docutils literal notranslate"><span class="pre">SpinalVhdl</span></code> 和 <code class="docutils literal notranslate"><span class="pre">SpinalVerilog</span></code> 可能需要创建组件类的多个实例，因此第一个参数不是 <code class="docutils literal notranslate"><span class="pre">Component</span></code> 引用，而是返回新组件的函数。</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>“SpinalVerilog”实施于 2016 年 6 月 5 日开始。该后端成功通过了与 VHDL 相同的回归测试（RISCV CPU、多核和流水线 Mandelbrot、UART RX/TX、单时钟 fifo、双时钟 fifo、Gray柜台， …）。</p>
-<p>如果您对这个新后端有任何问题，请创建“Github 问题 &lt;<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/issues">https://github.com/SpinalHDL/SpinalHDL/issues</a>&gt;”_ 描述问题。</p>
+<p><code class="docutils literal notranslate"><span class="pre">SpinalVerilog</span></code> 实施于 2016 年 6 月 5 日开始。该后端成功通过了与 VHDL 相同的回归测试（RISCV CPU、多核和流水线 Mandelbrot、UART RX/TX、单时钟域 fifo、双时钟域 fifo、格雷码计数器， …）。</p>
+<p>如果您对这个新后端有任何问题，请创建 <a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/issues">Github 工单</a> 描述问题。</p>
 </div>
 <section id="parametrization-from-scala">
 <h3>Scala 的参数化<a class="headerlink" href="#parametrization-from-scala" title="此标题的永久链接"></a></h3>
@@ -1226,49 +1226,49 @@
 <thead>
 <tr class="row-odd"><th class="head"><p>参数名称</p></th>
 <th class="head"><p>类型</p></th>
-<th class="head"><p>默认</p></th>
+<th class="head"><p>默认值</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">模式</span></code></p></td>
-<td><p>脊柱模式</p></td>
-<td><p>无效的</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">mode</span></code></p></td>
+<td><p>SpinalMode</p></td>
+<td><p>null</p></td>
 <td><div class="line-block">
-<div class="line">设置 SpinalHDL hdl 生成模式。</div>
-<div class="line">可以设置为“VHDL”或“Verilog”</div>
+<div class="line">设置 SpinalHDL 生成HDL的模式。</div>
+<div class="line">可以设置为 <code class="docutils literal notranslate"><span class="pre">VHDL</span></code> 或 <code class="docutils literal notranslate"><span class="pre">Verilog</span></code></div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">defaultConfigForClockDomains</span></code></p></td>
-<td><p>时钟域配置</p></td>
+<td><p>ClockDomainConfig</p></td>
 <td><div class="line-block">
-<div class="line">上升沿时钟</div>
-<div class="line">异步复位</div>
-<div class="line">复位高电平有效</div>
-<div class="line">时钟使能高电平有效</div>
+<div class="line">RisingEdgeClock</div>
+<div class="line">AsynchronousReset</div>
+<div class="line">ResetActiveHigh</div>
+<div class="line">ClockEnableActiveHigh</div>
 </div>
 </td>
-<td><p>设置将用作所有新“ClockDomain”默认值的时钟配置。</p></td>
+<td><p>设置将用作所有新 <a href="#id1"><span class="problematic" id="id2">``</span></a>ClockDomain``时钟域默认值的配置。</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onlyStdLogicVectorAtTopLevelIo</span></code></p></td>
-<td><p>布尔值</p></td>
-<td><p>错误的</p></td>
-<td><p>将所有无符号/有符号顶级 io 更改为 std_logic_vector。</p></td>
+<td><p>Boolean</p></td>
+<td><p>false</p></td>
+<td><p>将所有无符号/有符号顶级 io 更改为 std_logic_vector类型。</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">默认时钟域频率</span></code></p></td>
-<td><p>I时钟域频率</p></td>
-<td><p>未知频率</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">defaultClockDomainFrequency</span></code></p></td>
+<td><p>IClockDomainFrequency</p></td>
+<td><p> UnknownFrequency</p></td>
 <td><p>默认时钟频率。</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">目标目录</span></code></p></td>
-<td><p>细绳</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">targetDirectory</span></code></p></td>
+<td><p>String</p></td>
 <td><p>当前目录</p></td>
 <td><p>生成文件的目录。</p></td>
 </tr>
 </tbody>
 </table>
-<p>这是指定它们的语法：</p>
+<p>这是设置它们的语法：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">SpinalConfig</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="nc">VHDL</span><span class="p">,</span><span class="w"> </span><span class="n">targetDirectory</span><span class="o">=</span><span class="s">&quot;temp/myDesign&quot;</span><span class="p">).</span><span class="n">generate</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="nc">UartCtrl</span><span class="p">)</span>
 
 <span class="c1">// Or for Verilog in a more scalable formatting:</span>
@@ -1306,28 +1306,28 @@
 <h2>生成的 VHDL 和 Verilog<a class="headerlink" href="#generated-vhdl-and-verilog" title="此标题的永久链接"></a></h2>
 <p>如何将 SpinalHDL RTL 描述转换为 VHDL 和 Verilog 非常重要：</p>
 <ul class="simple">
-<li><p>Scala 中的名称保留在 VHDL 和 Verilog 中。</p></li>
-<li><p>Scala 中的“组件”层次结构保留在 VHDL 和 Verilog 中。</p></li>
-<li><p>Scala 中的“when”语句与 VHDL 和 Verilog 中的 if 语句一样发出。</p></li>
-<li><p>Scala 中的 switch 语句在所有标准情况下都作为 VHDL 和 Verilog 中的 case 语句发出。</p></li>
+<li><p>Scala 中变量的名称将保留在 VHDL 和 Verilog 中。</p></li>
+<li><p>Scala 中的``Component`` 组件层次结构会保留在 VHDL 和 Verilog 中。</p></li>
+<li><p>Scala 中的 <code class="docutils literal notranslate"><span class="pre">when</span></code> 语句会生成为 VHDL 和 Verilog 中的 if 语句。</p></li>
+<li><p>Scala 中的 <code class="docutils literal notranslate"><span class="pre">switch</span></code> 语句在所有标准情况下都生成为 VHDL 和 Verilog 中的 case 语句。</p></li>
 </ul>
 <section id="organization">
 <h3>组织<a class="headerlink" href="#organization" title="此标题的永久链接"></a></h3>
 <p>当您使用 VHDL 生成器时，所有模块都会生成到一个文件中，其中包含三个部分：</p>
 <ol class="arabic simple">
 <li><p>包含所有 Enum 定义的包</p></li>
-<li><p>包含架构元素使用的功能的包</p></li>
+<li><p>包含架构中所有元素使用函数的包</p></li>
 <li><p>您的设计所需的所有组件</p></li>
 </ol>
 <p>当您使用 Verilog 生成时，所有模块都会生成到一个文件中，其中包含两个部分：</p>
 <ol class="arabic simple">
 <li><p>使用的所有枚举定义</p></li>
-<li><p>您的设计所需的所有模块</p></li>
+<li><p>您的设计需要的所有模块</p></li>
 </ol>
 </section>
 <section id="combinational-logic">
 <h3>组合逻辑<a class="headerlink" href="#combinational-logic" title="此标题的永久链接"></a></h3>
-<p>斯卡拉：</p>
+<p>Scala:</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">cond</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w">  </span><span class="nc">Bool</span><span class="p">()</span>
@@ -1353,7 +1353,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>硬件描述语言：</p>
+<p>VHDL:</p>
 <div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">entity</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
 <span class="w">  </span><span class="k">port</span><span class="p">(</span>
 <span class="w">    </span><span class="n">io_cond</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
@@ -1386,7 +1386,7 @@
 </section>
 <section id="sequential-logic">
 <h3>时序逻辑<a class="headerlink" href="#sequential-logic" title="此标题的永久链接"></a></h3>
-<p>斯卡拉：</p>
+<p>Scala:</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">cond</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
@@ -1409,7 +1409,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>硬件描述语言：</p>
+<p>VHDL:</p>
 <div class="highlight-vhdl notranslate"><div class="highlight"><pre><span></span><span class="k">entity</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">is</span>
 <span class="w">  </span><span class="k">port</span><span class="p">(</span>
 <span class="w">    </span><span class="n">io_cond</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="kt">std_logic</span><span class="p">;</span>
@@ -1453,7 +1453,7 @@
 </section>
 <section id="vhdl-and-verilog-attributes">
 <span id="id1"></span><h2>VHDL 和 Verilog 属性<a class="headerlink" href="#vhdl-and-verilog-attributes" title="此标题的永久链接"></a></h2>
-<p>在某些情况下，为设计中的某些信号提供属性以修改它们的合成方式很有用。</p>
+<p>在某些情况下，为设计中的某些信号提供属性以修改它们的综合方式很有用。</p>
 <p>为此，您可以对设计中的任何信号或存储器调用以下函数：</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1466,15 +1466,15 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">addAttribute(名称)</span></code></p></td>
-<td><p>添加一个布尔属性，并将给定的 <code class="docutils literal notranslate"><span class="pre">name</span></code> 设置为 true</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">addAttribute(name)</span></code></p></td>
+<td><p>添加一个名为 <code class="docutils literal notranslate"><span class="pre">name</span></code> 的布尔属性，并将给定值设置为 true</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">addAttribute（名称，值）</span></code></p></td>
-<td><p>添加一个字符串属性，并将给定的“name”设置为“value”</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">addAttribute(name,</span> <span class="pre">value)</span></code></p></td>
+<td><p>添加一个字符串属性，并将给定的 <code class="docutils literal notranslate"><span class="pre">name</span></code> 设置为 <code class="docutils literal notranslate"><span class="pre">value</span></code></p></td>
 </tr>
 </tbody>
 </table>
-<p>例子：</p>
+<p>示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">pcPlus4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pc</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">4</span>
 <span class="n">pcPlus4</span><span class="p">.</span><span class="n">addAttribute</span><span class="p">(</span><span class="s">&quot;keep&quot;</span><span class="p">)</span>
 </pre></div>
@@ -1503,7 +1503,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="analog_inout.html" class="btn btn-neutral float-left" title="模拟和输入输出" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="analog_inout.html" class="btn btn-neutral float-left" title="模拟信号和输入输出" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="../Libraries/index.html" class="btn btn-neutral float-right" title="图书馆" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
