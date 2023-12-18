@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>老虎机 &mdash; SpinalHDL  文档</title>
+  <title>插槽(Slots) &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
     <link rel="next" title="计时器" href="timer.html" />
-    <link rel="prev" title="松塞克" href="pinesec.html" />
+    <link rel="prev" title="Pinesec" href="pinesec.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -437,22 +437,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Semantic/index.html">语义学</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Semantic/index.html">语义</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Semantic/assignments.html">赋值</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/assignments.html#width-checking">宽度检查</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/assignments.html#width-checking">位宽检查</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Semantic/assignments.html#combinatorial-loops">组合逻辑环(Combinatorial loops)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/assignments.html#combinit">组合初始化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/assignments.html#combinit">CombInit</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Semantic/when_switch.html">何时/切换/复用器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#when">什么时候</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#switch">转变</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Semantic/when_switch.html">When/Switch/Mux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#when">When</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#switch">Switch</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Semantic/when_switch.html#example">示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Semantic/when_switch.html#additional-options">其他选项</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#local-declaration">当地申报</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#mux">多路复用器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#local-declaration">本地声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#mux">Mux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Semantic/when_switch.html#bitwise-selection">按位选择</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Semantic/when_switch.html#id1">示例</a></li>
 </ul>
@@ -460,9 +460,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Semantic/rules.html">规则</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/rules.html#concurrency">并发性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/rules.html#last-valid-assignment-wins">最后有效的作业获胜</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Semantic/rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">与 Scala 的信号和寄存器交互（OOP 参考 + 函数）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/rules.html#concurrency">并发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/rules.html#last-valid-assignment-wins">最后有效赋值生效</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Semantic/rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">信号和寄存器与 Scala 语言的协作（OOP 引用 + 函数）</a></li>
 </ul>
 </li>
 </ul>
@@ -977,14 +977,14 @@
 <li class="toctree-l4"><a class="reference internal" href="jtag.html#usage-demonstration">使用演示</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="memory_mapped_uart.html">内存映射 UART</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="memory_mapped_uart.html">内存映射UART</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="memory_mapped_uart.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="memory_mapped_uart.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="memory_mapped_uart.html#implementation">实现</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="pinesec.html">松塞克</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">老虎机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pinesec.html">Pinesec</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">插槽(Slots)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#introduction">简介</a></li>
 </ul>
 </li>
@@ -1164,7 +1164,7 @@
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">示例</a></li>
           <li class="breadcrumb-item"><a href="index.html">高级示例</a></li>
-      <li class="breadcrumb-item active">老虎机</li>
+      <li class="breadcrumb-item active">插槽(Slots)</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Examples/Advanced ones/slots.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1177,14 +1177,14 @@
 
 
   <section id="slots">
-<span id="id1"></span><h1>老虎机<a class="headerlink" href="#slots" title="此标题的永久链接"></a></h1>
+<span id="id1"></span><h1>插槽(Slots)<a class="headerlink" href="#slots" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
-<p>假设您有一些硬件必须跟踪多个类似的正在进行的活动，您可能需要实现一组“槽”来执行此操作。此示例展示如何使用 Area、OHMasking.first、onMask 和 reader 来完成此操作。</p>
+<p>假设您有一些硬件必须跟踪多个相似的正在进行的活动，您可能需要实现一组“插槽”来执行此操作。此示例展示如何使用 Area、OHMasking.first、onMask和reader来完成此操作。</p>
 <section id="implementation">
 <h3>实现<a class="headerlink" href="#implementation" title="此标题的永久链接"></a></h3>
-<p>此实现避免使用 Vec。相反，它使用允许在每个插槽中混合信号、寄存器和逻辑定义的区域。</p>
-<p>请注意，“reader” API 适用于 1.9.1 之后推出的 SpinalHDL 版本</p>
+<p>此实现避免使用Vec。相反，它使用允许在每个插槽中混合信号、寄存器和逻辑定义的逻辑区。</p>
+<p>请注意， <cite>reader</cite> API 适用于1.9.1之后推出的SpinalHDL版本</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">package</span><span class="w"> </span><span class="nn">spinaldoc</span><span class="p">.</span><span class="nn">examples</span><span class="p">.</span><span class="n">advanced</span>
 
 <span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">core</span><span class="p">.</span><span class="n">_</span>
@@ -1257,7 +1257,7 @@
 </div>
 </section>
 <section id="in-practice">
-<h3>在实践中<a class="headerlink" href="#in-practice" title="此标题的永久链接"></a></h3>
+<h3>应用<a class="headerlink" href="#in-practice" title="此标题的永久链接"></a></h3>
 <p>For instance, this kind of slot pattern is used in Tilelink coherency hub to keep track of all ongoing memory probes in flight:</p>
 <p><a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/008c73f1ce18e294f137efe7a1442bd3f8fa2ee0/lib/src/main/scala/spinal/lib/bus/tilelink/coherent/Hub.scala#L376">https://github.com/SpinalHDL/SpinalHDL/blob/008c73f1ce18e294f137efe7a1442bd3f8fa2ee0/lib/src/main/scala/spinal/lib/bus/tilelink/coherent/Hub.scala#L376</a></p>
 <p>以及在 DRAM / SDR / DDR 内存控制器中实现同时处理多个内存事务（同时运行多个预充电/活动/读/写以提高性能）：</p>
@@ -1278,7 +1278,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="pinesec.html" class="btn btn-neutral float-left" title="松塞克" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="pinesec.html" class="btn btn-neutral float-left" title="Pinesec" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="timer.html" class="btn btn-neutral float-right" title="计时器" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

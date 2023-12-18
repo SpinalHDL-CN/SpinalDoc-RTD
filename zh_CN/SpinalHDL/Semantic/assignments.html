@@ -32,8 +32,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="何时/切换/复用器" href="when_switch.html" />
-    <link rel="prev" title="语义学" href="index.html" />
+    <link rel="next" title="When/Switch/Mux" href="when_switch.html" />
+    <link rel="prev" title="语义" href="index.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -437,22 +437,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">语义学</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">语义</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">赋值</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#width-checking">宽度检查</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#width-checking">位宽检查</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#combinatorial-loops">组合逻辑环(Combinatorial loops)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#combinit">组合初始化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#combinit">CombInit</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="when_switch.html">何时/切换/复用器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#when">什么时候</a></li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#switch">转变</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="when_switch.html">When/Switch/Mux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#when">When</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#switch">Switch</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#example">示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#additional-options">其他选项</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#local-declaration">当地申报</a></li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#mux">多路复用器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#local-declaration">本地声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#mux">Mux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="when_switch.html#bitwise-selection">按位选择</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#id1">示例</a></li>
 </ul>
@@ -460,9 +460,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="rules.html">规则</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#concurrency">并发性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#last-valid-assignment-wins">最后有效的作业获胜</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">与 Scala 的信号和寄存器交互（OOP 参考 + 函数）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#concurrency">并发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#last-valid-assignment-wins">最后有效赋值生效</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">信号和寄存器与 Scala 语言的协作（OOP 引用 + 函数）</a></li>
 </ul>
 </li>
 </ul>
@@ -977,14 +977,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/jtag.html#usage-demonstration">使用演示</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射 UART</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射UART</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#implementation">实现</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/pinesec.html">松塞克</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html">老虎机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/pinesec.html">Pinesec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html">插槽(Slots)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html#introduction">简介</a></li>
 </ul>
 </li>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">语义学</a></li>
+          <li class="breadcrumb-item"><a href="index.html">语义</a></li>
       <li class="breadcrumb-item active">赋值</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Semantic/assignments.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1184,7 +1184,7 @@
 <col style="width: 83%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>象征</p></th>
+<tr class="row-odd"><th class="head"><p>符号</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
@@ -1193,19 +1193,14 @@
 <td><p>标准赋值，相当于 VHDL/Verilog 中的``&lt;=``。</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\=</span></code></p></td>
-<td><p>Equivalent to <code class="docutils literal notranslate"><span class="pre">:=</span></code> in VHDL and <code class="docutils literal notranslate"><span class="pre">=</span></code> in Verilog. The value is updated instantly in-place. Only works with combinational signals, does not work with registers.</p></td>
+<td><p>相当于 VHDL 中的 <code class="docutils literal notranslate"><span class="pre">:=</span></code> 和 Verilog 中的 <code class="docutils literal notranslate"><span class="pre">=</span></code>。该值会立即就地更新。仅适用于组合信号，不适用于寄存器。</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code></p></td>
-<td><p>2 个信号或相同类型的两个信号束之间的自动连接。通过使用信号方向（输入/输出）来推断方向。 （与 <code class="docutils literal notranslate"><span class="pre">:=</span></code>类似的行为）</p></td>
+<td><p>2 个信号或相同类型的两个信号线束之间的自动连接。通过使用信号定义（输入/输出）来推断方向。 （与 <code class="docutils literal notranslate"><span class="pre">:=</span></code>类似的行为）</p></td>
 </tr>
 </tbody>
 </table>
-<p>When muxing (for instance using <code class="docutils literal notranslate"><span class="pre">when</span></code>, see <a class="reference internal" href="when_switch.html"><span class="doc">何时/切换/复用器</span></a>.), the last
-valid standard assignment <code class="docutils literal notranslate"><span class="pre">:=</span></code> wins. Else, assigning twice to the same assignee
-from the same scope results in an assignment overlap.  SpinalHDL will assume
-this is a unintentional design error by default and halt elaboration with error.
-For special use-cases assignment overlap can be programatically permitted on a case by case basis.
-(see <a class="reference internal" href="../Design%20errors/assignment_overlap.html"><span class="doc">赋值覆盖(Assignment overlap)</span></a>).</p>
+<p>当多路复用时（例如使用 <code class="docutils literal notranslate"><span class="pre">when</span></code>，请参阅 <a class="reference internal" href="when_switch.html"><span class="doc">When/Switch/Mux</span></a>。），最后一个有效的赋值 <code class="docutils literal notranslate"><span class="pre">:=</span></code> 为准。否则，向同一范围内的同一信号赋值两次会导致重叠错误。 SpinalHDL 默认情况下会假设这是一个无意的设计错误，并因错误而停止实例细化。对于特殊用例，可以根据具体情况以编程方式允许重叠赋值。 （参见 <a class="reference internal" href="../Design%20errors/assignment_overlap.html"><span class="doc">赋值覆盖(Assignment overlap)</span></a>）。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
 <span class="n">b</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">a</span>
@@ -1224,7 +1219,7 @@ For special use-cases assignment overlap can be programatically permitted on a c
 <span class="n">uartCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">uart</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">uart</span>
 </pre></div>
 </div>
-<p>它还支持捆绑分配（将所有位信号转换为适当宽度的位类型的单个位总线，然后在分配表达式中使用更宽的形式）。在赋值表达式的左侧和右侧使用“()”（Scala 元组语法）将多个信号捆绑在一起。</p>
+<p>它还支持线束赋值（将所有位信号转换为适当位宽的 <cite>Bits</cite> 类型的单位总线，然后在赋值表达式中使用更宽的形式）。在赋值表达式的左侧和右侧使用 <code class="docutils literal notranslate"><span class="pre">()</span></code> （Scala 元组语法）将多个信号捆绑在一起。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">d</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">12</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">e</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="nc">Bits</span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1237,7 +1232,7 @@ For special use-cases assignment overlap can be programatically permitted on a c
 <span class="n">g</span><span class="w">         </span><span class="o">:=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">).</span><span class="n">asBits</span><span class="w">  </span><span class="c1">// and on the right hand side</span>
 </pre></div>
 </div>
-<p>重要的是要理解，在 SpinalHDL 中，信号的性质（组合/顺序）是在其声明中定义的，而不是通过分配的方式定义的。所有数据类型实例都将定义一个组合信号，而用“Reg(…)”包装的数据类型实例将定义一个顺序（注册）信号。</p>
+<p>重要的是要理解，在 SpinalHDL 中，信号的性质（组合/时序）是在其声明中定义的，而不是通过赋值的方式定义的。所有数据类型实例都将定义一个组合信号，而用 <code class="docutils literal notranslate"><span class="pre">Reg(...)</span></code> 包装的实例将定义为一个时序信号（寄存器）。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span><span class="w">              </span><span class="c1">// Define a combinational signal</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w">         </span><span class="c1">// Define a registered signal</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="c1">// Define a registered signal which is</span>
@@ -1245,47 +1240,47 @@ For special use-cases assignment overlap can be programatically permitted on a c
 </pre></div>
 </div>
 <section id="width-checking">
-<h2>宽度检查<a class="headerlink" href="#width-checking" title="此标题的永久链接"></a></h2>
-<p>SpinalHDL 检查赋值左侧和右侧的位数是否匹配。有多种方法可以调整给定 BitVector 的宽度（“Bits”、“UInt”、“SInt”）：</p>
+<h2>位宽检查<a class="headerlink" href="#width-checking" title="此标题的永久链接"></a></h2>
+<p>SpinalHDL 检查赋值左侧和右侧的位数是否匹配。有多种方法可以改变给定 BitVector （<code class="docutils literal notranslate"><span class="pre">Bits</span></code>, <code class="docutils literal notranslate"><span class="pre">UInt</span></code>, <code class="docutils literal notranslate"><span class="pre">SInt</span></code>）的位宽：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 38%" />
 <col style="width: 63%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>调整大小技巧</p></th>
+<tr class="row-odd"><th class="head"><p>调整位宽的技术</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>x := y.resized</p></td>
-<td><p>Assign x with a resized copy of y, size inferred from x.</p></td>
+<td><p>将 y 改变位宽后的副本分配给 x，其位宽是从 x 推断出来的。</p></td>
 </tr>
 <tr class="row-odd"><td><p>x := y.resize(newWidth)</p></td>
-<td><p>Assign x with a resized copy of y <code class="code docutils literal notranslate"><span class="pre">newWidth</span></code> bits wide.</p></td>
+<td><p>为 x 赋值一个 y 变为 newWidth 位宽后的副本。</p></td>
 </tr>
 <tr class="row-even"><td><p>x := y.resizeLeft(newWidth)</p></td>
-<td><p>Assign x with a resized copy of y <code class="code docutils literal notranslate"><span class="pre">newWidth</span></code> bits wide. Pads at the LSB if needed.</p></td>
+<td><p>对 x 赋值 y 变为 newWidth 位宽后的副本。如果需要，可在 LSB 处进行填充。</p></td>
 </tr>
 </tbody>
 </table>
-<p>所有调整大小方法都可能导致生成的宽度比 y 的原始宽度更宽或更窄。当发生加宽时，额外的位将用零填充。</p>
-<p>使用“x.resized”推断的转换基于正在解析的赋值表达式左侧的目标宽度，并遵循与“y.resize(someWidth)”相同的语义。表达式“x := y.resized”相当于“x := y.resize(x.getBitsWidth 位)”。</p>
-<p>虽然示例代码片段显示了赋值语句的使用，但 resize 系列方法可以像任何普通 Scala 方法一样进行链接。</p>
-<p>在一种情况下，Spinal 会自动调整值的大小：</p>
+<p>所有改变位宽方法都可能导致生成的位宽比 y 的原始位宽更宽或更窄。当发生加宽时，额外的位将用零填充。</p>
+<p><code class="docutils literal notranslate"><span class="pre">x.resized</span></code> 根据赋值表达式左侧的目标位宽推断转换方法，并遵循与 <code class="docutils literal notranslate"><span class="pre">y.resize(someWidth)</span></code> 相同的语义。表达式 <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">:=</span> <span class="pre">y.resized</span></code> 相当于 <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">:=</span> <span class="pre">y.resize(x.getBitsWidth</span> <span class="pre">bits)</span></code>。</p>
+<p>虽然示例代码片段显示了赋值语句的使用方法，但 resize 系列方法可以像任何普通 Scala 方法一样进行级联。</p>
+<p>在一种情况下，Spinal 会自动调整位宽的大小：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// U(3) creates an UInt of 2 bits, which doesn&#39;t match the left side (8 bits)</span>
 <span class="n">myUIntOf_8bits</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nc">U</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>因为“U(3)”是一个“弱”位计数推断信号，SpinalHDL 会自动加宽它。这可以被认为在功能上等同于“U(3, 2 位).resized”，但是请放心，如果场景需要缩小范围，SpinalHDL 将做正确的事情并继续标记错误。当尝试分配到“myUIntOf_8bits”时，如果文字需要 9 位（例如“U(0x100)”），则会报告错误。</p>
+<p>因为 <code class="docutils literal notranslate"><span class="pre">U(3)</span></code> 是一个“弱”位计数推断信号，SpinalHDL 会自动加宽它。这可以被认为在功能上等同于 <code class="docutils literal notranslate"><span class="pre">U(3,</span> <span class="pre">2</span> <span class="pre">bits).resized</span></code> ，但是请放心，如果场景需要缩小范围，SpinalHDL 将做正确的事情并报告错误。当尝试赋值 <code class="docutils literal notranslate"><span class="pre">myUIntOf_8bits``时，如果字面量需要</span> <span class="pre">9</span> <span class="pre">位（例如</span> <span class="pre">``U(0x100)</span></code>），则会报告错误。</p>
 </section>
 <section id="combinatorial-loops">
 <h2>组合逻辑环(Combinatorial loops)<a class="headerlink" href="#combinatorial-loops" title="此标题的永久链接"></a></h2>
-<p>SpinalHDL 检查您的设计中是否存在组合环（锁存器）。如果检测到，它会引发错误，并且 SpinalHDL 将打印循环的路径。</p>
+<p>SpinalHDL 检查您的设计中是否存在组合逻辑环（锁存器）。如果检测到，会引发错误，并且 SpinalHDL 将打印造成循环的路径。</p>
 </section>
 <section id="combinit">
-<h2>组合初始化<a class="headerlink" href="#combinit" title="此标题的永久链接"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">CombInit</span></code> 可用于复制信号及其当前的组合分配。主要用例是能够稍后覆盖复制的信号，而不影响原始信号。</p>
+<h2>CombInit<a class="headerlink" href="#combinit" title="此标题的永久链接"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">CombInit</span></code> 可用于复制信号及其当前的组合逻辑赋值。主要用例是能够稍后覆盖复制后信号，而不影响原始信号。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="n">a</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">1</span>
 
@@ -1306,7 +1301,7 @@ For special use-cases assignment overlap can be programatically permitted on a c
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>如果我们查看生成的 Verilog，会发现“b”不存在。由于它是引用的“a”的副本，因此这些变量指定相同的 Verilog 线。</p>
+<p>如果我们查看生成的 Verilog，会发现``b`` 不存在。由于它是引用的 <code class="docutils literal notranslate"><span class="pre">a</span></code> 的副本，因此这些变量指代相同的 Verilog 信号。</p>
 <div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="k">always</span><span class="w"> </span><span class="p">@(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
 <span class="w">  </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">8&#39;h01</span><span class="p">;</span>
 <span class="w">  </span><span class="k">if</span><span class="p">(</span><span class="n">sel</span><span class="p">)</span><span class="w"> </span><span class="k">begin</span>
@@ -1323,7 +1318,7 @@ For special use-cases assignment overlap can be programatically permitted on a c
 <span class="k">end</span>
 </pre></div>
 </div>
-<p>“CombInit” 在辅助函数中特别有用，可确保返回值不引用输入。</p>
+<p><code class="docutils literal notranslate"><span class="pre">CombInit</span></code> 在辅助函数中特别有用，可确保返回值不引用输入。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// note that condition is an elaboration time constant</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">invertedIf</span><span class="p">(</span><span class="n">b</span><span class="p">:</span><span class="w"> </span><span class="nc">Bits</span><span class="p">,</span><span class="w"> </span><span class="n">condition</span><span class="p">:</span><span class="w"> </span><span class="nc">Boolean</span><span class="p">):</span><span class="w"> </span><span class="nc">Bits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="n">condition</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="o">~</span><span class="n">b</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nc">CombInit</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
 
@@ -1334,7 +1329,7 @@ For special use-cases assignment overlap can be programatically permitted on a c
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>没有“CombInit”，如果“c”== false（但不是“c”== true），“a1”和“a2”引用相同的信号，并且零分配是也适用于“a1”。使用“CombInit”，无论“c”值是多少，我们都有一致的行为。</p>
+<p>没有 <code class="docutils literal notranslate"><span class="pre">CombInit</span></code> 的话，如果 <code class="docutils literal notranslate"><span class="pre">c</span></code> == false（而不是 <code class="docutils literal notranslate"><span class="pre">c</span></code> == true），<code class="docutils literal notranslate"><span class="pre">a1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">a2</span></code> 会引用相同的信号，并且 <code class="docutils literal notranslate"><span class="pre">a1</span></code> 被赋值为零。有了 <code class="docutils literal notranslate"><span class="pre">CombInit</span></code> ，无论 <code class="docutils literal notranslate"><span class="pre">c</span></code> 的值是多少，我们都有一致的行为（CombInit创建新的信号）。</p>
 </section>
 </section>
 
@@ -1349,8 +1344,8 @@ For special use-cases assignment overlap can be programatically permitted on a c
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="index.html" class="btn btn-neutral float-left" title="语义学" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="when_switch.html" class="btn btn-neutral float-right" title="何时/切换/复用器" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="语义" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="when_switch.html" class="btn btn-neutral float-right" title="When/Switch/Mux" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>何时/切换/复用器 &mdash; SpinalHDL  文档</title>
+  <title>When/Switch/Mux &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -437,22 +437,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">语义学</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">语义</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="assignments.html">赋值</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="assignments.html#width-checking">宽度检查</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assignments.html#width-checking">位宽检查</a></li>
 <li class="toctree-l3"><a class="reference internal" href="assignments.html#combinatorial-loops">组合逻辑环(Combinatorial loops)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="assignments.html#combinit">组合初始化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assignments.html#combinit">CombInit</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">何时/切换/复用器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#when">什么时候</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#switch">转变</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">When/Switch/Mux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#when">When</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#switch">Switch</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#example">示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#additional-options">其他选项</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#local-declaration">当地申报</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mux">多路复用器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#local-declaration">本地声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mux">Mux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#bitwise-selection">按位选择</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">示例</a></li>
 </ul>
@@ -460,9 +460,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="rules.html">规则</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#concurrency">并发性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#last-valid-assignment-wins">最后有效的作业获胜</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">与 Scala 的信号和寄存器交互（OOP 参考 + 函数）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#concurrency">并发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#last-valid-assignment-wins">最后有效赋值生效</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">信号和寄存器与 Scala 语言的协作（OOP 引用 + 函数）</a></li>
 </ul>
 </li>
 </ul>
@@ -977,14 +977,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/jtag.html#usage-demonstration">使用演示</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射 UART</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射UART</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#implementation">实现</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/pinesec.html">松塞克</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html">老虎机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/pinesec.html">Pinesec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html">插槽(Slots)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html#introduction">简介</a></li>
 </ul>
 </li>
@@ -1162,8 +1162,8 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">语义学</a></li>
-      <li class="breadcrumb-item active">何时/切换/复用器</li>
+          <li class="breadcrumb-item"><a href="index.html">语义</a></li>
+      <li class="breadcrumb-item active">When/Switch/Mux</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Semantic/when_switch.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,10 +1176,10 @@
 
 
   <section id="when-switch-mux">
-<h1>何时/切换/复用器<a class="headerlink" href="#when-switch-mux" title="此标题的永久链接"></a></h1>
+<h1>When/Switch/Mux<a class="headerlink" href="#when-switch-mux" title="此标题的永久链接"></a></h1>
 <section id="when">
-<h2>什么时候<a class="headerlink" href="#when" title="此标题的永久链接"></a></h2>
-<p>与 VHDL 和 Verilog 中一样，当满足指定条件时可以有条件地分配信号：</p>
+<h2>When<a class="headerlink" href="#when" title="此标题的永久链接"></a></h2>
+<p>与 VHDL 和 Verilog 中一样，当满足指定条件时可以有条件地赋值信号：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">when</span><span class="p">(</span><span class="n">cond1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Execute when cond1 is true</span>
 <span class="p">}</span><span class="w"> </span><span class="n">elsewhen</span><span class="p">(</span><span class="n">cond2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1191,7 +1191,7 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>如果关键字“otherwise”与“when”条件的右括号“}”在同一行，则不需要点。</p>
+<p>如果关键字 <code class="docutils literal notranslate"><span class="pre">otherwise</span></code> 与 <code class="docutils literal notranslate"><span class="pre">when</span></code> 条件的右括号 <code class="docutils literal notranslate"><span class="pre">}</span></code> 在同一行，则不需要点。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">when</span><span class="p">(</span><span class="n">cond1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Execute when cond1 is true</span>
 <span class="p">}</span><span class="w"> </span><span class="n">otherwise</span><span class="w"> </span><span class="p">{</span>
@@ -1199,7 +1199,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>但如果“.otherwise”在另一行，则**需要**一个点：</p>
+<p>但如果 <code class="docutils literal notranslate"><span class="pre">.otherwise</span></code> 在另一行，则**需要**一个点：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">when</span><span class="p">(</span><span class="n">cond1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Execute when cond1 is true</span>
 <span class="p">}</span>
@@ -1211,8 +1211,8 @@
 </div>
 </section>
 <section id="switch">
-<h2>转变<a class="headerlink" href="#switch" title="此标题的永久链接"></a></h2>
-<p>与 VHDL 和 Verilog 中一样，当信号具有定义的值时，可以有条件地分配信号：</p>
+<h2>Switch<a class="headerlink" href="#switch" title="此标题的永久链接"></a></h2>
+<p>与 VHDL 和 Verilog 中一样，当信号具有定义的值时，可以有条件地对信号赋值：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">switch</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">is</span><span class="p">(</span><span class="n">value1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// Execute when x === value1</span>
@@ -1226,7 +1226,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">is</span></code> clauses can be factorized (logical OR) by separating them with a comma <code class="docutils literal notranslate"><span class="pre">is(value1,</span> <span class="pre">value2)</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">is</span></code> 子句可以通过用逗号 <code class="docutils literal notranslate"><span class="pre">is(value1,</span> <span class="pre">value2)</span></code> 分隔来进行分解（逻辑 OR）。</p>
 <section id="example">
 <h3>示例<a class="headerlink" href="#example" title="此标题的永久链接"></a></h3>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">switch</span><span class="p">(</span><span class="n">aluop</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1262,7 +1262,7 @@
 </section>
 <section id="additional-options">
 <h3>其他选项<a class="headerlink" href="#additional-options" title="此标题的永久链接"></a></h3>
-<p>默认情况下，如果“switch”包含“default”语句，而“switch”的所有可能的逻辑值都已被“覆盖”，SpinalHDL 将生成“无法访问的默认语句”错误。是`语句。您可以通过指定`` switch(myValue, coverUnreachable = true) { … }`` 来删除此错误报告。</p>
+<p>默认情况下，如果 <code class="docutils literal notranslate"><span class="pre">switch</span></code> 包含 <code class="docutils literal notranslate"><span class="pre">default</span></code> 语句，而 <code class="docutils literal notranslate"><span class="pre">switch</span></code> 的所有可能的逻辑值都已被是 <code class="docutils literal notranslate"><span class="pre">is</span></code> 语句“覆盖”，SpinalHDL 将生成“UNREACHABLE DEFAULT STATEMENT”错误。您可以通过指定 `` switch(myValue, coverUnreachable = true) { … }`` 来删除此错误报告。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">switch</span><span class="p">(</span><span class="n">my2Bits</span><span class="p">,</span><span class="w"> </span><span class="n">coverUnreachable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">is</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="n">is</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
@@ -1274,9 +1274,9 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>This check is done on the logical values, not on the physical values. For instance, if you have a SpinalEnum(A,B,C) encoded in a one-hot manner, SpinalHDL will only care about the A,B,C values (“001” “010” “100”). Physical values as “000” “011” “101” “110” “111” will not be taken in account.</p>
+<p>此检查是针对逻辑值而不是物理值进行的。例如，如果您有一个以独热编码的 SpinalEnum(A,B,C)，SpinalHDL 将只关心 A,B,C 值 (“001” “010” “100”）。物理值“000”“011”“101”“110”“111”将不被考虑。</p>
 </div>
-<p>默认情况下，如果给定的“is”语句多次提供相同的值，SpinalHDL 将生成“DUPLICATED ELEMENTS IN SWITCH IS(…) STATEMENT”错误。例如 <code class="docutils literal notranslate"><span class="pre">is(42,42)</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> 您可以通过指定 <code class="docutils literal notranslate"><span class="pre">switch(myValue,</span> <span class="pre">strict</span> <span class="pre">=</span> <span class="pre">true){</span> <span class="pre">...</span> <span class="pre">}</span></code> 来删除此错误报告。 SpinalHDL 然后将负责删除重复的值。</p>
+<p>默认情况下，如果给定的 <code class="docutils literal notranslate"><span class="pre">is</span></code> 语句多次提供相同的值，SpinalHDL 将生成 “DUPLICATED ELEMENTS IN SWITCH IS(…) STATEMENT” 错误。例如 <code class="docutils literal notranslate"><span class="pre">is(42,42)</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> 您可以通过指定 <code class="docutils literal notranslate"><span class="pre">switch(myValue,</span> <span class="pre">strict</span> <span class="pre">=</span> <span class="pre">true){</span> <span class="pre">...</span> <span class="pre">}</span></code> 来避免报告此错误。 SpinalHDL 然后将负责删除重复的值。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">switch</span><span class="p">(</span><span class="n">value</span><span class="p">,</span><span class="w"> </span><span class="n">strict</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">is</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 <span class="w">    </span><span class="n">is</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// This will be okay</span>
@@ -1287,7 +1287,7 @@
 </section>
 </section>
 <section id="local-declaration">
-<h2>当地申报<a class="headerlink" href="#local-declaration" title="此标题的永久链接"></a></h2>
+<h2>本地声明<a class="headerlink" href="#local-declaration" title="此标题的永久链接"></a></h2>
 <p>可以在 when/switch 语句中定义新信号：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1304,12 +1304,12 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>SpinalHDL 检查范围内定义的信号是否仅在该范围内分配。</p>
+<p>SpinalHDL 会检查范围内定义的信号是否仅在该范围内使用/赋值。</p>
 </div>
 </section>
 <section id="mux">
-<h2>多路复用器<a class="headerlink" href="#mux" title="此标题的永久链接"></a></h2>
-<p>如果您只需要一个带有“Bool”选择信号的“Mux”，则有两种等效的语法：</p>
+<h2>Mux<a class="headerlink" href="#mux" title="此标题的永久链接"></a></h2>
+<p>如果您只需要一个带有 <code class="docutils literal notranslate"><span class="pre">Bool</span></code> 选择信号的 <code class="docutils literal notranslate"><span class="pre">Mux</span></code> ，则有两种等效的语法：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 44%" />
@@ -1323,13 +1323,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Mux（条件，当True，当False）</p></td>
+<tr class="row-even"><td><p>Mux(cond, whenTrue, whenFalse)</p></td>
 <td><p>T</p></td>
-<td><p>当“cond”为 True 时返回“whenTrue”，否则返回“whenFalse”</p></td>
+<td><p>当 <code class="docutils literal notranslate"><span class="pre">cond</span></code> 为 True 时返回 <code class="docutils literal notranslate"><span class="pre">whenTrue</span></code> ，否则返回 <code class="docutils literal notranslate"><span class="pre">whenFalse</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>条件 ？当为真时 <a href="#id1"><span class="problematic" id="id2">|</span></a>当为假时</p></td>
+<tr class="row-odd"><td><p>cond ? whenTrue | whenFalse</p></td>
 <td><p>T</p></td>
-<td><p>当“cond”为 True 时返回“whenTrue”，否则返回“whenFalse”</p></td>
+<td><p>当 <code class="docutils literal notranslate"><span class="pre">cond</span></code> 为 True 时返回 <code class="docutils literal notranslate"><span class="pre">whenTrue</span></code> ，否则返回 <code class="docutils literal notranslate"><span class="pre">whenFalse</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1354,7 +1354,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">mux</span></code> 检查所有可能的值是否都被覆盖以防止锁存器的生成。如果覆盖了所有可能的值，则不得添加default语句：</p>
+<p><code class="docutils literal notranslate"><span class="pre">mux</span></code> 检查所有可能的值是否都被覆盖以防止锁存器的生成。如果覆盖了所有可能的值，则不允许添加default语句：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">bitwiseSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">bitwiseResult</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bitwiseSelect</span><span class="p">.</span><span class="n">mux</span><span class="p">(</span>
 <span class="w">  </span><span class="mi">0</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">io</span><span class="p">.</span><span class="n">src0</span><span class="w"> </span><span class="n">&amp;</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">src1</span><span class="p">),</span>
@@ -1364,10 +1364,10 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">muxList(...)</span></code> 和 <code class="docutils literal notranslate"><span class="pre">muxListDc(...)</span></code> 是替代的按位选择器，它们采用元组或映射序列作为输入。</p>
-<p><code class="docutils literal notranslate"><span class="pre">muxList</span></code> 可以用作``mux`` 的直接替代品，在生成案例的代码中提供更易于使用的接口。它具有与“mux”相同的检查行为，要求完全覆盖并在不需要时禁止列出默认值。</p>
-<p>如果未覆盖的值不重要，则可以使用“muxtListDc”，可以使用“muxListDc”将它们保留为未分配状态。如果需要，这将添加默认情况。如果遇到这种默认情况，将在模拟过程中生成 X。在通用代码中，<code class="docutils literal notranslate"><span class="pre">muxListDc(...)</span></code> 通常是一个很好的替代方法。</p>
-<p>下面是将 128 位的“Bits”划分为 32 位的示例：</p>
+<p><code class="docutils literal notranslate"><span class="pre">muxList(...)</span></code> 和 <code class="docutils literal notranslate"><span class="pre">muxListDc(...)</span></code> 是另一种按位选择器，它们采用元组或映射作为输入。</p>
+<p><code class="docutils literal notranslate"><span class="pre">muxList</span></code> 可以用作 <code class="docutils literal notranslate"><span class="pre">mux</span></code> 的直接替代品，在生成案例的代码中提供更易于使用的接口。它具有与 <code class="docutils literal notranslate"><span class="pre">mux</span></code> 相同的检查行为，它要求完全覆盖并禁止在不需要时列出默认值。</p>
+<p>如果未覆盖的值不重要，则可以使用 <code class="docutils literal notranslate"><span class="pre">muxtListDc</span></code> ，可以使用 <code class="docutils literal notranslate"><span class="pre">muxtListDc</span></code> 将它们保留为未分配状态。如果需要，这将添加默认情况。如果遇到这种默认情况，将在仿真过程中生成 <cite>X</cite>。<code class="docutils literal notranslate"><span class="pre">muxListDc(...)</span></code> 通常是一个很好的通用代码的替代方法。</p>
+<p>下面是将 128 位的 <code class="docutils literal notranslate"><span class="pre">Bits</span></code> 划分为 32 位的示例：</p>
 <a class="reference internal image-reference" href="../../_images/MuxList.png"><img alt="../../_images/MuxList.png" class="align-center" src="../../_images/MuxList.png" style="width: 300px;" /></a>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">sel</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bits</span><span class="p">(</span><span class="mi">128</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1380,7 +1380,7 @@
 <span class="kd">val</span><span class="w"> </span><span class="n">dataWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="n">subdivideIn</span><span class="p">(</span><span class="mi">32</span><span class="w"> </span><span class="n">bits</span><span class="p">)(</span><span class="n">sel</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>从可配置宽度向量中选择位的“muxListDc”示例：</p>
+<p>下面是 <code class="docutils literal notranslate"><span class="pre">muxListDc</span></code> 的案例，从可配置位宽的向量中选择多个位：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Example</span><span class="p">(</span><span class="n">width</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// 2 bit wide for default width</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">sel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="n">log2Up</span><span class="p">(</span><span class="n">count</span><span class="p">)</span><span class="w"> </span><span class="n">bit</span><span class="p">)</span>

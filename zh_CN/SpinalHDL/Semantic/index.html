@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>语义学 &mdash; SpinalHDL  文档</title>
+  <title>语义 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -437,22 +437,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">语义学</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">语义</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="assignments.html">赋值</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="assignments.html#width-checking">宽度检查</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assignments.html#width-checking">位宽检查</a></li>
 <li class="toctree-l3"><a class="reference internal" href="assignments.html#combinatorial-loops">组合逻辑环(Combinatorial loops)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="assignments.html#combinit">组合初始化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assignments.html#combinit">CombInit</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="when_switch.html">何时/切换/复用器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#when">什么时候</a></li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#switch">转变</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="when_switch.html">When/Switch/Mux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#when">When</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#switch">Switch</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#example">示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#additional-options">其他选项</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#local-declaration">当地申报</a></li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#mux">多路复用器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#local-declaration">本地声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#mux">Mux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="when_switch.html#bitwise-selection">按位选择</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#id1">示例</a></li>
 </ul>
@@ -460,9 +460,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="rules.html">规则</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#concurrency">并发性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#last-valid-assignment-wins">最后有效的作业获胜</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">与 Scala 的信号和寄存器交互（OOP 参考 + 函数）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#concurrency">并发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#last-valid-assignment-wins">最后有效赋值生效</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">信号和寄存器与 Scala 语言的协作（OOP 引用 + 函数）</a></li>
 </ul>
 </li>
 </ul>
@@ -977,14 +977,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/jtag.html#usage-demonstration">使用演示</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射 UART</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射UART</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#implementation">实现</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/pinesec.html">松塞克</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html">老虎机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/pinesec.html">Pinesec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html">插槽(Slots)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html#introduction">简介</a></li>
 </ul>
 </li>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">语义学</li>
+      <li class="breadcrumb-item active">语义</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Semantic/index.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1175,24 +1175,24 @@
 
 
   <section id="semantic">
-<span id="semantics"></span><h1>语义学<a class="headerlink" href="#semantic" title="此标题的永久链接"></a></h1>
+<span id="semantics"></span><h1>语义<a class="headerlink" href="#semantic" title="此标题的永久链接"></a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="assignments.html">赋值</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="assignments.html#width-checking">宽度检查</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignments.html#width-checking">位宽检查</a></li>
 <li class="toctree-l2"><a class="reference internal" href="assignments.html#combinatorial-loops">组合逻辑环(Combinatorial loops)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="assignments.html#combinit">组合初始化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="assignments.html#combinit">CombInit</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="when_switch.html">何时/切换/复用器</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="when_switch.html#when">什么时候</a></li>
-<li class="toctree-l2"><a class="reference internal" href="when_switch.html#switch">转变</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="when_switch.html">When/Switch/Mux</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="when_switch.html#when">When</a></li>
+<li class="toctree-l2"><a class="reference internal" href="when_switch.html#switch">Switch</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="when_switch.html#example">示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="when_switch.html#additional-options">其他选项</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="when_switch.html#local-declaration">当地申报</a></li>
-<li class="toctree-l2"><a class="reference internal" href="when_switch.html#mux">多路复用器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="when_switch.html#local-declaration">本地声明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="when_switch.html#mux">Mux</a></li>
 <li class="toctree-l2"><a class="reference internal" href="when_switch.html#bitwise-selection">按位选择</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="when_switch.html#id1">示例</a></li>
 </ul>
@@ -1200,9 +1200,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rules.html">规则</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rules.html#concurrency">并发性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rules.html#last-valid-assignment-wins">最后有效的作业获胜</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">与 Scala 的信号和寄存器交互（OOP 参考 + 函数）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rules.html#concurrency">并发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rules.html#last-valid-assignment-wins">最后有效赋值生效</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rules.html#signal-and-register-interactions-with-scala-oop-reference-functions">信号和寄存器与 Scala 语言的协作（OOP 引用 + 函数）</a></li>
 </ul>
 </li>
 </ul>

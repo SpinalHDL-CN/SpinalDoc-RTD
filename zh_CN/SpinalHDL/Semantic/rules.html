@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="时序逻辑" href="../Sequential%20logic/index.html" />
-    <link rel="prev" title="何时/切换/复用器" href="when_switch.html" />
+    <link rel="prev" title="When/Switch/Mux" href="when_switch.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -437,22 +437,22 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">语义学</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">语义</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="assignments.html">赋值</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="assignments.html#width-checking">宽度检查</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assignments.html#width-checking">位宽检查</a></li>
 <li class="toctree-l3"><a class="reference internal" href="assignments.html#combinatorial-loops">组合逻辑环(Combinatorial loops)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="assignments.html#combinit">组合初始化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="assignments.html#combinit">CombInit</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="when_switch.html">何时/切换/复用器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#when">什么时候</a></li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#switch">转变</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="when_switch.html">When/Switch/Mux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#when">When</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#switch">Switch</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#example">示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#additional-options">其他选项</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#local-declaration">当地申报</a></li>
-<li class="toctree-l3"><a class="reference internal" href="when_switch.html#mux">多路复用器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#local-declaration">本地声明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="when_switch.html#mux">Mux</a></li>
 <li class="toctree-l3"><a class="reference internal" href="when_switch.html#bitwise-selection">按位选择</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="when_switch.html#id1">示例</a></li>
 </ul>
@@ -460,9 +460,9 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">规则</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#concurrency">并发性</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#last-valid-assignment-wins">最后有效的作业获胜</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#signal-and-register-interactions-with-scala-oop-reference-functions">与 Scala 的信号和寄存器交互（OOP 参考 + 函数）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#concurrency">并发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#last-valid-assignment-wins">最后有效赋值生效</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#signal-and-register-interactions-with-scala-oop-reference-functions">信号和寄存器与 Scala 语言的协作（OOP 引用 + 函数）</a></li>
 </ul>
 </li>
 </ul>
@@ -977,14 +977,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/jtag.html#usage-demonstration">使用演示</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射 UART</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html">内存映射UART</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#specification">规范</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#implementation">实现</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/pinesec.html">松塞克</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html">老虎机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/pinesec.html">Pinesec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html">插槽(Slots)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/slots.html#introduction">简介</a></li>
 </ul>
 </li>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">语义学</a></li>
+          <li class="breadcrumb-item"><a href="index.html">语义</a></li>
       <li class="breadcrumb-item active">规则</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Semantic/rules.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1183,12 +1183,12 @@
 <li><p>信号和寄存器彼此同时运行（并行行为，如 VHDL 和 Verilog）</p></li>
 <li><p>对组合信号的赋值就像表达一条始终为真的规则</p></li>
 <li><p>对寄存器的赋值就像表达一条应用于其时钟域的每个周期的规则</p></li>
-<li><p>对于每个信号，最后一个有效的分配获胜</p></li>
-<li><p>每个信号和寄存器都可以在硬件精化期间以“OOP &lt;<a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">https://en.wikipedia.org/wiki/Object-oriented_programming</a>&gt;”方式作为对象进行操作</p></li>
+<li><p>对于每个信号，最后一个赋值生效</p></li>
+<li><p>每个信号和寄存器都可以作为对象在硬件实例细化期间进行操作，用 <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming">OOP</a> 的思想</p></li>
 </ul>
 <section id="concurrency">
-<h2>并发性<a class="headerlink" href="#concurrency" title="此标题的永久链接"></a></h2>
-<p>您分配每个组合或注册信号的顺序不会对行为产生影响。</p>
+<h2>并发<a class="headerlink" href="#concurrency" title="此标题的永久链接"></a></h2>
+<p>您对每个组合或时序信号的赋值顺序不会对行为产生影响。</p>
 <p>例如，以下两段代码是等效的：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span><span class="w"> </span><span class="c1">// Define 3 combinational signals</span>
 <span class="n">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w">  </span><span class="c1">// c will be set to 7</span>
@@ -1203,14 +1203,14 @@
 <span class="n">c</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w">  </span><span class="c1">// c will be set to 7</span>
 </pre></div>
 </div>
-<p>More generally, when you use the <code class="docutils literal notranslate"><span class="pre">:=</span></code> assignment operator, it’s like specifying an additional new rule for the left side signal/register.</p>
+<p>更一般地说，当您使用 <code class="docutils literal notranslate"><span class="pre">:=</span></code> 赋值运算符时，就像为左侧信号/寄存器指定一个附加的新规则。</p>
 </section>
 <section id="last-valid-assignment-wins">
-<h2>最后有效的作业获胜<a class="headerlink" href="#last-valid-assignment-wins" title="此标题的永久链接"></a></h2>
-<p>如果通过使用 SpinalHDL <code class="docutils literal notranslate"><span class="pre">:=</span></code> 运算符对组合信号或寄存器进行多次分配，则可能执行的最后一次分配获胜（因此可以将值设置为该状态的结果）。</p>
-<p>可以说，自上而下的评估是根据当时存在的状态进行的。如果您的上游信号输入是从寄存器驱动的，因此具有同步行为，那么可以说，在每个时钟周期，都会根据当时的新状态重新评估分配。</p>
-<p>赋值语句可能无法在本时钟周期在硬件中执行的一些原因，可能是由于它被包装在“when(cond)”子句中。</p>
-<p>另一个原因可能是 SpinalHDL 代码从未通过详细阐述，因为该功能在 HDL 代码生成期间被参数化并禁用，请参阅下面的“paramIsFalse”使用。</p>
+<h2>最后有效赋值生效<a class="headerlink" href="#last-valid-assignment-wins" title="此标题的永久链接"></a></h2>
+<p>如果通过使用 SpinalHDL <code class="docutils literal notranslate"><span class="pre">:=</span></code> 运算符对组合信号或寄存器进行多次分配，则可能执行的最后一次赋值生效（因此可以将值设置为该状态的结果）。</p>
+<p>可以说，自上而下的评估计算是根据当时的状态进行的。如果您的上游信号输入是从寄存器驱动的，因此具有同步行为，那么可以说，在每个时钟周期，都会根据当时的新状态重新计算、赋值。</p>
+<p>在硬件中，赋值语句可能无法在本时钟周期执行的一些原因，可能是由于它被包装在 <code class="docutils literal notranslate"><span class="pre">when(cond)</span></code> 子句中。</p>
+<p>另一个原因，可能是 SpinalHDL 代码从未通过实力细化，因为该功能在 HDL 代码生成期间被参数化并禁用，请参阅下面 <code class="docutils literal notranslate"><span class="pre">paramIsFalse</span></code> 的案例。</p>
 <p>举个例子：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Every clock cycle  evaluation starts here</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">paramIsFalse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
@@ -1263,9 +1263,9 @@
 </table>
 </section>
 <section id="signal-and-register-interactions-with-scala-oop-reference-functions">
-<h2>与 Scala 的信号和寄存器交互（OOP 参考 + 函数）<a class="headerlink" href="#signal-and-register-interactions-with-scala-oop-reference-functions" title="此标题的永久链接"></a></h2>
+<h2>信号和寄存器与 Scala 语言的协作（OOP 引用 + 函数）<a class="headerlink" href="#signal-and-register-interactions-with-scala-oop-reference-functions" title="此标题的永久链接"></a></h2>
 <p>在 SpinalHDL 中，每个硬件元素都由一个类实例建模。这意味着您可以通过使用实例的引用来操作实例，例如将它们作为参数传递给函数。</p>
-<p>作为示例，以下代码实现了一个寄存器，当 <code class="docutils literal notranslate"><span class="pre">inc</span></code> 为 True 时递增，当 <code class="docutils literal notranslate"><span class="pre">clear</span></code> 为 True 时清除（<code class="docutils literal notranslate"><span class="pre">clear</span></code> 优先于 <code class="docutils literal notranslate"><span class="pre">inc</span></code>）：</p>
+<p>作为示例，以下代码实现了一个寄存器，当 <code class="docutils literal notranslate"><span class="pre">inc</span></code> 为 True 时递增，当 <code class="docutils literal notranslate"><span class="pre">clear</span></code> 为 True 时清零（<code class="docutils literal notranslate"><span class="pre">clear</span></code> 优先于 <code class="docutils literal notranslate"><span class="pre">inc</span></code>）：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inc</span><span class="p">,</span><span class="w"> </span><span class="n">clear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span><span class="w">          </span><span class="c1">// Define two combinational signals/wires</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w">  </span><span class="c1">// Define an 8 bit register</span>
 
@@ -1277,7 +1277,7 @@
 <span class="p">}</span><span class="w">                 </span><span class="c1">//  (last value assignment wins rule)</span>
 </pre></div>
 </div>
-<p>您可以通过将前面的示例与分配给“counter”的函数混合来实现完全相同的功能：</p>
+<p>您可以通过将前面的示例与赋值给 <a href="#id1"><span class="problematic" id="id2">``</span></a>counter``的函数混合来实现完全相同的功能：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inc</span><span class="p">,</span><span class="w"> </span><span class="n">clear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 
@@ -1307,7 +1307,7 @@
 <span class="n">setCounterWhen</span><span class="p">(</span><span class="n">cond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clear</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>并指定应分配给函数的内容：</p>
+<p>并指定函数应实现的赋值：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inc</span><span class="p">,</span><span class="w"> </span><span class="n">clear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 
@@ -1321,8 +1321,8 @@
 <span class="n">setSomethingWhen</span><span class="p">(</span><span class="n">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">counter</span><span class="p">,</span><span class="w"> </span><span class="n">cond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clear</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>前面的所有示例在生成的 RTL 中以及从 SpinalHDL 编译器的角度来看都是严格等效的。这是因为 SpinalHDL 只关心 Scala 运行时和在那里实例化的对象，它不关心 Scala 语法本身。</p>
-<p>换句话说，从生成的 RTL 生成/SpinalHDL 的角度来看，当您使用 Scala 中生成硬件的函数时，就像该函数被内联一样。 Scala 循环也是如此，因为它们将以展开的形式出现在生成的 RTL 中。</p>
+<p>前面的所有示例在生成的 RTL 中，从 SpinalHDL 编译器的角度来看都是严格等效的。这是因为 SpinalHDL 只关心 Scala 运行时实例化的对象，它不关心 Scala 语法本身。</p>
+<p>换句话说，从生成的 RTL 生成/SpinalHDL 的角度来看，当您调用 Scala 中生成硬件的函数时，就像该函数被内联了一样。 Scala 循环也是如此，因为它们将以展开的形式出现在生成的 RTL 中。</p>
 </section>
 </section>
 
@@ -1337,7 +1337,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="when_switch.html" class="btn btn-neutral float-left" title="何时/切换/复用器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="when_switch.html" class="btn btn-neutral float-left" title="When/Switch/Mux" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="../Sequential%20logic/index.html" class="btn btn-neutral float-right" title="时序逻辑" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
