@@ -1338,7 +1338,7 @@
 <li><p>Reset ：异步，高电平有效</p></li>
 <li><p>无时钟使能</p></li>
 </ul>
-<p>这对应于以下“ClockDomainConfig”：</p>
+<p>这对应于以下 <code class="docutils literal notranslate"><span class="pre">ClockDomainConfig</span></code>：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">defaultCC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomainConfig</span><span class="p">(</span>
 <span class="w">  </span><span class="n">clockEdge</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nc">RISING</span><span class="p">,</span>
 <span class="w">  </span><span class="n">resetKind</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="nc">ASYNC</span><span class="p">,</span>
@@ -1349,7 +1349,7 @@
 </section>
 <section id="internal-clock">
 <h3>内部时钟<a class="headerlink" href="#internal-clock" title="此标题的永久链接"></a></h3>
-<p>创建时钟域的替代语法如下：</p>
+<p>另一种创建时钟域的语法如下：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">ClockDomain</span><span class="p">.</span><span class="n">internal</span><span class="p">(</span>
 <span class="w">  </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="p">,</span>
 <span class="w">  </span><span class="p">[</span><span class="n">config</span><span class="p">:</span><span class="w"> </span><span class="nc">ClockDomainConfig</span><span class="p">,]</span>
@@ -1374,7 +1374,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">名字</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
 <td><p><cite>clk</cite> 和 <cite>reset</cite> 信号的名称</p></td>
 <td></td>
 </tr>
