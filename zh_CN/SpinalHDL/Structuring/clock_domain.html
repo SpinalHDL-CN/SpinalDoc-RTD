@@ -1292,14 +1292,14 @@
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">resetKind</span></code></p></td>
 <td><p>某些 FPGA 支持的 <code class="docutils literal notranslate"><span class="pre">ASYNC</span></code>、 <code class="docutils literal notranslate"><span class="pre">SYNC</span></code>和 <code class="docutils literal notranslate"><span class="pre">BOOT</span></code> （其中 FF 值由比特流加载）</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">重置活动级别</span></code></p></td>
-<td><p>“高”、“低”</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resetActiveLevel</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">软重置活动级别</span></code></p></td>
-<td><p>“高”、“低”</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">softResetActiveLevel</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">clockEnableActiveLevel</span></code></p></td>
-<td><p>“高”、“低”</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">HIGH</span></code>, <code class="docutils literal notranslate"><span class="pre">LOW</span></code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1332,10 +1332,10 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>默认情况下，“ClockDomain”应用于整个设计。该默认域的配置为：</p>
+<p>默认情况下， <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 应用于整个设计。该默认域的配置为：</p>
 <ul class="simple">
-<li><p>时钟：上升沿</p></li>
-<li><p>复位：异步，高电平有效</p></li>
+<li><p>Clock：上升沿</p></li>
+<li><p>Reset ：异步，高电平有效</p></li>
 <li><p>无时钟使能</p></li>
 </ul>
 <p>这对应于以下“ClockDomainConfig”：</p>
