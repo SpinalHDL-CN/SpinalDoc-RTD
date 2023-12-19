@@ -406,7 +406,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#defining-an-blackbox">定义一个黑盒</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#generics">泛型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#instantiating-a-blackbox">实例化黑盒</a></li>
-<li class="toctree-l3"><a class="reference internal" href="blackbox.html#clock-and-reset-mapping">时钟和复位信号映射</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blackbox.html#clock-and-reset-mapping">时钟和复位信号的映射</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#io-prefix">io前缀</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#rename-all-io-of-a-blackbox">重命名黑盒中的所有io</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#add-rtl-source">添加 RTL 源</a></li>
@@ -1180,8 +1180,8 @@
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
 <p>在 SpinalHDL 中，时钟和复位信号可以组合起来创建**时钟域**。时钟域可以应用于设计的某些区域，然后实例化到这些区域中的所有同步元件将**隐式**使用该时钟域。</p>
-<p>时钟域应用程序的工作方式类似于堆栈，这意味着如果您位于给定时钟域中，您仍然可以在本地应用另一个时钟域。</p>
-<p>请注意，寄存器在创建时捕获其时钟域，而不是在分配时捕获。因此，请确保在所需的“ClockingArea”内创建它们。</p>
+<p>时钟域的应用方式类似于堆栈，这意味着当您的设计位于给定时钟域中，您仍然可以将该设计应用到另一个时钟域。</p>
+<p>请注意，寄存器在创建时捕获其时钟域，而不是在赋值时捕获。因此，请确保在所需的 <code class="docutils literal notranslate"><span class="pre">ClockingArea</span></code> 内创建它们。</p>
 </section>
 <section id="instantiation">
 <span id="clock-domain-instantiation"></span><h2>实例化<a class="headerlink" href="#instantiation" title="此标题的永久链接"></a></h2>
@@ -1204,40 +1204,39 @@
 <col style="width: 8%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>争论</p></th>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
 <th class="head"><p>描述</p></th>
 <th class="head"><p>默认值</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">时钟</span></code></p></td>
-<td><p>定义域的时钟信号</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">clock</span></code></p></td>
+<td><p>定义时钟域中的时钟信号</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">重置</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">reset</span></code></p></td>
 <td><p>复位信号。如果存在需要复位的寄存器，而时钟域没有提供复位，则会显示错误消息</p></td>
 <td><p>null</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">软重置</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">softReset</span></code></p></td>
 <td><p>复位意味着额外的同步复位</p></td>
 <td><p>null</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">时钟启用</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">clockEnable</span></code></p></td>
 <td><p>该信号的目标是禁用整个时钟域上的时钟，而无需在每个同步元件上手动实现</p></td>
 <td><p>null</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">频率</span></code></p></td>
-<td><p>Allows you to specify the frequency of the given clock domain and later read it in your design.
-This parameter does not generate and PLL or other hardware to control the frequency</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code></p></td>
+<td><p>允许您指定给定时钟域的频率，然后在您的设计中读取它。该参数不生成PLL或其他硬件来控制频率</p></td>
 <td><p>UnknownFrequency</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">配置</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">config</span></code></p></td>
 <td><p>指定信号的极性和复位的性质</p></td>
 <td><p>当前配置</p></td>
 </tr>
 </tbody>
 </table>
-<p>在设计中定义特定时钟域的示例如下：</p>
+<p>在设计中定义具有指定属性时钟域的示例如下：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">coreClock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">coreReset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 
@@ -1250,7 +1249,7 @@ This parameter does not generate and PLL or other hardware to control the freque
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>当不需要“Area”时，也可以直接应用时钟域。存在两种语法：</p>
+<p>当不需要 <cite>Area</cite> 时，也可以直接应用时钟域。存在两种语法：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Counters</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">enable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">Bool</span><span class="w"> </span><span class="p">()</span>
@@ -1275,7 +1274,7 @@ This parameter does not generate and PLL or other hardware to control the freque
 </div>
 <section id="configuration">
 <h3>配置<a class="headerlink" href="#configuration" title="此标题的永久链接"></a></h3>
-<p>除了 :ref:` 构造函数参数 &lt;clock_domain_instantiation&gt;`之外，每个时钟域的以下元素都可以通过 <code class="docutils literal notranslate"><span class="pre">ClockDomainConfig</span></code>类进行配置：</p>
+<p>除了 <a class="reference internal" href="#clock-domain-instantiation"><span class="std std-ref">构造函数参数</span></a>之外，每个时钟域的以下元素都可以通过 <code class="docutils literal notranslate"><span class="pre">ClockDomainConfig</span></code>类进行配置：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -1290,7 +1289,7 @@ This parameter does not generate and PLL or other hardware to control the freque
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">clockEdge</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">RISING</span></code>, <code class="docutils literal notranslate"><span class="pre">FALLING</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">重置种类</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">resetKind</span></code></p></td>
 <td><p>某些 FPGA 支持的 <code class="docutils literal notranslate"><span class="pre">ASYNC</span></code>、 <code class="docutils literal notranslate"><span class="pre">SYNC</span></code>和 <code class="docutils literal notranslate"><span class="pre">BOOT</span></code> （其中 FF 值由比特流加载）</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">重置活动级别</span></code></p></td>
@@ -1369,7 +1368,7 @@ This parameter does not generate and PLL or other hardware to control the freque
 <col style="width: 14%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>争论</p></th>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
 <th class="head"><p>描述</p></th>
 <th class="head"><p>默认值</p></th>
 </tr>
@@ -1379,7 +1378,7 @@ This parameter does not generate and PLL or other hardware to control the freque
 <td><p><cite>clk</cite> 和 <cite>reset</cite> 信号的名称</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">配置</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">config</span></code></p></td>
 <td><p>指定信号的极性和复位的性质</p></td>
 <td><p>当前配置</p></td>
 </tr>
@@ -1395,7 +1394,7 @@ This parameter does not generate and PLL or other hardware to control the freque
 <td><p>添加时钟使能</p></td>
 <td><p>false</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">频率</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">frequency</span></code></p></td>
 <td><p>时钟域频率</p></td>
 <td><p>UnknownFrequency</p></td>
 </tr>

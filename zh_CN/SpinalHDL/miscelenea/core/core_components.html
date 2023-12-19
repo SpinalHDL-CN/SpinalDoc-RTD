@@ -406,7 +406,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#defining-an-blackbox">定义一个黑盒</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#generics">泛型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#instantiating-a-blackbox">实例化黑盒</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#clock-and-reset-mapping">时钟和复位信号映射</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#clock-and-reset-mapping">时钟和复位信号的映射</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#io-prefix">io前缀</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#rename-all-io-of-a-blackbox">重命名黑盒中的所有io</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#add-rtl-source">添加 RTL 源</a></li>
@@ -1205,7 +1205,7 @@
 <li><p>可选的 <code class="docutils literal notranslate"><span class="pre">reset</span></code> 复位信号。如果需要重置的寄存器并且其时钟域没有提供重置，则会出现错误提示</p></li>
 <li><p>可选的 <code class="docutils literal notranslate"><span class="pre">enable</span></code> 使能信号。该信号的目标是禁用整个时钟域上的时钟，而无需在每个同步元件上手动实现。</p></li>
 </ol>
-<p>在设计中定义特定时钟域的示例如下：</p>
+<p>在设计中定义具有指定属性时钟域的示例如下：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">coreClock</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">coreReset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 

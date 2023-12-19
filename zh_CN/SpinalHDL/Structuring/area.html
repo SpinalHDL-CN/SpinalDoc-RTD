@@ -406,7 +406,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#defining-an-blackbox">定义一个黑盒</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#generics">泛型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#instantiating-a-blackbox">实例化黑盒</a></li>
-<li class="toctree-l3"><a class="reference internal" href="blackbox.html#clock-and-reset-mapping">时钟和复位信号映射</a></li>
+<li class="toctree-l3"><a class="reference internal" href="blackbox.html#clock-and-reset-mapping">时钟和复位信号的映射</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#io-prefix">io前缀</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#rename-all-io-of-a-blackbox">重命名黑盒中的所有io</a></li>
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#add-rtl-source">添加 RTL 源</a></li>
@@ -1177,12 +1177,12 @@
 
   <section id="area">
 <h1>逻辑区<a class="headerlink" href="#area" title="此标题的永久链接"></a></h1>
-<p>有时，创建一个“组件”来定义某些逻辑是多余的，因为您：</p>
+<p>有时，创建一个 <code class="docutils literal notranslate"><span class="pre">Component</span></code> 组件来定义某些逻辑是多余的，因为：</p>
 <ul class="simple">
 <li><p>需要定义所有构造参数和IO（冗长、重复）</p></li>
-<li><p>拆分您的代码（超出需要）</p></li>
+<li><p>拆分您的代码（超出需求）</p></li>
 </ul>
-<p>对于这种情况，您可以使用“Area”来定义一组信号/逻辑：</p>
+<p>对于这种情况，您可以使用 <code class="docutils literal notranslate"><span class="pre">Area</span></code> 来定义一组信号/逻辑：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrl</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="p">...</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">timer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Area</span><span class="w"> </span><span class="p">{</span>
@@ -1214,12 +1214,12 @@
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <div class="line-block">
-<div class="line">在 VHDL 和 Verilog 中，有时使用前缀将变量分隔成逻辑部分。建议您在 SpinalHDL 中使用``Area`` 代替它。</div>
+<div class="line">在 VHDL 和 Verilog 中，有时使用前缀将变量分隔成逻辑部分。建议您在 SpinalHDL 中使用 <code class="docutils literal notranslate"><span class="pre">Area</span></code> 代替它。</div>
 </div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p><a class="reference internal" href="clock_domain.html#clock-domain"><span class="std std-ref">ClockingArea</span></a> 是一种特殊的 <code class="docutils literal notranslate"><span class="pre">Area</span></code> ，它允许您在该硬件块中缺省使用指定的 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> </p>
+<p><a class="reference internal" href="clock_domain.html#clock-domain"><span class="std std-ref">ClockingArea</span></a> 是一种特殊的 <code class="docutils literal notranslate"><span class="pre">Area</span></code> ，它允许您在该硬件块中缺省使用指定的 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 时钟域</p>
 </div>
 </section>
 

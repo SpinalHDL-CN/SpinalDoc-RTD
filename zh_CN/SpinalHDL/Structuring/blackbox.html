@@ -406,7 +406,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#defining-an-blackbox">定义一个黑盒</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#generics">泛型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#instantiating-a-blackbox">实例化黑盒</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#clock-and-reset-mapping">时钟和复位信号映射</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clock-and-reset-mapping">时钟和复位信号的映射</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#io-prefix">io前缀</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#rename-all-io-of-a-blackbox">重命名黑盒中的所有io</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#add-rtl-source">添加 RTL 源</a></li>
@@ -1179,7 +1179,7 @@
 <span id="blackbox"></span><h1>实例化 VHDL 和 Verilog IP<a class="headerlink" href="#instantiate-vhdl-and-verilog-ip" title="此标题的永久链接"></a></h1>
 <section id="description">
 <h2>描述<a class="headerlink" href="#description" title="此标题的永久链接"></a></h2>
-<p>黑盒允许用户通过指定其接口将现有的 VHDL/Verilog 组件集成到设计中。正确地进行阐述取决于仿真器或综合器。</p>
+<p>黑盒允许用户通过指定其接口将现有的 VHDL/Verilog 组件集成到设计中。正确地进行实力细化取决于仿真器或综合器。</p>
 </section>
 <section id="defining-an-blackbox">
 <h2>定义一个黑盒<a class="headerlink" href="#defining-an-blackbox" title="此标题的永久链接"></a></h2>
@@ -1214,7 +1214,7 @@
 </div>
 <div class="line-block">
 <div class="line">在 VHDL 中， <code class="docutils literal notranslate"><span class="pre">Bool</span></code> 类型的信号将被转换为 <code class="docutils literal notranslate"><span class="pre">std_logic</span></code> ， <code class="docutils literal notranslate"><span class="pre">Bits</span></code> 将被转换为 <code class="docutils literal notranslate"><span class="pre">std_logic_vector</span></code>。如果你想获得 <code class="docutils literal notranslate"><span class="pre">std_ulogic</span></code>，你必须使用 <code class="docutils literal notranslate"><span class="pre">BlackBoxULogic</span></code> 而不是 <code class="docutils literal notranslate"><span class="pre">BlackBox</span></code>。</div>
-<div class="line">In Verilog, <code class="docutils literal notranslate"><span class="pre">BlackBoxUlogic</span></code> does not change the generated verilog.</div>
+<div class="line">在 Verilog 中，<code class="docutils literal notranslate"><span class="pre">BlackBoxUlogic</span></code> 不会更改生成的 Verilog。</div>
 </div>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Ram_1w_1r</span><span class="p">(</span><span class="n">wordWidth</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span><span class="w"> </span><span class="n">wordCount</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">BlackBoxULogic</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="p">...</span>
@@ -1278,7 +1278,7 @@
 </div>
 </section>
 <section id="clock-and-reset-mapping">
-<h2>时钟和复位信号映射<a class="headerlink" href="#clock-and-reset-mapping" title="此标题的永久链接"></a></h2>
+<h2>时钟和复位信号的映射<a class="headerlink" href="#clock-and-reset-mapping" title="此标题的永久链接"></a></h2>
 <p>在黑盒定义中，您必须明确定义时钟和复位线。要将 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 的信号映射到黑盒的相应输入，您可以使用 <code class="docutils literal notranslate"><span class="pre">mapClockDomain</span></code> 或 <code class="docutils literal notranslate"><span class="pre">mapCurrentClockDomain</span></code> 函数。 <code class="docutils literal notranslate"><span class="pre">mapClockDomain</span></code> 具有以下参数：</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1295,24 +1295,24 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>时钟域</p></td>
-<td><p>时钟域</p></td>
+<tr class="row-even"><td><p>clockDomain</p></td>
+<td><p>ClockDomain</p></td>
 <td><p>ClockDomain.current</p></td>
 <td><p>指定提供信号的clockDomain</p></td>
 </tr>
 <tr class="row-odd"><td><p>时钟</p></td>
 <td><p>Bool</p></td>
-<td><p>没有什么</p></td>
+<td><p>Nothing</p></td>
 <td><p>应连接到clockDomain时钟的黑盒输入</p></td>
 </tr>
-<tr class="row-even"><td><p>复位</p></td>
+<tr class="row-even"><td><p>reset</p></td>
 <td><p>Bool</p></td>
-<td><p>没有什么</p></td>
+<td><p>Nothing</p></td>
 <td><p>黑盒输入应连接到时钟域的复位信号</p></td>
 </tr>
 <tr class="row-odd"><td><p>enable</p></td>
 <td><p>Bool</p></td>
-<td><p>没有什么</p></td>
+<td><p>Nothing</p></td>
 <td><p>黑盒输入应连接到时钟域的使能信号</p></td>
 </tr>
 </tbody>
@@ -1371,7 +1371,7 @@
 </section>
 <section id="rename-all-io-of-a-blackbox">
 <h2>重命名黑盒中的所有io<a class="headerlink" href="#rename-all-io-of-a-blackbox" title="此标题的永久链接"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">BlackBox</span></code> 或 <code class="docutils literal notranslate"><span class="pre">Component</span></code> 的 IO 可以在编译时使用 <code class="docutils literal notranslate"><span class="pre">addPrePopTask</span></code> 函数重命名。此函数在编译期间应用一个无参数函数，对于添加重命名通道非常有用，如下所示：</p>
+<p><code class="docutils literal notranslate"><span class="pre">BlackBox</span></code> 或 <code class="docutils literal notranslate"><span class="pre">Component</span></code> 的 IO 可以在编译时使用 <code class="docutils literal notranslate"><span class="pre">addPrePopTask</span></code> 函数重命名。此函数在编译期间调用一个无参数函数，对于添加重命名通道非常有用，如下所示：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyRam</span><span class="p">()</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Blackbox</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
