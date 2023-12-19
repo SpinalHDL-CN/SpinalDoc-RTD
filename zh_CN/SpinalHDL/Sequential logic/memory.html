@@ -471,18 +471,18 @@
 <li class="toctree-l2"><a class="reference internal" href="registers.html">寄存器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="registers.html#instantiation">实例化</a></li>
 <li class="toctree-l3"><a class="reference internal" href="registers.html#reset-value">复位值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="registers.html#initialization-value-for-simulation-purposes">用于模拟目的的初始化值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="registers.html#register-vectors">注册向量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="registers.html#transforming-a-wire-into-a-register">将电线转换为寄存器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="registers.html#initialization-value-for-simulation-purposes">用于仿真目的的初始化值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="registers.html#register-vectors">寄存器组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="registers.html#transforming-a-wire-into-a-register">将线缆/信号转换为寄存器</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">RAM/ROM存储器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#synchronous-enable-quirk">同步启用怪癖</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#read-under-write-policy">读写策略</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mixed-width-ram">混合宽度内存</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#automatic-blackboxing">Automatic blackboxing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#blackboxing-policy">黑盒政策</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#standard-memory-blackboxes">标准内存黑匣子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synchronous-enable-quirk">同步使能注意事项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#read-under-write-policy">写入时读取策略</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mixed-width-ram">混合位宽存储器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#automatic-blackboxing">自动黑盒化</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#blackboxing-policy">黑盒策略</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#standard-memory-blackboxes">标准存储器黑盒</a></li>
 </ul>
 </li>
 </ul>
@@ -729,7 +729,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/regIf.html#developers-area">开发商专区</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/Bus/index.html">公共汽车</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/Bus/index.html">总线</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Bus/amba3/ahblite3.html">AHB-Lite3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Bus/amba3/ahblite3.html#configuration-and-instanciation">配置和实例化</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Bus/amba3/ahblite3.html#variations">变化</a></li>
@@ -920,7 +920,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Examples/index.html">示例</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Examples/Simple%20ones/index.html">简单实例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/Simple%20ones/index.html">简单示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/apb3.html">APB3定义</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Simple%20ones/apb3.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Simple%20ones/apb3.html#specification">规范</a></li>
@@ -991,7 +991,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html">计时器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html#id2">计时器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html#bridging-function">桥接功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html#bridging-function">桥接函数</a></li>
 </ul>
 </li>
 </ul>
@@ -1177,8 +1177,8 @@
 
   <section id="ram-rom-memory">
 <h1>RAM/ROM存储器<a class="headerlink" href="#ram-rom-memory" title="此标题的永久链接"></a></h1>
-<p>要在 SpinalHDL 中创建内存，应使用“Mem”类。它允许您定义内存并向其添加读写端口。</p>
-<p>下表显示了如何实例化内存：</p>
+<p>要在 SpinalHDL 中创建内存，应使用 <code class="docutils literal notranslate"><span class="pre">Mem</span></code> 类。它允许您定义内存并向其添加读写端口。</p>
+<p>下表显示了如何实例化存储器：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -1190,32 +1190,31 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Mem（类型：数据，大小：Int）</span></code></p></td>
-<td><p>创建内存</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Mem(type</span> <span class="pre">:</span> <span class="pre">Data,</span> <span class="pre">size</span> <span class="pre">:</span> <span class="pre">Int)</span></code></p></td>
+<td><p>创建随机访问存储器</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Mem（类型：数据，初始内容：数组[数据]）</span></code></p></td>
-<td><p>创建一个 ROM。如果您的目标是 FPGA，因为内存可以推断为块 RAM，您仍然可以在其上创建写入端口。</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Mem(type</span> <span class="pre">:</span> <span class="pre">Data,</span> <span class="pre">initialContent</span> <span class="pre">:</span> <span class="pre">Array[Data])</span></code></p></td>
+<td><p>创建一个 ROM。如果您的目标是 FPGA，因为存储器可以推断为块 RAM，您仍然可以在其上创建写入端口。</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果你想定义一个 ROM，<code class="docutils literal notranslate"><span class="pre">initialContent</span></code> 数组的元素应该只是文字值（没有运算符，没有调整大小函数）。这里有一个例子:ref:<cite>&lt;sinus_rom&gt;</cite>。</p>
+<p>如果你想定义一个 ROM，<code class="docutils literal notranslate"><span class="pre">initialContent</span></code> 数组的元素应该只是字面量（无法做运算，无法改变位宽）。这里有一个例子 <a class="reference internal" href="../Examples/Simple%20ones/sinus_rom.html#sinus-rom"><span class="std std-ref">here</span></a>。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>要给 RAM 初始值，您还可以使用“init”函数。</p>
+<p>要给 RAM 初始值，您还可以使用 <code class="docutils literal notranslate"><span class="pre">init</span></code> 函数。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>Write mask width is flexible, and subdivide the memory word in as many slices of equal width as the width of the mask.
-For instance if you have a 32 bits memory word and provide a 4 bits mask then it will be a byte mask. If you provide a as many mask bits than you have word bits, then it is a bit mask.</p>
+<p>掩码位宽是可以灵活设定的，您可以根据掩码的宽度将存储器分成位宽相同的多个片段。例如，如果您有一个32位内存字，并提供一个4位掩码，那么它将是一个字节掩码。如果您提供的掩码位数与存储器一个字的位数相同，那么它将是一个位掩码。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>在模拟中可以对“Mem”进行操作，请参阅“模拟中内存的加载和存储&lt;simulation_of_memory&gt;”部分。</p>
+<p>在仿真时可以对 <code class="docutils literal notranslate"><span class="pre">Mem</span></code> 进行操作，请参阅 <a class="reference internal" href="../Simulation/signal.html#simulation-of-memory"><span class="std std-ref">仿真中加载和存储存储器</span></a> 部分。</p>
 </div>
-<p>下表显示了如何在内存上添加访问端口：</p>
+<p>下表显示了如何在存储器上添加访问端口：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 3%" />
@@ -1229,28 +1228,28 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>mem(地址) := 数据</p></td>
+<tr class="row-even"><td><p>mem(address) := data</p></td>
 <td><p>同步写入</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>内存（x）</p></td>
+<tr class="row-odd"><td><p>mem(x)</p></td>
 <td><p>异步读取</p></td>
 <td><p>T</p></td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
-<div class="line">内存.write(</div>
+<div class="line">mem.write(</div>
 <div class="line-block">
 <div class="line">address</div>
 <div class="line">data</div>
-<div class="line">[使能够]</div>
-<div class="line">[面具]</div>
+<div class="line">[enable]</div>
+<div class="line">[mask]</div>
 </div>
-<div class="line">）</div>
+<div class="line">)</div>
 </div>
 </td>
 <td><div class="line-block">
 <div class="line">使用可选掩码进行同步写入。</div>
-<div class="line">如果未指定使能（<code class="docutils literal notranslate"><span class="pre">enable</span></code>）条件，则会自动从调用此函数的条件范围（如when语句等）中推断出条件</div>
+<div class="line">如果未指定使能（enable）条件，则会自动从调用此函数的条件范围（如when语句等）中推断出条件</div>
 </div>
 </td>
 <td></td>
@@ -1259,26 +1258,26 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 <div class="line">mem.readAsync(</div>
 <div class="line-block">
 <div class="line">address</div>
-<div class="line">[读下写]</div>
+<div class="line">[readUnderWrite]</div>
 </div>
-<div class="line">）</div>
+<div class="line">)</div>
 </div>
 </td>
-<td><p>具有可选的读下写策略的异步读取</p></td>
+<td><p>异步读取，具有可选的写入时读取（read-under-write）策略</p></td>
 <td><p>T</p></td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
-<div class="line">内存.readSync(</div>
+<div class="line">mem.readSync(</div>
 <div class="line-block">
 <div class="line">address</div>
-<div class="line">[使能够]</div>
-<div class="line">[读下写]</div>
-<div class="line">[时钟穿越]</div>
+<div class="line">[enable]</div>
+<div class="line">[readUnderWrite]</div>
+<div class="line">[clockCrossing]</div>
 </div>
-<div class="line">）</div>
+<div class="line">)</div>
 </div>
 </td>
-<td><p>Synchronous read with an optional enable, read-under-write policy, and <code class="docutils literal notranslate"><span class="pre">clockCrossing</span></code> mode</p></td>
+<td><p>同步读取，具有可选的使能信号、写入间读取策略、跨时钟域（<code class="docutils literal notranslate"><span class="pre">clockCrossing</span></code>）模式。</p></td>
 <td><p>T</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
@@ -1286,19 +1285,19 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 <div class="line-block">
 <div class="line">address</div>
 <div class="line">data</div>
-<div class="line">使能</div>
+<div class="line">enable</div>
 <div class="line">write</div>
-<div class="line">[面具]</div>
-<div class="line">[读下写]</div>
-<div class="line">[时钟穿越]</div>
+<div class="line">[mask]</div>
+<div class="line">[readUnderWrite]</div>
+<div class="line">[clockCrossing]</div>
 </div>
-<div class="line">）</div>
+<div class="line">)</div>
 </div>
 </td>
 <td><div class="line-block">
 <div class="line">推断读/写端口。</div>
-<div class="line">当“enable &amp;&amp; write”时写入“data”。</div>
-<div class="line">返回读取的数据，当``enable``为true时发生读取</div>
+<div class="line">当 <code class="docutils literal notranslate"><span class="pre">enable</span> <span class="pre">&amp;&amp;</span> <span class="pre">write</span></code> 满足时写入 <code class="docutils literal notranslate"><span class="pre">data</span></code>。</div>
+<div class="line">返回读取的数据，当 <code class="docutils literal notranslate"><span class="pre">enable</span></code> 为true时读取</div>
 </div>
 </td>
 <td><p>T</p></td>
@@ -1307,11 +1306,11 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 </table>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果由于某种原因您需要一个未在 Spinal 中实现的特定内存端口，您始终可以通过为其指定 BlackBox 来抽象您的内存。</p>
+<p>如果由于某种原因您需要一个未在 Spinal 中实现的特定存储器端口，您始终可以通过为其指定 BlackBox 来抽象您的存储器。</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>SpinalHDL 中的内存端口不是推断的，而是明确定义的。您不应使用 VHDL/Verilog 等编码模板来帮助综合工具推断内存。</p>
+<p>SpinalHDL 中的存储器端口不是推断的，而是明确定义的。您不应使用 VHDL/Verilog 等编码模板来帮助综合工具推断存储器。</p>
 </div>
 <p>下面是一个推断简单双端口 RAM（32 位 * 256）的示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">mem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Mem</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">32</span><span class="w"> </span><span class="n">bits</span><span class="p">),</span><span class="w"> </span><span class="n">wordCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">256</span><span class="p">)</span>
@@ -1328,22 +1327,22 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 </pre></div>
 </div>
 <section id="synchronous-enable-quirk">
-<h2>同步启用怪癖<a class="headerlink" href="#synchronous-enable-quirk" title="此标题的永久链接"></a></h2>
-<p>当使能信号用于由“when”等条件块保护的块中时，只会生成使能信号作为访问条件：“when”条件将被忽略。</p>
+<h2>同步使能注意事项<a class="headerlink" href="#synchronous-enable-quirk" title="此标题的永久链接"></a></h2>
+<p>当使能信号用于由 <cite>when</cite> 等条件块保护的块中时，只会生成用使能信号作为访问条件的电路，也就是说 <cite>when</cite> 条件将被忽略。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">rom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Mem</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="n">bits</span><span class="p">),</span><span class="w"> </span><span class="mi">32</span><span class="p">)</span>
 <span class="n">when</span><span class="p">(</span><span class="n">cond</span><span class="p">){</span>
 <span class="w">  </span><span class="n">io</span><span class="p">.</span><span class="n">rdata</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">rom</span><span class="p">.</span><span class="n">readSync</span><span class="p">(</span><span class="n">io</span><span class="p">.</span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">rdEna</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>上面的例子中条件`cond`就不详细说明了。最好直接在使能信号中包含条件“cond”，如下所示。</p>
+<p>上面的例子中条件 <cite>cond</cite> 就不详细说明了。最好直接在使能信号中包含条件 <cite>cond</cite>，如下所示。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">io</span><span class="p">.</span><span class="n">rdata</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">rom</span><span class="p">.</span><span class="n">readSync</span><span class="p">(</span><span class="n">io</span><span class="p">.</span><span class="n">addr</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">rdEna</span><span class="w"> </span><span class="n">&amp;</span><span class="w"> </span><span class="n">cond</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="read-under-write-policy">
-<h2>读写策略<a class="headerlink" href="#read-under-write-policy" title="此标题的永久链接"></a></h2>
-<p>此策略指定在同一周期内对同一地址发生写入时，读取将受到怎样的影响。</p>
+<h2>写入时读取策略<a class="headerlink" href="#read-under-write-policy" title="此标题的永久链接"></a></h2>
+<p>此策略指定在同一周期内对同一地址发生写入时，读取的值将受到怎样的影响。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1355,25 +1354,25 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">不在乎</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dontCare</span></code></p></td>
 <td><p>发生这种情况时不用关心读取的值</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">首先阅读</span></code></p></td>
-<td><p>读取将得到旧值（写入之前）</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">readFirst</span></code></p></td>
+<td><p>读取操作将得到写入之前的值</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">先写</span></code></p></td>
-<td><p>读取将得到新值（由写入提供）</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">writeFirst</span></code></p></td>
+<td><p>读取操作将得到由写入提供的值</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>生成的 VHDL/Verilog 始终处于“readFirst”模式，该模式与“dontCare”兼容，但与“writeFirst”不兼容。要生成包含此类功能的设计，您需要启用:ref:<cite>自动内存黑盒 &lt;automatic_memory_blackboxing&gt;</cite>。</p>
+<p>生成的 VHDL/Verilog 始终处于 <code class="docutils literal notranslate"><span class="pre">readFirst</span></code> 模式，该模式与 <code class="docutils literal notranslate"><span class="pre">dontCare</span></code> 兼容，但与 <code class="docutils literal notranslate"><span class="pre">writeFirst</span></code> 不兼容。要生成包含此类功能的设计，您需要使能 <a class="reference internal" href="#automatic-memory-blackboxing"><span class="std std-ref">自动存储器黑盒</span></a>。</p>
 </div>
 </section>
 <section id="mixed-width-ram">
-<h2>混合宽度内存<a class="headerlink" href="#mixed-width-ram" title="此标题的永久链接"></a></h2>
-<p>您可以使用以下函数指定访问内存的端口，其宽度为内存宽度的二分之一次方：</p>
+<h2>混合位宽存储器<a class="headerlink" href="#mixed-width-ram" title="此标题的永久链接"></a></h2>
+<p>您可以使用以下函数指定访问存储器的端口，其位宽为二的幂次：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -1390,66 +1389,66 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 <div class="line-block">
 <div class="line">address</div>
 <div class="line">data</div>
-<div class="line">[读下写]</div>
+<div class="line">[readUnderWrite]</div>
 </div>
-<div class="line">）</div>
+<div class="line">)</div>
 </div>
 </td>
-<td><p>类似于“mem.write”</p></td>
+<td><p>类似于 <code class="docutils literal notranslate"><span class="pre">mem.write</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
 <div class="line">mem.readAsyncMixedWidth(</div>
 <div class="line-block">
 <div class="line">address</div>
 <div class="line">data</div>
-<div class="line">[读下写]</div>
+<div class="line">[readUnderWrite]</div>
 </div>
-<div class="line">）</div>
+<div class="line">)</div>
 </div>
 </td>
-<td><p>Similar to <code class="docutils literal notranslate"><span class="pre">mem.readAsync</span></code>, but in place of returning the read value, it drives the signal/object given as the <code class="docutils literal notranslate"><span class="pre">data</span></code> argument</p></td>
+<td><p>类似于 <code class="docutils literal notranslate"><span class="pre">mem.readAsync</span></code>, 会立即返回值，它驱动以 <code class="docutils literal notranslate"><span class="pre">data</span></code> 参数的形式传入的信号/对象</p></td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
 <div class="line">mem.readSyncMixedWidth(</div>
 <div class="line-block">
 <div class="line">address</div>
 <div class="line">data</div>
-<div class="line">[使能够]</div>
-<div class="line">[读下写]</div>
-<div class="line">[时钟穿越]</div>
+<div class="line">[enable]</div>
+<div class="line">[readUnderWrite]</div>
+<div class="line">[clockCrossing]</div>
 </div>
-<div class="line">）</div>
+<div class="line">)</div>
 </div>
 </td>
-<td><p>与“mem.readSync”类似，但它不是返回读取值，而是驱动作为“data”参数给出的信号/对象</p></td>
+<td><p>与 <code class="docutils literal notranslate"><span class="pre">mem.readSync``类似，但它不是返回读取值，而是驱动</span> <span class="pre">``data</span></code> 参数给出的信号/对象</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
 <div class="line">mem.readWriteSyncMixedWidth(</div>
 <div class="line-block">
 <div class="line">address</div>
 <div class="line">data</div>
-<div class="line">使能</div>
+<div class="line">enable</div>
 <div class="line">write</div>
-<div class="line">[面具]</div>
-<div class="line">[读下写]</div>
-<div class="line">[时钟穿越]</div>
+<div class="line">[mask]</div>
+<div class="line">[readUnderWrite]</div>
+<div class="line">[clockCrossing]</div>
 </div>
-<div class="line">）</div>
+<div class="line">)</div>
 </div>
 </td>
-<td><p>相当于“mem.readWriteSync”</p></td>
+<td><p>相当于 <code class="docutils literal notranslate"><span class="pre">mem.readWriteSync</span></code></p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>至于读下写策略，要使用此功能，您需要启用自动内存黑盒 &lt;automatic_memory_blackboxing&gt;`，因为没有通用的 VHDL/Verilog 语言模板来推断混合宽度 ram。</p>
+<p>至于写入时读取策略，要使用此功能，您需要启用 <a class="reference internal" href="#automatic-memory-blackboxing"><span class="std std-ref">自动内存黑盒</span></a>，因为没有通用的 VHDL/Verilog 语言模板来推断混合位宽存储器。</p>
 </div>
 </section>
 <section id="automatic-blackboxing">
-<span id="automatic-memory-blackboxing"></span><h2>Automatic blackboxing<a class="headerlink" href="#automatic-blackboxing" title="此标题的永久链接"></a></h2>
-<p>由于使用常规 VHDL/Verilog 不可能推断所有 ram 类型，因此 SpinalHDL 集成了可选的自动黑盒系统。该系统会查看 RTL 网表中存在的所有内存，并用黑盒替换它们。然后生成的代码将依赖第三方IP来提供内存功能，例如read-during-write策略和混合宽度端口。</p>
-<p>Here is an example of how to enable blackboxing of memories by default:</p>
+<span id="automatic-memory-blackboxing"></span><h2>自动黑盒化<a class="headerlink" href="#automatic-blackboxing" title="此标题的永久链接"></a></h2>
+<p>由于使用常规 VHDL/Verilog 不可能推断所有 ram 类型，因此 SpinalHDL 集成了可选的自动黑盒系统。该系统会查看 RTL 网表中存在的所有存储器，并用一个黑盒替换它们。然后生成的代码将依赖第三方IP来提供内存功能，例如写入时读取策略和混合位宽端口。</p>
+<p>这是一个如何缺省使能黑盒化存储器的例子：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">args</span><span class="p">:</span><span class="w"> </span><span class="nc">Array</span><span class="p">[</span><span class="nc">String</span><span class="p">])</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nc">SpinalConfig</span><span class="p">()</span>
 <span class="w">    </span><span class="p">.</span><span class="n">addStandardMemBlackboxing</span><span class="p">(</span><span class="n">blackboxAll</span><span class="p">)</span>
@@ -1457,9 +1456,9 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>如果标准黑盒工具不足以满足您的设计需求，请毫不犹豫地创建“Github 问题 &lt;<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/issues">https://github.com/SpinalHDL/SpinalHDL/issues</a>&gt;”_。还有一种方法可以创建您自己的黑盒工具。</p>
+<p>如果标准黑盒工具不足以满足您的设计需求，请毫不犹豫地创建 <a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/issues">Github工单</a>。还有一种方法，可以创建您自己的黑盒工具。</p>
 <section id="blackboxing-policy">
-<h3>黑盒政策<a class="headerlink" href="#blackboxing-policy" title="此标题的永久链接"></a></h3>
+<h3>黑盒策略<a class="headerlink" href="#blackboxing-policy" title="此标题的永久链接"></a></h3>
 <p>您可以使用多种策略来选择要黑盒的内存以及黑盒不可行时要执行的操作：</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1472,41 +1471,41 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">黑盒全部</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">blackboxAll</span></code></p></td>
 <td><div class="line-block">
-<div class="line">Blackbox all memory.</div>
-<div class="line">对不可黑盒内存抛出错误</div>
+<div class="line">黑盒化所有存储器。</div>
+<div class="line">对不可黑盒存储器抛出错误</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">blackboxAllWhatsYouCan</span></code></p></td>
-<td><p>黑盒所有可黑盒的内存</p></td>
+<td><p>黑盒所有可黑盒的存储器</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">blackboxRequestedAndUninferable</span></code></p></td>
 <td><div class="line-block">
-<div class="line">用户指定的黑盒内存和已知不可推断的内存（混合宽度，…）。</div>
-<div class="line">对不可黑盒内存抛出错误</div>
+<div class="line">用户指定的黑盒存储器和已知不可推断的存储器（混合位宽，…）。</div>
+<div class="line">对不可黑盒存储器抛出错误</div>
 </div>
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">blackboxOnlyIfRequested</span></code></p></td>
 <td><div class="line-block">
-<div class="line">用户指定的黑盒内存</div>
-<div class="line">对不可黑盒内存抛出错误</div>
+<div class="line">用户指定的黑盒存储器</div>
+<div class="line">对不可黑盒存储器抛出错误</div>
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-<p>要显式地将内存设置为黑盒，您可以使用其“generateAsBlackBox”函数。</p>
+<p>要显式地将存储器设置为黑盒，您可以使用其 <code class="docutils literal notranslate"><span class="pre">generateAsBlackBox</span></code> 函数。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">mem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Mem</span><span class="p">(</span><span class="nc">Rgb</span><span class="p">(</span><span class="n">rgbConfig</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">16</span><span class="p">)</span>
 <span class="n">mem</span><span class="p">.</span><span class="n">generateAsBlackBox</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>You can also define your own blackboxing policy by extending the <code class="docutils literal notranslate"><span class="pre">MemBlackboxingPolicy</span></code> class.</p>
+<p>你可以通过继承 <code class="docutils literal notranslate"><span class="pre">MemBlackboxingPolicy</span></code> 类定义你自己的黑盒化策略。</p>
 </section>
 <section id="standard-memory-blackboxes">
-<h3>标准内存黑匣子<a class="headerlink" href="#standard-memory-blackboxes" title="此标题的永久链接"></a></h3>
+<h3>标准存储器黑盒<a class="headerlink" href="#standard-memory-blackboxes" title="此标题的永久链接"></a></h3>
 <p>下面显示的是 SpinalHDL 中使用的标准黑盒的 VHDL 定义：</p>
 <div class="highlight-ada notranslate"><div class="highlight"><pre><span></span><span class="c1">-- Simple asynchronous dual port (1 write port, 1 read port)</span>
 <span class="n">component</span> <span class="n">Ram_1w_1ra</span> <span class="kr">is</span>
@@ -1617,21 +1616,21 @@ For instance if you have a 32 bits memory word and provide a 4 bits mask then it
 <span class="kr">end</span> <span class="nf">component</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>正如你所看到的，黑匣子有一个技术参数。要设置它，您可以在相应的内存上使用“setTechnology”函数。目前有4种可能的技术：</p>
+<p>正如你所看到的，黑盒有一个技术参数。要设置它，您可以在相应的内存上使用 <code class="docutils literal notranslate"><span class="pre">setTechnology</span></code> 函数。目前有4种可能的技术：</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">自动</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">内存块</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">分布式Lut</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">注册文件</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ramBlock</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">distributedLut</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">registerFile</span></code></p></li>
 </ul>
-<p>如果已为您的设备供应商配置了“SpinalConfig#setDevice(Device)”，则 Blackboxing 可以插入 HDL 属性。</p>
+<p>如果已为您的设备供应商配置了 <code class="docutils literal notranslate"><span class="pre">SpinalConfig#setDevice(Device)</span></code> ，则黑盒化可以插入 HDL 属性。</p>
 <p>生成的 HDL 属性可能如下所示：</p>
 <div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">ram_style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;distributed&quot;</span><span class="w"> </span><span class="o">*</span><span class="p">)</span>
 <span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="n">ramsyle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;no_rw_check&quot;</span><span class="w"> </span><span class="o">*</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>SpinalHDL 尝试支持知名供应商和设备提供的许多常见内存类型，但是这是一个不断变化的领域，并且该领域的项目要求可能非常具体。</p>
-<p>如果这对您的设计流程很重要，请检查输出 HDL 是否有预期的属性/通用插入，同时查阅供应商的平台文档。</p>
+<p>SpinalHDL 尝试支持知名供应商和设备提供的许多常见存储器类型，但是这是一个不断变化的领域，并且该领域的项目要求可能非常具体。</p>
+<p>如果这对您的设计流程很重要，请检查输出 HDL 是否有预期的属性/代码，同时查阅供应商的平台文档。</p>
 <p>HDL 属性也可以使用 <cite>addAttribute()</cite> <a class="reference internal" href="../Other%20language%20features/vhdl_generation.html#vhdl-and-verilog-attributes"><span class="std std-ref">addAttribute</span></a> 机制手动添加。</p>
 </section>
 </section>

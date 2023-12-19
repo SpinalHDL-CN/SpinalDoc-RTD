@@ -471,18 +471,18 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Sequential%20logic/registers.html">寄存器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/registers.html#instantiation">实例化</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/registers.html#reset-value">复位值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/registers.html#initialization-value-for-simulation-purposes">用于模拟目的的初始化值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/registers.html#register-vectors">注册向量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/registers.html#transforming-a-wire-into-a-register">将电线转换为寄存器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/registers.html#initialization-value-for-simulation-purposes">用于仿真目的的初始化值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/registers.html#register-vectors">寄存器组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/registers.html#transforming-a-wire-into-a-register">将线缆/信号转换为寄存器</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Sequential%20logic/memory.html">RAM/ROM存储器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/memory.html#synchronous-enable-quirk">同步启用怪癖</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/memory.html#read-under-write-policy">读写策略</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/memory.html#mixed-width-ram">混合宽度内存</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/memory.html#automatic-blackboxing">Automatic blackboxing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Sequential%20logic/memory.html#blackboxing-policy">黑盒政策</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Sequential%20logic/memory.html#standard-memory-blackboxes">标准内存黑匣子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/memory.html#synchronous-enable-quirk">同步使能注意事项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/memory.html#read-under-write-policy">写入时读取策略</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/memory.html#mixed-width-ram">混合位宽存储器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Sequential%20logic/memory.html#automatic-blackboxing">自动黑盒化</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Sequential%20logic/memory.html#blackboxing-policy">黑盒策略</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Sequential%20logic/memory.html#standard-memory-blackboxes">标准存储器黑盒</a></li>
 </ul>
 </li>
 </ul>
@@ -729,7 +729,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/regIf.html#developers-area">开发商专区</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/Bus/index.html">公共汽车</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/Bus/index.html">总线</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html">AHB-Lite3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html#configuration-and-instanciation">配置和实例化</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html#variations">变化</a></li>
@@ -920,7 +920,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">示例</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../Simple%20ones/index.html">简单实例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Simple%20ones/index.html">简单示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Simple%20ones/apb3.html">APB3定义</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Simple%20ones/apb3.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Simple%20ones/apb3.html#specification">规范</a></li>
@@ -991,7 +991,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">计时器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id2">计时器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#bridging-function">桥接功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bridging-function">桥接函数</a></li>
 </ul>
 </li>
 </ul>
@@ -1180,14 +1180,14 @@
 <span id="id1"></span><h1>计时器<a class="headerlink" href="#timer" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
-<p>定时器模块可能是最基本的硬件之一。但即使对于计时器来说，您也可以使用 SpinalHDL 做一些有趣的事情。此示例将定义一个集成总线桥接实用程序的简单计时器组件。</p>
+<p>计时器模块可能是最基本的硬件模块之一。但即使对于计时器，您也可以使用SpinalHDL做一些有趣的事情。这个示例将定义一个简单的计时器组件，其中集成了一个总线桥接实用工具。</p>
 </section>
 <section id="id2">
 <h2>计时器<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
-<p>让我们从“Timer”组件开始。</p>
+<p>那么让我们从 <code class="docutils literal notranslate"><span class="pre">Timer</span></code> 组件开始。</p>
 <section id="specification">
 <h3>规范<a class="headerlink" href="#specification" title="此标题的永久链接"></a></h3>
-<p>“Timer”组件将有一个构造参数：</p>
+<p><code class="docutils literal notranslate"><span class="pre">Timer</span></code> 组件将具有一个构造参数：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1203,7 +1203,7 @@
 <tbody>
 <tr class="row-even"><td><p>width</p></td>
 <td><p>Int</p></td>
-<td><p>指定定时器计数器的位宽</p></td>
+<td><p>指定计时器计数器的位宽</p></td>
 </tr>
 </tbody>
 </table>
@@ -1223,30 +1223,30 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>打钩</p></td>
+<tr class="row-even"><td><p>tick</p></td>
 <td><p>in</p></td>
 <td><p>Bool</p></td>
-<td><p>当“tick”为 True 时，计时器计数直到“limit”。</p></td>
+<td><p>当 <code class="docutils literal notranslate"><span class="pre">tick</span></code> 为 True 时，计时器计数到 <code class="docutils literal notranslate"><span class="pre">limit</span></code> 。</p></td>
 </tr>
 <tr class="row-odd"><td><p>clear</p></td>
 <td><p>in</p></td>
 <td><p>Bool</p></td>
-<td><p>当“tick”为 True 时，计时器设置为零。 “clear” 优先于“tick”。</p></td>
+<td><p>当 <code class="docutils literal notranslate"><span class="pre">tick</span></code> 为 True 时，计时器设为零。 <code class="docutils literal notranslate"><span class="pre">clear</span></code> 优先于 <code class="docutils literal notranslate"><span class="pre">tick</span></code> 。</p></td>
 </tr>
-<tr class="row-even"><td><p>限制</p></td>
+<tr class="row-even"><td><p>limit</p></td>
 <td><p>in</p></td>
-<td><p>UInt（宽度位）</p></td>
-<td><p>当定时器值等于“limit”时，“tick”输入被禁止。</p></td>
+<td><p>UInt(width bits)</p></td>
+<td><p>当计时器值等于 <code class="docutils literal notranslate"><span class="pre">limit</span></code> 时，禁止 <code class="docutils literal notranslate"><span class="pre">tick</span></code> 输入。</p></td>
 </tr>
-<tr class="row-odd"><td><p>满的</p></td>
+<tr class="row-odd"><td><p>full</p></td>
 <td><p>out</p></td>
 <td><p>Bool</p></td>
-<td><p>当定时器值等于“limit”并且“tick”为高时，“full”为高。</p></td>
+<td><p>当计时器值等于 <code class="docutils literal notranslate"><span class="pre">limit</span></code> 并且 <code class="docutils literal notranslate"><span class="pre">tick</span></code> 为高时，<code class="docutils literal notranslate"><span class="pre">full</span></code> 为高。</p></td>
 </tr>
-<tr class="row-even"><td><p>价值</p></td>
+<tr class="row-even"><td><p>value</p></td>
 <td><p>out</p></td>
-<td><p>UInt（宽度位）</p></td>
-<td><p>接线定时器计数器值。</p></td>
+<td><p>UInt(width bits)</p></td>
+<td><p>引出计时器的计数器值。</p></td>
 </tr>
 </tbody>
 </table>
@@ -1280,15 +1280,15 @@
 </section>
 </section>
 <section id="bridging-function">
-<h2>桥接功能<a class="headerlink" href="#bridging-function" title="此标题的永久链接"></a></h2>
-<p>现在我们可以开始讨论这个例子的主要目的：定义总线桥接功能。为此，我们将使用两种技术：</p>
+<h2>桥接函数<a class="headerlink" href="#bridging-function" title="此标题的永久链接"></a></h2>
+<p>现在我们可以从这个例子的主要目的开始：定义总线桥接功能。为此，我们将使用两种技术：</p>
 <ul class="simple">
-<li><p>使用此处记录的“BusSlaveFactory”工具 &lt;bus_slave_factory&gt;`</p></li>
-<li><p>在“Timer”组件内定义一个函数，可以从父组件调用该函数以抽象方式驱动“Timer”的 IO。</p></li>
+<li><p>使用在文档 <a class="reference internal" href="../../Libraries/bus_slave_factory.html#bus-slave-factory"><span class="std std-ref">此处</span></a> 的 <code class="docutils literal notranslate"><span class="pre">BusSlaveFactory</span></code> 工具</p></li>
+<li><p>在 <code class="docutils literal notranslate"><span class="pre">Timer</span></code> 组件内定义一个函数，这个函数可以从父组件调用该函数，并以抽象方式驱动 <code class="docutils literal notranslate"><span class="pre">Timer</span></code> 的 IO。</p></li>
 </ul>
 <section id="id3">
 <h3>规范<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h3>
-<p>该桥接函数将采用以下参数：</p>
+<p>该桥接函数将使用以下参数：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 8%" />
@@ -1302,25 +1302,25 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>总线控制</p></td>
+<tr class="row-even"><td><p>busCtrl</p></td>
 <td><p>BusSlaveFactory</p></td>
-<td><p>函数将使用“BusSlaveFactory”实例来创建桥接逻辑。</p></td>
+<td><p>函数将使用 <code class="docutils literal notranslate"><span class="pre">BusSlaveFactory</span></code> 实例来创建桥接逻辑。</p></td>
 </tr>
-<tr class="row-odd"><td><p>基地址</p></td>
+<tr class="row-odd"><td><p>baseAddress</p></td>
 <td><p>BigInt</p></td>
 <td><p>桥接逻辑应映射到的基地址。</p></td>
 </tr>
-<tr class="row-even"><td><p>蜱虫</p></td>
-<td><p>序列[布尔]</p></td>
-<td><p>可用作刻度信号的布尔源列表。</p></td>
+<tr class="row-even"><td><p>ticks</p></td>
+<td><p>Seq[Bool]</p></td>
+<td><p>可用作tick信号的Bool源序列。</p></td>
 </tr>
-<tr class="row-odd"><td><p>清除</p></td>
-<td><p>序列[布尔]</p></td>
-<td><p>可用作明确信号的布尔源列表。</p></td>
+<tr class="row-odd"><td><p>clears</p></td>
+<td><p>Seq[Bool]</p></td>
+<td><p>可用作clear信号的Bool源序列。</p></td>
 </tr>
 </tbody>
 </table>
-<p>寄存器映射假设总线系统是 32 位宽：</p>
+<p>假设寄存器映射的总线系统位宽是32位：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 7%" />
@@ -1334,57 +1334,57 @@
 <tr class="row-odd"><th class="head"><p>名称</p></th>
 <th class="head"><p>通道</p></th>
 <th class="head"><p>位宽</p></th>
-<th class="head"><p>地址偏移量</p></th>
-<th class="head"><p>位偏移量</p></th>
+<th class="head"><p>地址偏移</p></th>
+<th class="head"><p>位偏移</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>勾选启用</p></td>
+<tr class="row-even"><td><p>ticksEnable</p></td>
 <td><p>RW</p></td>
-<td><p>长度（刻度）</p></td>
+<td><p>len(ticks)</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
-<td><p>如果相应的“ticks Enable”位为高，则可以激活每个“ticks”布尔值。</p></td>
+<td><p>每个 <code class="docutils literal notranslate"><span class="pre">ticks</span></code> 逻辑值都可以被相应的 <code class="docutils literal notranslate"><span class="pre">ticksEnable</span></code> 位取高激活。</p></td>
 </tr>
-<tr class="row-odd"><td><p>清除启用</p></td>
+<tr class="row-odd"><td><p>clearsEnable</p></td>
 <td><p>RW</p></td>
-<td><p>len（清除）</p></td>
+<td><p>len(clears)</p></td>
 <td><p>0</p></td>
 <td><p>16</p></td>
-<td><p>如果相应的“清除启用”位为高，则可以激活每个“清除”布尔值。</p></td>
+<td><p>每个 <code class="docutils literal notranslate"><span class="pre">clears</span></code> 逻辑值都可以被相应的 <code class="docutils literal notranslate"><span class="pre">clearsEnable</span></code> 位取高激活。</p></td>
 </tr>
-<tr class="row-even"><td><p>限制</p></td>
+<tr class="row-even"><td><p>limit</p></td>
 <td><p>RW</p></td>
 <td><p>width</p></td>
 <td><p>4</p></td>
 <td><p>0</p></td>
 <td><div class="line-block">
-<div class="line">访问定时器组件的极限值。</div>
-<div class="line">当写入该寄存器时，定时器被清零。</div>
+<div class="line">访问计时器组件的limit值。</div>
+<div class="line">当写入该寄存器时，计时器清零。</div>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p>价值</p></td>
+<tr class="row-odd"><td><p>value</p></td>
 <td><p>R</p></td>
 <td><p>width</p></td>
 <td><p>8</p></td>
 <td><p>0</p></td>
-<td><p>访问定时器的值。</p></td>
+<td><p>访问计时器的值。</p></td>
 </tr>
 <tr class="row-even"><td><p>clear</p></td>
 <td><p>W</p></td>
 <td></td>
 <td><p>8</p></td>
 <td></td>
-<td><p>当写入该寄存器时，它会清除定时器。</p></td>
+<td><p>当写入该寄存器时，计时器清零。</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="id4">
 <h3>实现<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h3>
-<p>让我们在“Timer”组件中添加这个桥接函数。</p>
+<p>让我们在 <code class="docutils literal notranslate"><span class="pre">Timer</span></code> 组件中添加这个桥接函数。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Timer</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="p">...</span>
 <span class="w">  </span><span class="c1">// The function prototype uses Scala currying funcName(arg1,arg2)(arg3,arg3)</span>
@@ -1413,13 +1413,13 @@
 </section>
 <section id="usage">
 <h3>用法<a class="headerlink" href="#usage" title="此标题的永久链接"></a></h3>
-<p>下面是一些演示代码，与 Pinsec SoC 定时器模块中使用的代码非常接近。基本上它实例化了以下元素：</p>
+<p>下面是一些演示代码，它与Pinsec SoC计时器模块中使用的代码非常接近。基本上，它实例化了以下元素：</p>
 <ul class="simple">
 <li><p>1个16位预分频器</p></li>
-<li><p>1个32位定时器</p></li>
-<li><p>三个16位定时器</p></li>
+<li><p>1个32位计时器</p></li>
+<li><p>3个16位计时器</p></li>
 </ul>
-<p>然后，通过使用“Apb3SlaveFactory”和“Timer”内定义的函数，它在 APB3 总线和所有实例化组件之间创建桥接逻辑。</p>
+<p>然后，通过使用 <code class="docutils literal notranslate"><span class="pre">Apb3SlaveFactory</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Timer</span></code> 内定义的函数，它在 APB3 总线和所有实例化组件之间创建桥接逻辑。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">apb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slave</span><span class="p">(</span><span class="nc">Apb3</span><span class="p">(</span><span class="nc">Apb3Config</span><span class="p">(</span><span class="n">addressWidth</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">dataWidth</span><span class="o">=</span><span class="mi">32</span><span class="p">)))</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">interrupt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>

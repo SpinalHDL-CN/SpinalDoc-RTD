@@ -471,18 +471,18 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">寄存器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#instantiation">实例化</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#reset-value">复位值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#initialization-value-for-simulation-purposes">用于模拟目的的初始化值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#register-vectors">注册向量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#transforming-a-wire-into-a-register">将电线转换为寄存器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initialization-value-for-simulation-purposes">用于仿真目的的初始化值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#register-vectors">寄存器组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#transforming-a-wire-into-a-register">将线缆/信号转换为寄存器</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="memory.html">RAM/ROM存储器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="memory.html#synchronous-enable-quirk">同步启用怪癖</a></li>
-<li class="toctree-l3"><a class="reference internal" href="memory.html#read-under-write-policy">读写策略</a></li>
-<li class="toctree-l3"><a class="reference internal" href="memory.html#mixed-width-ram">混合宽度内存</a></li>
-<li class="toctree-l3"><a class="reference internal" href="memory.html#automatic-blackboxing">Automatic blackboxing</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="memory.html#blackboxing-policy">黑盒政策</a></li>
-<li class="toctree-l4"><a class="reference internal" href="memory.html#standard-memory-blackboxes">标准内存黑匣子</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory.html#synchronous-enable-quirk">同步使能注意事项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory.html#read-under-write-policy">写入时读取策略</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory.html#mixed-width-ram">混合位宽存储器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory.html#automatic-blackboxing">自动黑盒化</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="memory.html#blackboxing-policy">黑盒策略</a></li>
+<li class="toctree-l4"><a class="reference internal" href="memory.html#standard-memory-blackboxes">标准存储器黑盒</a></li>
 </ul>
 </li>
 </ul>
@@ -729,7 +729,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/regIf.html#developers-area">开发商专区</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/Bus/index.html">公共汽车</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/Bus/index.html">总线</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Bus/amba3/ahblite3.html">AHB-Lite3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Bus/amba3/ahblite3.html#configuration-and-instanciation">配置和实例化</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Bus/amba3/ahblite3.html#variations">变化</a></li>
@@ -920,7 +920,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Examples/index.html">示例</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Examples/Simple%20ones/index.html">简单实例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Examples/Simple%20ones/index.html">简单示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/apb3.html">APB3定义</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Simple%20ones/apb3.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Simple%20ones/apb3.html#specification">规范</a></li>
@@ -991,7 +991,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html">计时器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html#id2">计时器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html#bridging-function">桥接功能</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Examples/Advanced%20ones/timer.html#bridging-function">桥接函数</a></li>
 </ul>
 </li>
 </ul>
@@ -1180,10 +1180,10 @@
 <p>在 SpinalHDL 中创建寄存器与在 VHDL 或 Verilog 中创建寄存器有很大不同。</p>
 <p>在 Spinal 中，没有 process/always 块。寄存器在声明时明确定义。这种与传统的事件驱动 HDL 的区别具有很大的影响：</p>
 <ul class="simple">
-<li><p>您可以在同一范围内分配寄存器和连线，这意味着代码不需要在 process/always 块之间拆分</p></li>
-<li><p>它使事情变得更加灵活（参见:ref:<cite>Functions &lt;function&gt;</cite>）</p></li>
+<li><p>您可以在同一范围内赋值寄存器和连线，这意味着代码不需要在 process/always 块之间拆分</p></li>
+<li><p>它使事情变得更加灵活（参见 <a class="reference internal" href="../Structuring/function.html#function"><span class="std std-ref">Functions</span></a>）</p></li>
 </ul>
-<p>时钟和复位是分开处理的，有关详细信息，请参阅时钟域 &lt;clock_domain&gt;` 章节。</p>
+<p>时钟和复位是分开处理的，有关详细信息，请参阅 <cite>时钟域 &lt;clock_domain&gt;</cite> 章节。</p>
 <section id="instantiation">
 <h2>实例化<a class="headerlink" href="#instantiation" title="此标题的永久链接"></a></h2>
 <p>实例化寄存器有4种方法：</p>
@@ -1198,17 +1198,17 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Reg（类型：数据）</span></code></p></td>
-<td><p>给定类型的寄存器</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Reg(type</span> <span class="pre">:</span> <span class="pre">Data)</span></code></p></td>
+<td><p>创建给定类型的寄存器</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RegInit（重置值：数据）</span></code></p></td>
-<td><p>当发生重置时，寄存器加载给定的“resetValue”</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RegInit(resetValue</span> <span class="pre">:</span> <span class="pre">Data)</span></code></p></td>
+<td><p>当发生复位时，为寄存器加载给定的 <code class="docutils literal notranslate"><span class="pre">resetValue</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RegNext（下一个值：数据）</span></code></p></td>
-<td><p>每个周期对给定的“nextValue”进行采样的寄存器</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RegNext(nextValue</span> <span class="pre">:</span> <span class="pre">Data)</span></code></p></td>
+<td><p>创建寄存器，且每个周期对给定的 <code class="docutils literal notranslate"><span class="pre">nextValue</span></code> 进行采样</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RegNextWhen(nextValue：数据，cond：Bool)</span></code></p></td>
-<td><p>当条件发生时对给定的“nextValue”进行采样的寄存器</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RegNextWhen(nextValue</span> <span class="pre">:</span> <span class="pre">Data,</span> <span class="pre">cond</span> <span class="pre">:</span> <span class="pre">Bool)</span></code></p></td>
+<td><p>创建寄存器，当条件发生时对 <code class="docutils literal notranslate"><span class="pre">nextValue</span></code> 进行采样</p></td>
 </tr>
 </tbody>
 </table>
@@ -1233,12 +1233,9 @@
 <p>上面的代码将推断出以下逻辑：</p>
 <img alt="../../_images/register.svg" class="align-center" src="../../_images/register.svg" /><div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">reg3</span></code> example above shows how you can assign the value of a <code class="docutils literal notranslate"><span class="pre">RegInit</span></code> register.
-It’s possible to use the same syntax to assign to the other register types as well (<code class="docutils literal notranslate"><span class="pre">Reg</span></code>, <code class="docutils literal notranslate"><span class="pre">RegNext</span></code>, <code class="docutils literal notranslate"><span class="pre">RegNextWhen</span></code>).
-Just like in combinational assignments, the rule is ‘Last assignment wins’, but if no assignment is done, the register keeps its value.
-If the Reg is declared in a design and does not have suitable assignment and consumption it is likely to be pruned (removed from design) at some point by EDA flows after being deemed unnecessary.</p>
+<p>上面 <code class="docutils literal notranslate"><span class="pre">reg3</span></code> 示例显示了如何为 <code class="docutils literal notranslate"><span class="pre">RegInit</span></code> 创建寄存器赋值。也可以使用相同的语法赋值其他寄存器类型（“Reg”、“RegNext”、“RegNextWhen”）。就像组合赋值一样，规则是“最后一个赋值生效”，但如果没有完成赋值，寄存器将保留其值。如果在设计中声明 Reg 并且没有适当地赋值和使用， EDA 流程中的工具会在它认为该寄存器不必要时裁剪寄存器（从设计中删除）。</p>
 </div>
-<p id="regnext">另外，“RegNext”是一个基于“Reg”语法构建的抽象。以下两个代码序列严格等效：</p>
+<p id="regnext">另外，<code class="docutils literal notranslate"><span class="pre">RegNext</span></code> 是一个基于 <code class="docutils literal notranslate"><span class="pre">Reg</span></code> 语法构建的抽象。下面两个代码序列严格等效：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Standard way</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">something</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">Bool</span><span class="p">())</span>
@@ -1249,7 +1246,7 @@ If the Reg is declared in a design and does not have suitable assignment and con
 <span class="kd">val</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">RegNext</span><span class="p">(</span><span class="n">something</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>可以通过其他方式同时拥有多个选项，因此在上述基本理解的基础上构建稍微更高级的组合：</p>
+<p>可以通过其他方式同时拥有多个选项，因此可在上述基本理解的基础上构建稍微更高级的组合：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// UInt register of 6 bits (initialized with 42 when the reset occurs)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">reg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">6</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 
@@ -1287,12 +1284,12 @@ If the Reg is declared in a design and does not have suitable assignment and con
 </section>
 <section id="reset-value">
 <h2>复位值<a class="headerlink" href="#reset-value" title="此标题的永久链接"></a></h2>
-<p>除了直接创建具有重置值的寄存器的“RegInit(value : Data)”语法之外，您还可以通过在寄存器上调用“init(value : Data)”函数来设置重置值。</p>
+<p>除了直接创建具有复位值的寄存器的 <code class="docutils literal notranslate"><span class="pre">RegInit(value</span> <span class="pre">:</span> <span class="pre">Data)</span></code> 语法之外，您还可以通过在寄存器上调用 <code class="docutils literal notranslate"><span class="pre">init(value</span> <span class="pre">:</span> <span class="pre">Data)</span></code> 函数来设置复位值。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// UInt register of 4 bits initialized with 0 when the reset occurs</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">reg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>如果您有一个包含 Bundle 的寄存器，则可以对 Bundle 的每个元素使用“init”函数。</p>
+<p>如果您有一个包含线束（Bundle）的寄存器，则可以对线束的每个元素使用 <code class="docutils literal notranslate"><span class="pre">init</span></code> 函数。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">ValidRGB</span><span class="p">()</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">valid</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1304,21 +1301,21 @@ If the Reg is declared in a design and does not have suitable assignment and con
 </div>
 </section>
 <section id="initialization-value-for-simulation-purposes">
-<h2>用于模拟目的的初始化值<a class="headerlink" href="#initialization-value-for-simulation-purposes" title="此标题的永久链接"></a></h2>
-<p>对于在 RTL 中不需要复位值，但需要模拟初始化值（以避免 x 传播）的寄存器，您可以通过调用“randBoot()”函数来请求随机初始化值。</p>
+<h2>用于仿真目的的初始化值<a class="headerlink" href="#initialization-value-for-simulation-purposes" title="此标题的永久链接"></a></h2>
+<p>对于在 RTL 中不需要复位值，但需要仿真初始化值（以避免未知状态X传播）的寄存器，您可以通过调用 <code class="docutils literal notranslate"><span class="pre">randBoot()</span></code> 函数来请求随机初始化值。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// UInt register of 4 bits initialized with a random value</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">reg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">randBoot</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="register-vectors">
-<h2>注册向量<a class="headerlink" href="#register-vectors" title="此标题的永久链接"></a></h2>
-<p>至于连线，可以使用“Vec”定义寄存器向量。</p>
+<h2>寄存器组<a class="headerlink" href="#register-vectors" title="此标题的永久链接"></a></h2>
+<p>至于连线，可以使用 <code class="docutils literal notranslate"><span class="pre">Vec</span></code> 定义寄存器组。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">vecReg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Vec</span><span class="p">(</span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)),</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">vecReg2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Vec</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">8</span><span class="p">)(</span><span class="nc">Reg</span><span class="p">(</span><span class="nc">Bool</span><span class="p">()))</span>
 </pre></div>
 </div>
-<p>初始化可以像往常一样使用“init”方法完成，它可以与寄存器上的“foreach”迭代相结合。</p>
+<p>初始化可以像往常一样使用 <code class="docutils literal notranslate"><span class="pre">init</span></code> 方法完成，它可以与寄存器上的 <code class="docutils literal notranslate"><span class="pre">foreach</span></code> 迭代相结合。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">vecReg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Vec</span><span class="p">(</span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">vecReg2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Vec</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">8</span><span class="p">)(</span><span class="nc">Reg</span><span class="p">(</span><span class="nc">Bool</span><span class="p">()))</span>
 <span class="n">vecReg2</span><span class="p">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">_</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="nc">False</span><span class="p">))</span>
@@ -1356,8 +1353,8 @@ If the Reg is declared in a design and does not have suitable assignment and con
 </div>
 </section>
 <section id="transforming-a-wire-into-a-register">
-<h2>将电线转换为寄存器<a class="headerlink" href="#transforming-a-wire-into-a-register" title="此标题的永久链接"></a></h2>
-<p>有时将现有的连线转换为寄存器很有用。例如，当您使用 Bundle 时，如果您希望 Bundle 的某些输出成为寄存器，您可能更愿意编写 <code class="docutils literal notranslate"><span class="pre">io.myBundle.PORT</span> <span class="pre">:=</span> <span class="pre">newValue</span></code> 而不用 <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">PORT</span> <span class="pre">=</span> <span class="pre">Reg(</span> <span class="pre">...)</span></code> 并将其输出连接到带有``io.myBundle.PORT := PORT`` 的端口。为此，您只需在要控制为寄存器的端口上使用``.setAsReg()``：</p>
+<h2>将线缆/信号转换为寄存器<a class="headerlink" href="#transforming-a-wire-into-a-register" title="此标题的永久链接"></a></h2>
+<p>有时将现有的连线转换为寄存器很有用。例如，当您使用线束（Bundle）时，如果您希望线束的某些输出成为寄存器，您可能更愿意编写 <code class="docutils literal notranslate"><span class="pre">io.myBundle.PORT</span> <span class="pre">:=</span> <span class="pre">newValue</span></code> 而不用 <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">PORT</span> <span class="pre">=</span> <span class="pre">Reg(</span> <span class="pre">...)</span></code> 并将其输出连接到带有``io.myBundle.PORT := PORT`` 的端口。为此，您只需在要实例化为寄存器的端口上使用 <code class="docutils literal notranslate"><span class="pre">.setAsReg()</span></code>：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">   </span><span class="kd">val</span><span class="w"> </span><span class="n">apb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">master</span><span class="p">(</span><span class="nc">Apb3</span><span class="p">(</span><span class="n">apb3Config</span><span class="p">))</span>
 <span class="p">}</span>
@@ -1373,8 +1370,8 @@ If the Reg is declared in a design and does not have suitable assignment and con
 <p>请注意，在上面的代码中，您还可以指定初始化值。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>该寄存器是在线路的时钟域中创建的，并且不依赖于使用``.setAsReg()``的位置。</p>
-<p>在上面的示例中，线路在“io”捆绑包中定义，与组件位于同一时钟域中。即使“io.apb.PADDR.setAsReg()”写入具有不同时钟域的“ClockingArea”中，寄存器也将使用组件的时钟域，而不是“ClockingArea”的时钟域`。</p>
+<p>该寄存器是在线路/信号的时钟域中创建的，并且不依赖于使用 <code class="docutils literal notranslate"><span class="pre">.setAsReg()</span></code> 的位置。</p>
+<p>在上面的示例中，线路在 <code class="docutils literal notranslate"><span class="pre">io</span></code> 线束中定义，与组件位于同一时钟域中。即使 <code class="docutils literal notranslate"><span class="pre">io.apb.PADDR.setAsReg()</span></code> 这条代码写在具有不同时钟域的 <code class="docutils literal notranslate"><span class="pre">ClockingArea</span></code> 中，寄存器也将使用组件的时钟域，而不是 <code class="docutils literal notranslate"><span class="pre">ClockingArea</span></code> 的时钟域。</p>
 </div>
 </section>
 </section>
