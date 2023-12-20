@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="溪流" href="stream.html" />
-    <link rel="prev" title="图书馆" href="index.html" />
+    <link rel="prev" title="模块库" href="index.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -144,7 +144,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/SBT.html">将 CLI 中的 Spinal 与 SBT 结合使用</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/VSCodium.html">使用 VSCodium 的 Spinal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/IntelliJ.html">使用 IntelliJ IDEA 中的 Spinal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/IntelliJ.html">从 IntelliJ IDEA 使用 Spinal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/Scala%20Guide/index.html">斯卡拉指南</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Scala%20Guide/basics.html">基本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Getting%20Started/Scala%20Guide/basics.html#types">类型</a></li>
@@ -626,16 +626,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">图书馆</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">模块库</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">实用工具</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#state-less-utilities">无状态公用事业</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#state-full-utilities">State full utilities</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#counter">柜台</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#timeout">暂停</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#resetctrl">重置控制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#state-less-utilities">免状态工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#state-full-utilities">全状态工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#counter">计数器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#timeout">超时</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resetctrl">复位控制</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#special-utilities">特殊公用事业</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#special-utilities">特殊工具</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="stream.html">溪流</a><ul>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">图书馆</a></li>
+          <li class="breadcrumb-item"><a href="index.html">模块库</a></li>
       <li class="breadcrumb-item active">实用工具</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Libraries/utils.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1177,9 +1177,9 @@
 
   <section id="utils">
 <h1>实用工具<a class="headerlink" href="#utils" title="此标题的永久链接"></a></h1>
-<p>一些实用程序也存在于 <a class="reference internal" href="../Other%20language%20features/utils.html#utils"><span class="std std-ref">spinal.core</span></a> 中</p>
+<p>一些实用工具也在 <a class="reference internal" href="../Other%20language%20features/utils.html#utils"><span class="std std-ref">spinal.core</span></a> 中</p>
 <section id="state-less-utilities">
-<h2>无状态公用事业<a class="headerlink" href="#state-less-utilities" title="此标题的永久链接"></a></h2>
+<h2>免状态工具<a class="headerlink" href="#state-less-utilities" title="此标题的永久链接"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -1193,111 +1193,111 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>tiGray(x：UInt)</p></td>
+<tr class="row-even"><td><p>toGray(x : UInt)</p></td>
 <td><p>Bits</p></td>
-<td><p>返回从 <code class="docutils literal notranslate"><span class="pre">x</span></code> (UInt) 转换而来的灰度值</p></td>
+<td><p>返回从 <code class="docutils literal notranslate"><span class="pre">x</span></code> (UInt)转换而来的灰度值</p></td>
 </tr>
-<tr class="row-odd"><td><p>fromGray(x : 位)</p></td>
+<tr class="row-odd"><td><p>fromGray(x : Bits)</p></td>
 <td><p>UInt</p></td>
-<td><p>返回从``x``（灰色）转换而来的UInt值</p></td>
+<td><p>返回从 <code class="docutils literal notranslate"><span class="pre">x</span></code> (灰度)转换而来的UInt值</p></td>
 </tr>
-<tr class="row-even"><td><p>反转（x：T）</p></td>
+<tr class="row-even"><td><p>Reverse(x : T)</p></td>
 <td><p>T</p></td>
-<td><p>翻转所有位 (lsb + n -&gt; msb - n)</p></td>
+<td><p>翻转所有位(lsb + n -&gt; msb - n)</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
-<div class="line">OHToUInt(x : Seq[布尔])</div>
-<div class="line">OHToUInt(x：位向量)</div>
+<div class="line">OHToUInt(x : Seq[Bool])</div>
+<div class="line">OHToUInt(x : BitVector)</div>
 </div>
 </td>
 <td><p>UInt</p></td>
-<td><p>返回``x``中单个位集（一个热）的索引</p></td>
+<td><p>返回 <code class="docutils literal notranslate"><span class="pre">x</span></code> 中唯一被设置（为1）的比特位的索引</p></td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
 <div class="line">CountOne(x : Seq[Bool])</div>
-<div class="line">CountOne(x：位向量)</div>
+<div class="line">CountOne(x : BitVector)</div>
 </div>
 </td>
 <td><p>UInt</p></td>
-<td><p>返回“x”中设置的位数</p></td>
+<td><p>返回 <code class="docutils literal notranslate"><span class="pre">x</span></code> 中被设为1的位数</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
-<div class="line">多数投票（x：Seq[Bool]）</div>
-<div class="line">多数投票（x：位向量）</div>
+<div class="line">MajorityVote(x : Seq[Bool])</div>
+<div class="line">MajorityVote(x : BitVector)</div>
 </div>
 </td>
 <td><p>Bool</p></td>
-<td><p>如果设置的位数 &gt; x.size / 2，则返回 True</p></td>
+<td><p>如果设置为1的位数 &gt; x.size / 2，则返回 True</p></td>
 </tr>
-<tr class="row-even"><td><p>EndiannessSwap（即：T[，基数：BitCount]）</p></td>
+<tr class="row-even"><td><p>EndiannessSwap(that: T[, base:BitCount])</p></td>
 <td><p>T</p></td>
 <td><p>大端 &lt;-&gt; 小端</p></td>
 </tr>
-<tr class="row-odd"><td><p>OHMasking.first(x：位)</p></td>
+<tr class="row-odd"><td><p>OHMasking.first(x : Bits)</p></td>
 <td><p>Bits</p></td>
-<td><p>对 x 应用掩码以仅保留第一位设置</p></td>
+<td><p>对x应用掩码以仅保留第一个设为1的位</p></td>
 </tr>
-<tr class="row-even"><td><p>OHMasking.last（x：位）</p></td>
+<tr class="row-even"><td><p>OHMasking.last(x : Bits)</p></td>
 <td><p>Bits</p></td>
-<td><p>对 x 应用掩码以仅保留最后一位设置</p></td>
+<td><p>对x应用掩码以仅保留最后一个设为1的位</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
 <div class="line">OHMasking.roundRobin(</div>
 <div class="line-block">
-<div class="line">请求：位，</div>
-<div class="line">oh优先级：位</div>
+<div class="line">requests : Bits,</div>
+<div class="line">ohPriority : Bits</div>
 </div>
 <div class="line">)</div>
 </div>
 </td>
 <td><p>Bits</p></td>
 <td><div class="line-block">
-<div class="line">对 x 应用掩码以仅保留“请求”中设置的位。</div>
-<div class="line">it start looking in <code class="docutils literal notranslate"><span class="pre">requests</span></code> from the <code class="docutils literal notranslate"><span class="pre">ohPriority</span></code> position.</div>
-<div class="line">例如，如果“requests”为“1001”且“ohPriority”为“0010”，则“roundRobin”函数将从第二位开始查找“requests”并返回“ 1000”。</div>
+<div class="line">对x应用掩码以仅保留 <code class="docutils literal notranslate"><span class="pre">requests</span></code> 中设置1的位。</div>
+<div class="line">它从 <code class="docutils literal notranslate"><span class="pre">ohPriority</span></code> 位置开始访问 <code class="docutils literal notranslate"><span class="pre">requests</span></code> 。</div>
+<div class="line">例如，如果 <code class="docutils literal notranslate"><span class="pre">requests</span></code> 为“1001”且 <code class="docutils literal notranslate"><span class="pre">ohPriority</span></code> 为“0010”，则 <code class="docutils literal notranslate"><span class="pre">roundRobin</span></code> 函数将从第二位开始访问 <cite>requests</cite> 并返回“1000”。</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
-<div class="line">穆克斯OH (</div>
+<div class="line">MuxOH (</div>
 <div class="line-block">
 <div class="line">oneHot : IndexedSeq[Bool],</div>
-<div class="line">输入：可迭代[T]</div>
+<div class="line">inputs : Iterable[T]</div>
 </div>
 <div class="line">)</div>
 </div>
 </td>
 <td><p>T</p></td>
-<td><p>基于“oneHot”向量从“inputs”返回混合的“T”。</p></td>
+<td><p>根据 <code class="docutils literal notranslate"><span class="pre">oneHot</span></code> 向量从 <code class="docutils literal notranslate"><span class="pre">inputs</span></code> 中返回多路复用的 <code class="docutils literal notranslate"><span class="pre">T</span></code> 。</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
-<div class="line">优先复用器 (</div>
+<div class="line">PriorityMux (</div>
 <div class="line-block">
-<div class="line">sel: 序列[布尔],</div>
-<div class="line">在：序列[T]</div>
+<div class="line">sel: Seq[Bool],</div>
+<div class="line">in:  Seq[T]</div>
 </div>
 <div class="line">)</div>
 </div>
 </td>
 <td><p>T</p></td>
-<td><p>返回第一个 sel 为 True 的 in 元素。</p></td>
+<td><p>返回第一个其 <code class="docutils literal notranslate"><span class="pre">sel</span></code> 为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 的 <code class="docutils literal notranslate"><span class="pre">in</span></code> 元素。</p></td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
-<div class="line">优先复用器 (</div>
+<div class="line">PriorityMux (</div>
 <div class="line-block">
-<div class="line">在：Seq[(Bool, T)]</div>
+<div class="line">in:  Seq[(Bool, T)]</div>
 </div>
 <div class="line">)</div>
 </div>
 </td>
 <td><p>T</p></td>
-<td><p>返回第一个 sel 为 True 的 in 元素。</p></td>
+<td><p>返回第一个其 <code class="docutils literal notranslate"><span class="pre">sel</span></code> 为 <code class="docutils literal notranslate"><span class="pre">True</span></code> 的 <code class="docutils literal notranslate"><span class="pre">in</span></code> 元素。</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="state-full-utilities">
-<h2>State full utilities<a class="headerlink" href="#state-full-utilities" title="此标题的永久链接"></a></h2>
+<h2>全状态工具<a class="headerlink" href="#state-full-utilities" title="此标题的永久链接"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 33%" />
@@ -1311,27 +1311,27 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>延迟（即：T，cycleCount：Int）</p></td>
+<tr class="row-even"><td><p>Delay(that: T, cycleCount: Int)</p></td>
 <td><p>T</p></td>
-<td><p>返回延迟了“cycleCount”周期的“that”</p></td>
+<td><p>返回延迟了 <code class="docutils literal notranslate"><span class="pre">cycleCount</span></code> 周期的 <code class="docutils literal notranslate"><span class="pre">that</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>历史记录（即：T，长度：Int[，当：Bool]）</p></td>
-<td><p>列表[T]</p></td>
+<tr class="row-odd"><td><p>History(that: T, length: Int[,when : Bool])</p></td>
+<td><p>List[T]</p></td>
 <td><div class="line-block">
-<div class="line">返回“length”元素的 Vec</div>
-<div class="line">第一个元素是 <code class="docutils literal notranslate"><span class="pre">that</span></code>，最后一个元素是 <code class="docutils literal notranslate"><span class="pre">that</span></code> 延迟了 <code class="docutils literal notranslate"><span class="pre">length</span></code>-1</div>
-<div class="line">当“when”被置位时的内部移位寄存器样本</div>
+<div class="line">返回长度为 <code class="docutils literal notranslate"><span class="pre">length</span></code> 的Vec</div>
+<div class="line">其第一个元素是 <code class="docutils literal notranslate"><span class="pre">that</span></code> ，最后一个元素是延迟了 <code class="docutils literal notranslate"><span class="pre">length</span></code>-1的``that``</div>
+<div class="line">内部移位寄存器会在 <code class="docutils literal notranslate"><span class="pre">when</span></code> 有效时采样</div>
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p>BufferCC（输入：T）</p></td>
+<tr class="row-even"><td><p>BufferCC(input : T)</p></td>
 <td><p>T</p></td>
-<td><p>使用2个触发器返回与当前时钟域同步的输入信号</p></td>
+<td><p>返回利用两个触发器同步到当前时钟域的同步输入信号</p></td>
 </tr>
 </tbody>
 </table>
 <section id="counter">
-<h3>柜台<a class="headerlink" href="#counter" title="此标题的永久链接"></a></h3>
+<h3>计数器<a class="headerlink" href="#counter" title="此标题的永久链接"></a></h3>
 <p>计数器工具可用于轻松实例化硬件计数器。</p>
 <table class="docutils align-default">
 <colgroup>
@@ -1340,25 +1340,25 @@
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>实例化语法</p></th>
-<th class="head"><p>笔记</p></th>
+<th class="head"><p>备注</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">计数器（开始：BigInt，结束：BigInt[，inc：Bool]）</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Counter(start:</span> <span class="pre">BigInt,</span> <span class="pre">end:</span> <span class="pre">BigInt[,</span> <span class="pre">inc</span> <span class="pre">:</span> <span class="pre">Bool])</span></code></p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Counter(range</span> <span class="pre">:</span> <span class="pre">Range[,</span> <span class="pre">inc</span> <span class="pre">:</span> <span class="pre">Bool])</span></code></p></td>
-<td><p>与 <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">to</span> <span class="pre">y</span></code> <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">Until</span> <span class="pre">y</span></code> 语法兼容</p></td>
+<td><p>与 <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">to</span> <span class="pre">y</span></code> <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">until</span> <span class="pre">y</span></code> 语法兼容</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">计数器（stateCount：BigInt</span> <span class="pre">[，inc：Bool]）</span></code></p></td>
-<td><p>从 0 开始，到“stateCount - 1”结束</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Counter(stateCount:</span> <span class="pre">BigInt[,</span> <span class="pre">inc</span> <span class="pre">:</span> <span class="pre">Bool])</span></code></p></td>
+<td><p>从 0 开始，到 <code class="docutils literal notranslate"><span class="pre">stateCount</span> <span class="pre">-</span> <span class="pre">1</span></code> 结束</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">计数器（bitCount：BitCount</span> <span class="pre">[，inc：Bool]）</span></code></p></td>
-<td><p>Starts at zero and ends at <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">&lt;&lt;</span> <span class="pre">bitCount)</span> <span class="pre">-</span> <span class="pre">1</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Counter(bitCount:</span> <span class="pre">BitCount[,</span> <span class="pre">inc</span> <span class="pre">:</span> <span class="pre">Bool])</span></code></p></td>
+<td><p>从0开始到 <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">&lt;&lt;</span> <span class="pre">bitCount)</span> <span class="pre">-</span> <span class="pre">1</span></code> 结束</p></td>
 </tr>
 </tbody>
 </table>
-<p>计数器可以通过方法控制，并且可以读取连线：</p>
+<p>计数器可以通过方法控制，并且可以连线可以被读取：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Counter</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="mi">9</span><span class="p">)</span><span class="w"> </span><span class="c1">// Creates a counter of 8 states (2 to 9)</span>
 <span class="c1">// Methods</span>
 <span class="n">counter</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span><span class="w">               </span><span class="c1">// Resets the counter</span>
@@ -1372,16 +1372,16 @@
 <span class="n">when</span><span class="p">(</span><span class="n">counter</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mi">5</span><span class="p">){</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span><span class="w">    </span><span class="c1">// counter is implicitly casted to its current value</span>
 </pre></div>
 </div>
-<p>当“计数器”溢出（达到最终值）时，它会重新启动下一个周期至其起始值。</p>
+<p>当 <code class="docutils literal notranslate"><span class="pre">Counter</span></code> 溢出（达到最终值）时，它会重新启动下一个周期并设置为起始值。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <p>目前仅支持向上计数器。</p>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">CounterFreeRun</span></code> 构建一个始终运行的计数器：<code class="docutils literal notranslate"><span class="pre">CounterFreeRun(stateCount:</span> <span class="pre">BigInt)</span></code>。</p>
+<p><code class="docutils literal notranslate"><span class="pre">CounterFreeRun</span></code> 构建一个始终运行的计数器： <code class="docutils literal notranslate"><span class="pre">CounterFreeRun(stateCount:</span> <span class="pre">BigInt)</span></code> 。</p>
 </section>
 <section id="timeout">
-<h3>暂停<a class="headerlink" href="#timeout" title="此标题的永久链接"></a></h3>
-<p>The Timeout tool can be used to easily instantiate an hardware timeout.</p>
+<h3>超时<a class="headerlink" href="#timeout" title="此标题的永久链接"></a></h3>
+<p>超时工具可用于方便地实例化一个硬件超时。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -1389,22 +1389,22 @@
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>实例化语法</p></th>
-<th class="head"><p>笔记</p></th>
+<th class="head"><p>备注</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>超时（周期：BigInt）</p></td>
-<td><p>在“cycles”时钟后勾选</p></td>
+<tr class="row-even"><td><p>Timeout(cycles : BigInt)</p></td>
+<td><p>在 <code class="docutils literal notranslate"><span class="pre">cycles</span></code> 个时钟后标记</p></td>
 </tr>
-<tr class="row-odd"><td><p>超时（时间：时间编号）</p></td>
-<td><p>在“time”持续时间后勾选</p></td>
+<tr class="row-odd"><td><p>Timeout(time : TimeNumber)</p></td>
+<td><p>在持续 <code class="docutils literal notranslate"><span class="pre">time</span></code> 时间后标记</p></td>
 </tr>
-<tr class="row-even"><td><p>超时（频率：赫兹数）</p></td>
-<td><p>以“频率”速率勾选</p></td>
+<tr class="row-even"><td><p>Timeout(frequency : HertzNumber)</p></td>
+<td><p>以 <a href="#id1"><span class="problematic" id="id2">``</span></a>frequency``频率进行标记</p></td>
 </tr>
 </tbody>
 </table>
-<p>有一个可以与计数器工具一起使用的不同语法的示例</p>
+<p>下方是可以与Counter工具一起使用的不同语法句式的示例</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Timeout</span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="n">ms</span><span class="p">)</span><span class="w">  </span><span class="c1">//Timeout who tick after 10 ms</span>
 <span class="n">when</span><span class="p">(</span><span class="n">timeout</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">               </span><span class="c1">//Check if the timeout has tick</span>
 <span class="w">    </span><span class="n">timeout</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span><span class="w">           </span><span class="c1">//Ask the timeout to clear its flag</span>
@@ -1413,15 +1413,15 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>If you instantiate an <code class="docutils literal notranslate"><span class="pre">Timeout</span></code> with an time or frequency setup, the implicit <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> should have an frequency setting.</p>
+<p>如果您使用时间或频率设置实例化 <code class="docutils literal notranslate"><span class="pre">Timeout</span></code> ，则隐含地 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 应该具有频率设置。</p>
 </div>
 </section>
 <section id="resetctrl">
-<h3>重置控制<a class="headerlink" href="#resetctrl" title="此标题的永久链接"></a></h3>
-<p>ResetCtrl 提供了一些实用程序来管理重置。</p>
+<h3>复位控制<a class="headerlink" href="#resetctrl" title="此标题的永久链接"></a></h3>
+<p>复位控制(ResetCtrl)提供了一些实用工具来管理复位。</p>
 <section id="asyncassertsyncdeassert">
 <h4>asyncAssertSyncDeassert<a class="headerlink" href="#asyncassertsyncdeassert" title="此标题的永久链接"></a></h4>
-<p>You can filter an asynchronous reset by using an asynchronously asserted synchronously deaserted logic. To do it you can use the <code class="docutils literal notranslate"><span class="pre">ResetCtrl.asyncAssertSyncDeassert</span></code> function which will return you the filtered value.</p>
+<p>您可以使用异步有效同步无效逻辑来筛选异步复位。为此，您可以使用 <code class="docutils literal notranslate"><span class="pre">ResetCtrl.asyncAssertSyncDeassert</span></code> 函数返回筛选后的值。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -1435,34 +1435,34 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>输入</p></td>
+<tr class="row-even"><td><p>input</p></td>
 <td><p>Bool</p></td>
-<td><p>应过滤的信号</p></td>
+<td><p>被筛选的信号</p></td>
 </tr>
 <tr class="row-odd"><td><p>clockDomain</p></td>
 <td><p>ClockDomain</p></td>
-<td><p>ClockDomain 将使用过滤后的值</p></td>
+<td><p>返回将使用所筛选值的时钟域(ClockDomain)</p></td>
 </tr>
-<tr class="row-even"><td><p>输入极性</p></td>
-<td><p>极性</p></td>
+<tr class="row-even"><td><p>inputPolarity</p></td>
+<td><p>Polarity</p></td>
 <td><p>HIGH/LOW (default=HIGH)</p></td>
 </tr>
-<tr class="row-odd"><td><p>输出极性</p></td>
-<td><p>极性</p></td>
-<td><p>高/低（默认=clockDomain.config.resetActiveLevel）</p></td>
+<tr class="row-odd"><td><p>outputPolarity</p></td>
+<td><p>Polarity</p></td>
+<td><p>HIGH/LOW (default=clockDomain.config.resetActiveLevel)</p></td>
 </tr>
-<tr class="row-even"><td><p>缓冲区深度</p></td>
+<tr class="row-even"><td><p>bufferDepth</p></td>
 <td><p>Int</p></td>
-<td><p>用于避免亚稳态的寄存器级数（默认=2）</p></td>
+<td><p>防止亚稳态所需的寄存器级数（默认为2）</p></td>
 </tr>
 </tbody>
 </table>
-<p>There is also an <code class="docutils literal notranslate"><span class="pre">ResetCtrl.asyncAssertSyncDeassertDrive</span></code> version of tool which directly assign the <code class="docutils literal notranslate"><span class="pre">clockDomain</span></code> reset with the filtered value.</p>
+<p>另外还有一个 <code class="docutils literal notranslate"><span class="pre">ResetCtrl.asyncAssertSyncDeassertDrive</span></code> 版本的工具，它直接使用筛选后的值为 <code class="docutils literal notranslate"><span class="pre">clockDomain</span></code> 的复位赋值。</p>
 </section>
 </section>
 </section>
 <section id="special-utilities">
-<h2>特殊公用事业<a class="headerlink" href="#special-utilities" title="此标题的永久链接"></a></h2>
+<h2>特殊工具<a class="headerlink" href="#special-utilities" title="此标题的永久链接"></a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 33%" />
@@ -1476,11 +1476,11 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>延迟分析（路径：节点*）</p></td>
+<tr class="row-even"><td><p>LatencyAnalysis(paths : Node*)</p></td>
 <td><p>Int</p></td>
 <td><div class="line-block">
-<div class="line">Return the shortest path, in terms of cycles, that travel through all nodes,</div>
-<div class="line">从第一个到最后一个</div>
+<div class="line">以周期为单位返回经过所有节点的最短路径，</div>
+<div class="line">第一个节点到最后一个节点</div>
 </div>
 </td>
 </tr>
@@ -1500,7 +1500,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="index.html" class="btn btn-neutral float-left" title="图书馆" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="模块库" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="stream.html" class="btn btn-neutral float-right" title="溪流" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

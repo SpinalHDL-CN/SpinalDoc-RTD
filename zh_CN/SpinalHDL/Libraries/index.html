@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>图书馆 &mdash; SpinalHDL  文档</title>
+  <title>模块库 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -144,7 +144,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/SBT.html">将 CLI 中的 Spinal 与 SBT 结合使用</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/VSCodium.html">使用 VSCodium 的 Spinal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/IntelliJ.html">使用 IntelliJ IDEA 中的 Spinal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/IntelliJ.html">从 IntelliJ IDEA 使用 Spinal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Getting%20Started/Scala%20Guide/index.html">斯卡拉指南</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Getting%20Started/Scala%20Guide/basics.html">基本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Getting%20Started/Scala%20Guide/basics.html#types">类型</a></li>
@@ -626,16 +626,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">图书馆</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">模块库</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">实用工具</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="utils.html#state-less-utilities">无状态公用事业</a></li>
-<li class="toctree-l3"><a class="reference internal" href="utils.html#state-full-utilities">State full utilities</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="utils.html#counter">柜台</a></li>
-<li class="toctree-l4"><a class="reference internal" href="utils.html#timeout">暂停</a></li>
-<li class="toctree-l4"><a class="reference internal" href="utils.html#resetctrl">重置控制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#state-less-utilities">免状态工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#state-full-utilities">全状态工具</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#counter">计数器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#timeout">超时</a></li>
+<li class="toctree-l4"><a class="reference internal" href="utils.html#resetctrl">复位控制</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="utils.html#special-utilities">特殊公用事业</a></li>
+<li class="toctree-l3"><a class="reference internal" href="utils.html#special-utilities">特殊工具</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="stream.html">溪流</a><ul>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">图书馆</li>
+      <li class="breadcrumb-item active">模块库</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Libraries/index.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1175,22 +1175,22 @@
 
 
   <section id="libraries">
-<span id="lib-introduction"></span><h1>图书馆<a class="headerlink" href="#libraries" title="此标题的永久链接"></a></h1>
-<p>Spindle.lib 包的目标是：</p>
+<span id="lib-introduction"></span><h1>模块库<a class="headerlink" href="#libraries" title="此标题的永久链接"></a></h1>
+<p>spinal.lib包的目的是：</p>
 <ul class="simple">
-<li><p>提供硬件设计中常用的东西（FIFO、时钟交叉桥、有用的函数）</p></li>
-<li><p>提供简单的外设（UART、JTAG、VGA、..）</p></li>
-<li><p>提供一些总线定义（Avalon、AMBA、..）</p></li>
-<li><p>提供一些方法论（Stream、Flow、Fragment）</p></li>
-<li><p>举一些例子来了解脊椎精神</p></li>
-<li><p>提供一些工具和设施（延迟分析器、QSys 转换器……）</p></li>
+<li><p>提供硬件设计中常用的模块（FIFO、跨时钟域桥、一些有用的函数）</p></li>
+<li><p>提供简单的外设(UART, JTAG, VGA, ..)</p></li>
+<li><p>提供一些总线定义(Avalon, AMBA, ..)</p></li>
+<li><p>提供一些方法(Stream, Flow, Fragment)</p></li>
+<li><p>提供一些例子以理解spinal的精髓</p></li>
+<li><p>提供一些工具和功能（延迟分析器、QSys转换器……）</p></li>
 </ul>
-<p>要使用以下章节中介绍的功能，在大多数情况下，您需要在源代码中“import spin.lib._”。</p>
+<p>要使用以下章节中介绍的特性，在大多数情况下，您需要使用 <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">spinal.lib._</span></code> 在您的代码中。</p>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
 <div class="line-block">
-<div class="line">该软件包目前正在构建中。记录的功能可以被认为是稳定的。</div>
-<div class="line">不要犹豫，使用 github 寻求建议/错误/修复/增强</div>
+<div class="line">该包目前正在建设中。文档中的特性可以被认为是稳定的。</div>
+<div class="line">请不要犹豫，使用GitHub提供建议/错误/修复/增强等意见</div>
 </div>
 </div>
 <div class="toctree-wrapper compound">
