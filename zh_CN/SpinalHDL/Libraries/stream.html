@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>溪流 &mdash; SpinalHDL  文档</title>
+  <title>反压流 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -638,9 +638,9 @@
 <li class="toctree-l3"><a class="reference internal" href="utils.html#special-utilities">特殊工具</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">溪流</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">反压流</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#specification">规范</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#semantics">语义学</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#functions">功能</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#utils">实用工具</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#streamfifo">流先进先出</a></li>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">模块库</a></li>
-      <li class="breadcrumb-item active">溪流</li>
+      <li class="breadcrumb-item active">反压流</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Libraries/stream.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,12 +1176,12 @@
 
 
   <section id="stream">
-<span id="id1"></span><h1>溪流<a class="headerlink" href="#stream" title="此标题的永久链接"></a></h1>
+<span id="id1"></span><h1>反压流<a class="headerlink" href="#stream" title="此标题的永久链接"></a></h1>
 <section id="specification">
 <h2>规范<a class="headerlink" href="#specification" title="此标题的永久链接"></a></h2>
 <div class="line-block">
-<div class="line">Stream接口是一个简单的握手协议来承载有效负载。</div>
-<div class="line">例如，它可用于将元素推入和弹出到 FIFO、向 UART 控制器发送请求等。</div>
+<div class="line">反压数据流接口是一个用于承载有效负载的简单握手协议。</div>
+<div class="line">例如，它可用于对FIFO推入和弹出数据、向UART控制器发送请求等。</div>
 </div>
 <table class="docutils align-default">
 <colgroup>
@@ -1196,27 +1196,27 @@
 <th class="head"><p>类型</p></th>
 <th class="head"><p>驱动</p></th>
 <th class="head"><p>描述</p></th>
-<th class="head"><p>不在乎什么时候</p></th>
+<th class="head"><p>何时忽略</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>有效的</p></td>
+<tr class="row-even"><td><p>valid</p></td>
 <td><p>Bool</p></td>
 <td><p>Master</p></td>
-<td><p>当高 =&gt; 接口上存在有效负载时</p></td>
+<td><p>当为高时 =&gt; 接口上存在有效负载(payload)</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>准备好</p></td>
+<tr class="row-odd"><td><p>ready</p></td>
 <td><p>Bool</p></td>
 <td><p>Slave</p></td>
-<td><p>当低电平时 =&gt; 事务不被从机消耗</p></td>
-<td><p>有效值低</p></td>
+<td><p>当为低时 =&gt; 从端不接收传输</p></td>
+<td><p>valid为低</p></td>
 </tr>
-<tr class="row-even"><td><p>有效载荷</p></td>
+<tr class="row-even"><td><p>payload</p></td>
 <td><p>T</p></td>
 <td><p>Master</p></td>
-<td><p>交易内容</p></td>
-<td><p>有效值低</p></td>
+<td><p>传输任务内容</p></td>
+<td><p>valid为低</p></td>
 </tr>
 </tbody>
 </table>
@@ -1231,7 +1231,7 @@
 ]}
 </script>
 </div>
-<p>SpinalHDL 有一些用法示例：</p>
+<p>这里有一些在SpinalHDL中的用法示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">StreamFifo</span><span class="p">[</span><span class="nc">T</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="nc">Data</span><span class="p">](</span><span class="n">dataType</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">depth</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">push</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slave</span><span class="w"> </span><span class="nc">Stream</span><span class="w"> </span><span class="p">(</span><span class="n">dataType</span><span class="p">)</span>
@@ -1251,16 +1251,16 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>当 valid 为高且 Ready 为低时，每个从设备可以或不允许更改有效负载。举些例子：</p>
+<p>当valid为高且ready为低时，每个从端都可以控制是否允许有效负载变化。例如：</p>
 </div>
 <ul class="simple">
-<li><p>没有锁定逻辑的优先级仲裁器可以从一个输入切换到另一个输入（这将改变有效负载）。</p></li>
-<li><p>UART 控制器可以直接使用写入端口来驱动 UART 引脚，并且仅在传输结束时消耗事务。对此要小心。</p></li>
+<li><p>没有锁逻辑的优先级仲裁器可以从一个输入切换到另一个输入（这将改变有效负载）。</p></li>
+<li><p>UART控制器可以直接使用写端口驱动UART引脚，并且只在传输结束时完成数据交换。对此需要注意。</p></li>
 </ul>
 </section>
 <section id="semantics">
-<h2>语义学<a class="headerlink" href="#semantics" title="此标题的永久链接"></a></h2>
-<p>当手动读取/驱动流的信号时，请记住：</p>
+<h2>语义<a class="headerlink" href="#semantics" title="此标题的永久链接"></a></h2>
+<p>当手动读取/驱动反压流的信号时，请记住：</p>
 <ul class="simple">
 <li><p>断言后，“valid”只有在当前有效负载被确认后才能被取消断言。这意味着“valid”只能在从机通过断言“ready”进行读取后的周期切换到 0。</p></li>
 <li><p>与此相反，“准备好”可能随时改变。</p></li>
