@@ -32,8 +32,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="逻辑区" href="area.html" />
-    <link rel="prev" title="结构化" href="index.html" />
+    <link rel="next" title="Area" href="area.html" />
+    <link rel="prev" title="结构设计" href="index.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -96,7 +96,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Introduction/A%20simple%20example.html">一个简单的例子</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#component">组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#component">Component</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#ports">端口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#internal-logic">内部逻辑</a></li>
 </ul>
@@ -367,17 +367,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">结构化</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">结构设计</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">组件和层次结构</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#input-output-definition">输入/输出定义</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pruned-signals">修剪信号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pruned-signals">裁剪信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#parametrized-hardware-generic-in-vhdl-parameter-in-verilog">参数化硬件（VHDL 中的“Generic”，Verilog 中的“Parameter”）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#synthesized-component-names">合成的组件名称</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#synthesized-component-names">综合后组件名称</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="area.html">逻辑区</a></li>
+<li class="toctree-l2"><a class="reference internal" href="area.html">Area</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function.html">函数</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function.html#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="function.html#rgb-to-gray">RGB信号转灰度信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="function.html#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
@@ -413,14 +413,14 @@
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#vhdl-no-numeric-type">VHDL - 无数值类型</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="naming.html">保留名字</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#nameable-base-class">可命名基类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naming.html">保留名称的方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#nameable-base-class">Nameable 基类</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html#name-extraction-from-scala">从 Scala 中提取名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html#area-in-a-component">组件中的区域</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#area-in-a-function">函数中的面积</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-in-a-function">复合在一个函数中</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-chains">复合链条</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-in-a-bundle-s-function">复合在一个Bundle的函数中</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#area-in-a-function">函数中的逻辑区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-in-a-function">函数中的复合区（Composite）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-chains">复合区级联链</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-in-a-bundle-s-function">在一个线束（Bundle）的函数中的复合区</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html#unamed-signal-handling">未命名信号处理</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="naming.html#verilog-expression-splitting">Verilog 表达式分割</a></li>
 <li class="toctree-l4"><a class="reference internal" href="naming.html#verilog-long-expression-splitting">Verilog 长表达式分割</a></li>
@@ -430,8 +430,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parametrization.html">Parametrization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parametrization.html#elaboration-time-parameters">精化时间参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parametrization.html">参数化</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="parametrization.html#elaboration-time-parameters">实例细化时参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parametrization.html#optional-hardware">可选硬件</a></li>
 </ul>
 </li>
@@ -936,7 +936,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Simple%20ones/pll_resetctrl.html#toplevel-definition">TopLevel定义</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/rgb_to_gray.html">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/rgb_to_gray.html">RGB信号转灰度信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/sinus_rom.html">正弦rom</a></li>
 </ul>
 </li>
@@ -1061,9 +1061,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#assignments">赋值</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#when-switch">When / Switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#component-hierarchy">组件/层次结构</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">逻辑区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">Area</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#function">函数</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB信号转灰度信号</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">结构化</a></li>
+          <li class="breadcrumb-item"><a href="index.html">结构设计</a></li>
       <li class="breadcrumb-item active">组件和层次结构</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Structuring/components_hierarchy.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1241,46 +1241,46 @@
 <tr class="row-odd"><td><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">Bits/UInt/SInt[(x</span> <span class="pre">bits)]</span></code></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">out</span> <span class="pre">Bits/UInt/SInt[(x</span> <span class="pre">bits)]</span></code></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">以位为单位（3</span> <span class="pre">位）</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">Bits(3</span> <span class="pre">bits)</span></code></div>
 </div>
 </td>
-<td><p>创建相应类型的输入/输出</p></td>
+<td><p>创建相应类型的输入/输出端口</p></td>
 <td><p>Bits/UInt/SInt</p></td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
-<div class="line"><code class="docutils literal notranslate"><span class="pre">在（T）</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">in(T)</span></code></div>
 <div class="line"><code class="docutils literal notranslate"><span class="pre">out(T)</span></code></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">输出单元（7</span> <span class="pre">位）</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">out</span> <span class="pre">UInt(7</span> <span class="pre">bits)</span></code></div>
 </div>
 </td>
-<td><p>对于所有其他数据类型，您可能需要在其周围添加一些括号。抱歉，这是 Scala 的限制。</p></td>
+<td><p>对于所有其他数据类型，您可能需要在其周围添加一些括号。这是 Scala 的限制。</p></td>
 <td><p>T</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
 <div class="line"><code class="docutils literal notranslate"><span class="pre">master(T)</span></code></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">奴隶（T）</span></code></div>
-<div class="line"><code class="docutils literal notranslate"><span class="pre">主控（布尔（））</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">slave(T)</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">master(Bool())</span></code></div>
 </div>
 </td>
-<td><p>此语法由``spinal.lib`` 库提供（如果您使用 <code class="docutils literal notranslate"><span class="pre">slave</span></code> 语法注释对象，则改为导入 <code class="docutils literal notranslate"><span class="pre">spinal.lib.slave</span></code>）。 T 必须继承 <code class="docutils literal notranslate"><span class="pre">IMasterSlave</span></code>。一些文档可用 <a class="reference internal" href="../Developers%20area/types.html#interface-example-apb"><span class="std std-ref">此处</span></a> 。您实际上可能不需要括号，因此 <code class="docutils literal notranslate"><span class="pre">master</span> <span class="pre">T</span></code> 也可以。</p></td>
+<td><p>此语法由 <code class="docutils literal notranslate"><span class="pre">spinal.lib</span></code> 库提供（如果您使用 <code class="docutils literal notranslate"><span class="pre">slave</span></code> 语法标注对象，则应导入 <code class="docutils literal notranslate"><span class="pre">spinal.lib.slave</span></code>）。 T 必须继承自 <code class="docutils literal notranslate"><span class="pre">IMasterSlave</span></code>。一些参考文档在 <a class="reference internal" href="../Developers%20area/types.html#interface-example-apb"><span class="std std-ref">这里</span></a> 。您实际上可能不需要括号，因此写成 <code class="docutils literal notranslate"><span class="pre">master</span> <span class="pre">T</span></code> 也可以。</p></td>
 <td><p>T</p></td>
 </tr>
 </tbody>
 </table>
-<p>组件互连需要遵循一些规则：</p>
+<p>组件之间的互连需要遵循一些规则：</p>
 <ul class="simple">
-<li><p>组件只能**读取**子组件的输出和输入信号。</p></li>
+<li><p>组件只能 <strong>读取</strong> 子组件的输出和输入信号。</p></li>
 <li><p>组件可以读取自己的输出端口值（与 VHDL 不同）。</p></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>如果由于某种原因您需要从层次结构中较远的位置读取信号（例如用于调试或临时补丁），您可以使用“some.where.else.theSignal.pull()”返回的值来完成此操作</p>
+<p>如果由于某种原因您需要从层次结构中较深的位置读取信号（例如用于调试或临时补丁），您可以使用 <code class="docutils literal notranslate"><span class="pre">some.where.else.theSignal.pull()</span></code> 函数返回的信号来完成此操作</p>
 </div>
 </section>
 <section id="pruned-signals">
-<h2>修剪信号<a class="headerlink" href="#pruned-signals" title="此标题的永久链接"></a></h2>
-<p>SpinalHDL 将生成所有命名信号及其依赖性，而所有无用的匿名/零宽度信号将从 RTL 生成中删除。</p>
-<p>您可以通过生成的“SpinalReport”对象上的“printPruned”和“printPrunedIo”函数收集所有已删除的无用信号的列表：</p>
+<h2>裁剪信号<a class="headerlink" href="#pruned-signals" title="此标题的永久链接"></a></h2>
+<p>SpinalHDL 将生成所有命名信号及其依赖性，而所有无用的匿名/零位宽信号将从 RTL 生成中删除。</p>
+<p>您可以通过生成的 <code class="docutils literal notranslate"><span class="pre">SpinalReport</span></code> 对象上的 <code class="docutils literal notranslate"><span class="pre">printPruned</span></code> 和 <code class="docutils literal notranslate"><span class="pre">printPrunedIo</span></code> 函数收集所有已删除的无用信号列表：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1324,7 +1324,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>如果您有多个参数，最好给出一个特定的配置类，如下所示：</p>
+<p>如果您有多个参数，最好给出一个专用的配置类，如下所示：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MySocConfig</span><span class="p">(</span><span class="n">axiFrequency</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="nc">HertzNumber</span><span class="p">,</span>
 <span class="w">                       </span><span class="n">onChipRamSize</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">BigInt</span><span class="p">,</span>
 <span class="w">                       </span><span class="n">cpu</span><span class="w">           </span><span class="p">:</span><span class="w"> </span><span class="nc">RiscCoreConfig</span><span class="p">,</span>
@@ -1347,14 +1347,14 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>这种参数化完全发生在细化过程中的 SpinalHDL 代码生成中。这会生成非通用 HDL 代码。此处描述的方法不使用 VHDL 泛型或 Verilog 参数。</p>
-<p>另请参阅 Blackbox &lt;blackbox&gt; 了解有关该机制支持的更多信息。</p>
+<p>这种参数化完全发生在 SpinalHDL 代码生成的实例细化过程中。生成的 HDL 代码不包含使用HDL语言泛化特性的内容。此处描述的方法不会使用 VHDL 泛型或 Verilog 参数。</p>
+<p>另请参阅 <a class="reference internal" href="blackbox.html#blackbox"><span class="std std-ref">Blackbox</span></a> 了解有关该机制支持的更多信息。</p>
 </div>
 </section>
 <section id="synthesized-component-names">
-<h2>合成的组件名称<a class="headerlink" href="#synthesized-component-names" title="此标题的永久链接"></a></h2>
-<p>在模块内，每个组件都有一个名称，称为“部分名称”。 “完整”名称是通过将每个组件的父名称与“_”连接起来构建的，例如：<code class="docutils literal notranslate"><span class="pre">io_clockDomain_reset</span></code>。您可以使用“setName”将此约定替换为自定义名称。这在与外部组件连接时特别有用。其他方法分别称为“getName”、“setPartialName”和“getPartialName”。</p>
-<p>综合时，每个模块都会获得定义它的 Scala 类的名称。您也可以使用“setDefinitionName”覆盖它。</p>
+<h2>综合后组件名称<a class="headerlink" href="#synthesized-component-names" title="此标题的永久链接"></a></h2>
+<p>在模块内，每个组件都有一个名称，称为“部分名称”。 “完整”名称是通过将每个组件的父名称与“_”连接起来构建的，例如：<code class="docutils literal notranslate"><span class="pre">io_clockDomain_reset</span></code>。您可以使用 <code class="docutils literal notranslate"><span class="pre">setName</span></code> 将按此约定生成的名称替换为自定义的。这在与外部组件连接时特别有用。其他方法分别称为 <code class="docutils literal notranslate"><span class="pre">getName</span></code>、<code class="docutils literal notranslate"><span class="pre">setPartialName</span></code> 和 <code class="docutils literal notranslate"><span class="pre">getPartialName</span></code>。</p>
+<p>综合时，每个模块都会获得定义它的 Scala 类的名称。您也可以调用 <code class="docutils literal notranslate"><span class="pre">setDefinitionName</span></code> 函数来覆盖它。</p>
 <!--
 TODO
 ### Input or Output is a basic type
@@ -1377,8 +1377,8 @@ TODO
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="index.html" class="btn btn-neutral float-left" title="结构化" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="area.html" class="btn btn-neutral float-right" title="逻辑区" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="结构设计" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="area.html" class="btn btn-neutral float-right" title="Area" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="时钟域" href="clock_domain.html" />
-    <link rel="prev" title="逻辑区" href="area.html" />
+    <link rel="prev" title="Area" href="area.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -96,7 +96,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Introduction/A%20simple%20example.html">一个简单的例子</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#component">组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#component">Component</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#ports">端口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#internal-logic">内部逻辑</a></li>
 </ul>
@@ -367,17 +367,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">结构化</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">结构设计</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="components_hierarchy.html">组件和层次结构</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#input-output-definition">输入/输出定义</a></li>
-<li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#pruned-signals">修剪信号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#pruned-signals">裁剪信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#parametrized-hardware-generic-in-vhdl-parameter-in-verilog">参数化硬件（VHDL 中的“Generic”，Verilog 中的“Parameter”）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#synthesized-component-names">合成的组件名称</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#synthesized-component-names">综合后组件名称</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="area.html">逻辑区</a></li>
+<li class="toctree-l2"><a class="reference internal" href="area.html">Area</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">函数</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rgb-to-gray">RGB信号转灰度信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
@@ -413,14 +413,14 @@
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#vhdl-no-numeric-type">VHDL - 无数值类型</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="naming.html">保留名字</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#nameable-base-class">可命名基类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naming.html">保留名称的方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#nameable-base-class">Nameable 基类</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html#name-extraction-from-scala">从 Scala 中提取名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html#area-in-a-component">组件中的区域</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#area-in-a-function">函数中的面积</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-in-a-function">复合在一个函数中</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-chains">复合链条</a></li>
-<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-in-a-bundle-s-function">复合在一个Bundle的函数中</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#area-in-a-function">函数中的逻辑区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-in-a-function">函数中的复合区（Composite）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-chains">复合区级联链</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naming.html#composite-in-a-bundle-s-function">在一个线束（Bundle）的函数中的复合区</a></li>
 <li class="toctree-l3"><a class="reference internal" href="naming.html#unamed-signal-handling">未命名信号处理</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="naming.html#verilog-expression-splitting">Verilog 表达式分割</a></li>
 <li class="toctree-l4"><a class="reference internal" href="naming.html#verilog-long-expression-splitting">Verilog 长表达式分割</a></li>
@@ -430,8 +430,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parametrization.html">Parametrization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parametrization.html#elaboration-time-parameters">精化时间参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parametrization.html">参数化</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="parametrization.html#elaboration-time-parameters">实例细化时参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parametrization.html#optional-hardware">可选硬件</a></li>
 </ul>
 </li>
@@ -936,7 +936,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Simple%20ones/pll_resetctrl.html#toplevel-definition">TopLevel定义</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/rgb_to_gray.html">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/rgb_to_gray.html">RGB信号转灰度信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/sinus_rom.html">正弦rom</a></li>
 </ul>
 </li>
@@ -1061,9 +1061,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#assignments">赋值</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#when-switch">When / Switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#component-hierarchy">组件/层次结构</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">逻辑区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">Area</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#function">函数</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB信号转灰度信号</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">结构化</a></li>
+          <li class="breadcrumb-item"><a href="index.html">结构设计</a></li>
       <li class="breadcrumb-item active">函数</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Structuring/function.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1180,16 +1180,16 @@
 <p>使用 Scala 函数生成硬件的方式与 VHDL/Verilog 完全不同，原因有很多：</p>
 <ul>
 <li><p>您可以实例化寄存器、组合逻辑以及其中的组件。</p></li>
-<li><p>您不必使用限制信号分配范围的``process``/<code class="docutils literal notranslate"><span class="pre">&#64;always</span></code> 块。</p></li>
+<li><p>您不必使用限制信号赋值范围的 <code class="docutils literal notranslate"><span class="pre">process</span></code>/<code class="docutils literal notranslate"><span class="pre">&#64;always</span></code> 块。</p></li>
 <li><div class="line-block">
-<div class="line">一切都通过引用传递，这允许轻松操作。</div>
-<div class="line">例如，您可以将总线作为参数提供给函数，然后该函数可以在内部对其进行读/写。您还可以从 Scala 和 Scala 世界返回组件、总线或任何其他内容。</div>
+<div class="line">一切都通过引用传递，这允许简化操作。</div>
+<div class="line">例如，您可以将总线作为参数提供给函数，然后该函数可以在内部对其进行读/写。您还可以从 Scala 世界（函数、类型等）返回组件、总线或任何其他内容。</div>
 </div>
 </li>
 </ul>
 <section id="rgb-to-gray">
-<h2>RGB转灰度值<a class="headerlink" href="#rgb-to-gray" title="此标题的永久链接"></a></h2>
-<p>例如，如果您想使用系数将红/绿/蓝颜色转换为灰度，您可以使用函数来应用它们：</p>
+<h2>RGB信号转灰度信号<a class="headerlink" href="#rgb-to-gray" title="此标题的永久链接"></a></h2>
+<p>例如，如果您想使用系数将红/绿/蓝颜色转换为灰度，您可以使用函数来完成：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Input RGB color</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 
@@ -1203,7 +1203,7 @@
 </section>
 <section id="valid-ready-payload-bus">
 <h2>Valid Ready Payload 总线<a class="headerlink" href="#valid-ready-payload-bus" title="此标题的永久链接"></a></h2>
-<p>例如，如果您定义一个带有“valid”、“ready”和“payload”信号的简单总线，则可以在其中定义一些有用的函数。</p>
+<p>例如，如果您定义一个带有 <code class="docutils literal notranslate"><span class="pre">valid</span></code>, <code class="docutils literal notranslate"><span class="pre">ready</span></code> 和 <code class="docutils literal notranslate"><span class="pre">payload</span></code> 信号的简单总线，则可以在其中定义一些有用的函数。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyBus</span><span class="p">(</span><span class="n">payloadWidth</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">IMasterSlave</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">valid</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">ready</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
@@ -1258,7 +1258,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="area.html" class="btn btn-neutral float-left" title="逻辑区" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="area.html" class="btn btn-neutral float-left" title="Area" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="clock_domain.html" class="btn btn-neutral float-right" title="时钟域" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

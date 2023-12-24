@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>保留名字 &mdash; SpinalHDL  文档</title>
+  <title>保留名称的方法 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -32,7 +32,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="Parametrization" href="parametrization.html" />
+    <link rel="next" title="参数化" href="parametrization.html" />
     <link rel="prev" title="实例化 VHDL 和 Verilog IP" href="blackbox.html" />
      
     <!-- source/_templates/layout.html -->
@@ -96,7 +96,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Introduction/A%20simple%20example.html">一个简单的例子</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#component">组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#component">Component</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#ports">端口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Introduction/A%20simple%20example.html#internal-logic">内部逻辑</a></li>
 </ul>
@@ -367,17 +367,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">结构化</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">结构设计</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="components_hierarchy.html">组件和层次结构</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#input-output-definition">输入/输出定义</a></li>
-<li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#pruned-signals">修剪信号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#pruned-signals">裁剪信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#parametrized-hardware-generic-in-vhdl-parameter-in-verilog">参数化硬件（VHDL 中的“Generic”，Verilog 中的“Parameter”）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#synthesized-component-names">合成的组件名称</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components_hierarchy.html#synthesized-component-names">综合后组件名称</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="area.html">逻辑区</a></li>
+<li class="toctree-l2"><a class="reference internal" href="area.html">Area</a></li>
 <li class="toctree-l2"><a class="reference internal" href="function.html">函数</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="function.html#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="function.html#rgb-to-gray">RGB信号转灰度信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="function.html#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
@@ -413,14 +413,14 @@
 <li class="toctree-l3"><a class="reference internal" href="blackbox.html#vhdl-no-numeric-type">VHDL - 无数值类型</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">保留名字</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#nameable-base-class">可命名基类</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">保留名称的方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#nameable-base-class">Nameable 基类</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#name-extraction-from-scala">从 Scala 中提取名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#area-in-a-component">组件中的区域</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#area-in-a-function">函数中的面积</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#composite-in-a-function">复合在一个函数中</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#composite-chains">复合链条</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#composite-in-a-bundle-s-function">复合在一个Bundle的函数中</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#area-in-a-function">函数中的逻辑区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composite-in-a-function">函数中的复合区（Composite）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composite-chains">复合区级联链</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composite-in-a-bundle-s-function">在一个线束（Bundle）的函数中的复合区</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#unamed-signal-handling">未命名信号处理</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#verilog-expression-splitting">Verilog 表达式分割</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#verilog-long-expression-splitting">Verilog 长表达式分割</a></li>
@@ -430,8 +430,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="parametrization.html">Parametrization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="parametrization.html#elaboration-time-parameters">精化时间参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="parametrization.html">参数化</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="parametrization.html#elaboration-time-parameters">实例细化时参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="parametrization.html#optional-hardware">可选硬件</a></li>
 </ul>
 </li>
@@ -936,7 +936,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../Examples/Simple%20ones/pll_resetctrl.html#toplevel-definition">TopLevel定义</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/rgb_to_gray.html">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/rgb_to_gray.html">RGB信号转灰度信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Examples/Simple%20ones/sinus_rom.html">正弦rom</a></li>
 </ul>
 </li>
@@ -1061,9 +1061,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#assignments">赋值</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#when-switch">When / Switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#component-hierarchy">组件/层次结构</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">逻辑区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#area">Area</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miscelenea/core/core_components.html#function">函数</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#rgb-to-gray">RGB信号转灰度信号</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../miscelenea/core/core_components.html#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
@@ -1162,8 +1162,8 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">结构化</a></li>
-      <li class="breadcrumb-item active">保留名字</li>
+          <li class="breadcrumb-item"><a href="index.html">结构设计</a></li>
+      <li class="breadcrumb-item active">保留名称的方法</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Structuring/naming.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,18 +1176,18 @@
 
 
   <section id="preserving-names">
-<h1>保留名字<a class="headerlink" href="#preserving-names" title="此标题的永久链接"></a></h1>
-<p>本页将描述 SpinalHDL 如何将名称从 scala 代码传播到生成的硬件。了解它们应该使您能够尽可能保留这些名称，以生成可理解的网表。</p>
+<h1>保留名称的方法<a class="headerlink" href="#preserving-names" title="此标题的永久链接"></a></h1>
+<p>本页将描述 SpinalHDL 如何将名称从 scala 代码传播到生成的硬件 RTL。您应该了解它们，从而尽可能保留这些名称，以生成可理解的网表。</p>
 <section id="nameable-base-class">
-<h2>可命名基类<a class="headerlink" href="#nameable-base-class" title="此标题的永久链接"></a></h2>
+<h2>Nameable 基类<a class="headerlink" href="#nameable-base-class" title="此标题的永久链接"></a></h2>
 <p>所有可以在 SpinalHDL 中命名的事物都扩展了 Nameable 基类。</p>
-<p>因此在实践中，以下类扩展了 Nameable ：</p>
+<p>因此在实践中，以下类扩展了 Nameable 类：</p>
 <ul class="simple">
-<li><p>组件</p></li>
-<li><p>逻辑区</p></li>
-<li><p>数据（UInt、SInt、捆绑包……）</p></li>
+<li><p>Component</p></li>
+<li><p>Area</p></li>
+<li><p>Data (UInt, SInt, Bundle, …)</p></li>
 </ul>
-<p>有一些可命名 API 的示例</p>
+<p>有一些 Nameable 类型 API 的示例</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="w">  </span><span class="n">b</span><span class="p">.</span><span class="n">setName</span><span class="p">(</span><span class="s">&quot;rawrr&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Force name</span>
@@ -1196,7 +1196,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>遗嘱代：</p>
+<p>会生成：</p>
 <div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="k">module</span><span class="w"> </span><span class="n">MyComponent</span><span class="w"> </span><span class="p">(</span>
 <span class="p">);</span>
 <span class="w">  </span><span class="kt">wire</span><span class="w">                </span><span class="n">a</span><span class="p">;</span>
@@ -1206,12 +1206,12 @@
 <span class="k">endmodule</span>
 </pre></div>
 </div>
-<p>一般来说，您实际上并不需要访问该 API，除非您出于调试原因或出于详细说明的目的想要执行一些棘手的操作。</p>
+<p>一般来说，您实际上并不需要访问该 API，除非您出于调试原因或出于详细说明的目的想要做一些精巧的工作。</p>
 </section>
 <section id="name-extraction-from-scala">
 <h2>从 Scala 中提取名称<a class="headerlink" href="#name-extraction-from-scala" title="此标题的永久链接"></a></h2>
-<p>首先，从 1.4.0 版本开始，SpinalHDL 使用 scala 编译器插件，该插件可以在类构造期间每次定义新 val 时提供回调。</p>
-<p>有一个示例或多或少地展示了 SpinalHDL 本身是如何实现的：</p>
+<p>首先，从 1.4.0 版本开始，SpinalHDL 使用 scala 编译器插件，该插件可以在类构造期间在每次定义新 val 时，实现函数回调。</p>
+<p>这个示例或多或少地展示了 SpinalHDL 本身是如何实现的：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">//spinal.idslplugin.ValCallback is the Scala compiler plugin feature which will provide the callbacks</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="n">spinal</span><span class="p">.</span><span class="n">idslplugin</span><span class="p">.</span><span class="nc">ValCallback</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">override</span><span class="w"> </span><span class="k">def</span><span class="w"> </span><span class="nf">valCallback</span><span class="p">[</span><span class="nc">T</span><span class="p">](</span><span class="n">ref</span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="nc">String</span><span class="p">)</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">T</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
@@ -1239,8 +1239,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Using that ValCallback “introspection” feature, SpinalHDL’s Component classes are able to be aware of their content and the content’s name.</p>
-<p>但这也意味着，如果您希望某些东西获得名称，并且仅依赖于此自动命名功能，则对 Data (UInt、SInt、…) 实例的引用应存储在 Component val 中的某个位置。</p>
+<p>使用 ValCallback“自省”功能，SpinalHDL 的组件类能够了解其内容和内容的名称。</p>
+<p>但这也意味着，如果您希望某些东西获得名称，并且仅依赖于此自动命名功能，则对 Data (UInt、SInt、…) 实例的引用应存储在组件的某个 val 对象定义中。</p>
 <p>例如 ：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span><span class="w"> </span><span class="c1">// Will be properly named</span>
@@ -1295,8 +1295,8 @@
 </div>
 </section>
 <section id="area-in-a-function">
-<h2>函数中的面积<a class="headerlink" href="#area-in-a-function" title="此标题的永久链接"></a></h2>
-<p>您还可以定义将创建新区域的函数，该区域将为其所有内容提供命名空间：</p>
+<h2>函数中的逻辑区<a class="headerlink" href="#area-in-a-function" title="此标题的永久链接"></a></h2>
+<p>您还可以定义将创建新逻辑区的函数，该逻辑区将为其所有内容提供命名空间：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">isZero</span><span class="p">(</span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="nc">UInt</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Area</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">comparator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mi">0</span>
@@ -1325,8 +1325,8 @@
 </div>
 </section>
 <section id="composite-in-a-function">
-<h2>复合在一个函数中<a class="headerlink" href="#composite-in-a-function" title="此标题的永久链接"></a></h2>
-<p>SpinalHDL 1.5.0 中添加了 Composite，它允许您创建一个范围，该范围将用作另一个 Nameable 的前缀：</p>
+<h2>函数中的复合区（Composite）<a class="headerlink" href="#composite-in-a-function" title="此标题的永久链接"></a></h2>
+<p>SpinalHDL 1.5.0 中添加了复合区，它允许您创建一个范围，该范围将用作另一个 Nameable 的前缀：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Basicaly, a Composite is an Area that use its construction parameter as namespace prefix</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">isZero</span><span class="p">(</span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="nc">UInt</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Composite</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1355,8 +1355,8 @@
 </div>
 </section>
 <section id="composite-chains">
-<h2>复合链条<a class="headerlink" href="#composite-chains" title="此标题的永久链接"></a></h2>
-<p>您还可以链接复合材料：</p>
+<h2>复合区级联链<a class="headerlink" href="#composite-chains" title="此标题的永久链接"></a></h2>
+<p>您还可以级联复合区：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">isZero</span><span class="p">(</span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="nc">UInt</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Composite</span><span class="p">(</span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">comparator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mi">0</span>
@@ -1390,8 +1390,8 @@
 </div>
 </section>
 <section id="composite-in-a-bundle-s-function">
-<h2>复合在一个Bundle的函数中<a class="headerlink" href="#composite-in-a-bundle-s-function" title="此标题的永久链接"></a></h2>
-<p>This behaviour can be very useful when implementing Bundle utilities. For instance in the spinal.lib.Stream class is defined the following :</p>
+<h2>在一个线束（Bundle）的函数中的复合区<a class="headerlink" href="#composite-in-a-bundle-s-function" title="此标题的永久链接"></a></h2>
+<p>在实现线束工具时，此行为非常有用。例如，在 <code class="docutils literal notranslate"><span class="pre">spin.lib.Stream</span></code> 类中定义如下：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Stream</span><span class="p">[</span><span class="nc">T</span><span class="w"> </span><span class="o">&lt;:</span><span class="w"> </span><span class="nc">Data</span><span class="p">](</span><span class="kd">val</span><span class="w"> </span><span class="n">payloadType</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="nc">HardType</span><span class="p">[</span><span class="nc">T</span><span class="p">])</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">valid</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">ready</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
@@ -1422,7 +1422,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>允许嵌套调用，同时保留名称：</p>
+<p>这将允许嵌套调用，同时保留名称：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slave</span><span class="p">(</span><span class="nc">Stream</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)))</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">sink</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">master</span><span class="p">(</span><span class="nc">Stream</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)))</span>
@@ -1494,12 +1494,12 @@
 </section>
 <section id="unamed-signal-handling">
 <h2>未命名信号处理<a class="headerlink" href="#unamed-signal-handling" title="此标题的永久链接"></a></h2>
-<p>从 1.5.0 开始，对于最终没有名称的信号，SpinalHDL 将找到由该未命名信号驱动的信号并传播其名称。只要您没有太多未命名的东西，这就可以产生有用的结果。</p>
+<p>从 1.5.0 开始，对于最终没有名称的信号，SpinalHDL 将找到由该信号驱动的信号并传播其名称。只要您没有太多未命名的东西，这就可以产生有用的结果。</p>
 <p>这种未命名信号的名称是：_zz_ +drivenSignal.getName()</p>
-<p>请注意，当生成后端需要将某些特定表达式或长表达式链分解为多个信号时，也会使用此命名模式。</p>
+<p>请注意，当生成后端需要将某些特定表达式或表达式链分解为多个信号时，也会使用此命名模式。</p>
 <section id="verilog-expression-splitting">
 <h3>Verilog 表达式分割<a class="headerlink" href="#verilog-expression-splitting" title="此标题的永久链接"></a></h3>
-<p>SpinalHDL 需要在专用信号中表达一个表达式实例（例如：+ 运算符），以将行为与 Scala API 相匹配：</p>
+<p>下例中， SpinalHDL 需要使用指定信号描述一个表达式（例如：+ 运算符），以将其行为与 Scala API 相匹配：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">d</span>
@@ -1527,7 +1527,7 @@
 </section>
 <section id="verilog-long-expression-splitting">
 <h3>Verilog 长表达式分割<a class="headerlink" href="#verilog-long-expression-splitting" title="此标题的永久链接"></a></h3>
-<p>有一个例子说明 SpinalHDL 如何分割很长的表达链：</p>
+<p>下例说明了 SpinalHDL 如何分割一个长表达式链：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">conditions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">Vec</span><span class="p">(</span><span class="nc">Bool</span><span class="p">(),</span><span class="w"> </span><span class="mi">64</span><span class="p">)</span>
 <span class="w">  </span><span class="c1">// Perform a logical OR between all the condition elements</span>
@@ -1567,7 +1567,7 @@
 </section>
 <section id="when-statement-condition">
 <h3>When 语句条件<a class="headerlink" href="#when-statement-condition" title="此标题的永久链接"></a></h3>
-<p><cite>when(cond) { }</cite> 语句条件生成为名为 <cite>when_</cite> + fileName + line 的单独信号。 switch 语句也会做类似的事情。</p>
+<p><cite>when(cond) { }</cite> 语句条件生成为名为 <cite>when_</cite> + fileName + line 的单独信号。 对 switch 语句也会做类似的事情。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">//In file Test.scala</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyComponent</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1647,8 +1647,8 @@
 <span class="k">endmodule</span>
 </pre></div>
 </div>
-<p>最后的命名略读方法并不适合所有情况，但可以提供帮助。</p>
-<p>请注意，以下划线开头的信号不会存储在 Verilator 波形中（故意）</p>
+<p>最后的命名方法并不适合所有情况，但可以提供帮助。</p>
+<p>请注意，以下划线开头的信号不会存储在 Verilator 波形中（这是故意的）</p>
 </section>
 </section>
 </section>
@@ -1665,7 +1665,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
         <a href="blackbox.html" class="btn btn-neutral float-left" title="实例化 VHDL 和 Verilog IP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="parametrization.html" class="btn btn-neutral float-right" title="Parametrization" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="parametrization.html" class="btn btn-neutral float-right" title="参数化" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

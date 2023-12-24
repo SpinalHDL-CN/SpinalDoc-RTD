@@ -96,7 +96,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Introduction/A%20simple%20example.html">一个简单的例子</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Introduction/A%20simple%20example.html#component">组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Introduction/A%20simple%20example.html#component">Component</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Introduction/A%20simple%20example.html#ports">端口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Introduction/A%20simple%20example.html#internal-logic">内部逻辑</a></li>
 </ul>
@@ -367,17 +367,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../Structuring/index.html">结构化</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../Structuring/index.html">结构设计</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Structuring/components_hierarchy.html">组件和层次结构</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#input-output-definition">输入/输出定义</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#pruned-signals">修剪信号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#pruned-signals">裁剪信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#parametrized-hardware-generic-in-vhdl-parameter-in-verilog">参数化硬件（VHDL 中的“Generic”，Verilog 中的“Parameter”）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#synthesized-component-names">合成的组件名称</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/components_hierarchy.html#synthesized-component-names">综合后组件名称</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Structuring/area.html">逻辑区</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Structuring/area.html">Area</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Structuring/function.html">函数</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/function.html#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/function.html#rgb-to-gray">RGB信号转灰度信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/function.html#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
@@ -413,14 +413,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/blackbox.html#vhdl-no-numeric-type">VHDL - 无数值类型</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Structuring/naming.html">保留名字</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#nameable-base-class">可命名基类</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Structuring/naming.html">保留名称的方法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#nameable-base-class">Nameable 基类</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#name-extraction-from-scala">从 Scala 中提取名称</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#area-in-a-component">组件中的区域</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#area-in-a-function">函数中的面积</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#composite-in-a-function">复合在一个函数中</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#composite-chains">复合链条</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#composite-in-a-bundle-s-function">复合在一个Bundle的函数中</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#area-in-a-function">函数中的逻辑区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#composite-in-a-function">函数中的复合区（Composite）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#composite-chains">复合区级联链</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#composite-in-a-bundle-s-function">在一个线束（Bundle）的函数中的复合区</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/naming.html#unamed-signal-handling">未命名信号处理</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Structuring/naming.html#verilog-expression-splitting">Verilog 表达式分割</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Structuring/naming.html#verilog-long-expression-splitting">Verilog 长表达式分割</a></li>
@@ -430,8 +430,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Structuring/parametrization.html">Parametrization</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Structuring/parametrization.html#elaboration-time-parameters">精化时间参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Structuring/parametrization.html">参数化</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Structuring/parametrization.html#elaboration-time-parameters">实例细化时参数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Structuring/parametrization.html#optional-hardware">可选硬件</a></li>
 </ul>
 </li>
@@ -936,7 +936,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Examples/Simple%20ones/pll_resetctrl.html#toplevel-definition">TopLevel定义</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Examples/Simple%20ones/rgb_to_gray.html">RGB转灰度值</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Examples/Simple%20ones/rgb_to_gray.html">RGB信号转灰度信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Examples/Simple%20ones/sinus_rom.html">正弦rom</a></li>
 </ul>
 </li>
@@ -1061,9 +1061,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#assignments">赋值</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#when-switch">When / Switch</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#component-hierarchy">组件/层次结构</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#area">逻辑区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#area">Area</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#function">函数</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#rgb-to-gray">RGB转灰度值</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#rgb-to-gray">RGB信号转灰度信号</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#valid-ready-payload-bus">Valid Ready Payload 总线</a></li>
 </ul>
 </li>
@@ -1186,7 +1186,7 @@
 <li><p>赋值</p></li>
 <li><p>When / Switch</p></li>
 <li><p>组件层次结构</p></li>
-<li><p>逻辑区</p></li>
+<li><p>Area</p></li>
 <li><p>功能</p></li>
 <li><p>实用函数</p></li>
 <li><p>VHDL生成器</p></li>
@@ -1498,7 +1498,7 @@
 <td><p>Bool</p></td>
 </tr>
 <tr class="row-even"><td><p>in/out Bits/UInt/SInt(x bits)</p></td>
-<td><p>创建相应类型的输入/输出</p></td>
+<td><p>创建相应类型的输入/输出端口</p></td>
 <td><p>T</p></td>
 </tr>
 </tbody>
@@ -1511,7 +1511,7 @@
 </ul>
 </section>
 <section id="area">
-<h2>逻辑区<a class="headerlink" href="#area" title="此标题的永久链接"></a></h2>
+<h2>Area<a class="headerlink" href="#area" title="此标题的永久链接"></a></h2>
 <p>有时，创建一个组件来定义某些逻辑是多余的并且过于冗长。对于这种情况，您可以使用 Area 逻辑区 ：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">UartCtrl</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="p">...</span>
@@ -1554,7 +1554,7 @@
 </li>
 </ul>
 <section id="rgb-to-gray">
-<h3>RGB转灰度值<a class="headerlink" href="#rgb-to-gray" title="此标题的永久链接"></a></h3>
+<h3>RGB信号转灰度信号<a class="headerlink" href="#rgb-to-gray" title="此标题的永久链接"></a></h3>
 <p>例如，如果您想使用系数将红/绿/蓝颜色转换为灰色，您可以使用函数来应用它们：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Input RGB color</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">r</span><span class="p">,</span><span class="n">g</span><span class="p">,</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
