@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>相互作用 &mdash; SpinalHDL  文档</title>
+  <title>交互 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
     <link rel="next" title="VHDL 用户入门" href="../Help%20for%20VHDL%20people/index.html" />
-    <link rel="prev" title="编码约定" href="coding_conventions.html" />
+    <link rel="prev" title="编码规范" href="coding_conventions.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -145,33 +145,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../SBT.html">在 CLI （命令行）中结合 SBT 使用 Spinal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../VSCodium.html">使用 VSCodium 的 Spinal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../IntelliJ.html">从 IntelliJ IDEA 使用 Spinal</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">斯卡拉指南</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="basics.html">基本</a><ul>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Scala 使用指南</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="basics.html">基础内容</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="basics.html#types">类型</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basics.html#variables">变量</a></li>
-<li class="toctree-l4"><a class="reference internal" href="basics.html#functions">功能</a></li>
-<li class="toctree-l4"><a class="reference internal" href="basics.html#object">目的</a></li>
-<li class="toctree-l4"><a class="reference internal" href="basics.html#entry-point-main">入口点（主要）</a></li>
-<li class="toctree-l4"><a class="reference internal" href="basics.html#class">班级</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics.html#functions">函数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics.html#object">对象（Object）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics.html#entry-point-main">入口点（main）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basics.html#class">类</a></li>
 <li class="toctree-l4"><a class="reference internal" href="basics.html#templates-type-parameterization">模板/类型参数化</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="coding_conventions.html">编码约定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="coding_conventions.html">编码规范</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="coding_conventions.html#introduction">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="coding_conventions.html#class-vs-case-class">类与案例类</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coding_conventions.html#class-vs-case-class">类与样例类</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">相互作用</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">交互</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#introduction">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#how-spinalhdl-works-behind-the-api">SpinalHDL 在 API 背后的工作原理</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#everything-is-a-reference">一切都是参考</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#how-spinalhdl-works-behind-the-api">SpinalHDL 在 API 隐藏后的工作原理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#everything-is-a-reference">一切都是引用</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#hardware-types">硬件类型</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#names-of-signals-in-the-generated-rtl">生成的 RTL 中的信号名称</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scala-is-for-elaboration-spinalhdl-for-hardware-description">Scala 用于阐述，SpinalHDL 用于硬件描述</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#scala-elaboration-capabilities-if-for-functional-programming">Scala 阐述能力（if、for、函数式编程）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scala-is-for-elaboration-spinalhdl-for-hardware-description">Scala 用于实例细化，SpinalHDL 用于硬件描述</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scala-elaboration-capabilities-if-for-functional-programming">Scala 实例细化能力（if、for、函数式编程）</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id1">斯卡拉指南</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id1">Scala 使用指南</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="index.html#introduction">简介</a></li>
 </ul>
 </li>
@@ -641,7 +641,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/stream.html">反压流</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/stream.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/stream.html#semantics">语义</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/stream.html#functions">功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/stream.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/stream.html#utils">实用工具</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/stream.html#streamfifo">流先进先出</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/stream.html#streamfifocc">流FifoCC</a></li>
@@ -661,14 +661,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/flow.html">流动</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/flow.html#specification">规范</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/flow.html#functions">功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/flow.html#code-example">代码示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/flow.html#simulation-support">模拟支持</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/fragment.html">分段</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/fragment.html#specification">规范</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fragment.html#functions">功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fragment.html#functions">函数</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/fsm.html">状态机</a><ul>
@@ -1163,8 +1163,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">入门</a></li>
-          <li class="breadcrumb-item"><a href="index.html">斯卡拉指南</a></li>
-      <li class="breadcrumb-item active">相互作用</li>
+          <li class="breadcrumb-item"><a href="index.html">Scala 使用指南</a></li>
+      <li class="breadcrumb-item active">交互</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Getting Started/Scala Guide/interaction.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1177,32 +1177,32 @@
 
 
   <section id="interaction">
-<h1>相互作用<a class="headerlink" href="#interaction" title="此标题的永久链接"></a></h1>
+<h1>交互<a class="headerlink" href="#interaction" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
 <p>事实上，SpinalHDL 不是一种语言：它是一个常规的 Scala 库。乍一看这似乎很奇怪，但这是一个非常强大的组合。</p>
-<p>您可以使用整个 Scala 世界通过 SpinalHDL 库来帮助您描述硬件，但要正确地做到这一点，了解 SpinalHDL 如何与 Scala 交互非常重要。</p>
+<p>您可以使用整个 Scala 世界的工具，通过 SpinalHDL 库来帮助您描述硬件，但要正确地做到这一点，了解 SpinalHDL 如何与 Scala 交互非常重要。</p>
 </section>
 <section id="how-spinalhdl-works-behind-the-api">
-<h2>SpinalHDL 在 API 背后的工作原理<a class="headerlink" href="#how-spinalhdl-works-behind-the-api" title="此标题的永久链接"></a></h2>
-<p>当您执行 SpinalHDL 硬件描述时，每次使用 SpinalHDL 函数、运算符或类时，它都会构建一个内存中图形来表示您的设计的网表。</p>
-<p>然后，当详细说明完成后（顶级“Component”类的实例化），SpinalHDL 将对构建的图进行一些传递，如果一切正常，它将将该图刷新为 VHDL 或 Verilog文件。</p>
+<h2>SpinalHDL 在 API 隐藏后的工作原理<a class="headerlink" href="#how-spinalhdl-works-behind-the-api" title="此标题的永久链接"></a></h2>
+<p>当您执行 SpinalHDL 硬件描述时，每次使用 SpinalHDL 函数、运算符或类时，它都会构建一个内存中图来表示您设计的网表。</p>
+<p>然后，当实例细化完成后（顶层 <code class="docutils literal notranslate"><span class="pre">Component</span></code> 类的实例化），SpinalHDL 将对构建的图进行一些处理，如果一切正常，它将把该图生成为 VHDL 或 Verilog文件。</p>
 </section>
 <section id="everything-is-a-reference">
-<h2>一切都是参考<a class="headerlink" href="#everything-is-a-reference" title="此标题的永久链接"></a></h2>
-<p>例如，如果您定义一个 Scala 函数，它接受类型为“Bits”的参数，那么当您调用它时，它将作为引用传递。因此，如果您在函数内部分配该参数，它对底层“Bits”对象具有相同的效果，就像您在函数外部分配给它一样。</p>
+<h2>一切都是引用<a class="headerlink" href="#everything-is-a-reference" title="此标题的永久链接"></a></h2>
+<p>例如，如果您定义一个 Scala 函数，它接受类型为 <code class="docutils literal notranslate"><span class="pre">Bits</span></code> 的参数，那么当您调用它时，它将作为引用传递。因此，如果您在函数内部赋值（通过“:=”）该参数，它对底层 <code class="docutils literal notranslate"><span class="pre">Bits</span></code> 对象具有相同的效果，就像您在函数外部给它赋值一样。</p>
 </section>
 <section id="hardware-types">
 <span id="hardware-type"></span><h2>硬件类型<a class="headerlink" href="#hardware-types" title="此标题的永久链接"></a></h2>
-<p>SpinalHDL 中的硬件数据类型是两件事的组合：</p>
+<p>SpinalHDL 中的硬件数据类型是两个概念的组合：</p>
 <ul class="simple">
 <li><p>给定 Scala 类型的实例</p></li>
-<li><p>该实例的配置</p></li>
+<li><p>该实例的配置信息</p></li>
 </ul>
-<p>例如，“Bits(8 位)”是 Scala 类型“Bits”及其“8 位”配置（作为构造参数）的组合。</p>
+<p>例如，<code class="docutils literal notranslate"><span class="pre">Bits(8</span> <span class="pre">bits)</span></code> 是 Scala 类型 <code class="docutils literal notranslate"><span class="pre">Bits</span></code> 及其 <code class="docutils literal notranslate"><span class="pre">8</span> <span class="pre">bits</span></code> 这一配置信息（作为构造参数）的组合。</p>
 <section id="rgb-example">
 <h3>RGB 示例<a class="headerlink" href="#rgb-example" title="此标题的永久链接"></a></h3>
-<p>我们以 Rgb 捆绑类为例：</p>
+<p>我们以 Rgb 线束类为例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Rgb</span><span class="p">(</span><span class="n">rWidth</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span><span class="w"> </span><span class="n">gWidth</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">,</span><span class="w"> </span><span class="n">bWidth</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">r</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="n">rWidth</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="n">gWidth</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1210,7 +1210,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这里的硬件数据类型是 Scala“Rgb”类及其“rWidth”、“gWidth”和“bWidth”参数化的组合。</p>
+<p>这里的硬件数据类型是 Scala <code class="docutils literal notranslate"><span class="pre">Rgb</span></code> 类及其 <code class="docutils literal notranslate"><span class="pre">rWidth</span></code>, <code class="docutils literal notranslate"><span class="pre">gWidth</span></code>, 和 <code class="docutils literal notranslate"><span class="pre">bWidth</span></code> 参数的组合。</p>
 <p>这是一个用法示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define an Rgb signal</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">myRgbSignal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Rgb</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
@@ -1241,7 +1241,7 @@
 <span class="kd">val</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myFunction</span><span class="p">(</span><span class="nc">U</span><span class="s">&quot;000001&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">42</span>
 </pre></div>
 </div>
-<p>如果您想在生成的 RTL 中保留内部变量的名称，一种解决方案是使用“Area”：</p>
+<p>如果您想在生成的 RTL 中保留内部变量的名称，一种解决方案是使用逻辑区（ <code class="docutils literal notranslate"><span class="pre">Area</span></code>）：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">myFunction</span><span class="p">(</span><span class="n">arg</span><span class="p">:</span><span class="w"> </span><span class="nc">UInt</span><span class="p">)</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Area</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arg</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="w">  </span><span class="c1">// You will not retrieve the temp signal in the generated RTL</span>
 <span class="p">}</span>
@@ -1252,9 +1252,9 @@
 </div>
 </section>
 <section id="scala-is-for-elaboration-spinalhdl-for-hardware-description">
-<h2>Scala 用于阐述，SpinalHDL 用于硬件描述<a class="headerlink" href="#scala-is-for-elaboration-spinalhdl-for-hardware-description" title="此标题的永久链接"></a></h2>
-<p>例如，如果您编写 Scala for 循环来生成某些硬件，它将生成 VHDL/Verilog 中的展开结果。</p>
-<p>另外，如果你想要一个常量，你不应该使用 SpinalHDL 硬件文字，而应该使用 Scala 硬件文字。例如：</p>
+<h2>Scala 用于实例细化，SpinalHDL 用于硬件描述<a class="headerlink" href="#scala-is-for-elaboration-spinalhdl-for-hardware-description" title="此标题的永久链接"></a></h2>
+<p>例如，如果您编写 Scala for 循环来生成某些硬件，它将生成展开的 VHDL/Verilog 代码。</p>
+<p>另外，如果你想要一个常量，你不应该使用 SpinalHDL 硬件代码，而应该使用 Scala 代码。例如：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// This is wrong, because you can&#39;t use a hardware Bool as construction parameter. (It will cause hierarchy violations.)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">SubComponent</span><span class="p">(</span><span class="n">activeHigh</span><span class="p">:</span><span class="w"> </span><span class="nc">Bool</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// ...</span>
@@ -1268,8 +1268,8 @@
 </div>
 </section>
 <section id="scala-elaboration-capabilities-if-for-functional-programming">
-<h2>Scala 阐述能力（if、for、函数式编程）<a class="headerlink" href="#scala-elaboration-capabilities-if-for-functional-programming" title="此标题的永久链接"></a></h2>
-<p>All of Scala’s syntax can be used to elaborate hardware designs, for instance, a Scala <code class="docutils literal notranslate"><span class="pre">if</span></code> statement could be used to enable or disable the generation of hardware:</p>
+<h2>Scala 实例细化能力（if、for、函数式编程）<a class="headerlink" href="#scala-elaboration-capabilities-if-for-functional-programming" title="此标题的永久链接"></a></h2>
+<p>在Scala中，所有的语法都可以用来细化硬件设计。例如，Scala的 <code class="docutils literal notranslate"><span class="pre">if</span></code> 语句可以用于启用或禁用部分硬件的生成。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="n">counter</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
 <span class="k">if</span><span class="p">(</span><span class="n">generateAClearWhenHit42</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">// Elaboration test, like an if generate in vhdl</span>
@@ -1279,7 +1279,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Scala 的“for”循环也是如此：</p>
+<p>Scala 的 <code class="docutils literal notranslate"><span class="pre">for</span></code> 循环也是如此：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="n">when</span><span class="p">(</span><span class="n">something</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Set all bits of value by using a Scala for loop (evaluated during hardware elaboration)</span>
@@ -1312,7 +1312,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="coding_conventions.html" class="btn btn-neutral float-left" title="编码约定" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="coding_conventions.html" class="btn btn-neutral float-left" title="编码规范" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="../Help%20for%20VHDL%20people/index.html" class="btn btn-neutral float-right" title="VHDL 用户入门" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
