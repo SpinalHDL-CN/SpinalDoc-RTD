@@ -1262,11 +1262,11 @@
 <h2>语义<a class="headerlink" href="#semantics" title="此标题的永久链接"></a></h2>
 <p>当手动读取/驱动反压流的信号时，请记住：</p>
 <ul class="simple">
-<li><p>断言后，“valid”只有在当前有效负载被确认后才能被取消断言。这意味着“valid”只能在从机通过断言“ready”进行读取后的周期切换到 0。</p></li>
-<li><p>与此相反，“准备好”可能随时改变。</p></li>
-<li><p>仅在“valid”和“ready”均已断言的周期上进行传输。</p></li>
-<li><p>Stream 的“valid”不能以组合方式依赖于“ready”，并且必须注册两者之间的任何路径。</p></li>
-<li><p>建议“valid”根本不依赖于“ready”。</p></li>
+<li><p>当 <code class="docutils literal notranslate"><span class="pre">valid</span></code> 被置为有效后，它只有在当前负载被使用后才能被置为无效。这意味着 <code class="docutils literal notranslate"><span class="pre">valid</span></code> 只能在从端通过置高 <code class="docutils literal notranslate"><span class="pre">ready</span></code> 完成一次读取后的下一个周期，才可以切换到0。</p></li>
+<li><p>相反， <code class="docutils literal notranslate"><span class="pre">ready</span></code> 可以随时改变。</p></li>
+<li><p>传输仅在 <code class="docutils literal notranslate"><span class="pre">valid</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ready</span></code> 均已置高的周期内进行。</p></li>
+<li><p>一个反压流的 <code class="docutils literal notranslate"><span class="pre">valid</span></code> 不能以组合逻辑方式和 <code class="docutils literal notranslate"><span class="pre">ready</span></code> 连接，并且两者之间的任何路径都必须经过寄存器。</p></li>
+<li><p>推荐 <code class="docutils literal notranslate"><span class="pre">valid</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ready</span></code> 之间没有任何依赖。</p></li>
 </ul>
 </section>
 <section id="functions">
@@ -1282,37 +1282,37 @@
 <tr class="row-odd"><th class="head"><p>语法</p></th>
 <th class="head"><p>描述</p></th>
 <th class="head"><p>返回类型</p></th>
-<th class="head"><p>潜伏</p></th>
+<th class="head"><p>延迟</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>流（类型：数据）</p></td>
-<td><p>创建给定类型的 Stream</p></td>
-<td><p>流[T]</p></td>
+<tr class="row-even"><td><p>Stream(type : Data)</p></td>
+<td><p>创建一个给定类型的Stream反压流</p></td>
+<td><p>Stream[T]</p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>主/从流（类型：数据）</p></td>
+<tr class="row-odd"><td><p>master/slave Stream(type : Data)</p></td>
 <td><div class="line-block">
-<div class="line">创建给定类型的 Stream</div>
+<div class="line">创建一个给定类型的Stream反压流</div>
 <div class="line">使用相应的输入/输出设置进行初始化</div>
 </div>
 </td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>x.火</p></td>
-<td><p>当交易在总线上被消费时返回 True（有效 &amp;&amp; 就绪）</p></td>
+<tr class="row-even"><td><p>x.fire</p></td>
+<td><p>当总线上的传输完成时返回 True(valid &amp;&amp; ready)</p></td>
 <td><p>Bool</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p>x.isStall</p></td>
-<td><p>当事务在总线上停止时返回 True（有效 &amp;&amp; ！就绪）</p></td>
+<td><p>当总线上的传输停滞时返回True(valid &amp;&amp; ! ready)</p></td>
 <td><p>Bool</p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p>x.queue(大小:Int)</p></td>
-<td><p>返回通过 FIFO 连接到 x 的 Stream</p></td>
-<td><p>流[T]</p></td>
+<tr class="row-even"><td><p>x.queue(size:Int)</p></td>
+<td><p>返回一个通过FIFO连接到x的Stream</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>2</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
@@ -1321,32 +1321,32 @@
 </div>
 </td>
 <td><div class="line-block">
-<div class="line">返回由 x 驱动的 Stream</div>
+<div class="line">返回由x驱动的Stream反压流</div>
 <div class="line">通过寄存器阶段切断有效/有效负载路径</div>
 <div class="line">成本 = (有效负载宽度 + 1) 触发器 flop</div>
 </div>
 </td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>1</p></td>
 </tr>
 <tr class="row-even"><td><p>x.s2mPipe()</p></td>
 <td><div class="line-block">
-<div class="line">返回由 x 驱动的 Stream</div>
+<div class="line">返回由x驱动的Stream反压流</div>
 <div class="line">就绪路径被寄存器阶段切断</div>
 <div class="line">成本 = 有效负载宽度 * (mux2 + 1 个触发器)</div>
 </div>
 </td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>0</p></td>
 </tr>
 <tr class="row-odd"><td><p>x.halfPipe()</p></td>
 <td><div class="line-block">
-<div class="line">返回由 x 驱动的 Stream</div>
+<div class="line">返回由x驱动的Stream反压流</div>
 <div class="line">有效/就绪/有效负载路径被某些寄存器切断</div>
 <div class="line">成本 = (有效负载宽度 + 2) 触发器，带宽除以二</div>
 </div>
 </td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>1</p></td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
@@ -1395,7 +1395,7 @@
 <div class="line">cond 为 true 时停止</div>
 </div>
 </td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>0</p></td>
 </tr>
 <tr class="row-odd"><td><p>x.throwWhen(cond : Bool)</p></td>
@@ -1404,7 +1404,7 @@
 <div class="line">当 cond 为 true 时，交易将被丢弃</div>
 </div>
 </td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>0</p></td>
 </tr>
 </tbody>
@@ -1477,11 +1477,11 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>推</p></td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>用于推送元素</p></td>
 </tr>
 <tr class="row-odd"><td><p>流行音乐</p></td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>用于弹出元素</p></td>
 </tr>
 <tr class="row-even"><td><p>冲水</p></td>
@@ -1557,11 +1557,11 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>推</p></td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>用于推送元素</p></td>
 </tr>
 <tr class="row-odd"><td><p>流行音乐</p></td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>用于弹出元素</p></td>
 </tr>
 <tr class="row-even"><td><p>推送占用</p></td>
@@ -1635,11 +1635,11 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>input</p></td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>用于推送元素</p></td>
 </tr>
 <tr class="row-odd"><td><p>输出</p></td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 <td><p>用于弹出元素</p></td>
 </tr>
 </tbody>
@@ -1748,10 +1748,10 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>on(输入：Seq[Stream[T]])</p></td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 </tr>
 <tr class="row-odd"><td><p>onArgs(输入：流[T]*)</p></td>
-<td><p>流[T]</p></td>
+<td><p>Stream[T]</p></td>
 </tr>
 </tbody>
 </table>
