@@ -830,9 +830,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">模拟</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="install/index.html">用于模拟的 SBT 设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="install/index.html#backend-dependent-installation-instructions">依赖后端的安装说明</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">仿真</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install/index.html">用于仿真的 SBT 设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install/index.html#backend-dependent-installation-instructions">后台依赖的安装说明</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="install/GHDL.html">GHDL 的设置和安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="install/Icarus%20Verilog.html">Icarus Verilog 的设置和安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="install/VCS.html">VCS 仿真配置</a></li>
@@ -841,12 +841,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bootstraps.html">启动模拟</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bootstraps.html">启动仿真器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bootstraps.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bootstraps.html#configuration">配置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bootstraps.html#running-multiple-tests-on-the-same-hardware">在同一硬件上运行多个测试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bootstraps.html#throw-success-or-failure-of-the-simulation-from-a-thread">从线程中抛出模拟的成功或失败</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bootstraps.html#capturing-wave-for-a-given-window-before-failure">在失败之前捕获给定窗口的波形</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bootstraps.html#throw-success-or-failure-of-the-simulation-from-a-thread">从线程中抛出仿真成功或失败结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bootstraps.html#capturing-wave-for-a-given-window-before-failure">在失败之前捕获给定时间窗内的波形</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="signal.html">访问模拟信号</a><ul>
@@ -856,16 +856,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="clock.html">时钟域</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="clock.html#stimulus-api">刺激API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="clock.html#wait-api">等待API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="clock.html#callback-api">回调接口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock.html#stimulus-api">激励函数API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock.html#wait-api">等待相关API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock.html#callback-api">回调函数API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clock.html#default-clockdomain">默认时钟域</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clock.html#new-clockdomain">新时钟域</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">全线程API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#fork-and-join-simulation-threads">分叉和连接模拟线程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sleep-and-waituntil">睡眠并等待直到</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fork-and-join-simulation-threads">分裂和合并仿真线程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sleep-and-waituntil">休眠和等待</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="threadLess.html">无线程API</a></li>
@@ -878,11 +878,11 @@
 <li class="toctree-l3"><a class="reference internal" href="simulator_specifics.html#performance">表现</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="engine.html">模拟引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="engine.html">仿真引擎</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/index.html">示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/asynchronous.html">异步加法器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/dual_clock_fifo.html">双时钟先进先出</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/single_clock_fifo.html">单时钟先进先出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/dual_clock_fifo.html">双时钟域FIFO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/single_clock_fifo.html">单时钟域FIFO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/synchronous.html">同步加法器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/uart_decoder.html">串口解码器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/uart_encoder.html">串口编码器</a></li>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">模拟</a></li>
+          <li class="breadcrumb-item"><a href="index.html">仿真</a></li>
       <li class="breadcrumb-item active">全线程API</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Simulation/threadFull.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1177,9 +1177,9 @@
 
   <section id="thread-full-api">
 <h1>全线程API<a class="headerlink" href="#thread-full-api" title="此标题的永久链接"></a></h1>
-<p>在 SpinalSim 中，您可以使用多个线程来编写测试平台，方式与 SystemVerilog 类似，有点像 VHDL/Verilog process/always 块。这允许您使用流畅的 API 编写并发任务并控制模拟时间。</p>
+<p>在 SpinalSim 中，您可以使用多个线程来编写测试平台，方法与 SystemVerilog 类似，有点像 VHDL/Verilog的process/always 块。这允许您使用流畅的 API 编写并发任务并控制仿真时间。</p>
 <section id="fork-and-join-simulation-threads">
-<h2>分叉和连接模拟线程<a class="headerlink" href="#fork-and-join-simulation-threads" title="此标题的永久链接"></a></h2>
+<h2>分裂和合并仿真线程<a class="headerlink" href="#fork-and-join-simulation-threads" title="此标题的永久链接"></a></h2>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Create a new thread</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">myNewThread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fork</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// New simulation thread body</span>
@@ -1191,7 +1191,7 @@
 </div>
 </section>
 <section id="sleep-and-waituntil">
-<h2>睡眠并等待直到<a class="headerlink" href="#sleep-and-waituntil" title="此标题的永久链接"></a></h2>
+<h2>休眠和等待<a class="headerlink" href="#sleep-and-waituntil" title="此标题的永久链接"></a></h2>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Sleep 1000 units of time</span>
 <span class="n">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 

@@ -830,9 +830,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">模拟</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="install/index.html">用于模拟的 SBT 设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="install/index.html#backend-dependent-installation-instructions">依赖后端的安装说明</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">仿真</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install/index.html">用于仿真的 SBT 设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install/index.html#backend-dependent-installation-instructions">后台依赖的安装说明</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="install/GHDL.html">GHDL 的设置和安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="install/Icarus%20Verilog.html">Icarus Verilog 的设置和安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="install/VCS.html">VCS 仿真配置</a></li>
@@ -841,12 +841,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bootstraps.html">启动模拟</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bootstraps.html">启动仿真器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bootstraps.html#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bootstraps.html#configuration">配置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bootstraps.html#running-multiple-tests-on-the-same-hardware">在同一硬件上运行多个测试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bootstraps.html#throw-success-or-failure-of-the-simulation-from-a-thread">从线程中抛出模拟的成功或失败</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bootstraps.html#capturing-wave-for-a-given-window-before-failure">在失败之前捕获给定窗口的波形</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bootstraps.html#throw-success-or-failure-of-the-simulation-from-a-thread">从线程中抛出仿真成功或失败结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bootstraps.html#capturing-wave-for-a-given-window-before-failure">在失败之前捕获给定时间窗内的波形</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="signal.html">访问模拟信号</a><ul>
@@ -856,16 +856,16 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">时钟域</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#stimulus-api">刺激API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#wait-api">等待API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#callback-api">回调接口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stimulus-api">激励函数API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-api">等待相关API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#callback-api">回调函数API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#default-clockdomain">默认时钟域</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#new-clockdomain">新时钟域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="threadFull.html">全线程API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="threadFull.html#fork-and-join-simulation-threads">分叉和连接模拟线程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="threadFull.html#sleep-and-waituntil">睡眠并等待直到</a></li>
+<li class="toctree-l3"><a class="reference internal" href="threadFull.html#fork-and-join-simulation-threads">分裂和合并仿真线程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="threadFull.html#sleep-and-waituntil">休眠和等待</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="threadLess.html">无线程API</a></li>
@@ -878,11 +878,11 @@
 <li class="toctree-l3"><a class="reference internal" href="simulator_specifics.html#performance">表现</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="engine.html">模拟引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="engine.html">仿真引擎</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/index.html">示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/asynchronous.html">异步加法器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/dual_clock_fifo.html">双时钟先进先出</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/single_clock_fifo.html">单时钟先进先出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/dual_clock_fifo.html">双时钟域FIFO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/single_clock_fifo.html">单时钟域FIFO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/synchronous.html">同步加法器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/uart_decoder.html">串口解码器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/uart_encoder.html">串口编码器</a></li>
@@ -1162,7 +1162,7 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">模拟</a></li>
+          <li class="breadcrumb-item"><a href="index.html">仿真</a></li>
       <li class="breadcrumb-item active">时钟域</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Simulation/clock.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1178,106 +1178,106 @@
   <section id="clock-domains">
 <h1>时钟域<a class="headerlink" href="#clock-domains" title="此标题的永久链接"></a></h1>
 <section id="stimulus-api">
-<h2>刺激API<a class="headerlink" href="#stimulus-api" title="此标题的永久链接"></a></h2>
-<p>以下是“ClockDomain”刺激函数的列表：</p>
+<h2>激励函数API<a class="headerlink" href="#stimulus-api" title="此标题的永久链接"></a></h2>
+<p>以下是 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 激励函数的列表：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 71%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>ClockDomain 激励函数</p></th>
+<tr class="row-odd"><th class="head"><p>时钟域激励函数</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">forkStimulus(句点)</span></code></p></td>
-<td><p>Fork a simulation process to generate the ClockDomain stimulus (clock, reset, softReset, clockEnable signals)</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">forkStimulus(period)</span></code></p></td>
+<td><p>分裂一个仿真进程以生成时钟域激励（时钟、复位、softReset、clockEnable 信号）</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">forkSimSpeedPrinter（printPeriod）</span></code></p></td>
-<td><p>分叉一个模拟过程，该过程将定期打印每秒实时千周期的模拟速度。 <code class="docutils literal notranslate"><span class="pre">printPeriod</span></code> 是实时秒数</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">forkSimSpeedPrinter(printPeriod)</span></code></p></td>
+<td><p>分裂一个仿真进程，该进程将定期打印每秒实时千周期的仿真速度。 <code class="docutils literal notranslate"><span class="pre">printPeriod</span></code> 是实时计数的秒数</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">时钟切换（）</span></code></p></td>
-<td><p>切换时钟信号</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">clockToggle()</span></code></p></td>
+<td><p>翻转时钟信号</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fallingEdge()</span></code></p></td>
 <td><p>清除时钟信号</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">上升边缘（）</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">risingEdge()</span></code></p></td>
 <td><p>设置时钟信号</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">断言重置（）</span></code></p></td>
-<td><p>将复位信号设置为有效电平</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">assertReset()</span></code></p></td>
+<td><p>将复位信号设置为有效（电平）</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">deassertReset()</span></code></p></td>
-<td><p>将复位信号设置为无效电平</p></td>
+<td><p>将复位信号设置为无效（电平）</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">assertClockEnable()</span></code></p></td>
-<td><p>将时钟启用信号设置为有效电平</p></td>
+<td><p>将时钟使能信号设置为有效（电平）</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">deassertClockEnable()</span></code></p></td>
-<td><p>将时钟启用信号设置为有效电平</p></td>
+<td><p>将时钟使能信号设置为有效（电平）</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">assertSoftReset()</span></code></p></td>
-<td><p>将软复位信号设置为有效电平</p></td>
+<td><p>将软复位信号设置为有效（电平）</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">deassertSoftReset()</span></code></p></td>
-<td><p>将软复位信号设置为有效电平</p></td>
+<td><p>将软复位信号设置为有效（电平）</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="wait-api">
-<h2>等待API<a class="headerlink" href="#wait-api" title="此标题的永久链接"></a></h2>
-<p>以下是“ClockDomain”实用程序的列表，您可以使用它们来等待来自域的给定事件：</p>
+<h2>等待相关API<a class="headerlink" href="#wait-api" title="此标题的永久链接"></a></h2>
+<p>以下是 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 实用工具函数的列表，您可以用它们来等待来自时钟域的给定事件：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 83%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>ClockDomain等待函数</p></th>
+<tr class="row-odd"><th class="head"><p>时钟域等待函数</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waitSampling([cyclesCount])</span></code></p></td>
-<td><p>等待“ClockDomain”进行采样（有效时钟沿 &amp;&amp; deassertReset &amp;&amp; assertClockEnable）</p></td>
+<td><p>等待 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 进行采样（有效时钟沿 &amp;&amp; 无复位 &amp;&amp; 时钟使能）</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">waitRisingEdge([cyclesCount])</span></code></p></td>
-<td><p>等待周期计数时钟的上升沿；如果没有另外指定，cycleCount 默认为 1 个周期。注意，cyclesCount = 0 是合法的，该功能对复位/softReset/clockEnable 不敏感</p></td>
+<td><p>等待cyclesCount个时钟的上升沿；如果没有另外指定，cycleCount 默认为 1 个周期。注意，cyclesCount = 0 是合法的，该功能对复位/softReset/clockEnable 不敏感</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waitFallingEdge([cyclesCount])</span></code></p></td>
-<td><p>与“waitRisingEdge”相同，但针对下降沿</p></td>
+<td><p>与 <code class="docutils literal notranslate"><span class="pre">waitRisingEdge</span></code> 相同，但针对下降沿</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">waitActiveEdge([cyclesCount])</span></code></p></td>
-<td><p>与“waitRisingEdge”相同，但针对“ClockDomainConfig”指定的边沿级别</p></td>
+<td><p>与 <code class="docutils literal notranslate"><span class="pre">waitRisingEdge</span></code> 相同，但针对 <code class="docutils literal notranslate"><span class="pre">ClockDomainConfig</span></code> 指定的边沿类型</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waitRisingEdgeWhere（条件）</span></code></p></td>
-<td><p>与“waitRisingEdge”相同，但要退出，上升沿发生时布尔“condition”必须为真</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waitRisingEdgeWhere(condition)</span></code></p></td>
+<td><p>与 <code class="docutils literal notranslate"><span class="pre">waitRisingEdge</span></code> 功能相同，但要检查条件，上升沿发生时布尔 <code class="docutils literal notranslate"><span class="pre">condition</span></code> 必须为真</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">waitFallingEdgeWhere（条件）</span></code></p></td>
-<td><p>与“waitRisingEdgeWhere”相同，但针对下降沿</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">waitFallingEdgeWhere(condition)</span></code></p></td>
+<td><p>与 <code class="docutils literal notranslate"><span class="pre">waitRisingEdgeWhere</span></code> 相同，但针对的是下降沿</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waitActiveEdgeWhere（条件）</span></code></p></td>
-<td><p>与“waitRisingEdgeWhere”相同，但针对“ClockDomainConfig”指定的边缘级别</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waitActiveEdgeWhere(condition)</span></code></p></td>
+<td><p>与 <code class="docutils literal notranslate"><span class="pre">waitRisingEdgeWhere</span></code> 相同，但针对 <code class="docutils literal notranslate"><span class="pre">ClockDomainConfig</span></code> 指定的边沿类型</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">waitSamplingWhere（条件）：布尔值</span></code></p></td>
-<td><p>等到时钟域采样并且给定条件为真</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">waitSamplingWhere(condition)</span> <span class="pre">:</span> <span class="pre">Boolean</span></code></p></td>
+<td><p>等待直到时钟域采样并且给定条件为真</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waitSamplingWhere（超时）（条件）：布尔值</span></code></p></td>
-<td><p>与上面定义的 waitSamplingWhere 相同，但阻塞永远不会超过超时周期。如果退出条件来自超时，则返回 true</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">waitSamplingWhere(timeout)(condition)</span> <span class="pre">:</span> <span class="pre">Boolean</span></code></p></td>
+<td><p>与上面定义的 waitSamplingWhere 相同，但阻塞不会超过timeout个周期。如果退出是因为超时，则返回 true</p></td>
 </tr>
 </tbody>
 </table>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>All the functionality of the wait API can only be called directly from inside a thread, and not from a callback executed via the Callback API.</p>
+<p>等待 API 的所有功能只能直接从线程内部调用，而不能从通过回调函数使用（通过回调API调用）。</p>
 </div>
 </section>
 <section id="callback-api">
-<span id="sim-clock-threadless"></span><h2>回调接口<a class="headerlink" href="#callback-api" title="此标题的永久链接"></a></h2>
-<p>以下是“ClockDomain”实用程序的列表，您可以使用它们来等待来自域的给定事件：</p>
+<span id="sim-clock-threadless"></span><h2>回调函数API<a class="headerlink" href="#callback-api" title="此标题的永久链接"></a></h2>
+<p>以下是 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 实用工具函数的列表，您可以用它们来等待来自时钟域的给定事件：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -1289,25 +1289,25 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onNextSampling</span> <span class="pre">{回调}</span></code></p></td>
-<td><p>仅在下一个“ClockDomain”样本上执行一次回调代码（有效边沿+复位关闭+时钟使能打开）</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onNextSampling</span> <span class="pre">{</span> <span class="pre">callback</span> <span class="pre">}</span></code></p></td>
+<td><p>仅在下一个 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 样本上执行一次回调代码（有效边沿+无复位+时钟使能）</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">onSamplings</span> <span class="pre">{回调}</span></code></p></td>
-<td><p>每次“ClockDomain”采样时执行回调代码（有效边沿+复位关闭+时钟使能打开）</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">onSamplings</span> <span class="pre">{</span> <span class="pre">callback</span> <span class="pre">}</span></code></p></td>
+<td><p>每次 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 采样时执行回调代码（有效边沿+无复位+时钟使能）</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onActiveEdges</span> <span class="pre">{回调}</span></code></p></td>
-<td><p>每次“ClockDomain”时钟生成其配置的边沿时执行回调代码</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onActiveEdges</span> <span class="pre">{</span> <span class="pre">callback</span> <span class="pre">}</span></code></p></td>
+<td><p>每次 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 时钟符合其配置的边沿的条件时执行回调代码</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">onEdges</span> <span class="pre">{回调}</span></code></p></td>
-<td><p>每次“ClockDomain”时钟产生上升沿或下降沿时执行回调代码</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">onEdges</span> <span class="pre">{</span> <span class="pre">callback</span> <span class="pre">}</span></code></p></td>
+<td><p>每次 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 时钟出现上升沿或下降沿时执行回调代码</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onRisingEdges</span> <span class="pre">{回调}</span></code></p></td>
-<td><p>每次“ClockDomain”时钟产生上升沿时执行回调代码</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onRisingEdges</span> <span class="pre">{</span> <span class="pre">callback</span> <span class="pre">}</span></code></p></td>
+<td><p>每次 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 的时钟出现上升沿时执行回调代码</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">onFallingEdges</span> <span class="pre">{回调}</span></code></p></td>
-<td><p>每次“ClockDomain”时钟产生下降沿时执行回调代码</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">onFallingEdges</span> <span class="pre">{</span> <span class="pre">callback</span> <span class="pre">}</span></code></p></td>
+<td><p>每次 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 中时钟出现下降沿时执行回调代码</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onSamplingWhile</span> <span class="pre">{回调：布尔值}</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">onSamplingWhile</span> <span class="pre">{</span> <span class="pre">callback</span> <span class="pre">:</span> <span class="pre">Boolean</span> <span class="pre">}</span></code></p></td>
 <td><p>与 onSampling 相同，但您可以通过让回调返回 false 来停止它（永远）</p></td>
 </tr>
 </tbody>
@@ -1315,7 +1315,7 @@
 </section>
 <section id="default-clockdomain">
 <h2>默认时钟域<a class="headerlink" href="#default-clockdomain" title="此标题的永久链接"></a></h2>
-<p>您可以访问顶层的默认“ClockDomain”，如下所示：</p>
+<p>您可以访问顶层模块的默认 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> ，如下所示：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Example of thread forking to generate a reset, and then toggling the clock each 5 time units.</span>
 <span class="c1">// dut.clockDomain refers to the implicit clock domain created during component instantiation.</span>
 <span class="n">fork</span><span class="w"> </span><span class="p">{</span>
@@ -1329,7 +1329,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>请注意，您还可以直接分叉标准重置/时钟进程：</p>
+<p>请注意，您还可以直接分裂标准复位/时钟产生进程：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">dut</span><span class="p">.</span><span class="n">clockDomain</span><span class="p">.</span><span class="n">forkStimulus</span><span class="p">(</span><span class="n">period</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1340,7 +1340,7 @@
 </section>
 <section id="new-clockdomain">
 <h2>新时钟域<a class="headerlink" href="#new-clockdomain" title="此标题的永久链接"></a></h2>
-<p>如果您的顶层定义了一些未直接集成到其“ClockDomain”中的时钟和重置输入，您可以直接在测试台中定义其相应的“ClockDomain”：</p>
+<p>如果您的顶层模块中定义了一些未直接集成到其 <code class="docutils literal notranslate"><span class="pre">ClockDomain``中的时钟和复位，您可以直接在测试平台中定义其相应的</span> <span class="pre">``ClockDomain</span></code> ：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// In the testbench</span>
 <span class="nc">ClockDomain</span><span class="p">(</span><span class="n">dut</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">coreClk</span><span class="p">,</span><span class="w"> </span><span class="n">dut</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">coreReset</span><span class="p">).</span><span class="n">forkStimulus</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>

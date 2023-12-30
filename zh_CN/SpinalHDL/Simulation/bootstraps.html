@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>启动模拟 &mdash; SpinalHDL  文档</title>
+  <title>启动仿真器 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -830,9 +830,9 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">模拟</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="install/index.html">用于模拟的 SBT 设置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="install/index.html#backend-dependent-installation-instructions">依赖后端的安装说明</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">仿真</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="install/index.html">用于仿真的 SBT 设置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="install/index.html#backend-dependent-installation-instructions">后台依赖的安装说明</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="install/GHDL.html">GHDL 的设置和安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="install/Icarus%20Verilog.html">Icarus Verilog 的设置和安装</a></li>
 <li class="toctree-l4"><a class="reference internal" href="install/VCS.html">VCS 仿真配置</a></li>
@@ -841,12 +841,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">启动模拟</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">启动仿真器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction">简介</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#configuration">配置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#running-multiple-tests-on-the-same-hardware">在同一硬件上运行多个测试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#throw-success-or-failure-of-the-simulation-from-a-thread">从线程中抛出模拟的成功或失败</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#capturing-wave-for-a-given-window-before-failure">在失败之前捕获给定窗口的波形</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#throw-success-or-failure-of-the-simulation-from-a-thread">从线程中抛出仿真成功或失败结果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#capturing-wave-for-a-given-window-before-failure">在失败之前捕获给定时间窗内的波形</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="signal.html">访问模拟信号</a><ul>
@@ -856,16 +856,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="clock.html">时钟域</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="clock.html#stimulus-api">刺激API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="clock.html#wait-api">等待API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="clock.html#callback-api">回调接口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock.html#stimulus-api">激励函数API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock.html#wait-api">等待相关API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clock.html#callback-api">回调函数API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clock.html#default-clockdomain">默认时钟域</a></li>
 <li class="toctree-l3"><a class="reference internal" href="clock.html#new-clockdomain">新时钟域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="threadFull.html">全线程API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="threadFull.html#fork-and-join-simulation-threads">分叉和连接模拟线程</a></li>
-<li class="toctree-l3"><a class="reference internal" href="threadFull.html#sleep-and-waituntil">睡眠并等待直到</a></li>
+<li class="toctree-l3"><a class="reference internal" href="threadFull.html#fork-and-join-simulation-threads">分裂和合并仿真线程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="threadFull.html#sleep-and-waituntil">休眠和等待</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="threadLess.html">无线程API</a></li>
@@ -878,11 +878,11 @@
 <li class="toctree-l3"><a class="reference internal" href="simulator_specifics.html#performance">表现</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="engine.html">模拟引擎</a></li>
+<li class="toctree-l2"><a class="reference internal" href="engine.html">仿真引擎</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/index.html">示例</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="examples/asynchronous.html">异步加法器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/dual_clock_fifo.html">双时钟先进先出</a></li>
-<li class="toctree-l3"><a class="reference internal" href="examples/single_clock_fifo.html">单时钟先进先出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/dual_clock_fifo.html">双时钟域FIFO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="examples/single_clock_fifo.html">单时钟域FIFO</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/synchronous.html">同步加法器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/uart_decoder.html">串口解码器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="examples/uart_encoder.html">串口编码器</a></li>
@@ -1162,8 +1162,8 @@
           <div role="navigation" aria-label="页面导航">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">模拟</a></li>
-      <li class="breadcrumb-item active">启动模拟</li>
+          <li class="breadcrumb-item"><a href="index.html">仿真</a></li>
+      <li class="breadcrumb-item active">启动仿真器</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Simulation/bootstraps.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,7 +1176,7 @@
 
 
   <section id="boot-a-simulation">
-<h1>启动模拟<a class="headerlink" href="#boot-a-simulation" title="此标题的永久链接"></a></h1>
+<h1>启动仿真器<a class="headerlink" href="#boot-a-simulation" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
 <p>下面是一个硬件定义+测试平台的示例：</p>
@@ -1216,7 +1216,7 @@
 </section>
 <section id="configuration">
 <h2>配置<a class="headerlink" href="#configuration" title="此标题的永久链接"></a></h2>
-<p>“SimConfig” 将返回一个默认的模拟配置实例，您可以在该实例上调用多个函数来配置您的模拟：</p>
+<p><code class="docutils literal notranslate"><span class="pre">SimConfig</span></code> 将返回一个默认的仿真配置实例，您可以在该实例上调用多个函数来配置您的仿真过程：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
@@ -1229,53 +1229,53 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">withWave</span></code></p></td>
-<td><p>启用模拟波形捕获（默认格式）</p></td>
+<td><p>打开仿真波形捕获与存储（默认格式）</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">withVcdWave</span></code></p></td>
-<td><p>启用模拟波形捕获（VCD文本格式）</p></td>
+<td><p>打开仿真波形捕获与存储（VCD格式）</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">withFstWave</span></code></p></td>
-<td><p>启用模拟波形捕获（FST 二进制格式）</p></td>
+<td><p>打开仿真波形捕获与存储（FST 二进制格式）</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">withConfig(SpinalConfig)</span></code></p></td>
-<td><p>指定用于生成硬件的“SpinalConfig”</p></td>
+<td><p>指定用于生成硬件的 <code class="docutils literal notranslate"><span class="pre">SpinalConfig</span></code></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">全部优化</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">allOptimisation</span></code></p></td>
 <td><p>启用所有 RTL 编译优化以减少仿真时间（会增加编译时间）</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">工作空间路径（路径）</span></code></p></td>
-<td><p>更改生成 sim 文件的文件夹</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">workspacePath(path)</span></code></p></td>
+<td><p>更改生成的仿真文件存放的文件夹</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">withVerilator</span></code></p></td>
-<td><p>使用 Verilator 作为模拟后端（默认）</p></td>
+<td><p>使用 Verilator 作为后台仿真器（默认）</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">withGhdl</span></code></p></td>
-<td><p>使用GHDL作为模拟后端</p></td>
+<td><p>使用GHDL作为后台仿真器</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">withIVilog</span></code></p></td>
-<td><p>使用 Icarus Verilog 作为模拟后端</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">withIVerilog</span></code></p></td>
+<td><p>使用 Icarus Verilog 作为后台仿真器</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">withVCS</span></code></p></td>
-<td><p>使用Synopsys VCS作为模拟后端</p></td>
+<td><p>使用Synopsys VCS作为后台仿真器</p></td>
 </tr>
 </tbody>
 </table>
-<p>然后你可以调用“compile(rtl)”函数来编译硬件并预热模拟器。该函数将返回一个“SimCompiled”实例。</p>
-<p>在此“SimCompiled”实例上，您可以使用以下函数运行模拟：</p>
+<p>然后你可以调用 <code class="docutils literal notranslate"><span class="pre">compile(rtl)</span></code> 函数来编译硬件并预热仿真器。该函数将返回一个 <code class="docutils literal notranslate"><span class="pre">SimCompiled</span></code> 实例。</p>
+<p>在此 <code class="docutils literal notranslate"><span class="pre">SimCompiled</span></code> 实例上，您可以使用以下函数进行仿真：</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">doSim[(simName[,</span> <span class="pre">seed])]{dut</span> <span class="pre">=&gt;</span> <span class="pre">/*</span> <span class="pre">主要激励代码</span> <span class="pre">*/}</span></code></dt><dd><p>运行模拟，直到主线程运行完成并退出/返回。如果模拟完全卡住，它将检测并报告错误。只要例如时钟正在运行，模拟可以永远持续下去，因此建议使用“SimTimeout(cycles)”来限制可能的运行时间。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">doSim[(simName[,</span> <span class="pre">seed])]{dut</span> <span class="pre">=&gt;</span> <span class="pre">/*</span> <span class="pre">main</span> <span class="pre">stimulus</span> <span class="pre">code</span> <span class="pre">*/}</span></code></dt><dd><p>运行仿真，直到主线程运行完成并退出/返回。如果仿真完全卡住，它将检测并报告错误。只要例如时钟正在运行，仿真过程可以永远持续下去，因此建议使用 <code class="docutils literal notranslate"><span class="pre">SimTimeout(cycles)</span></code> 来限制可能的运行时间。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">doSimUntilVoid[(simName[,</span> <span class="pre">种子])]{dut</span> <span class="pre">=&gt;</span> <span class="pre">...}</span></code></dt><dd><p>运行模拟，直到通过调用“simSuccess()”或“simFailure()”结束。主要刺激线程可以继续或提前退出。只要有事件需要处理，模拟就会继续。如果完全卡住，模拟将报告错误。</p>
+<dt><code class="docutils literal notranslate"><span class="pre">doSimUntilVoid[(simName[,</span> <span class="pre">seed])]{dut</span> <span class="pre">=&gt;</span> <span class="pre">...}</span></code></dt><dd><p>运行仿真，直到通过调用 <code class="docutils literal notranslate"><span class="pre">simSuccess()</span></code> 或 <code class="docutils literal notranslate"><span class="pre">simFailure()</span></code> 结束。主激励线程可以继续或提前退出。只要有事件需要处理，仿真就会继续。如果完全卡住，仿真器将报告错误。</p>
 </dd>
 </dl>
-<p>以下测试平台模板将使用以下顶层：</p>
+<p>以下测试平台模板将使用以下顶层设计：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">   </span><span class="kd">val</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">out</span><span class="p">(</span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 <span class="w">   </span><span class="n">counter</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这是一个包含许多模拟配置的模板：</p>
+<p>这是一个包含多个仿真配置的模板：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">spinalConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">SpinalConfig</span><span class="p">(</span><span class="n">defaultClockDomainFrequency</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">FixedFrequency</span><span class="p">(</span><span class="mi">10</span><span class="w"> </span><span class="nc">MHz</span><span class="p">))</span>
 
 <span class="nc">SimConfig</span>
@@ -1290,7 +1290,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这是一个模板，其中模拟通过完成模拟主线程执行而结束：</p>
+<p>这是一个模板，其中仿真过程在主仿真线程执行完成后结束：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">SimConfig</span><span class="p">.</span><span class="n">compile</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="nc">TopLevel</span><span class="p">).</span><span class="n">doSim</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dut</span><span class="w"> </span><span class="o">=&gt;</span>
 <span class="w">  </span><span class="nc">SimTimeout</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 <span class="w">  </span><span class="n">dut</span><span class="p">.</span><span class="n">clockDomain</span><span class="p">.</span><span class="n">forkStimulus</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1299,7 +1299,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这是一个模板，其中模拟通过显式调用“simSuccess()”结束：</p>
+<p>这是一个模板，其中仿真过程通过显式调用 <cite>simSuccess()</cite> 结束：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">SimConfig</span><span class="p">.</span><span class="n">compile</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="nc">TopLevel</span><span class="p">).</span><span class="n">doSimUntilVoid</span><span class="p">{</span><span class="w"> </span><span class="n">dut</span><span class="w"> </span><span class="o">=&gt;</span>
 <span class="w">  </span><span class="nc">SimTimeout</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 <span class="w">  </span><span class="n">dut</span><span class="p">.</span><span class="n">clockDomain</span><span class="p">.</span><span class="n">forkStimulus</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -1324,7 +1324,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p id="env-spinalsim-workspace">Note that by default, the simulation files will be placed into the <code class="docutils literal notranslate"><span class="pre">simWorkspace/xxx</span></code> folders. You can override the simWorkspace location by setting the <code class="docutils literal notranslate"><span class="pre">SPINALSIM_WORKSPACE</span></code> environment variable.</p>
+<p id="env-spinalsim-workspace">请注意，默认情况下，仿真文件将放置在 <code class="docutils literal notranslate"><span class="pre">simWorkspace/xxx</span></code> 文件夹中。您可以通过设置 <code class="docutils literal notranslate"><span class="pre">SPINALSIM_WORKSPACE</span></code> 环境变量来覆盖 simWorkspace 位置。</p>
 </section>
 <section id="running-multiple-tests-on-the-same-hardware">
 <h2>在同一硬件上运行多个测试<a class="headerlink" href="#running-multiple-tests-on-the-same-hardware" title="此标题的永久链接"></a></h2>
@@ -1341,10 +1341,10 @@
 </div>
 </section>
 <section id="throw-success-or-failure-of-the-simulation-from-a-thread">
-<h2>从线程中抛出模拟的成功或失败<a class="headerlink" href="#throw-success-or-failure-of-the-simulation-from-a-thread" title="此标题的永久链接"></a></h2>
-<p>在模拟过程中的任何时刻，您都可以调用“simSuccess”或“simFailure”来结束模拟。</p>
-<p>当仿真时间太长时，可能会导致仿真失败，例如，因为测试台正在等待从未发生的条件。为此，请调用“SimTimeout(maxDuration)”，其中“maxDuration”是模拟应被视为失败的时间（以模拟时间单位表示）。</p>
-<p>例如，要使仿真在时钟周期持续时间的 1000 倍后失败：</p>
+<h2>从线程中抛出仿真成功或失败结果<a class="headerlink" href="#throw-success-or-failure-of-the-simulation-from-a-thread" title="此标题的永久链接"></a></h2>
+<p>在仿真过程中的任何时刻，您都可以调用 <code class="docutils literal notranslate"><span class="pre">simSuccess</span></code> 或 <code class="docutils literal notranslate"><span class="pre">simFailure</span></code> 来结束它。</p>
+<p>当仿真时间太长时，可能会导致仿真失败，例如，因为测试平台正在等待从未发生的条件。为此，请调用 <code class="docutils literal notranslate"><span class="pre">SimTimeout(maxDuration)</span></code> 函数设置超时时间，其中 <code class="docutils literal notranslate"><span class="pre">maxDuration</span></code> 是仿真应被视为失败的时间（以仿真时间单位表示）。</p>
+<p>例如，要使仿真在持续 1000 个时钟周期后失败：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">period</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span>
 <span class="n">dut</span><span class="p">.</span><span class="n">clockDomain</span><span class="p">.</span><span class="n">forkStimulus</span><span class="p">(</span><span class="n">period</span><span class="p">)</span>
 <span class="nc">SimTimeout</span><span class="p">(</span><span class="mi">1000</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">period</span><span class="p">)</span>
@@ -1352,15 +1352,15 @@
 </div>
 </section>
 <section id="capturing-wave-for-a-given-window-before-failure">
-<h2>在失败之前捕获给定窗口的波形<a class="headerlink" href="#capturing-wave-for-a-given-window-before-failure" title="此标题的永久链接"></a></h2>
-<p>如果您有一个很长的模拟，并且您不想捕获所有波形（太错误，太慢），那么您主要有两种方法可以做到这一点。</p>
-<p>要么您已经知道模拟在哪个“simTime”失败，在这种情况下您可以在测试台中执行以下操作：</p>
+<h2>在失败之前捕获给定时间窗内的波形<a class="headerlink" href="#capturing-wave-for-a-given-window-before-failure" title="此标题的永久链接"></a></h2>
+<p>如果您有一个很长时间的仿真，并且您不想捕获所有波形（太多错误，太慢），那么您主要有两种方法可以做到这一点。</p>
+<p>要么您已经知道模拟在哪个 <code class="docutils literal notranslate"><span class="pre">simTime</span></code> 失败，在这种情况下您可以在测试平台中执行以下操作：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">disableSimWave</span><span class="p">()</span>
 <span class="n">delayed</span><span class="p">(</span><span class="n">timeFromWhichIWantToCapture</span><span class="p">)(</span><span class="n">enableSimWave</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>或者，您可以运行双锁步模拟，其中一个模拟的运行比另一个模拟的运行稍有延迟，一旦领先的模拟出现故障，它将开始记录波。</p>
-<p>为此，您可以使用 DualSimTracer 实用程序，其中包含已编译硬件的参数、故障前要捕获的时间窗口以及种子。</p>
+<p>或者，您可以运行双步锁仿真，其中一个仿真的运行比另一个仿真的运行稍有延迟，一旦领先的模拟出现故障，它将开始记录波形。</p>
+<p>为此，您可以使用 DualSimTracer 实用程序，其中包含已编译硬件的参数、故障前要捕获的时间窗大小以及随机种子。</p>
 <p>这是一个例子：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">package</span><span class="w"> </span><span class="nn">spinaldoc</span><span class="p">.</span><span class="nn">libraries</span><span class="p">.</span><span class="n">sim</span>
 
@@ -1396,11 +1396,11 @@
 </div>
 <p>这将生成以下文件结构：</p>
 <ul class="simple">
-<li><p>simWorkspace/Toplevel/explorer/stdout.log ：前面的模拟的标准输出</p></li>
-<li><p>simWorkspace/Toplevel/tracer/stdout.log ：执行波形跟踪的模拟的标准输出</p></li>
-<li><p>simWorkspace/Toplevel/tracer.fst ：故障波形</p></li>
+<li><p>simWorkspace/Toplevel/explorer/stdout.log : stdout of the simulation which is ahead</p></li>
+<li><p>simWorkspace/Toplevel/tracer/stdout.log : stdout of the simulation doing the wave tracing</p></li>
+<li><p>simWorkspace/Toplevel/tracer.fst : Waveform of the failure</p></li>
 </ul>
-<p>scala 终端将显示资源管理器模拟标准输出。</p>
+<p>scala 终端将显示仿真结果到标准输出。</p>
 </section>
 </section>
 
