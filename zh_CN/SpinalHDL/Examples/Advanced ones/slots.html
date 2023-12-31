@@ -143,7 +143,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Getting%20Started/SBT.html">在 CLI （命令行）中结合 SBT 使用 Spinal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Getting%20Started/VSCodium.html">使用 VSCodium 的 Spinal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Getting%20Started/VSCodium.html">在 VSCodium 中使用 Spinal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Getting%20Started/IntelliJ.html">从 IntelliJ IDEA 使用 Spinal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Getting%20Started/Scala%20Guide/index.html">Scala 使用指南</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Getting%20Started/Scala%20Guide/basics.html">基础内容</a><ul>
@@ -1258,7 +1258,7 @@
 </section>
 <section id="in-practice">
 <h3>应用<a class="headerlink" href="#in-practice" title="此标题的永久链接"></a></h3>
-<p>例如，在Tilelink一致性枢纽中，这种插槽模式用于跟踪所有正在进行的内存检测：</p>
+<p>例如，在Tilelink总线（具有一致性机制）hub中，这种插槽模式用于跟踪所有正在进行的内存操作：</p>
 <p><a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/008c73f1ce18e294f137efe7a1442bd3f8fa2ee0/lib/src/main/scala/spinal/lib/bus/tilelink/coherent/Hub.scala#L376">https://github.com/SpinalHDL/SpinalHDL/blob/008c73f1ce18e294f137efe7a1442bd3f8fa2ee0/lib/src/main/scala/spinal/lib/bus/tilelink/coherent/Hub.scala#L376</a></p>
 <p>以及在 DRAM / SDR / DDR 内存控制器中实现同时处理多个内存事务（同时运行多个预充电/激活/读/写以提高性能）：</p>
 <p><a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/1edba1890b5f629b28e5171b3c449155337d2548/lib/src/main/scala/spinal/lib/memory/sdram/xdr/Tasker.scala#L202">https://github.com/SpinalHDL/SpinalHDL/blob/1edba1890b5f629b28e5171b3c449155337d2548/lib/src/main/scala/spinal/lib/memory/sdram/xdr/Tasker.scala#L202</a></p>

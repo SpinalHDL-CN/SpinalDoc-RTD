@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>使用 VSCodium 的 Spinal &mdash; SpinalHDL  文档</title>
+  <title>在 VSCodium 中使用 Spinal &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -143,7 +143,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="SBT.html">在 CLI （命令行）中结合 SBT 使用 Spinal</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">使用 VSCodium 的 Spinal</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">在 VSCodium 中使用 Spinal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="IntelliJ.html">从 IntelliJ IDEA 使用 Spinal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Scala%20Guide/index.html">Scala 使用指南</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Scala%20Guide/basics.html">基础内容</a><ul>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">入门</a></li>
-      <li class="breadcrumb-item active">使用 VSCodium 的 Spinal</li>
+      <li class="breadcrumb-item active">在 VSCodium 中使用 Spinal</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Getting Started/VSCodium.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,20 +1176,19 @@
 
 
   <section id="using-spinal-from-vscodium">
-<span id="using-vscodium"></span><h1>使用 VSCodium 的 Spinal<a class="headerlink" href="#using-spinal-from-vscodium" title="此标题的永久链接"></a></h1>
+<span id="using-vscodium"></span><h1>在 VSCodium 中使用 Spinal<a class="headerlink" href="#using-spinal-from-vscodium" title="此标题的永久链接"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p><a class="reference external" href="https://vscodium.com/">VSCodium</a> 是 Visual Studio Code 的开源版本，但不包含 Microsoft 可下载版本中的遥测功能。</p>
+<p><a class="reference external" href="https://vscodium.com/">VSCodium</a> 是 Visual Studio Code 的开源版本，但不包含 Microsoft 可下载版本的数据报告功能。</p>
 </div>
-<p>作为一项一次性安装任务，请转到“查看”-&gt;“扩展”搜索“Scala”并安装“Scala（金属）”扩展 &lt;<a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=scalameta">https://marketplace.visualstudio.com/items?itemName=scalameta</a> .金属&gt;`_。</p>
-<p>打开工作区：“文件”&gt;“打开文件夹…”并打开您之前在模板中下载的文件夹。</p>
+<p>作为一次性安装任务，请转到“查看”-&gt;“扩展” 菜单栏搜索“Scala”并安装“Scala（Metals）” <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=scalameta.metals">扩展</a>。</p>
+<p>打开工作区：<code class="docutils literal notranslate"><span class="pre">File</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">Open</span> <span class="pre">Folder...</span></code> 并打开您之前在 <a class="reference internal" href="Install%20and%20setup.html#template"><span class="std std-ref">创建第一个 SpinalHDL 项目</span></a> 中下载的文件夹。</p>
 <p>另一种启动方法是 cd 进入适当的目录并输入 <code class="docutils literal notranslate"><span class="pre">codium</span> <span class="pre">.</span></code></p>
-<p>稍等一下，右下角应该会出现一个弹出通知：“找到多个构建定义。您想使用哪个？”。单击“sbt”，然后出现另一个弹出窗口，单击“Import build”。</p>
-<p>运行“sbt bloopInstall”时等待。然后会出现一个警告弹出窗口，您可以忽略它（不再显示）。</p>
-<p>Find and open <code class="docutils literal notranslate"><span class="pre">hw/spinal/projectname/MyTopLevel.scala</span></code>.  Wait a little bit, and see the <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">|</span> <span class="pre">debug</span></code> line that is displayed by Metals, before each <code class="docutils literal notranslate"><span class="pre">App</span></code>. For instance, click on <code class="docutils literal notranslate"><span class="pre">run</span></code> just above <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">MyTopLevelVerilog</span></code>. Alternatively, you can select Menu Bar -&gt; Run -&gt; Run Without Debugging.  Either approach performs design checks and, as the checks pass, generates the Verilog file
-<code class="docutils literal notranslate"><span class="pre">./hw/gen/MyTopLevel.v</span></code></p>
+<p>稍等一下，右下角应该会出现一个弹出通知：“找到多个构建定义。您想使用哪个？”。单击 <code class="docutils literal notranslate"><span class="pre">sbt</span></code> ，然后出现另一个弹出窗口，单击 <code class="docutils literal notranslate"><span class="pre">Import</span> <span class="pre">build</span></code>。</p>
+<p>运行 <code class="docutils literal notranslate"><span class="pre">sbt</span> <span class="pre">bloopInstall</span></code> 时稍等片刻。然后会出现一个警告弹出窗口，您可以忽略它（不再显示）。</p>
+<p>找到并打开 <code class="docutils literal notranslate"><span class="pre">hw/spinal/projectname/MyTopLevel.scala</span></code>。稍等一下，然后看到 Metals 在每个 <code class="docutils literal notranslate"><span class="pre">App</span></code> 之前显示的 <code class="docutils literal notranslate"><span class="pre">run</span> <span class="pre">|</span> <span class="pre">debug</span></code> 行。例如，单击 <code class="docutils literal notranslate"><span class="pre">object</span> <span class="pre">MyTopLevelVerilog</span></code> 上方的 <code class="docutils literal notranslate"><span class="pre">run</span></code> 。或者，您可以选择菜单栏 -&gt; 运行 -&gt; 运行而不调试。两种方法都会执行设计检查，并在检查通过后生成 Verilog 文件 <code class="docutils literal notranslate"><span class="pre">./hw/gen/MyTopLevel.v</span></code></p>
 <p>这就是使用 VSCodium 的 SpinalHDL 所需要做的全部工作。您现在拥有经过设计规则检查的 Verilog 和/或 VHDL，您可以将其用作您最喜欢的综合工具的输入。</p>
-<p>Now that you know how to use the VSCodium development environment, let’s explore the code: <a class="reference internal" href="../Introduction/A%20simple%20example.html#simple-example"><span class="std std-ref">一个简单的例子</span></a>.</p>
+<p>现在您已经知道如何使用 VSCodium 开发环境了，让我们来探索一下代码： <a class="reference internal" href="../Introduction/A%20simple%20example.html#simple-example"><span class="std std-ref">一个简单的例子</span></a> 。</p>
 </section>
 
     <script type="text/javascript">
