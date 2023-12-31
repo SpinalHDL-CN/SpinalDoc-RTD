@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>模拟器具体细节 &mdash; SpinalHDL  文档</title>
+  <title>仿真器的具体细节 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -849,9 +849,9 @@
 <li class="toctree-l3"><a class="reference internal" href="bootstraps.html#capturing-wave-for-a-given-window-before-failure">在失败之前捕获给定时间窗内的波形</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="signal.html">访问模拟信号</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="signal.html">仿真过程中访问信号</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="signal.html#read-and-write-signals">读写信号</a></li>
-<li class="toctree-l3"><a class="reference internal" href="signal.html#accessing-signals-inside-the-component-s-hierarchy">访问组件层次结构内的信号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="signal.html#accessing-signals-inside-the-component-s-hierarchy">访问组件层次结构内部的信号</a></li>
 <li class="toctree-l3"><a class="reference internal" href="signal.html#load-and-store-of-memory-in-simulation">仿真中内存的加载和存储</a></li>
 </ul>
 </li>
@@ -870,12 +870,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="threadLess.html">无线程API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sensitive.html">敏感API</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">模拟器具体细节</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#how-spinalhdl-simulates-the-hardware-with-verilator-backend">SpinalHDL 如何使用 Verilator 后端模拟硬件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-spinalhdl-simulates-the-hardware-with-ghdl-icarus-verilog-backend">SpinalHDL 如何使用 GHDL/Icarus Verilog 后端模拟硬件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-spinalhdl-simulates-the-hardware-with-synopsys-vcs-backend">SpinalHDL 如何使用 Synopsys VCS 后端模拟硬件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#how-spinalhdl-simulates-the-hardware-with-xilinx-xsim-backend">SpinalHDL 如何使用 Xilinx XSim 后端模拟硬件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#performance">表现</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">仿真器的具体细节</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-spinalhdl-simulates-the-hardware-with-verilator-backend">SpinalHDL 如何使用 Verilator 后端进行硬件仿真</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-spinalhdl-simulates-the-hardware-with-ghdl-icarus-verilog-backend">SpinalHDL 如何使用 GHDL/Icarus Verilog 后端进行硬件仿真</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-spinalhdl-simulates-the-hardware-with-synopsys-vcs-backend">SpinalHDL 如何使用 Synopsys VCS 后端进行硬件仿真</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-spinalhdl-simulates-the-hardware-with-xilinx-xsim-backend">SpinalHDL 如何使用 Xilinx XSim 后端进行硬件仿真</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performance">性能</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="engine.html">仿真引擎</a></li>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">仿真</a></li>
-      <li class="breadcrumb-item active">模拟器具体细节</li>
+      <li class="breadcrumb-item active">仿真器的具体细节</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Simulation/simulator_specifics.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,13 +1176,13 @@
 
 
   <section id="simulator-specific-details">
-<h1>模拟器具体细节<a class="headerlink" href="#simulator-specific-details" title="此标题的永久链接"></a></h1>
+<h1>仿真器的具体细节<a class="headerlink" href="#simulator-specific-details" title="此标题的永久链接"></a></h1>
 <section id="how-spinalhdl-simulates-the-hardware-with-verilator-backend">
-<h2>SpinalHDL 如何使用 Verilator 后端模拟硬件<a class="headerlink" href="#how-spinalhdl-simulates-the-hardware-with-verilator-backend" title="此标题的永久链接"></a></h2>
+<h2>SpinalHDL 如何使用 Verilator 后端进行硬件仿真<a class="headerlink" href="#how-spinalhdl-simulates-the-hardware-with-verilator-backend" title="此标题的永久链接"></a></h2>
 <ol class="arabic simple">
-<li><p>SpinalHDL 在后台生成 DUT 的 Verilog 等效硬件模型，然后使用 Verilator 将其转换为 C++ 周期精确模型。</p></li>
+<li><p>SpinalHDL 在后台生成 DUT 的 Verilog 等效硬件模型，然后使用 Verilator 将其转换为 C++ 的周期精确模型。</p></li>
 <li><p>C++ 模型被编译为共享对象 (.so)，该对象通过 JNI-FFI 绑定到 Scala。</p></li>
-<li><p>通过提供模拟多线程API来抽象本机Verilator API。</p></li>
+<li><p>通过提供多线程仿真API来抽象原始的Verilator API。</p></li>
 </ol>
 <p><strong>优点：</strong></p>
 <ul class="simple">
@@ -1190,72 +1190,72 @@
 </ul>
 <p><strong>限制：</strong></p>
 <ul class="simple">
-<li><p>Verilator 仅接受可综合的 Verilog/System Verilog 代码。因此，在模拟可能具有不可综合语句的 Verilog 黑盒组件时必须特别小心。</p></li>
+<li><p>Verilator 仅接受可综合的 Verilog/System Verilog 代码。因此，在仿真中使用了包含不可综合语句的 Verilog 黑盒组件时必须特别小心。</p></li>
 <li><p>VHDL 黑盒无法模拟。</p></li>
-<li><p>由于需要编译和链接生成的 C++ 模型，模拟启动过程很慢。存在对增量编译和链接的一些支持，这可以在构建第一个模拟后为后续模拟提供加速。</p></li>
+<li><p>由于需要编译和链接生成的 C++ 模型，仿真的启动过程很慢。存在对增量编译和链接的一些支持，这可以在构建第一个仿真模型后为后续模型仿真提供加速。</p></li>
 </ul>
 </section>
 <section id="how-spinalhdl-simulates-the-hardware-with-ghdl-icarus-verilog-backend">
-<h2>SpinalHDL 如何使用 GHDL/Icarus Verilog 后端模拟硬件<a class="headerlink" href="#how-spinalhdl-simulates-the-hardware-with-ghdl-icarus-verilog-backend" title="此标题的永久链接"></a></h2>
+<h2>SpinalHDL 如何使用 GHDL/Icarus Verilog 后端进行硬件仿真<a class="headerlink" href="#how-spinalhdl-simulates-the-hardware-with-ghdl-icarus-verilog-backend" title="此标题的永久链接"></a></h2>
 <ol class="arabic simple">
-<li><p>根据所选模拟器，SpinalHDL 生成 DUT 的 Verilog 或 VHDL 硬件模型。</p></li>
-<li><p>HDL 模型已加载到模拟器中。</p></li>
-<li><p>模拟和JVM之间的通信是通过共享内存建立的。使用“VPI &lt;<a class="reference external" href="https://en.wikipedia.org/wiki/Verilog_Procedural_Interface">https://en.wikipedia.org/wiki/Verilog_Procedural_Interface</a>&gt;”向模拟器发出命令。</p></li>
+<li><p>根据所选仿真器，SpinalHDL 生成 DUT 的 Verilog 或 VHDL 硬件模型。</p></li>
+<li><p>HDL 模型加载到仿真器中。</p></li>
+<li><p>仿真器和JVM之间的通信是通过共享内存建立的。使用 <a class="reference external" href="https://en.wikipedia.org/wiki/Verilog_Procedural_Interface">VPI</a> 向模拟器发出命令。</p></li>
 </ol>
 <p><strong>优点：</strong></p>
 <ul class="simple">
 <li><p>GHDL 和 Icarus Verilog 都可以接受不可综合的 HDL 代码。</p></li>
-<li><p>与 Verilator 相比，模拟启动过程要快得多。</p></li>
+<li><p>与 Verilator 相比，仿真启动过程要快得多。</p></li>
 </ul>
 <p><strong>限制：</strong></p>
 <ul class="simple">
-<li><p>GHDL 仅接受 VHDL 代码。因此，该模拟器只能使用 VHDL 黑盒。</p></li>
-<li><p>Icarus Verilog 仅接受 Verilog 代码。因此，该模拟器只能使用 Verilog 黑盒。</p></li>
+<li><p>GHDL 仅接受 VHDL 代码。因此，该仿真器只能使用 VHDL 黑盒。</p></li>
+<li><p>Icarus Verilog 仅接受 Verilog 代码。因此，该仿真器只能使用 Verilog 黑盒。</p></li>
 <li><p>与 Verilator 相比，仿真速度大约慢一个数量级。</p></li>
 </ul>
-<p>最后，由于原生 Verilator API 相当粗糙，SpinalHDL 通过提供单线程和多线程模拟 API 对其进行抽象，以帮助用户构建测试平台实现。</p>
+<p>最后，由于原生 Verilator API 相当粗糙，SpinalHDL 通过提供单线程和多线程仿真 API 对其进行抽象，以帮助用户构建测试平台实现。</p>
 </section>
 <section id="how-spinalhdl-simulates-the-hardware-with-synopsys-vcs-backend">
-<h2>SpinalHDL 如何使用 Synopsys VCS 后端模拟硬件<a class="headerlink" href="#how-spinalhdl-simulates-the-hardware-with-synopsys-vcs-backend" title="此标题的永久链接"></a></h2>
+<h2>SpinalHDL 如何使用 Synopsys VCS 后端进行硬件仿真<a class="headerlink" href="#how-spinalhdl-simulates-the-hardware-with-synopsys-vcs-backend" title="此标题的永久链接"></a></h2>
 <ol class="arabic simple">
 <li><p>SpinalHDL 生成 DUT 的 Verilog/VHDL（取决于您的选择）硬件模型。</p></li>
-<li><p>HDL 模型已加载到模拟器中。</p></li>
-<li><p>模拟和JVM之间的通信是通过共享内存建立的。使用“VPI &lt;<a class="reference external" href="https://en.wikipedia.org/wiki/Verilog_Procedural_Interface">https://en.wikipedia.org/wiki/Verilog_Procedural_Interface</a>&gt;”向模拟器发出命令。</p></li>
+<li><p>HDL 模型加载到仿真器中。</p></li>
+<li><p>仿真器和JVM之间的通信是通过共享内存建立的。使用 <a class="reference external" href="https://en.wikipedia.org/wiki/Verilog_Procedural_Interface">VPI</a> 向模拟器发出命令。</p></li>
 </ol>
 <p><strong>优点：</strong></p>
 <ul class="simple">
 <li><p>支持SystemVerilog/Verilog/VHDL的所有语言特性。</p></li>
 <li><p>支持加密IP。</p></li>
-<li><p>支持 FSDB 波形格式转储。</p></li>
-<li><p>编译和模拟的高性能。</p></li>
+<li><p>支持 FSDB 波形格式存储。</p></li>
+<li><p>编译和仿真的性能好。</p></li>
 </ul>
 <p><strong>限制：</strong></p>
 <ul class="simple">
-<li><p>Synopsys VCS 是一款**商业**仿真工具。它是闭源的并且不是免费的。您必须拥有许可证才能**合法**使用它。</p></li>
+<li><p>Synopsys VCS 是一款 <strong>商用</strong> 仿真工具。它是闭源的并且不是免费的。您必须拥有许可证才能 <strong>合法</strong> 使用它。</p></li>
 </ul>
-<p>在使用 VCS 作为模拟后端之前，请确保您已将系统环境检查为:ref:<cite>VCS 环境&lt;vcs_env&gt;</cite>。</p>
+<p>在使用 VCS 作为仿真后台之前，请确保您已将系统环境检查为 <a class="reference internal" href="install/VCS.html#vcs-env"><span class="std std-ref">VCS 环境</span></a>。</p>
 </section>
 <section id="how-spinalhdl-simulates-the-hardware-with-xilinx-xsim-backend">
-<h2>SpinalHDL 如何使用 Xilinx XSim 后端模拟硬件<a class="headerlink" href="#how-spinalhdl-simulates-the-hardware-with-xilinx-xsim-backend" title="此标题的永久链接"></a></h2>
+<h2>SpinalHDL 如何使用 Xilinx XSim 后端进行硬件仿真<a class="headerlink" href="#how-spinalhdl-simulates-the-hardware-with-xilinx-xsim-backend" title="此标题的永久链接"></a></h2>
 <ol class="arabic simple">
 <li><p>SpinalHDL 生成 DUT 的 Verilog/VHDL（取决于您的选择）硬件模型。</p></li>
-<li><p>HDL 模型已加载到模拟器中。</p></li>
-<li><p>模拟和JVM之间的通信是通过共享内存建立的。命令使用 XSI 发送到模拟器。</p></li>
+<li><p>HDL 模型加载到仿真器中。</p></li>
+<li><p>仿真器和JVM之间的通信是通过共享内存建立的。命令使用 XSI 发送到仿真器。</p></li>
 </ol>
 <p><strong>优点：</strong></p>
 <ul class="simple">
-<li><p>支持 Xilinx 内置原语和内核。</p></li>
+<li><p>支持 Xilinx 内置原语和IP核。</p></li>
 </ul>
 <p><strong>限制：</strong></p>
 <ul class="simple">
-<li><p>Xilinx XSim 是与 Vivado 一起安装的**商业**工具。它是闭源的，并受许可条款的使用。您必须拥有许可证才能**合法**使用它。</p></li>
+<li><p>Xilinx XSim 是与 Vivado 一起安装的 <strong>商用</strong> 工具。它是闭源的，并受许可条款的使用。您必须拥有许可证才能 <strong>合法</strong> 使用它。</p></li>
 <li><p>2019.1 之前的 Vivado 版本无法正常工作。</p></li>
 </ul>
-<p>在使用 XSim 作为模拟后端之前，请确保您已完成以下步骤。 1. 定义 VIVADO_HOME 环境变量以指定 vivado 所在的位置。 ex <a href="#id1"><span class="problematic" id="id2">`</span></a>export VIVADO_HOME=/d/Xilinx/Vivado/2022.1`（在 MSYS2 下）。 2.确保两个vivado路径在PATH内。对于 Windows MSYS2 用户，运行 shell 命令，如“export PATH=$PATH:$VIVADO_HOME/bin:$VIVADO_HOME/lib/win64.o”。对于 Linux 用户，只需获取位于“VIVADO_HOME”的 Vivado 的 settings64.sh 文件。</p>
+<p>在使用 XSim 作为仿真后台之前，请确保您已完成以下步骤。 1. 定义 VIVADO_HOME 环境变量以指定 vivado 所在的位置。例如， <cite>export VIVADO_HOME=/d/Xilinx/Vivado/2022.1`（在 MSYS2 下）。 2.确保两个vivado路径在PATH内。对于 Windows MSYS2 用户，运行 shell 命令，如 `export PATH=$PATH:$VIVADO_HOME/bin:$VIVADO_HOME/lib/win64.o</cite>。对于 Linux 用户，只需用 <cite>source</cite> 执行位于 <cite>VIVADO_HOME</cite> 的 settings64.sh 文件。</p>
 </section>
 <section id="performance">
-<h2>表现<a class="headerlink" href="#performance" title="此标题的永久链接"></a></h2>
-<p>当需要高性能仿真时，应使用Verilator作为后端。在像“Murax &lt;<a class="reference external" href="https://github.com/SpinalHDL/VexRiscv">https://github.com/SpinalHDL/VexRiscv</a>&gt;”这样的小型 SoC 上，英特尔® 酷睿™ i7-4720HQ 能够每秒模拟 120 万个时钟周期。然而，当 DUT 很简单并且需要仿真最多几千个时钟周期时，使用 GHDL 或 Icarus Verilog 可以产生更好的结果，因为它们的仿真负载开销较低。</p>
+<h2>性能<a class="headerlink" href="#performance" title="此标题的永久链接"></a></h2>
+<p>当需要高性能仿真时，应使用Verilator作为后台。在像 <a class="reference external" href="https://github.com/SpinalHDL/VexRiscv">Murax</a> 这样的小型 SoC 上，英特尔® 酷睿™ i7-4720HQ 能够每秒模拟 120 万个时钟周期。然而，当 DUT 很简单并且需要仿真最多几千个时钟周期时，使用 GHDL 或 Icarus Verilog 可以产生更好的结果，因为它们的仿真负载开销较低。</p>
 </section>
 </section>
 
