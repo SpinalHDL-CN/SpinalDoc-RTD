@@ -1322,8 +1322,8 @@
 </td>
 <td><div class="line-block">
 <div class="line">返回由x驱动的Stream反压流</div>
-<div class="line">通过寄存器阶段切断有效/有效负载路径</div>
-<div class="line">成本 = (有效负载宽度 + 1) 触发器 flop</div>
+<div class="line">通过寄存器级断开 valid/payload 路径（优化时序）</div>
+<div class="line">Cost = (payload width + 1) flop flop</div>
 </div>
 </td>
 <td><p>Stream[T]</p></td>
@@ -1332,8 +1332,8 @@
 <tr class="row-even"><td><p>x.s2mPipe()</p></td>
 <td><div class="line-block">
 <div class="line">返回由x驱动的Stream反压流</div>
-<div class="line">就绪路径被寄存器阶段切断</div>
-<div class="line">成本 = 有效负载宽度 * (mux2 + 1 个触发器)</div>
+<div class="line">通过寄存器级断开ready路径</div>
+<div class="line">Cost = payload width * (mux2 + 1 flip flop)</div>
 </div>
 </td>
 <td><p>Stream[T]</p></td>
@@ -1932,7 +1932,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2018 - 2023, SpinalHDL.</p>
+    <p>&#169; 版权所有 2018 - 2024, SpinalHDL.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 

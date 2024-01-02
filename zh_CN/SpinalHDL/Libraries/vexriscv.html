@@ -1177,22 +1177,22 @@
 
   <section id="vexriscv-rv32im-cpu">
 <h1>VexRiscv（RV32IM CPU）<a class="headerlink" href="#vexriscv-rv32im-cpu" title="此标题的永久链接"></a></h1>
-<p>VexRiscv 是一款 fpga 友好的 RISC-V ISA CPU 实现，具有以下功能：</p>
+<p>VexRiscv 是一款 fpga 友好的 RISC-V 指令集架构（ISA）的 CPU 实现，具有以下功能：</p>
 <ul class="simple">
 <li><p>RV32IM指令集</p></li>
-<li><p>分 5 个阶段进行流水线处理（获取、解码、执行、内存、回写）</p></li>
-<li><p>启用所有功能时为 1.44 DMIPS/Mhz</p></li>
+<li><p>分 5 级流水线处理（取指令、解码、执行、内存操作、回写）</p></li>
+<li><p>启用所有功能时其性能为 1.44 DMIPS/Mhz</p></li>
 <li><p>针对 FPGA 进行了优化</p></li>
 <li><p>可选的 MUL/DIV 扩展</p></li>
-<li><p>可选指令和数据缓存</p></li>
-<li><p>可选MMU</p></li>
-<li><p>可选的调试扩展允许通过 GDB &gt;&gt; openOCD &gt;&gt; JTAG 连接进行 Eclipse 调试</p></li>
-<li><p>riscv-privileged-v1.9.1 规范中机器和用户模式的可选中断和异常处理。</p></li>
+<li><p>指令和数据缓存可选</p></li>
+<li><p>MMU 可选</p></li>
+<li><p>具有可选的调试扩展，它允许通过 GDB &gt;&gt; openOCD &gt;&gt; JTAG 连接并进行 Eclipse 调试</p></li>
+<li><p>支持可选中断和异常处理，用于处理机器和用户模式下的中断、异常。（riscv-privileged-v1.9.1 规范规定）。</p></li>
 <li><p>移位指令的两种实现方式，单周期/shiftNumber 周期</p></li>
-<li><p>每个阶段都可以有旁路或联锁危险逻辑</p></li>
-<li><p>FreeRTOS 端口 <a class="reference external" href="https://github.com/Dolu1990/FreeRTOS-RISCV">https://github.com/Dolu1990/FreeRTOS-RISCV</a></p></li>
+<li><p>每个流水线级中都可以有旁路或互锁冒险逻辑</p></li>
+<li><p>FreeRTOS 移植版本在这里 <a class="reference external" href="https://github.com/Dolu1990/FreeRTOS-RISCV">https://github.com/Dolu1990/FreeRTOS-RISCV</a></p></li>
 </ul>
-<p>更多信息：<a class="reference external" href="https://github.com/SpinalHDL/VexRiscv">https://github.com/SpinalHDL/VexRiscv</a></p>
+<p>更多信息在这里：<a class="reference external" href="https://github.com/SpinalHDL/VexRiscv">https://github.com/SpinalHDL/VexRiscv</a></p>
 </section>
 
     <script type="text/javascript">
@@ -1213,7 +1213,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; 版权所有 2018 - 2023, SpinalHDL.</p>
+    <p>&#169; 版权所有 2018 - 2024, SpinalHDL.</p>
   </div>
 
   利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
