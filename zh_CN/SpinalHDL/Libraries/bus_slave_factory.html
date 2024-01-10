@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>总线从属工厂 &mdash; SpinalHDL  文档</title>
+  <title>总线从端生成器 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -32,7 +32,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="纤维骨架" href="fiber.html" />
+    <link rel="next" title="纤程框架" href="fiber.html" />
     <link rel="prev" title="VexRiscv（RV32IM CPU）" href="vexriscv.html" />
      
     <!-- source/_templates/layout.html -->
@@ -643,58 +643,58 @@
 <li class="toctree-l3"><a class="reference internal" href="stream.html#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stream.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stream.html#utils">实用工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifo">流先进先出</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifocc">流FifoCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifo">StreamFifo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifocc">StreamFifoCC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stream.html#streamccbytoggle">StreamCCByToggle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamwidthadapter">流宽度适配器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamarbiter">流仲裁器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamjoin">流连接</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfork">流叉</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streammux">流复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdemux">流解复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdispatchersequencial">流调度器顺序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamtransactionextender">流事务扩展器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamwidthadapter">StreamWidthAdapter（反压流位宽适应器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamarbiter">StreamArbiter（反压流仲裁器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamjoin">StreamJoin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfork">StreamFork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streammux">StreamMux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdemux">StreamDemux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdispatchersequencial">StreamDispatcherSequencial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamtransactionextender">StreamTransactionExtender</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="stream.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stream.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="flow.html">流动</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flow.html">数据流</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#code-example">代码示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fragment.html">分段</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fragment.html">片段</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fragment.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fragment.html#functions">函数</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="fsm.html">状态机</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fsm.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fsm.html#statemachine">状态机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fsm.html#statemachine">StateMachine</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fsm.html#entry-point">入口点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#transitions">过渡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#transitions">转换</a></li>
 <li class="toctree-l4"><a class="reference internal" href="fsm.html#state-encoding">状态编码</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="fsm.html#states">状态</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#statedelay">状态延迟</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#statefsm">国家FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#stateparallelfsm">状态并行FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#notes-about-the-entry-state">关于进入状态的注释</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#statedelay">StateDelay（状态延迟）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#statefsm">StateFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#stateparallelfsm">StateParallelFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#notes-about-the-entry-state">关于入口状态的注释</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="vexriscv.html">VexRiscv（RV32IM CPU）</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">总线从属工厂</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">总线从端生成器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#functionality">功能性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#functionality">功能</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤维骨架</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤程框架</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#simple-dummy-example">简单的虚拟示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#handle-t">手柄[T]</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fiber.html#soon-handle">很快（处理）</a></li>
@@ -711,22 +711,22 @@
 <li class="toctree-l3"><a class="reference internal" href="binarySystem.html#bigint-enricher">BigInt 丰富器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#automatic-allocation">自动分配</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#access-types">28 种访问类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#access-types">28种访问类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#automatic-documentation-generation">自动生成文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#special-access-usage">特殊访问使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#special-access-usage">特殊访问用途</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#byte-mask">字节掩码</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#typical-example">典型例子</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#interrupt-factory">中断工厂</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="regIf.html#ip-level-interrupt-factory">IP级中断工厂</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#interrupt-factory">中断生成器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="regIf.html#ip-level-interrupt-factory">IP级中断生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="regIf.html#sys-level-interrupt-merge">SYS级中断合并</a></li>
-<li class="toctree-l4"><a class="reference internal" href="regIf.html#spinal-factory">脊柱工厂</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regIf.html#spinal-factory">Spinal的生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="regIf.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#defaultreadvalue">默认读取值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#developers-area">开发商专区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#developers-area">开发者区域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Bus/index.html">总线</a><ul>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">模块库</a></li>
-      <li class="breadcrumb-item active">总线从属工厂</li>
+      <li class="breadcrumb-item active">总线从端生成器</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Libraries/bus_slave_factory.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,18 +1176,18 @@
 
 
   <section id="bus-slave-factory">
-<span id="id1"></span><h1>总线从属工厂<a class="headerlink" href="#bus-slave-factory" title="此标题的永久链接"></a></h1>
+<span id="id1"></span><h1>总线从端生成器<a class="headerlink" href="#bus-slave-factory" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
-<p>在许多情况下，需要实现总线寄存器组。 “BusSlaveFactory”是一个工具，它提供了一种抽象且流畅的方式来定义它们。</p>
-<p>要了解该工具的功能，可以通过一个简单的示例使用 Apb3SlaveFactory 变体来实现内存映射 UART &lt;memory_mapped_uart&gt;`。还有另一个带有 Timer &lt;timer&gt;` 的示例，其中包含内存映射函数。</p>
-<p>您可以在 &lt;bus_slave_factory_implementation&gt; 中找到有关“BusSlaveFactory”工具内部实现的更多文档：ref:`</p>
+<p>在许多情况下，需要实现总线寄存器组， <code class="docutils literal notranslate"><span class="pre">BusSlaveFactory</span></code> 是一个提供了一种抽象且流畅的方式来定义它们的工具。</p>
+<p>要了解该工具的功能，可以通过一个简单的使用Apb3SlaveFactory变体来实现 <a class="reference internal" href="../Examples/Advanced%20ones/memory_mapped_uart.html#memory-mapped-uart"><span class="std std-ref">内存映射UART</span></a> 的示例。还有另一个 <a class="reference internal" href="../Examples/Advanced%20ones/timer.html#timer"><span class="std std-ref">计时器</span></a> 的示例，其中包含内存映射函数。</p>
+<p>您可以在 <a class="reference internal" href="../Developers%20area/bus_slave_factory_impl.html#bus-slave-factory-implementation"><span class="std std-ref">这里</span></a> 找到有关 <code class="docutils literal notranslate"><span class="pre">BusSlaveFactory</span></code> 工具内部实现的更多文档</p>
 </section>
 <section id="functionality">
-<h2>功能性<a class="headerlink" href="#functionality" title="此标题的永久链接"></a></h2>
+<h2>功能<a class="headerlink" href="#functionality" title="此标题的永久链接"></a></h2>
 <div class="line-block">
-<div class="line">There are many implementations of the <code class="docutils literal notranslate"><span class="pre">BusSlaveFactory</span></code> tool : AHB3-lite, APB3, APB4, AvalonMM, AXI-lite 3, AXI4, BMB, Wishbone and PipelinedMemoryBus.</div>
-<div class="line">Each implementation of that tool take as an argument one instance of the corresponding bus and then offers the following functions to map your hardware into the memory mapping :</div>
+<div class="line">有许多 <code class="docutils literal notranslate"><span class="pre">BusSlaveFactory</span></code> 工具的实现：AHB3-lite、APB3、APB4、AvalonMM、AXI-lite 3、AXI4、BMB、Wishbone 和 PipelinedMemoryBus。</div>
+<div class="line">该工具的每个实现都接受相应总线的一个实例作为参数，然后提供以下函数，用于将您的硬件映射到内存映射：</div>
 </div>
 <table class="docutils align-default">
 <colgroup>
@@ -1208,7 +1208,7 @@
 </tr>
 <tr class="row-odd"><td><p>read(that,address,bitOffset)</p></td>
 <td></td>
-<td><p>当通过总线读取地址 <code class="docutils literal notranslate"><span class="pre">address</span></code> 时，用 <code class="docutils literal notranslate"><span class="pre">that</span></code> 中 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置的数据填充响应。</p></td>
+<td><p>当通过总线读取地址 <code class="docutils literal notranslate"><span class="pre">address</span></code> 时，用 <code class="docutils literal notranslate"><span class="pre">that</span></code> 中 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位置的数据填充响应</p></td>
 </tr>
 <tr class="row-even"><td><p>write(that,address,bitOffset)</p></td>
 <td></td>
@@ -1224,7 +1224,7 @@
 </tr>
 <tr class="row-odd"><td><p>nonStopWrite(that,bitOffset)</p></td>
 <td></td>
-<td><p>将通过总线写入的 <code class="docutils literal notranslate"><span class="pre">bitOffset``的数据赋值到</span> <span class="pre">``that</span></code></p></td>
+<td><p>将通过总线写入的 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 的数据赋值到 <code class="docutils literal notranslate"><span class="pre">that</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p>readAndWrite(that,address,bitOffset)</p></td>
 <td></td>
@@ -1233,16 +1233,16 @@
 <tr class="row-odd"><td><p>readMultiWord(that,address)</p></td>
 <td></td>
 <td><div class="line-block">
-<div class="line">创建内存映射以从“地址”读取“that”。</div>
-<div class="line">如果``that`` 的位宽大于一个字（32位），它将在以下地址上扩展寄存器</div>
+<div class="line">创建内存映射以从 ‘address’ 读取 <code class="docutils literal notranslate"><span class="pre">that</span></code> 。</div>
+<div class="line">如果 <code class="docutils literal notranslate"><span class="pre">that</span></code> 的位宽大于一个字（32位），它将在以下地址上扩展寄存器</div>
 </div>
 </td>
 </tr>
 <tr class="row-even"><td><p>writeMultiWord(that,address)</p></td>
 <td></td>
 <td><div class="line-block">
-<div class="line">创建内存映射以在“地址”处写入“that”。</div>
-<div class="line">如果``that`` 的位宽大于一个字（32位），它将在以下地址上扩展寄存器</div>
+<div class="line">创建内存映射以在 ‘address’ 处写入 <code class="docutils literal notranslate"><span class="pre">that</span></code> 。</div>
+<div class="line">如果 <code class="docutils literal notranslate"><span class="pre">that</span></code> 的位宽大于一个字（32位），它将在以下地址上扩展寄存器</div>
 </div>
 </td>
 </tr>
@@ -1271,11 +1271,11 @@
 <td><p>当对 <code class="docutils literal notranslate"><span class="pre">address</span></code> 地址写入时，通过使用位于 <code class="docutils literal notranslate"><span class="pre">bitOffset</span></code> 位的数据，在 <code class="docutils literal notranslate"><span class="pre">that</span></code> 流（Flow）上发出事务</p></td>
 </tr>
 <tr class="row-odd"><td><div class="line-block">
-<div class="line">readStreamNonBlocking（即，</div>
+<div class="line">readStreamNonBlocking(that,</div>
 <div class="line-block">
-<div class="line">地址，</div>
-<div class="line">有效位偏移量，</div>
-<div class="line">有效负载位偏移）</div>
+<div class="line">address,</div>
+<div class="line">validBitOffset,</div>
+<div class="line">payloadBitOffset)</div>
 </div>
 </div>
 </td>
@@ -1288,10 +1288,10 @@
 </td>
 </tr>
 <tr class="row-even"><td><div class="line-block">
-<div class="line">doBitsAccumulationAndClearOnRead（即，</div>
+<div class="line">doBitsAccumulationAndClearOnRead(that,</div>
 <div class="line-block">
-<div class="line">地址，</div>
-<div class="line">位偏移）</div>
+<div class="line">address,</div>
+<div class="line">bitOffset)</div>
 </div>
 </div>
 </td>
@@ -1320,7 +1320,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
         <a href="vexriscv.html" class="btn btn-neutral float-left" title="VexRiscv（RV32IM CPU）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="fiber.html" class="btn btn-neutral float-right" title="纤维骨架" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fiber.html" class="btn btn-neutral float-right" title="纤程框架" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

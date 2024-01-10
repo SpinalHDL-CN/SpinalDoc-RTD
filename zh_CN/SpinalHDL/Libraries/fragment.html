@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>分段 &mdash; SpinalHDL  文档</title>
+  <title>片段 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="状态机" href="fsm.html" />
-    <link rel="prev" title="流动" href="flow.html" />
+    <link rel="prev" title="数据流" href="flow.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -643,58 +643,58 @@
 <li class="toctree-l3"><a class="reference internal" href="stream.html#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stream.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stream.html#utils">实用工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifo">流先进先出</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifocc">流FifoCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifo">StreamFifo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifocc">StreamFifoCC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stream.html#streamccbytoggle">StreamCCByToggle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamwidthadapter">流宽度适配器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamarbiter">流仲裁器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamjoin">流连接</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfork">流叉</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streammux">流复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdemux">流解复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdispatchersequencial">流调度器顺序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamtransactionextender">流事务扩展器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamwidthadapter">StreamWidthAdapter（反压流位宽适应器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamarbiter">StreamArbiter（反压流仲裁器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamjoin">StreamJoin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfork">StreamFork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streammux">StreamMux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdemux">StreamDemux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdispatchersequencial">StreamDispatcherSequencial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamtransactionextender">StreamTransactionExtender</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="stream.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stream.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="flow.html">流动</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flow.html">数据流</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#code-example">代码示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">分段</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">片段</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#functions">函数</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="fsm.html">状态机</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fsm.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fsm.html#statemachine">状态机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fsm.html#statemachine">StateMachine</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fsm.html#entry-point">入口点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#transitions">过渡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#transitions">转换</a></li>
 <li class="toctree-l4"><a class="reference internal" href="fsm.html#state-encoding">状态编码</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="fsm.html#states">状态</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#statedelay">状态延迟</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#statefsm">国家FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#stateparallelfsm">状态并行FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#notes-about-the-entry-state">关于进入状态的注释</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#statedelay">StateDelay（状态延迟）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#statefsm">StateFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#stateparallelfsm">StateParallelFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#notes-about-the-entry-state">关于入口状态的注释</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="vexriscv.html">VexRiscv（RV32IM CPU）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bus_slave_factory.html">总线从属工厂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bus_slave_factory.html">总线从端生成器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#functionality">功能性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#functionality">功能</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤维骨架</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤程框架</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#simple-dummy-example">简单的虚拟示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#handle-t">手柄[T]</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fiber.html#soon-handle">很快（处理）</a></li>
@@ -711,22 +711,22 @@
 <li class="toctree-l3"><a class="reference internal" href="binarySystem.html#bigint-enricher">BigInt 丰富器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#automatic-allocation">自动分配</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#access-types">28 种访问类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#access-types">28种访问类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#automatic-documentation-generation">自动生成文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#special-access-usage">特殊访问使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#special-access-usage">特殊访问用途</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#byte-mask">字节掩码</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#typical-example">典型例子</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#interrupt-factory">中断工厂</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="regIf.html#ip-level-interrupt-factory">IP级中断工厂</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#interrupt-factory">中断生成器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="regIf.html#ip-level-interrupt-factory">IP级中断生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="regIf.html#sys-level-interrupt-merge">SYS级中断合并</a></li>
-<li class="toctree-l4"><a class="reference internal" href="regIf.html#spinal-factory">脊柱工厂</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regIf.html#spinal-factory">Spinal的生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="regIf.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#defaultreadvalue">默认读取值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#developers-area">开发商专区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#developers-area">开发者区域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Bus/index.html">总线</a><ul>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">模块库</a></li>
-      <li class="breadcrumb-item active">分段</li>
+      <li class="breadcrumb-item active">片段</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Libraries/fragment.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,16 +1176,16 @@
 
 
   <section id="fragment">
-<h1>分段<a class="headerlink" href="#fragment" title="此标题的永久链接"></a></h1>
+<h1>片段<a class="headerlink" href="#fragment" title="此标题的永久链接"></a></h1>
 <section id="specification">
 <h2>规范<a class="headerlink" href="#specification" title="此标题的永久链接"></a></h2>
-<p>“片段”捆绑是通过使用多个“小”片段来传输“大”事物的概念。举些例子 ：</p>
+<p><code class="docutils literal notranslate"><span class="pre">Fragment</span></code> 包是通过使用多个“小”片段来传输“大”东西的概念。比如 ：</p>
 <ul class="simple">
-<li><p>在“Stream[Fragment[Pixel]]”上以宽度*高度交易传输的图片</p></li>
-<li><p>从没有流量控制的控制器接收到的 UART 数据包可以在“Flow[Fragment[Bits]]”上传输</p></li>
-<li><p>AXI 读取突发可以由“Stream[Fragment[AxiReadResponse]]”承载</p></li>
+<li><p>一张通过 <code class="docutils literal notranslate"><span class="pre">Stream[Fragment[Pixel]]</span></code> 传输尺寸为 宽*高 的图片</p></li>
+<li><p>一个可以在 <code class="docutils literal notranslate"><span class="pre">Flow[Fragment[Bits]]</span></code> 上传输的、从没有流量控制的控制器里接收到的 UART 数据包</p></li>
+<li><p>一个可以由 <code class="docutils literal notranslate"><span class="pre">Stream[Fragment[AxiReadResponse]]</span></code> 承载的AXI突发读</p></li>
 </ul>
-<p>“Fragment”包定义的信号是：</p>
+<p><code class="docutils literal notranslate"><span class="pre">Fragment</span></code> 包定义的信号是：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 13%" />
@@ -1201,27 +1201,27 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>分段</p></td>
+<tr class="row-even"><td><p>fragment</p></td>
 <td><p>T</p></td>
 <td><p>Master</p></td>
-<td><p>当前交易的“有效负载”</p></td>
+<td><p>当前传输任务的“负载”</p></td>
 </tr>
-<tr class="row-odd"><td><p>最后的</p></td>
+<tr class="row-odd"><td><p>last</p></td>
 <td><p>Bool</p></td>
 <td><p>Master</p></td>
-<td><p>当片段是当前数据包的最后一个时为高</p></td>
+<td><p>当该片段是当前数据包的最后一个片段时为高</p></td>
 </tr>
 </tbody>
 </table>
-<p>正如您在本规范和先例中看到的，“Fragment”概念并未指定事务如何传输（您可以使用 Stream、Flow 或任何其他通信协议）。它仅添加足够的信息（``last``）来了解当前事务是给定数据包的第一个、最后一个还是中间的一个。</p>
+<p>正如您在本说明和先例中看到的， <code class="docutils literal notranslate"><span class="pre">Fragment</span></code> 概念并未指定传输任务如何传输（您可以使用 Stream、Flow 或任何其他通信协议）。它仅添加足够的信息(<code class="docutils literal notranslate"><span class="pre">last</span></code>) 来了解当前传输是给定数据包的第一个、最后一个还是中间的一个。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>该协议没有携带 'first' 位，因为它可以通过执行 'RegNextWhen(bus.last, bus.fire) init(True)' 在任何地方生成</p>
+<p>该协议没有携带 'first' 位，因为它可以通过执行 'RegNextWhen(bus.last, bus.fire) init(True)' 被生成在任何位置</p>
 </div>
 </section>
 <section id="functions">
 <h2>函数<a class="headerlink" href="#functions" title="此标题的永久链接"></a></h2>
-<p>对于 <code class="docutils literal notranslate"><span class="pre">Stream[Fragment[T]]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Flow[Fragment[T]]</span></code>，存在以下函数：</p>
+<p>对于 <code class="docutils literal notranslate"><span class="pre">Stream[Fragment[T]]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">Flow[Fragment[T]]</span></code> ，给出以下函数：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 5%" />
@@ -1237,27 +1237,27 @@
 <tbody>
 <tr class="row-even"><td><p>x.first</p></td>
 <td><p>Bool</p></td>
-<td><p>当下一个或当前事务是/将是数据包的第一个时返回 True</p></td>
+<td><p>当当前或下一个传输是/将是数据包的第一个片段时返回 True</p></td>
 </tr>
-<tr class="row-odd"><td><p>x.尾部</p></td>
+<tr class="row-odd"><td><p>x.tail</p></td>
 <td><p>Bool</p></td>
-<td><p>当下一个或当前事务不是数据包的第一个事务时返回 True</p></td>
+<td><p>当当前或下一个传输不是数据包的第一个片段时返回 True</p></td>
 </tr>
 <tr class="row-even"><td><p>x.isFirst</p></td>
 <td><p>Bool</p></td>
-<td><p>当交易存在并且是数据包的第一个交易时返回 True</p></td>
+<td><p>当当前传输任务被提交并且为数据包的第一个片段时返回 True</p></td>
 </tr>
 <tr class="row-odd"><td><p>x.isTail</p></td>
 <td><p>Bool</p></td>
-<td><p>当交易存在并且不是数据包的第一个/最后一个时返回 True</p></td>
+<td><p>当当前传输任务被提交并且不是数据包的第一个/最后一个片段时返回 True</p></td>
 </tr>
 <tr class="row-even"><td><p>x.isLast</p></td>
 <td><p>Bool</p></td>
-<td><p>当交易存在并且是数据包的最后一个时返回 True</p></td>
+<td><p>当当前传输任务被提交并且为数据包的最后一个片段时返回 True</p></td>
 </tr>
 </tbody>
 </table>
-<p>对于``Stream[Fragment[T]]``，还可以访问以下函数：</p>
+<p>对于 <code class="docutils literal notranslate"><span class="pre">Stream[Fragment[T]]</span></code> ，以下函数也是可用的：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 33%" />
@@ -1271,9 +1271,9 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>x.insertHeader(标题：T)</p></td>
-<td><p>流[片段[T]]</p></td>
-<td><p>将“header”添加到“x”上的每个数据包并返回结果总线</p></td>
+<tr class="row-even"><td><p>x.insertHeader(header : T)</p></td>
+<td><p>Stream[Fragment[T]]</p></td>
+<td><p>对每个数据包 <code class="docutils literal notranslate"><span class="pre">x</span></code> 添加 <code class="docutils literal notranslate"><span class="pre">header</span></code> 并返回生成的总线</p></td>
 </tr>
 </tbody>
 </table>
@@ -1291,7 +1291,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="flow.html" class="btn btn-neutral float-left" title="流动" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="flow.html" class="btn btn-neutral float-left" title="数据流" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="fsm.html" class="btn btn-neutral float-right" title="状态机" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

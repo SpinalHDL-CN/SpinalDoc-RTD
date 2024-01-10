@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>寄存器 &mdash; SpinalHDL  文档</title>
+  <title>寄存器接口 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -643,58 +643,58 @@
 <li class="toctree-l3"><a class="reference internal" href="stream.html#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stream.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stream.html#utils">实用工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifo">流先进先出</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifocc">流FifoCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifo">StreamFifo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifocc">StreamFifoCC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stream.html#streamccbytoggle">StreamCCByToggle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamwidthadapter">流宽度适配器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamarbiter">流仲裁器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamjoin">流连接</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfork">流叉</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streammux">流复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdemux">流解复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdispatchersequencial">流调度器顺序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamtransactionextender">流事务扩展器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamwidthadapter">StreamWidthAdapter（反压流位宽适应器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamarbiter">StreamArbiter（反压流仲裁器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamjoin">StreamJoin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfork">StreamFork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streammux">StreamMux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdemux">StreamDemux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdispatchersequencial">StreamDispatcherSequencial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamtransactionextender">StreamTransactionExtender</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="stream.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stream.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="flow.html">流动</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flow.html">数据流</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#code-example">代码示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fragment.html">分段</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fragment.html">片段</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fragment.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fragment.html#functions">函数</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="fsm.html">状态机</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fsm.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fsm.html#statemachine">状态机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fsm.html#statemachine">StateMachine</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fsm.html#entry-point">入口点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#transitions">过渡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#transitions">转换</a></li>
 <li class="toctree-l4"><a class="reference internal" href="fsm.html#state-encoding">状态编码</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="fsm.html#states">状态</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#statedelay">状态延迟</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#statefsm">国家FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#stateparallelfsm">状态并行FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#notes-about-the-entry-state">关于进入状态的注释</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#statedelay">StateDelay（状态延迟）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#statefsm">StateFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#stateparallelfsm">StateParallelFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#notes-about-the-entry-state">关于入口状态的注释</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="vexriscv.html">VexRiscv（RV32IM CPU）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bus_slave_factory.html">总线从属工厂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bus_slave_factory.html">总线从端生成器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#functionality">功能性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#functionality">功能</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤维骨架</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤程框架</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#simple-dummy-example">简单的虚拟示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#handle-t">手柄[T]</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fiber.html#soon-handle">很快（处理）</a></li>
@@ -711,22 +711,22 @@
 <li class="toctree-l3"><a class="reference internal" href="binarySystem.html#bigint-enricher">BigInt 丰富器</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">寄存器</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">寄存器接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#automatic-allocation">自动分配</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#access-types">28 种访问类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#access-types">28种访问类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#automatic-documentation-generation">自动生成文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#special-access-usage">特殊访问使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#special-access-usage">特殊访问用途</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#byte-mask">字节掩码</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#typical-example">典型例子</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#interrupt-factory">中断工厂</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ip-level-interrupt-factory">IP级中断工厂</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interrupt-factory">中断生成器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ip-level-interrupt-factory">IP级中断生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#sys-level-interrupt-merge">SYS级中断合并</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#spinal-factory">脊柱工厂</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spinal-factory">Spinal的生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#defaultreadvalue">默认读取值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#developers-area">开发商专区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#developers-area">开发者区域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Bus/index.html">总线</a><ul>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">模块库</a></li>
-      <li class="breadcrumb-item active">寄存器</li>
+      <li class="breadcrumb-item active">寄存器接口</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Libraries/regIf.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,11 +1176,11 @@
 
 
   <section id="regif">
-<h1>寄存器<a class="headerlink" href="#regif" title="此标题的永久链接"></a></h1>
-<p>注册接口生成器</p>
+<h1>寄存器接口<a class="headerlink" href="#regif" title="此标题的永久链接"></a></h1>
+<p>寄存器接口搭建器</p>
 <ul class="simple">
-<li><p>自动地址、字段分配和冲突检测</p></li>
-<li><p>28 Register Access types (Covering the 25 types defined by the UVM standard)</p></li>
+<li><p>自动寻址、字段分配和冲突检测</p></li>
+<li><p>28种寄存器访问类型（涵盖UVM标准定义的25种类型）</p></li>
 <li><p>自动生成文档</p></li>
 </ul>
 <section id="automatic-allocation">
@@ -1207,7 +1207,7 @@
 </pre></div>
 </div>
 <img alt="../../_images/reg-auto-allocate.gif" src="../../_images/reg-auto-allocate.gif" />
-<p>自动分配字段</p>
+<p>自动字段分配</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="nc">M_REG0</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">busif</span><span class="p">.</span><span class="n">newReg</span><span class="p">(</span><span class="n">doc</span><span class="o">=</span><span class="s">&quot;REG1&quot;</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">fd0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">M_REG0</span><span class="p">.</span><span class="n">field</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="n">bit</span><span class="p">),</span><span class="w"> </span><span class="nc">RW</span><span class="p">,</span><span class="w"> </span><span class="n">doc</span><span class="o">=</span><span class="w"> </span><span class="s">&quot;fields 0&quot;</span><span class="p">)</span>
 <span class="nc">M_REG0</span><span class="p">.</span><span class="n">reserved</span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1219,7 +1219,7 @@
 </pre></div>
 </div>
 <img alt="../../_images/field-auto-allocate.gif" src="../../_images/field-auto-allocate.gif" />
-<p>conflict detection</p>
+<p>冲突检测</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="nc">M_REG1</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">busif</span><span class="p">.</span><span class="n">newReg</span><span class="p">(</span><span class="n">doc</span><span class="o">=</span><span class="s">&quot;REG1&quot;</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">r1fd0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">M_REG1</span><span class="p">.</span><span class="n">field</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="n">bits</span><span class="p">),</span><span class="w"> </span><span class="nc">RW</span><span class="p">,</span><span class="w"> </span><span class="n">doc</span><span class="o">=</span><span class="s">&quot;fields 1&quot;</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">r1fd2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">M_REG1</span><span class="p">.</span><span class="n">field</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">18</span><span class="w"> </span><span class="n">bits</span><span class="p">),</span><span class="w"> </span><span class="nc">RW</span><span class="p">,</span><span class="w"> </span><span class="n">doc</span><span class="o">=</span><span class="s">&quot;fields 1&quot;</span><span class="p">)</span>
@@ -1234,141 +1234,141 @@
 </div>
 </section>
 <section id="access-types">
-<h2>28 种访问类型<a class="headerlink" href="#access-types" title="此标题的永久链接"></a></h2>
+<h2>28种访问类型<a class="headerlink" href="#access-types" title="此标题的永久链接"></a></h2>
 <p>其中大部分来自UVM规范</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>访问类型</p></th>
 <th class="head"><p>描述</p></th>
-<th class="head"><p>从</p></th>
+<th class="head"><p>来源</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>反渗透</p></td>
+<tr class="row-even"><td><p>RO</p></td>
 <td><p>w：无影响，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>RW</p></td>
-<td><p>w：原样，r：无效果</p></td>
+<td><p>w：保持原样，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-even"><td><p>RC</p></td>
-<td><p>w：无影响，r：清除所有位</p></td>
+<td><p>w：无影响，r：清除所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>RS</p></td>
-<td><p>w：无影响，r：设置所有位</p></td>
+<td><p>w：无影响，r：置位所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-even"><td><p>世界拉力锦标赛</p></td>
-<td><p>w：按原样，r：清除所有位</p></td>
+<tr class="row-even"><td><p>WRC</p></td>
+<td><p>w：保持原样，r：清除所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>WRS</p></td>
-<td><p>w：按原样，r：设置所有位</p></td>
+<td><p>w：保持原样，r：置位所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-even"><td><p>厕所</p></td>
-<td><p>w：清除所有位，r：无影响</p></td>
+<tr class="row-even"><td><p>WC</p></td>
+<td><p>w：清除所有比特，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>WS</p></td>
-<td><p>w：设置所有位，r：无影响</p></td>
+<td><p>w：置位所有比特，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-even"><td><p>WSRC</p></td>
-<td><p>w：设置所有位，r：清除所有位</p></td>
+<td><p>w：置位所有比特，r：清除所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-odd"><td><p>世界资源研究协会</p></td>
-<td><p>w：清除所有位，r：设置所有位</p></td>
+<tr class="row-odd"><td><p>WCRS</p></td>
+<td><p>w：清除所有比特，r：置位所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-even"><td><p>W1C</p></td>
-<td><p>w：1/0 清除/对匹配位没有影响，r：没有影响</p></td>
+<td><p>w：1/0 对匹配位清除/无影响，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>W1S</p></td>
-<td><p>w：1/0组/对匹配位无影响，r：无影响</p></td>
+<td><p>w：1/0 对匹配位置位/无影响，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-even"><td><p>W1T</p></td>
-<td><p>w：1/0 切换/对匹配位没有影响，r：没有影响</p></td>
+<td><p>w：1/0 对匹配位翻转/无影响，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>W0C</p></td>
-<td><p>w：1/0 对/清除匹配位没有影响，r：没有影响</p></td>
+<td><p>w：1/0 对匹配位清除/无影响，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-even"><td><p>沃斯</p></td>
-<td><p>w：1/0 对/设置匹配位没有影响，r：没有影响</p></td>
+<tr class="row-even"><td><p>W0S</p></td>
+<td><p>w：1/0 对匹配位置位/无影响，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-odd"><td><p>沃特</p></td>
-<td><p>w：1/0 对/切换匹配位没有影响，r：没有影响</p></td>
+<tr class="row-odd"><td><p>W0T</p></td>
+<td><p>w：1/0 对匹配位翻转/无影响，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-even"><td><p>W1SRC</p></td>
-<td><p>w：1/0 设置/对匹配位没有影响，r：清除所有位</p></td>
+<td><p>w：1/0 对匹配位置位/无影响，r：清除所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>W1CRS</p></td>
-<td><p>w：1/0 清除/对匹配位没有影响，r：设置所有位</p></td>
+<td><p>w：1/0 对匹配位清除/无影响，r：置位所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-even"><td><p>W0SRC</p></td>
-<td><p>w：1/0 对/设置匹配位没有影响，r：清除所有位</p></td>
+<td><p>w：1/0 对匹配位置位/无影响，r：清除所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>W0CRS</p></td>
-<td><p>w：1/0 对/清除匹配位没有影响，r：设置所有位</p></td>
+<td><p>w：1/0 对匹配位清除/无影响，r：置位所有比特</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-even"><td><p>沃</p></td>
-<td><p>w：原样，r：错误</p></td>
+<tr class="row-even"><td><p>WO</p></td>
+<td><p>w：保持原样，r：错误</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-odd"><td><p>世界石油公司</p></td>
-<td><p>w：清除所有位，r：错误</p></td>
+<tr class="row-odd"><td><p>WOC</p></td>
+<td><p>w：清除所有比特，r：错误</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-even"><td><p>沃斯</p></td>
-<td><p>w：设置所有位，r：错误</p></td>
+<tr class="row-even"><td><p>WOS</p></td>
+<td><p>w：置位所有比特，r：错误</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-odd"><td><p>W1</p></td>
-<td><p>w：硬重置后第一个保持原样，其他w没有影响，r：没有影响</p></td>
+<td><p>w：硬复位后第一个w保持原样，其他w无影响，r：无影响</p></td>
 <td><p>UVM</p></td>
 </tr>
 <tr class="row-even"><td><p>WO1</p></td>
-<td><p>w：硬重置后第一个是原样，其他w没有影响，r：错误</p></td>
+<td><p>w：硬复位后第一个w保持原样，其他w无影响，r：错误</p></td>
 <td><p>UVM</p></td>
 </tr>
-<tr class="row-odd"><td><p>不适用</p></td>
+<tr class="row-odd"><td><p>NA</p></td>
 <td><p>w：保留，r：保留</p></td>
 <td><p>新的</p></td>
 </tr>
 <tr class="row-even"><td><p>W1P</p></td>
-<td><p>w：1/0 脉冲/对匹配位无影响，r：无影响</p></td>
+<td><p>w：1/0 对匹配位脉冲(pulse)/无影响，r：无影响</p></td>
 <td><p>新的</p></td>
 </tr>
 <tr class="row-odd"><td><p>W0P</p></td>
-<td><p>w：0/1 脉冲/对匹配位无影响，r：无影响</p></td>
+<td><p>w：0/1 对匹配位脉冲(pulse)/无影响，r：无影响</p></td>
 <td><p>新的</p></td>
 </tr>
-<tr class="row-even"><td><p>高速RW</p></td>
-<td><p>w：硬件设置，软件RW</p></td>
+<tr class="row-even"><td><p>HSRW</p></td>
+<td><p>w：硬件置位，软件RW</p></td>
 <td><p>新的</p></td>
 </tr>
-<tr class="row-odd"><td><p>右室健康中心</p></td>
-<td><p>w：软件RW、硬件设置</p></td>
+<tr class="row-odd"><td><p>RWHS</p></td>
+<td><p>w：软件RW、硬件置位</p></td>
 <td><p>新的</p></td>
 </tr>
-<tr class="row-even"><td><p>遥控潜水器</p></td>
+<tr class="row-even"><td><p>ROV</p></td>
 <td><p>w：只读值，用于硬件版本</p></td>
 <td><p>新的</p></td>
 </tr>
-<tr class="row-odd"><td><p>计算机科学技术协会</p></td>
+<tr class="row-odd"><td><p>CSTM</p></td>
 <td><p>w：用户自定义类型，用于文档</p></td>
 <td><p>新的</p></td>
 </tr>
@@ -1377,51 +1377,51 @@
 </section>
 <section id="automatic-documentation-generation">
 <h2>自动生成文档<a class="headerlink" href="#automatic-documentation-generation" title="此标题的永久链接"></a></h2>
-<p>文件类型</p>
+<p>文档类型</p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>文档</p></th>
+<tr class="row-odd"><th class="head"><p>文档类型</p></th>
 <th class="head"><p>用法</p></th>
-<th class="head"><p>地位</p></th>
+<th class="head"><p>状态</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>超文本标记语言</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(HtmlGenerator(&quot;regif&quot;,</span> <span class="pre">title</span> <span class="pre">=</span> <span class="pre">&quot;XXX</span> <span class="pre">注册文件&quot;))</span></code></p></td>
-<td><p>是</p></td>
+<tr class="row-even"><td><p>HTML</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(HtmlGenerator(&quot;regif&quot;,</span> <span class="pre">title</span> <span class="pre">=</span> <span class="pre">&quot;XXX</span> <span class="pre">register</span> <span class="pre">file&quot;))</span></code></p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-odd"><td><p>头文件</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(CHeaderGenerator(&quot;标头&quot;,</span> <span class="pre">&quot;AP&quot;))</span></code></p></td>
-<td><p>是</p></td>
+<tr class="row-odd"><td><p>CHeader</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(CHeaderGenerator(&quot;header&quot;,</span> <span class="pre">&quot;AP&quot;))</span></code></p></td>
+<td><p>Y</p></td>
 </tr>
 <tr class="row-even"><td><p>JSON</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(JsonGenerator(&quot;regif&quot;))</span></code></p></td>
-<td><p>是</p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-odd"><td><p>拉夫(UVM)</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(RalfGenerator(&quot;标题&quot;))</span></code></p></td>
-<td><p>是</p></td>
+<tr class="row-odd"><td><p>RALF(UVM)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(RalfGenerator(&quot;header&quot;))</span></code></p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-even"><td><p>系统RDL</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(SystemRdl</span> <span class="pre">Generator(&quot;redgif&quot;,</span> <span class="pre">&quot;addrmap_name&quot;,</span> <span class="pre">Some(&quot;name&quot;),</span> <span class="pre">Some(&quot;desc&quot;)))</span></code></p></td>
-<td><p>是</p></td>
+<tr class="row-even"><td><p>SystemRDL</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">busif.accept(SystemRdlGenerator(&quot;regif&quot;,</span> <span class="pre">&quot;addrmap_name&quot;,</span> <span class="pre">Some(&quot;name&quot;),</span> <span class="pre">Some(&quot;desc&quot;)))</span></code></p></td>
+<td><p>Y</p></td>
 </tr>
-<tr class="row-odd"><td><p>乳胶（pdf）</p></td>
+<tr class="row-odd"><td><p>Latex(pdf)</p></td>
 <td></td>
-<td><p>氮</p></td>
+<td><p>N</p></td>
 </tr>
-<tr class="row-even"><td><p>文档</p></td>
+<tr class="row-even"><td><p>docx</p></td>
 <td></td>
-<td><p>氮</p></td>
+<td><p>N</p></td>
 </tr>
 </tbody>
 </table>
-<p>HTML 自动文档现已完成，示例源代码：</p>
+<p>HTM 自动文档现已完成，源代码示例：</p>
 <p>生成的 HTML 文档：</p>
 <img alt="../../_images/regif-html.png" src="../../_images/regif-html.png" />
 </section>
 <section id="special-access-usage">
-<h2>特殊访问使用<a class="headerlink" href="#special-access-usage" title="此标题的永久链接"></a></h2>
+<h2>特殊访问用途<a class="headerlink" href="#special-access-usage" title="此标题的永久链接"></a></h2>
 <p><strong>案例1：</strong> <code class="docutils literal notranslate"><span class="pre">RO</span></code> 用法</p>
 <p><code class="docutils literal notranslate"><span class="pre">RO</span></code> 与其他类型不同。它不创建寄存器，需要外部信号来驱动它，注意，请不要忘记驱动它。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
@@ -1457,7 +1457,7 @@
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">M_REG0</span><span class="p">.</span><span class="n">field</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">32</span><span class="w"> </span><span class="n">bit</span><span class="p">),</span><span class="w"> </span><span class="nc">ROV</span><span class="p">,</span><span class="w"> </span><span class="nc">BigInt</span><span class="p">(</span><span class="s">&quot;F000A801&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">),</span><span class="w"> </span><span class="s">&quot;xx-device version&quot;</span><span class="p">)(</span><span class="nc">Symbol</span><span class="p">(</span><span class="s">&quot;Version&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p><strong>CASE3:</strong> <code class="docutils literal notranslate"><span class="pre">HSRW/RWHS</span></code> 硬件设置类型 在某些情况下，此类寄存器不仅可以由软件配置，还可以由硬件信号设置</p>
+<p><strong>案例3:</strong> <code class="docutils literal notranslate"><span class="pre">HSRW/RWHS</span></code> 在某些情况下的硬件设置类型，此类寄存器不仅可以由软件配置，还可以由硬件信号设置</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">xxx_set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">xxx_set_val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">Bits</span><span class="p">(</span><span class="mi">32</span><span class="w"> </span><span class="n">bit</span><span class="p">)</span>
@@ -1488,7 +1488,7 @@
 <span class="w">  </span><span class="k">end</span>
 </pre></div>
 </div>
-<p><strong>CASE4:</strong> <code class="docutils literal notranslate"><span class="pre">CSTM</span></code> 虽然 SpinalHDL 包含 25 种寄存器类型和 6 种扩展类型，但在实际应用中仍然对私有寄存器类型有各种需求。因此，我们保留 CSTM 类型以实现可扩展性。 CSTM仅用于生成软件接口，不生成实际电路</p>
+<p><strong>案例4:</strong> <code class="docutils literal notranslate"><span class="pre">CSTM</span></code> 虽然SpinalHDL包含25种寄存器类型和6种扩展类型，但在实际应用中仍然对私有寄存器类型有各种需求。因此，我们保留CSTM类型以实现可扩展性。 CSTM仅用于生成软件接口，不生成实际电路</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">reg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="n">bit</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="mi">0</span>
 <span class="nc">REG</span><span class="p">.</span><span class="n">registerAtOnlyReadLogic</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">reg</span><span class="p">,</span><span class="w"> </span><span class="nc">CSTM</span><span class="p">(</span><span class="s">&quot;BMRW&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">resetValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;custom field&quot;</span><span class="p">)</span>
 
@@ -1497,7 +1497,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p><strong>CASE5:</strong> <code class="docutils literal notranslate"><span class="pre">parasiteField</span></code></p>
+<p><strong>案例5：</strong> <code class="docutils literal notranslate"><span class="pre">parasiteField</span></code></p>
 <p>这用于软件在多个地址上共享同一寄存器，而不是生成多个寄存器实体</p>
 <p>示例1：时钟门软件使能</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="nc">M_CG_ENS_SET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">busif</span><span class="p">.</span><span class="n">newReg</span><span class="p">(</span><span class="n">doc</span><span class="o">=</span><span class="s">&quot;Clock Gate Enables&quot;</span><span class="p">)</span><span class="w">  </span><span class="c1">//0x0000</span>
@@ -1509,7 +1509,7 @@
 <span class="w">                   </span><span class="nc">M_CG_ENS_RO</span><span class="p">.</span><span class="n">parasiteField</span><span class="p">(</span><span class="n">xx_sys_cg_en</span><span class="p">,</span><span class="w"> </span><span class="nc">RO</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;clock gate enables, read only&quot;</span>
 </pre></div>
 </div>
-<p>示例2：使用软件的foce接口中断原始寄存器</p>
+<p>示例2：使用软件的带强制(force)接口的中断原始(raw)状态寄存器</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="nc">RAW</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="bp">this</span><span class="p">.</span><span class="n">newRegAt</span><span class="p">(</span><span class="n">offset</span><span class="p">,</span><span class="s">&quot;Interrupt Raw status Register\n set when event \n clear raw when write 1&quot;</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="nc">FORCE</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="bp">this</span><span class="p">.</span><span class="n">newReg</span><span class="p">(</span><span class="s">&quot;Interrupt Force  Register\n for SW debug use \n write 1 set raw&quot;</span><span class="p">)</span>
 
@@ -1520,11 +1520,11 @@
 </section>
 <section id="byte-mask">
 <h2>字节掩码<a class="headerlink" href="#byte-mask" title="此标题的永久链接"></a></h2>
-<p>与Strb</p>
+<p>withStrb</p>
 </section>
 <section id="typical-example">
 <h2>典型例子<a class="headerlink" href="#typical-example" title="此标题的永久链接"></a></h2>
-<p>Batch create REG-Address and fields register</p>
+<p>批量创建REG-Address和字段寄存器</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">lib</span><span class="p">.</span><span class="nn">bus</span><span class="p">.</span><span class="nn">regif</span><span class="p">.</span><span class="n">_</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">RegBank</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
@@ -1562,8 +1562,8 @@
 </div>
 </section>
 <section id="interrupt-factory">
-<h2>中断工厂<a class="headerlink" href="#interrupt-factory" title="此标题的永久链接"></a></h2>
-<p>手动书写中断</p>
+<h2>中断生成器<a class="headerlink" href="#interrupt-factory" title="此标题的永久链接"></a></h2>
+<p>手动写中断</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">cpInterruptExample</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">   </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">     </span><span class="kd">val</span><span class="w"> </span><span class="n">tx_done</span><span class="p">,</span><span class="w"> </span><span class="n">rx_done</span><span class="p">,</span><span class="w"> </span><span class="n">frame_end</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
@@ -1604,9 +1604,9 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>这是一项非常繁琐且重复的工作，更好的方法是使用“工厂”范例来自动生成每个信号的文档。</p>
-<p>now the InterruptFactory can do that.</p>
-<p>Easy Way create interruption:</p>
+<p>这是一项非常繁琐且重复的工作，更好的方法是使用“生成器(factory)”范例来自动生成每个信号的文档。</p>
+<p>现在InterruptFactory可以做到这一点。</p>
+<p>创建中断的简单方法：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">EasyInterrupt</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">apb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">slave</span><span class="p">(</span><span class="nc">Apb3</span><span class="p">(</span><span class="nc">Apb3Config</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">32</span><span class="p">)))</span>
@@ -1627,34 +1627,34 @@
 </div>
 <img alt="../../_images/easy-intr.png" src="../../_images/easy-intr.png" />
 <section id="ip-level-interrupt-factory">
-<h3>IP级中断工厂<a class="headerlink" href="#ip-level-interrupt-factory" title="此标题的永久链接"></a></h3>
+<h3>IP级中断生成器<a class="headerlink" href="#ip-level-interrupt-factory" title="此标题的永久链接"></a></h3>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>登记</p></th>
+<tr class="row-odd"><th class="head"><p>寄存器</p></th>
 <th class="head"><p>访问类型</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>生的</p></td>
+<tr class="row-even"><td><p>RAW</p></td>
 <td><p>W1C</p></td>
-<td><p>int raw寄存器，由int事件设置，总线写1时清零</p></td>
+<td><p>中断原始状态(int raw)寄存器，由int事件设置，总线写1时清零</p></td>
 </tr>
-<tr class="row-odd"><td><p>力量</p></td>
+<tr class="row-odd"><td><p>FORCE</p></td>
 <td><p>RW</p></td>
-<td><p>int 强制寄存器，用于软件调试</p></td>
+<td><p>中断强制寄存器，用于软件调试</p></td>
 </tr>
-<tr class="row-even"><td><p>面具</p></td>
+<tr class="row-even"><td><p>MASK</p></td>
 <td><p>RW</p></td>
-<td><p>int 掩码寄存器，1：关闭； 0：打开；默认 1 int 关闭</p></td>
+<td><p>中断掩码寄存器，1：关闭；0：打开；默认1 中断关闭</p></td>
 </tr>
-<tr class="row-odd"><td><p>地位</p></td>
-<td><p>反渗透</p></td>
-<td><p>int status，只读，<code class="docutils literal notranslate"><span class="pre">status</span> <span class="pre">=</span> <span class="pre">raw</span> <span class="pre">&amp;&amp;</span> <span class="pre">！面具</span></code></p></td>
+<tr class="row-odd"><td><p>STATUS</p></td>
+<td><p>RO</p></td>
+<td><p>中断状态，只读， <code class="docutils literal notranslate"><span class="pre">status</span> <span class="pre">=</span> <span class="pre">raw</span> <span class="pre">&amp;&amp;</span> <span class="pre">!</span> <span class="pre">mask</span></code></p></td>
 </tr>
 </tbody>
 </table>
-<img alt="../../_images/RFMS.svg" src="../../_images/RFMS.svg" /><p>脊柱用途：</p>
+<img alt="../../_images/RFMS.svg" src="../../_images/RFMS.svg" /><p>Spinal用法：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">busif</span><span class="p">.</span><span class="n">interruptFactory</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">d</span><span class="p">,</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1663,53 +1663,53 @@
 <h3>SYS级中断合并<a class="headerlink" href="#sys-level-interrupt-merge" title="此标题的永久链接"></a></h3>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>登记</p></th>
+<tr class="row-odd"><th class="head"><p>寄存器</p></th>
 <th class="head"><p>访问类型</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>面具</p></td>
+<tr class="row-even"><td><p>MASK</p></td>
 <td><p>RW</p></td>
-<td><p>int 掩码寄存器，1：关闭； 0：打开；默认 1 int 关闭</p></td>
+<td><p>中断掩码寄存器，1：关闭；0：打开；默认1 中断关闭</p></td>
 </tr>
-<tr class="row-odd"><td><p>地位</p></td>
-<td><p>反渗透</p></td>
-<td><p>int 状态，RO，<code class="docutils literal notranslate"><span class="pre">状态</span> <span class="pre">=</span> <span class="pre">int_level</span> <span class="pre">&amp;&amp;</span> <span class="pre">！面具</span></code></p></td>
+<tr class="row-odd"><td><p>STATUS</p></td>
+<td><p>RO</p></td>
+<td><p>中断状态，RO， <code class="docutils literal notranslate"><span class="pre">status</span> <span class="pre">=</span> <span class="pre">int_level</span> <span class="pre">&amp;&amp;</span> <span class="pre">!</span> <span class="pre">mask</span></code></p></td>
 </tr>
 </tbody>
 </table>
-<img alt="../../_images/MS.svg" src="../../_images/MS.svg" /><p>脊柱用途：</p>
+<img alt="../../_images/MS.svg" src="../../_images/MS.svg" /><p>Spinal用法：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">busif</span><span class="p">.</span><span class="n">interruptLevelFactory</span><span class="p">(</span><span class="s">&quot;T&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sys_int0</span><span class="p">,</span><span class="w"> </span><span class="n">sys_int1</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="spinal-factory">
-<h3>脊柱工厂<a class="headerlink" href="#spinal-factory" title="此标题的永久链接"></a></h3>
+<h3>Spinal的生成器<a class="headerlink" href="#spinal-factory" title="此标题的永久链接"></a></h3>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>总线接口方式</p></th>
+<tr class="row-odd"><th class="head"><p>总线接口方法</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactory（regNamePre：字符串，触发器：Bool</span> <span class="pre">*）</span></code></p></td>
-<td><p>create RAW/FORCE/MASK/STATUS for pulse event</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactory(regNamePre:</span> <span class="pre">String,</span> <span class="pre">triggers:</span> <span class="pre">Bool*)</span></code></p></td>
+<td><p>为脉冲事件创建RAW/FORCE/MASK/STATUS</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactoryNoForce（regNamePre：字符串，触发器：Bool</span> <span class="pre">*）</span></code></p></td>
-<td><p>create RAW/MASK/STATUS for pulse event</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactoryNoForce(regNamePre:</span> <span class="pre">String,</span> <span class="pre">triggers:</span> <span class="pre">Bool*)</span></code></p></td>
+<td><p>为脉冲事件创建RAW/MASK/STATUS</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactory（regNamePre：字符串，触发器：Bool</span> <span class="pre">*）</span></code></p></td>
-<td><p>create MASK/STATUS for level_int merge</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactory(regNamePre:</span> <span class="pre">String,</span> <span class="pre">triggers:</span> <span class="pre">Bool*)</span></code></p></td>
+<td><p>为level_int合并创建MASK/STATUS</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactoryAt（addrOffset：Int，regNamePre：字符串，触发器：Bool</span> <span class="pre">*）</span></code></p></td>
-<td><p>create RAW/FORCE/MASK/STATUS for pulse event at addrOffset</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactoryAt(addrOffset:</span> <span class="pre">Int,</span> <span class="pre">regNamePre:</span> <span class="pre">String,</span> <span class="pre">triggers:</span> <span class="pre">Bool*)</span></code></p></td>
+<td><p>在addrOffset处为脉冲事件创建RAW/FORCE/MASK/STATUS</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactoryNoForceAt（addrOffset：Int，regNamePre：字符串，触发器：Bool</span> <span class="pre">*）</span></code></p></td>
-<td><p>create RAW/MASK/STATUS for pulse event at addrOffset</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactoryNoForceAt(addrOffset:</span> <span class="pre">Int,</span> <span class="pre">regNamePre:</span> <span class="pre">String,</span> <span class="pre">triggers:</span> <span class="pre">Bool*)</span></code></p></td>
+<td><p>在addrOffset处为脉冲事件创建 RAW/MASK/STATUS</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactoryAt（addrOffset：Int，regNamePre：字符串，触发器：Bool</span> <span class="pre">*）</span></code></p></td>
-<td><p>create MASK/STATUS for level_int merge at addrOffset</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">InterruptFactoryAt(addrOffset:</span> <span class="pre">Int,</span> <span class="pre">regNamePre:</span> <span class="pre">String,</span> <span class="pre">triggers:</span> <span class="pre">Bool*)</span></code></p></td>
+<td><p>在addrOffset处为level_int合并创建MASK/STATUS</p></td>
 </tr>
 </tbody>
 </table>
@@ -1747,7 +1747,7 @@
 </section>
 <section id="defaultreadvalue">
 <h2>默认读取值<a class="headerlink" href="#defaultreadvalue" title="此标题的永久链接"></a></h2>
-<p>当软件读取保留地址时，当前策略是正常返回，readerror=0。为了方便软件调试，可以配置回读值，默认为0</p>
+<p>当软件读取保留地址时，当前的策略是正常返回，readerror=0。为了方便软件调试，可以配置回读值，默认为0</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">busif</span><span class="p">.</span><span class="n">setReservedAddressReadValue</span><span class="p">(</span><span class="mh">0x0000EF00</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1759,10 +1759,10 @@
 </div>
 </section>
 <section id="developers-area">
-<h2>开发商专区<a class="headerlink" href="#developers-area" title="此标题的永久链接"></a></h2>
-<p>您可以通过扩展“BusIfVistor”特征来添加文档类型</p>
+<h2>开发者区域<a class="headerlink" href="#developers-area" title="此标题的永久链接"></a></h2>
+<p>您可以通过扩展 <cite>BusIfVistor</cite> 特征来添加文档类型</p>
 <p><code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">class</span> <span class="pre">Latex(fileName</span> <span class="pre">:</span> <span class="pre">String)</span> <span class="pre">extends</span> <span class="pre">BusIfVisitor{</span> <span class="pre">...</span> <span class="pre">}</span></code></p>
-<p>BusIfVistor 授予访问 BusIf.RegInsts 的权限来执行您想要的操作</p>
+<p>BusIfVistor给予访问BusIf.RegInsts的权限来执行您想要的操作</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// lib/src/main/scala/lib/bus/regif/BusIfVistor.scala</span>
 
 <span class="k">trait</span><span class="w"> </span><span class="nc">BusIfVisitor</span><span class="w"> </span><span class="p">{</span>

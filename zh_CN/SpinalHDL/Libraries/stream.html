@@ -32,7 +32,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="流动" href="flow.html" />
+    <link rel="next" title="数据流" href="flow.html" />
     <link rel="prev" title="实用工具" href="utils.html" />
      
     <!-- source/_templates/layout.html -->
@@ -643,58 +643,58 @@
 <li class="toctree-l3"><a class="reference internal" href="#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#utils">实用工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#streamfifo">流先进先出</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streamfifocc">流FifoCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamfifo">StreamFifo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamfifocc">StreamFifoCC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#streamccbytoggle">StreamCCByToggle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streamwidthadapter">流宽度适配器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streamarbiter">流仲裁器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streamjoin">流连接</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streamfork">流叉</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streammux">流复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streamdemux">流解复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streamdispatchersequencial">流调度器顺序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#streamtransactionextender">流事务扩展器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamwidthadapter">StreamWidthAdapter（反压流位宽适应器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamarbiter">StreamArbiter（反压流仲裁器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamjoin">StreamJoin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamfork">StreamFork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streammux">StreamMux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamdemux">StreamDemux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamdispatchersequencial">StreamDispatcherSequencial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamtransactionextender">StreamTransactionExtender</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="flow.html">流动</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flow.html">数据流</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#code-example">代码示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fragment.html">分段</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fragment.html">片段</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fragment.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fragment.html#functions">函数</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="fsm.html">状态机</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fsm.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fsm.html#statemachine">状态机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fsm.html#statemachine">StateMachine</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fsm.html#entry-point">入口点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#transitions">过渡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#transitions">转换</a></li>
 <li class="toctree-l4"><a class="reference internal" href="fsm.html#state-encoding">状态编码</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="fsm.html#states">状态</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#statedelay">状态延迟</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#statefsm">国家FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#stateparallelfsm">状态并行FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="fsm.html#notes-about-the-entry-state">关于进入状态的注释</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#statedelay">StateDelay（状态延迟）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#statefsm">StateFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#stateparallelfsm">StateParallelFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fsm.html#notes-about-the-entry-state">关于入口状态的注释</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="vexriscv.html">VexRiscv（RV32IM CPU）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bus_slave_factory.html">总线从属工厂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bus_slave_factory.html">总线从端生成器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#functionality">功能性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#functionality">功能</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤维骨架</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤程框架</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#simple-dummy-example">简单的虚拟示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#handle-t">手柄[T]</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fiber.html#soon-handle">很快（处理）</a></li>
@@ -711,22 +711,22 @@
 <li class="toctree-l3"><a class="reference internal" href="binarySystem.html#bigint-enricher">BigInt 丰富器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#automatic-allocation">自动分配</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#access-types">28 种访问类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#access-types">28种访问类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#automatic-documentation-generation">自动生成文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#special-access-usage">特殊访问使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#special-access-usage">特殊访问用途</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#byte-mask">字节掩码</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#typical-example">典型例子</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#interrupt-factory">中断工厂</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="regIf.html#ip-level-interrupt-factory">IP级中断工厂</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#interrupt-factory">中断生成器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="regIf.html#ip-level-interrupt-factory">IP级中断生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="regIf.html#sys-level-interrupt-merge">SYS级中断合并</a></li>
-<li class="toctree-l4"><a class="reference internal" href="regIf.html#spinal-factory">脊柱工厂</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regIf.html#spinal-factory">Spinal的生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="regIf.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#defaultreadvalue">默认读取值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#developers-area">开发商专区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#developers-area">开发者区域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Bus/index.html">总线</a><ul>
@@ -1342,8 +1342,8 @@
 <tr class="row-odd"><td><p>x.halfPipe()</p></td>
 <td><div class="line-block">
 <div class="line">返回由x驱动的Stream反压流</div>
-<div class="line">有效/就绪/有效负载路径被某些寄存器切断</div>
-<div class="line">成本 = (有效负载宽度 + 2) 触发器，带宽除以二</div>
+<div class="line">valid/ready/payload路径通过一些寄存器分割</div>
+<div class="line">成本 = (payload位宽 + 2)个触发器，带宽除以二</div>
 </div>
 </td>
 <td><p>Stream[T]</p></td>
@@ -1363,7 +1363,7 @@
 <div class="line">y &gt;-&gt; x</div>
 </div>
 </td>
-<td><p>通过 m2sPipe 将 y 连接到 x</p></td>
+<td><p>通过m2sPipe将y连接到x</p></td>
 <td></td>
 <td><p>1</p></td>
 </tr>
@@ -1372,7 +1372,7 @@
 <div class="line">y &gt;/&gt; x</div>
 </div>
 </td>
-<td><p>通过 s2mPipe 将 y 连接到 x</p></td>
+<td><p>通过s2mPipe将y连接到x</p></td>
 <td></td>
 <td><p>0</p></td>
 </tr>
@@ -1383,7 +1383,7 @@
 </td>
 <td><div class="line-block">
 <div class="line">通过 s2mPipe().m2sPipe() 将 y 连接到 x</div>
-<div class="line">这意味着 x 和 y 之间没有组合路径</div>
+<div class="line">这意味着x和y之间没有组合逻辑路径</div>
 </div>
 </td>
 <td></td>
@@ -1391,8 +1391,8 @@
 </tr>
 <tr class="row-even"><td><p>x.haltWhen(cond : Bool)</p></td>
 <td><div class="line-block">
-<div class="line">返回连接到 x 的 Stream</div>
-<div class="line">cond 为 true 时停止</div>
+<div class="line">返回连接到x的反压流</div>
+<div class="line">cond为true时暂停</div>
 </div>
 </td>
 <td><p>Stream[T]</p></td>
@@ -1400,8 +1400,8 @@
 </tr>
 <tr class="row-odd"><td><p>x.throwWhen(cond : Bool)</p></td>
 <td><div class="line-block">
-<div class="line">返回连接到 x 的 Stream</div>
-<div class="line">当 cond 为 true 时，交易将被丢弃</div>
+<div class="line">返回连接到x的反压流</div>
+<div class="line">当cond为true时，传输数据将被抛弃</div>
 </div>
 </td>
 <td><p>Stream[T]</p></td>
@@ -1426,10 +1426,10 @@
 </section>
 <section id="utils">
 <h2>实用工具<a class="headerlink" href="#utils" title="此标题的永久链接"></a></h2>
-<p>有许多实用程序可以在设计中与 Stream 总线结合使用，本章将记录它们。</p>
+<p>有许多实用工具可以在设计中与反压流总线结合使用，本章将介绍它们。</p>
 <section id="streamfifo">
-<h3>流先进先出<a class="headerlink" href="#streamfifo" title="此标题的永久链接"></a></h3>
-<p>在每个流上，您可以调用 .queue(size) 来获取缓冲流。但您也可以实例化 FIFO 组件本身：</p>
+<h3>StreamFifo<a class="headerlink" href="#streamfifo" title="此标题的永久链接"></a></h3>
+<p>您可以在每个反压流上调用 .queue(size) 来获取一个缓冲反压流。但您也可以实例化 FIFO 组件本身：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">streamA</span><span class="p">,</span><span class="n">streamB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="c1">//...</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">myFifo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamFifo</span><span class="p">(</span>
@@ -1455,11 +1455,11 @@
 <tbody>
 <tr class="row-even"><td><p>数据类型</p></td>
 <td><p>T</p></td>
-<td><p>负载数据类型</p></td>
+<td><p>有效负载(payload)数据类型</p></td>
 </tr>
-<tr class="row-odd"><td><p>深度</p></td>
+<tr class="row-odd"><td><p>depth</p></td>
 <td><p>Int</p></td>
-<td><p>用于存储元素的内存大小</p></td>
+<td><p>用于存储数据的存储器的大小</p></td>
 </tr>
 </tbody>
 </table>
@@ -1476,27 +1476,27 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>推</p></td>
+<tr class="row-even"><td><p>push</p></td>
 <td><p>Stream[T]</p></td>
-<td><p>用于推送元素</p></td>
+<td><p>用于压入数据</p></td>
 </tr>
-<tr class="row-odd"><td><p>流行音乐</p></td>
+<tr class="row-odd"><td><p>pop</p></td>
 <td><p>Stream[T]</p></td>
-<td><p>用于弹出元素</p></td>
+<td><p>用于弹出数据</p></td>
 </tr>
-<tr class="row-even"><td><p>冲水</p></td>
+<tr class="row-even"><td><p>flush</p></td>
 <td><p>Bool</p></td>
-<td><p>用于移除 FIFO 内的所有元素</p></td>
+<td><p>用于清除FIFO内的所有数据</p></td>
 </tr>
-<tr class="row-odd"><td><p>占用</p></td>
-<td><p>log2Up(深度 + 1) 位的单位</p></td>
-<td><p>指示内部存储器占用情况</p></td>
+<tr class="row-odd"><td><p>occupancy</p></td>
+<td><p>log2Up(depth + 1) bits 的 UInt</p></td>
+<td><p>反映内部存储占用情况</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="streamfifocc">
-<h3>流FifoCC<a class="headerlink" href="#streamfifocc" title="此标题的永久链接"></a></h3>
+<h3>StreamFifoCC<a class="headerlink" href="#streamfifocc" title="此标题的永久链接"></a></h3>
 <p>You can instantiate the dual clock domain version of the fifo the following way :</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">clockA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">(</span><span class="o">???</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">clockB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">(</span><span class="o">???</span><span class="p">)</span>
@@ -1527,19 +1527,19 @@
 <tbody>
 <tr class="row-even"><td><p>数据类型</p></td>
 <td><p>T</p></td>
-<td><p>负载数据类型</p></td>
+<td><p>有效负载(payload)数据类型</p></td>
 </tr>
-<tr class="row-odd"><td><p>深度</p></td>
+<tr class="row-odd"><td><p>depth</p></td>
 <td><p>Int</p></td>
-<td><p>用于存储元素的内存大小</p></td>
+<td><p>用于存储数据的存储器的大小</p></td>
 </tr>
-<tr class="row-even"><td><p>推时钟</p></td>
+<tr class="row-even"><td><p>pushClock</p></td>
 <td><p>ClockDomain</p></td>
-<td><p>推送侧使用的时钟域</p></td>
+<td><p>压入数据端使用的时钟域</p></td>
 </tr>
-<tr class="row-odd"><td><p>流行时钟</p></td>
+<tr class="row-odd"><td><p>popClock</p></td>
 <td><p>ClockDomain</p></td>
-<td><p>pop侧使用的时钟域</p></td>
+<td><p>弹出数据端使用的时钟域</p></td>
 </tr>
 </tbody>
 </table>
@@ -1556,21 +1556,21 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>推</p></td>
+<tr class="row-even"><td><p>push</p></td>
 <td><p>Stream[T]</p></td>
-<td><p>用于推送元素</p></td>
+<td><p>用于压入数据</p></td>
 </tr>
-<tr class="row-odd"><td><p>流行音乐</p></td>
+<tr class="row-odd"><td><p>pop</p></td>
 <td><p>Stream[T]</p></td>
-<td><p>用于弹出元素</p></td>
+<td><p>用于弹出数据</p></td>
 </tr>
-<tr class="row-even"><td><p>推送占用</p></td>
-<td><p>log2Up(深度 + 1) 位的单位</p></td>
-<td><p>表示内部内存占用情况（从推送方角度）</p></td>
+<tr class="row-even"><td><p>pushOccupancy</p></td>
+<td><p>log2Up(depth + 1) bits 的 UInt</p></td>
+<td><p>反映内部存储器占用情况（从压入数据端的角度）</p></td>
 </tr>
-<tr class="row-odd"><td><p>流行占用率</p></td>
-<td><p>log2Up(深度 + 1) 位的单位</p></td>
-<td><p>表示内存占用情况（从pop侧角度）</p></td>
+<tr class="row-odd"><td><p>popOccupancy</p></td>
+<td><p>log2Up(depth + 1) bits 的 UInt</p></td>
+<td><p>反映内部存储器占用情况（从弹出数据端的角度）</p></td>
 </tr>
 </tbody>
 </table>
@@ -1578,8 +1578,8 @@
 <section id="streamccbytoggle">
 <h3>StreamCCByToggle<a class="headerlink" href="#streamccbytoggle" title="此标题的永久链接"></a></h3>
 <div class="line-block">
-<div class="line">基于切换信号跨时钟域连接流的组件。</div>
-<div class="line">这种实现跨时钟域桥的方式的特点是占用面积小，但带宽较低。</div>
+<div class="line">基于信号切换来连接跨时钟域的反压流组件。</div>
+<div class="line">这种实现跨时钟域桥的方式的特点是占用逻辑区小，但带宽较低。</div>
 </div>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">clockA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">(</span><span class="o">???</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">clockB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">(</span><span class="o">???</span><span class="p">)</span>
@@ -1609,15 +1609,15 @@
 <tbody>
 <tr class="row-even"><td><p>数据类型</p></td>
 <td><p>T</p></td>
-<td><p>负载数据类型</p></td>
+<td><p>有效负载(payload)数据类型</p></td>
 </tr>
-<tr class="row-odd"><td><p>输入时钟</p></td>
+<tr class="row-odd"><td><p>inputClock</p></td>
 <td><p>ClockDomain</p></td>
-<td><p>推送侧使用的时钟域</p></td>
+<td><p>压入数据端使用的时钟域</p></td>
 </tr>
-<tr class="row-even"><td><p>输出时钟</p></td>
+<tr class="row-even"><td><p>outputClock</p></td>
 <td><p>ClockDomain</p></td>
-<td><p>pop侧使用的时钟域</p></td>
+<td><p>弹出数据端使用的时钟域</p></td>
 </tr>
 </tbody>
 </table>
@@ -1636,15 +1636,15 @@
 <tbody>
 <tr class="row-even"><td><p>input</p></td>
 <td><p>Stream[T]</p></td>
-<td><p>用于推送元素</p></td>
+<td><p>用于压入数据</p></td>
 </tr>
-<tr class="row-odd"><td><p>输出</p></td>
+<tr class="row-odd"><td><p>output</p></td>
 <td><p>Stream[T]</p></td>
-<td><p>用于弹出元素</p></td>
+<td><p>用于弹出数据</p></td>
 </tr>
 </tbody>
 </table>
-<p>或者，您也可以使用更短的语法，直接返回交叉时钟流：</p>
+<p>或者您也可以使用更简短的语句，直接返回跨时钟域的反压流：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">clockA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">(</span><span class="o">???</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">clockB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">(</span><span class="o">???</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">streamA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
@@ -1657,26 +1657,26 @@
 </div>
 </section>
 <section id="streamwidthadapter">
-<h3>流宽度适配器<a class="headerlink" href="#streamwidthadapter" title="此标题的永久链接"></a></h3>
-<p>该组件使输入流的宽度适应输出流。当“outStream”有效负载的宽度大于“inStream”时，通过将多个输入事务的有效负载合并为一个；相反，如果“outStream”的有效负载宽度小于“inStream”，则一个输入事务将被拆分为多个输出事务。</p>
-<p>在最好的情况下，“inStream”的有效负载宽度应该是“outStream”的整数倍，如下所示。</p>
+<h3>StreamWidthAdapter（反压流位宽适应器）<a class="headerlink" href="#streamwidthadapter" title="此标题的永久链接"></a></h3>
+<p>该组件使输入反压流的位宽和输出反压流匹配。当 <code class="docutils literal notranslate"><span class="pre">outStream</span></code> 的负载的位宽大于 <code class="docutils literal notranslate"><span class="pre">inStream</span></code> 时，通过将多个输入传输任务的负载合并为一个；相反，如果 <code class="docutils literal notranslate"><span class="pre">outStream</span></code> 的负载位宽小于 <code class="docutils literal notranslate"><span class="pre">inStream</span></code> ，则一个输入传输任务将被拆分为多个输出传输任务。</p>
+<p>在最好的情况下， <code class="docutils literal notranslate"><span class="pre">inStream</span></code> 的负载位宽应该是 <code class="docutils literal notranslate"><span class="pre">outStream</span></code> 的整数倍，如下所示。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">outStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">adapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamWidthAdapter</span><span class="p">(</span><span class="n">inStream</span><span class="p">,</span><span class="w"> </span><span class="n">outStream</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>如上例所示，两个“inStream”交易将合并为一个“outStream”交易，并且第一个输入交易的有效负载将默认放置在输出有效负载的较低位上。</p>
-<p>如果输入事务有效负载放置的预期顺序与默认设置不同，请参阅以下示例。</p>
+<p>如上例所示，两个 <code class="docutils literal notranslate"><span class="pre">inStream</span></code> 传输任务将合并为一个 <code class="docutils literal notranslate"><span class="pre">outStream</span></code> 传输任务，并且第一个输入传输任务的负载将默认置于输出负载的低位上。</p>
+<p>如果输入传输任务负载放置的期望顺序与默认设置不同，请参阅以下示例。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">outStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">adapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamWidthAdapter</span><span class="p">(</span><span class="n">inStream</span><span class="p">,</span><span class="w"> </span><span class="n">outStream</span><span class="p">,</span><span class="w"> </span><span class="n">order</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">SlicesOrder</span><span class="p">.</span><span class="nc">HIGHER_FIRST</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>还有一个传统参数称为“endianness”，它与“ORDER”具有相同的效果。当为“LITTLE”时，“endianness”的值与“order”的“LOWER_FIRST”相同，当为“BIG”时，与“HIGHER_FIRST”相同。 “padding”参数是一个可选的布尔值，用于确定适配器是否接受输入和输出有效负载宽度的非整数倍。</p>
+<p>还有一个称为 <code class="docutils literal notranslate"><span class="pre">endianness</span></code> 的传统参数，它与 <code class="docutils literal notranslate"><span class="pre">ORDER</span></code> 具有相同的效果。当 <code class="docutils literal notranslate"><span class="pre">endianness</span></code> 的值为 <code class="docutils literal notranslate"><span class="pre">LITTLE</span></code> 时，它与 <code class="docutils literal notranslate"><span class="pre">order</span></code> 的 <code class="docutils literal notranslate"><span class="pre">LOWER_FIRST</span></code> 相同；当为 <code class="docutils literal notranslate"><span class="pre">BIG</span></code> 时，它与 <code class="docutils literal notranslate"><span class="pre">HIGHER_FIRST</span></code> 相同。 <code class="docutils literal notranslate"><span class="pre">padding</span></code> 参数是一个可选的布尔逻辑值，它用于确定适应器是否接受输入和输出负载位宽为非整数倍。</p>
 </section>
 <section id="streamarbiter">
-<h3>流仲裁器<a class="headerlink" href="#streamarbiter" title="此标题的永久链接"></a></h3>
-<p>当您有多个 Stream 并且您想要仲裁它们以驱动单个 Stream 时，您可以使用 StreamArbiterFactory。</p>
+<h3>StreamArbiter（反压流仲裁器）<a class="headerlink" href="#streamarbiter" title="此标题的永久链接"></a></h3>
+<p>当您有多个Stream反压流并且您想要仲裁它们以驱动单个反压流时，您可以使用 StreamArbiterFactory。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">streamA</span><span class="p">,</span><span class="w"> </span><span class="n">streamB</span><span class="p">,</span><span class="w"> </span><span class="n">streamC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">arbitredABC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamArbiterFactory</span><span class="p">.</span><span class="n">roundRobin</span><span class="p">.</span><span class="n">onArgs</span><span class="p">(</span><span class="n">streamA</span><span class="p">,</span><span class="w"> </span><span class="n">streamB</span><span class="p">,</span><span class="w"> </span><span class="n">streamC</span><span class="p">)</span>
 
@@ -1690,21 +1690,21 @@
 <col style="width: 83%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>仲裁功能</p></th>
+<tr class="row-odd"><th class="head"><p>仲裁函数</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>低优先级</p></td>
-<td><p>较低端口优先于较高端口</p></td>
+<tr class="row-even"><td><p>lowerFirst</p></td>
+<td><p>较低端口优先级高于较高端口</p></td>
 </tr>
-<tr class="row-odd"><td><p>循环赛</p></td>
-<td><p>公平循环仲裁</p></td>
+<tr class="row-odd"><td><p>roundRobin</p></td>
+<td><p>公平轮询仲裁</p></td>
 </tr>
-<tr class="row-even"><td><p>顺序</p></td>
+<tr class="row-even"><td><p>sequentialOrder</p></td>
 <td><div class="line-block">
-<div class="line">可用于按顺序检索交易</div>
-<div class="line">第一个事务应该来自端口 0，然后来自端口 1，…</div>
+<div class="line">可用于按顺序遍历任务</div>
+<div class="line">第一个传输应该来自端口 0，然后来自端口 1，…</div>
 </div>
 </td>
 </tr>
@@ -1716,18 +1716,18 @@
 <col style="width: 83%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>锁定功能</p></th>
+<tr class="row-odd"><th class="head"><p>锁函数</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>无锁</p></td>
-<td><p>即使所选端口上的交易未被消耗，端口选择也可能在每个周期发生变化。</p></td>
+<tr class="row-even"><td><p>noLock</p></td>
+<td><p>端口选择可以在每个周期改变，即使被选择的端口的传输没有执行。</p></td>
 </tr>
-<tr class="row-odd"><td><p>交易锁</p></td>
-<td><p>端口选择被锁定，直到所选端口上的交易被消耗。</p></td>
+<tr class="row-odd"><td><p>transactionLock</p></td>
+<td><p>端口选择被锁定，直到所选端口上的数据传输完成。</p></td>
 </tr>
-<tr class="row-even"><td><p>片段锁</p></td>
+<tr class="row-even"><td><p>fragmentLock</p></td>
 <td><div class="line-block">
 <div class="line">可用于仲裁 Stream[Flow[T]]。</div>
 <div class="line">在此模式下，端口选择被锁定，直到所选端口完成突发（last=True）。</div>
@@ -1747,26 +1747,26 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>on(输入：Seq[Stream[T]])</p></td>
+<tr class="row-even"><td><p>on(inputs : Seq[Stream[T]])</p></td>
 <td><p>Stream[T]</p></td>
 </tr>
-<tr class="row-odd"><td><p>onArgs(输入：流[T]*)</p></td>
+<tr class="row-odd"><td><p>onArgs(inputs : Stream[T]*)</p></td>
 <td><p>Stream[T]</p></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="streamjoin">
-<h3>流连接<a class="headerlink" href="#streamjoin" title="此标题的永久链接"></a></h3>
-<p>This utility takes multiple input streams and waits until all of them fire <cite>valid</cite> before letting all of them through by providing <cite>ready</cite>.</p>
+<h3>StreamJoin<a class="headerlink" href="#streamjoin" title="此标题的永久链接"></a></h3>
+<p>该实用工具接收多个输入反压流并等待所有输入反压流触发 <cite>valid</cite> ，然后再通过提供 <cite>ready</cite> 信号让所有输入流通过。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">cmdJoin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Cmd</span><span class="p">())</span>
 <span class="n">cmdJoin</span><span class="p">.</span><span class="n">arbitrationFrom</span><span class="p">(</span><span class="nc">StreamJoin</span><span class="p">.</span><span class="n">arg</span><span class="p">(</span><span class="n">cmdABuffer</span><span class="p">,</span><span class="w"> </span><span class="n">cmdBBuffer</span><span class="p">))</span>
 </pre></div>
 </div>
 </section>
 <section id="streamfork">
-<h3>流叉<a class="headerlink" href="#streamfork" title="此标题的永久链接"></a></h3>
-<p>StreamFork 会将每个传入数据克隆到其所有输出流。如果 synchronous 为 true，则所有输出流将始终一起触发，这意味着该流将停止，直到所有输出流准备就绪。如果 synchronous 为 false，则输出流可能一次准备好一个，但需要额外的触发器（每个输出 1 位）。输入流将阻塞，直到所有输出流都处理完每个项目为止。</p>
+<h3>StreamFork<a class="headerlink" href="#streamfork" title="此标题的永久链接"></a></h3>
+<p>StreamFork会将每个传入数据克隆到其所有输出流。如果synchronous为true，则所有输出流将始终一起触发，这意味着直到所有输出流准备就绪前该流将都将暂停。如果synchronous为false，那么一次可能只有一个输出流准备就绪，但需要一个额外的触发器（每个输出1位）。直到所有输出流都处理完每个项目前，输入流将阻塞。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="p">(</span><span class="n">outputstream1</span><span class="p">,</span><span class="w"> </span><span class="n">outputstream2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamFork2</span><span class="p">(</span><span class="n">inputStream</span><span class="p">,</span><span class="w"> </span><span class="n">synchronous</span><span class="o">=</span><span class="kc">false</span><span class="p">)</span>
 </pre></div>
@@ -1778,8 +1778,8 @@
 </div>
 </section>
 <section id="streammux">
-<h3>流复用器<a class="headerlink" href="#streammux" title="此标题的永久链接"></a></h3>
-<p>“Stream”的多路复用器实现。它接受一个“select”信号和“inputs”中的流，并返回一个“Stream”，该“Stream”连接到“select”指定的输入流之一。 “StreamArbiter” 是一个与此类似的工具，但功能更强大。</p>
+<h3>StreamMux<a class="headerlink" href="#streammux" title="此标题的永久链接"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Stream</span></code> 的多路复用器实现。它接受一个 <code class="docutils literal notranslate"><span class="pre">select</span></code> 信号和 <code class="docutils literal notranslate"><span class="pre">inputs</span></code> 中的反压流，并返回一个 <code class="docutils literal notranslate"><span class="pre">Stream</span></code> ，该 <code class="docutils literal notranslate"><span class="pre">Stream</span></code> 连接到 <code class="docutils literal notranslate"><span class="pre">select</span></code> 指定的其中一个输入流。 <code class="docutils literal notranslate"><span class="pre">StreamArbiter</span></code> 是一个与此类似的工具，但功能更强大。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inputStreams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Vec</span><span class="p">(</span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)),</span><span class="w"> </span><span class="n">portCount</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="n">log2Up</span><span class="p">(</span><span class="n">inputStreams</span><span class="p">.</span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">outputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamMux</span><span class="p">(</span><span class="n">select</span><span class="p">,</span><span class="w"> </span><span class="n">inputStreams</span><span class="p">)</span>
@@ -1787,12 +1787,12 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>当输出流停止时，不能更改“select”信号的“UInt”类型，否则可能会动态中断事务。使用“Stream”类型的“select”可以生成一个流接口，该接口仅在安全时触发并更改路由。</p>
+<p>当输出流暂停时， <code class="docutils literal notranslate"><span class="pre">select</span></code> 信号的 <code class="docutils literal notranslate"><span class="pre">UInt</span></code> 类型不能更改，否则可能会中断执行中的传输任务。使用 <code class="docutils literal notranslate"><span class="pre">Stream</span></code> 类型的 <code class="docutils literal notranslate"><span class="pre">select</span></code> 可以生成一个流接口，该接口仅在安全时触发并更改路径。</p>
 </div>
 </section>
 <section id="streamdemux">
-<h3>流解复用器<a class="headerlink" href="#streamdemux" title="此标题的永久链接"></a></h3>
-<p>“Stream”的解复用实现。它需要一个“input”、一个“select”和一个“portCount”并返回一个“Vec(Stream)”，其中由“select”指定的输出流连接到“input” <a href="#id1"><span class="problematic" id="id2">``</span></a>，其他输出流处于非活动状态。为了安全交易，请参阅上面的注释。</p>
+<h3>StreamDemux<a class="headerlink" href="#streamdemux" title="此标题的永久链接"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Stream</span></code> 的解复用实现。它需要一个 <code class="docutils literal notranslate"><span class="pre">input</span></code> 、一个 <code class="docutils literal notranslate"><span class="pre">select</span></code> 和一个 <code class="docutils literal notranslate"><span class="pre">portCount</span></code> 并返回一个 <code class="docutils literal notranslate"><span class="pre">Vec(Stream)</span></code> ，其中输出流由 <code class="docutils literal notranslate"><span class="pre">select</span></code> 指定并连接到 <code class="docutils literal notranslate"><span class="pre">input</span></code> ，其他输出流处于非活动状态。为了安全传输，请参阅上面的注释。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="n">log2Up</span><span class="p">(</span><span class="n">portCount</span><span class="p">)</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">outputStreams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamDemux</span><span class="p">(</span><span class="n">inputStream</span><span class="p">,</span><span class="w"> </span><span class="n">select</span><span class="p">,</span><span class="w"> </span><span class="n">portCount</span><span class="p">)</span>
@@ -1800,8 +1800,8 @@
 </div>
 </section>
 <section id="streamdispatchersequencial">
-<h3>流调度器顺序<a class="headerlink" href="#streamdispatchersequencial" title="此标题的永久链接"></a></h3>
-<p>该实用程序获取其输入流并将其按顺序路由到“outputCount”流。</p>
+<h3>StreamDispatcherSequencial<a class="headerlink" href="#streamdispatchersequencial" title="此标题的永久链接"></a></h3>
+<p>该工具获取其输入流并将其按顺序连接到 <code class="docutils literal notranslate"><span class="pre">outputCount</span></code> 反压流。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">dispatchedStreams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StreamDispatcherSequencial</span><span class="p">(</span>
 <span class="w">  </span><span class="n">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">inputStream</span><span class="p">,</span>
@@ -1811,8 +1811,8 @@
 </div>
 </section>
 <section id="streamtransactionextender">
-<h3>流事务扩展器<a class="headerlink" href="#streamtransactionextender" title="此标题的永久链接"></a></h3>
-<p>该实用程序将采用一个输入传输并生成多个输出传输，它提供了将有效负载值重复“count+1”次到输出传输的功能。每次为单个有效负载触发 inputStream 时，都会捕获并注册“count”。</p>
+<h3>StreamTransactionExtender<a class="headerlink" href="#streamtransactionextender" title="此标题的永久链接"></a></h3>
+<p>该工具将使用一个输入传输并生成多个输出传输，它提供了将负载值重复 <code class="docutils literal notranslate"><span class="pre">count+1</span></code> 次到输出传输的功能。每当为单个负载而触发inputStream时，都会捕获并寄存 <code class="docutils literal notranslate"><span class="pre">count</span></code> 。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">inputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">outputStream</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Stream</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UInt</span><span class="p">(</span><span class="mi">3</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
@@ -1824,7 +1824,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>该“扩展器”提供了多种状态信号，例如“工作中”、“最后一个”、“完成”，其中“工作中”表示有一个输入传输已接受并正在进行中，“ last`` 表示最后一个输出传输已准备好并等待完成，<code class="docutils literal notranslate"><span class="pre">done</span></code> 变为有效表示最后一个输出传输正在触发并使当前输入事务处理完成并准备好启动另一个事务。</p>
+<p>该 <code class="docutils literal notranslate"><span class="pre">extender</span></code> 提供了多种状态信号，例如 <code class="docutils literal notranslate"><span class="pre">working</span></code> 、 <code class="docutils literal notranslate"><span class="pre">last</span></code> 、<code class="docutils literal notranslate"><span class="pre">done</span></code> ，其中 <code class="docutils literal notranslate"><span class="pre">working</span></code> 表示有一个输入传输已接受并正在进行中， <code class="docutils literal notranslate"><span class="pre">last</span></code> 表示最后一个输出传输已准备好并等待完成，<code class="docutils literal notranslate"><span class="pre">done</span></code> 变为有效表示最后一个输出传输正在触发，并使当前输入传输任务处理完成且准备好启动另一个传输。</p>
 
 <div style="overflow-x:auto">
 <script type="WaveDrom">
@@ -1842,13 +1842,13 @@
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果仅需要输出流计数，则使用“StreamTransactionCounter”代替。</p>
+<p>如果仅需要对输出流计数，那么可以使用 <code class="docutils literal notranslate"><span class="pre">StreamTransactionCounter</span></code> 。</p>
 </div>
 </section>
 </section>
 <section id="simulation-support">
-<h2>模拟支持<a class="headerlink" href="#simulation-support" title="此标题的永久链接"></a></h2>
-<p>对于模拟主站和从站实现可用：</p>
+<h2>仿真支持<a class="headerlink" href="#simulation-support" title="此标题的永久链接"></a></h2>
+<p>对于仿真，有以下可用的主端和从端实现：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
@@ -1860,17 +1860,17 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>流监控器</p></td>
-<td><p>用于主端和从端，如果 Stream 触发，则调用带有有效负载的函数。</p></td>
+<tr class="row-even"><td><p>StreamMonitor</p></td>
+<td><p>用于主端和从端，如果Stream触发，则调用带有负载的函数。</p></td>
 </tr>
-<tr class="row-odd"><td><p>流驱动程序</p></td>
-<td><p>测试平台主端，通过调用函数来应用值（如果可用）来驱动值。如果值可用，则函数必须返回。支持随机延迟。</p></td>
+<tr class="row-odd"><td><p>StreamDriver</p></td>
+<td><p>Testbench中主端通过调用函数来应用值（如果可用）以驱动值。如果值可用，则函数必须返回。支持随机的延迟。</p></td>
 </tr>
 <tr class="row-even"><td><p>StreamReadyRandmizer</p></td>
-<td><p>随机化“准备好”接收数据，测试平台是从属端。</p></td>
+<td><p>随机产生 <code class="docutils literal notranslate"><span class="pre">ready</span></code> 以接收数据，testbench为从端。</p></td>
 </tr>
-<tr class="row-odd"><td><p>记分牌按顺序</p></td>
-<td><p>通常用于比较参考/待测数据</p></td>
+<tr class="row-odd"><td><p>ScoreboardInOrder</p></td>
+<td><p>通常用于比较参考/dut数据</p></td>
 </tr>
 </tbody>
 </table>
@@ -1926,7 +1926,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
         <a href="utils.html" class="btn btn-neutral float-left" title="实用工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
-        <a href="flow.html" class="btn btn-neutral float-right" title="流动" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="flow.html" class="btn btn-neutral float-right" title="数据流" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

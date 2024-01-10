@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="VexRiscv（RV32IM CPU）" href="vexriscv.html" />
-    <link rel="prev" title="分段" href="fragment.html" />
+    <link rel="prev" title="片段" href="fragment.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -643,58 +643,58 @@
 <li class="toctree-l3"><a class="reference internal" href="stream.html#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stream.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="stream.html#utils">实用工具</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifo">流先进先出</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifocc">流FifoCC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifo">StreamFifo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfifocc">StreamFifoCC</a></li>
 <li class="toctree-l4"><a class="reference internal" href="stream.html#streamccbytoggle">StreamCCByToggle</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamwidthadapter">流宽度适配器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamarbiter">流仲裁器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamjoin">流连接</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfork">流叉</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streammux">流复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdemux">流解复用器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdispatchersequencial">流调度器顺序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="stream.html#streamtransactionextender">流事务扩展器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamwidthadapter">StreamWidthAdapter（反压流位宽适应器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamarbiter">StreamArbiter（反压流仲裁器）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamjoin">StreamJoin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamfork">StreamFork</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streammux">StreamMux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdemux">StreamDemux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamdispatchersequencial">StreamDispatcherSequencial</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stream.html#streamtransactionextender">StreamTransactionExtender</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="stream.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stream.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="flow.html">流动</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="flow.html">数据流</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="flow.html#code-example">代码示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">模拟支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="flow.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fragment.html">分段</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fragment.html">片段</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fragment.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fragment.html#functions">函数</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">状态机</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#statemachine">状态机</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#statemachine">StateMachine</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#entry-point">入口点</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#transitions">过渡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transitions">转换</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#state-encoding">状态编码</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#states">状态</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#statedelay">状态延迟</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#statefsm">国家FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#stateparallelfsm">状态并行FSM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#notes-about-the-entry-state">关于进入状态的注释</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statedelay">StateDelay（状态延迟）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statefsm">StateFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stateparallelfsm">StateParallelFsm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#notes-about-the-entry-state">关于入口状态的注释</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="vexriscv.html">VexRiscv（RV32IM CPU）</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bus_slave_factory.html">总线从属工厂</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bus_slave_factory.html">总线从端生成器</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#introduction">简介</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#functionality">功能性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bus_slave_factory.html#functionality">功能</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤维骨架</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fiber.html">纤程框架</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#simple-dummy-example">简单的虚拟示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="fiber.html#handle-t">手柄[T]</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="fiber.html#soon-handle">很快（处理）</a></li>
@@ -711,22 +711,22 @@
 <li class="toctree-l3"><a class="reference internal" href="binarySystem.html#bigint-enricher">BigInt 丰富器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#automatic-allocation">自动分配</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#access-types">28 种访问类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#access-types">28种访问类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#automatic-documentation-generation">自动生成文档</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#special-access-usage">特殊访问使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#special-access-usage">特殊访问用途</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#byte-mask">字节掩码</a></li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#typical-example">典型例子</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#interrupt-factory">中断工厂</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="regIf.html#ip-level-interrupt-factory">IP级中断工厂</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#interrupt-factory">中断生成器</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="regIf.html#ip-level-interrupt-factory">IP级中断生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="regIf.html#sys-level-interrupt-merge">SYS级中断合并</a></li>
-<li class="toctree-l4"><a class="reference internal" href="regIf.html#spinal-factory">脊柱工厂</a></li>
+<li class="toctree-l4"><a class="reference internal" href="regIf.html#spinal-factory">Spinal的生成器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="regIf.html#example">示例</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="regIf.html#defaultreadvalue">默认读取值</a></li>
-<li class="toctree-l3"><a class="reference internal" href="regIf.html#developers-area">开发商专区</a></li>
+<li class="toctree-l3"><a class="reference internal" href="regIf.html#developers-area">开发者区域</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Bus/index.html">总线</a><ul>
@@ -1179,10 +1179,10 @@
 <span id="id1"></span><h1>状态机<a class="headerlink" href="#state-machine" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
-<p>在 SpinalHDL 中，您可以像在 VHDL/Verilog 中一样，通过使用枚举和 switch/case 语句来定义状态机。但在 SpinalHDL 中，您还可以使用专用语法。</p>
-<p>下面的状态机在以下示例中实现：</p>
+<p>在SpinalHDL中，您可以像在VHDL/Verilog中一样，通过使用枚举和switch/case语句来定义状态机。但在SpinalHDL中，您还可以使用专门的语句。</p>
+<p>下面的状态机在随后的示例中实现：</p>
 <a class="reference internal image-reference" href="../../_images/fsm_simple.svg"><img alt="../../_images/fsm_simple.svg" class="align-center" src="../../_images/fsm_simple.svg" width="300" /></a>
-<p>款式A：</p>
+<p>样式A：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">lib</span><span class="p">.</span><span class="nn">fsm</span><span class="p">.</span><span class="n">_</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
@@ -1214,7 +1214,7 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>款式B：</p>
+<p>样式B：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">lib</span><span class="p">.</span><span class="nn">fsm</span><span class="p">.</span><span class="n">_</span>
 
 <span class="k">class</span><span class="w"> </span><span class="nc">TopLevel</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
@@ -1251,8 +1251,8 @@
 </div>
 </section>
 <section id="statemachine">
-<h2>状态机<a class="headerlink" href="#statemachine" title="此标题的永久链接"></a></h2>
-<p>“StateMachine”是基类。它管理 FSM 的逻辑。</p>
+<h2>StateMachine<a class="headerlink" href="#statemachine" title="此标题的永久链接"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">StateMachine</span></code> 是基类，它管理FSM的逻辑。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">myFsm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">StateMachine</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Definition of states</span>
 <span class="p">}</span>
@@ -1272,41 +1272,41 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">isActive（状态）</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">布尔</span></code></p></td>
-<td><p>当状态机处于给定状态时返回“True”</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">isActive(state)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Bool</span></code></p></td>
+<td><p>当状态机处于给定状态时返回 <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">正在进入（状态）</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">布尔</span></code></p></td>
-<td><p>当状态机进入给定状态时返回“True”</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">isEntering(state)</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Bool</span></code></p></td>
+<td><p>当状态机进入给定状态时返回 <code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
 </tr>
 </tbody>
 </table>
 <section id="entry-point">
 <h3>入口点<a class="headerlink" href="#entry-point" title="此标题的永久链接"></a></h3>
-<p>通过扩展 EntryPoint 特征，可以将状态定义为状态机的入口点：</p>
+<p>通过扩展EntryPoint特征，可以将状态定义为状态机的入口点：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">stateA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="nc">EntryPoint</span>
 </pre></div>
 </div>
-<p>或者使用“setEntry(state)”：</p>
+<p>或者使用 <code class="docutils literal notranslate"><span class="pre">setEntry(state)</span></code> ：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">stateA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">State</span>
 <span class="n">setEntry</span><span class="p">(</span><span class="n">stateA</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="transitions">
-<h3>过渡<a class="headerlink" href="#transitions" title="此标题的永久链接"></a></h3>
+<h3>转换<a class="headerlink" href="#transitions" title="此标题的永久链接"></a></h3>
 <ul class="simple">
-<li><p>转换由“goto(nextState)”表示，它安排状态机在下一个周期处于“nextState”。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">exit()</span></code> 安排状态机在下一个周期处于启动状态（或者，在 <code class="docutils literal notranslate"><span class="pre">StateFsm</span></code> 中，退出当前的嵌套状态机）。</p></li>
+<li><p>转换由 <code class="docutils literal notranslate"><span class="pre">goto(nextState)</span></code> 表示，它使状态机的状态在下一个周期转换到 <code class="docutils literal notranslate"><span class="pre">nextState</span></code> 。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exit()</span></code> 使状态机在下一个周期处于启动(boot)状态（或者，在 <code class="docutils literal notranslate"><span class="pre">StateFsm</span></code> 中，退出当前的嵌套状态机）。</p></li>
 </ul>
-<p>这两个函数可以在状态定义内部使用（见下文）或使用“always { yourStatements }”，它总是应用“yourStatements”，优先于状态。</p>
+<p>这两个函数可以在状态定义中使用（见下文），或使用 <code class="docutils literal notranslate"><span class="pre">always</span> <span class="pre">{</span> <span class="pre">yourStatements</span> <span class="pre">}</span></code> ，这将始终应用 <code class="docutils literal notranslate"><span class="pre">yourStatements</span></code>，并且优先级高于状态。</p>
 </section>
 <section id="state-encoding">
 <h3>状态编码<a class="headerlink" href="#state-encoding" title="此标题的永久链接"></a></h3>
-<p>默认情况下，FSM 状态向量将使用生成 RTL 的语言/工具（Verilog 或 VHDL）的本机编码进行编码。可以使用“setEncoding(…)”方法覆盖此默认值，该方法采用“SpinalEnumEncoding”或“(State, BigInt)”类型的可变参数进行自定义编码。</p>
+<p>默认情况下，FSM状态向量将使用（针对Verilog或VHDL）生成RTL的语言/工具的本地编码进行编码。可以通过使用 <code class="docutils literal notranslate"><span class="pre">setEncoding(...)</span></code> 函数覆盖此默认设置，该方法接收 <code class="docutils literal notranslate"><span class="pre">SpinalEnumEncoding</span></code> 或类型为 <code class="docutils literal notranslate"><span class="pre">(State,</span> <span class="pre">BigInt)</span></code> 的可变参数以进行自定义编码。</p>
 <div class="literal-block-wrapper docutils container" id="id2">
-<div class="code-block-caption"><span class="caption-text">使用“SpinalEnumEncoding”</span><a class="headerlink" href="#id2" title="此代码块的永久链接"></a></div>
+<div class="code-block-caption"><span class="caption-text">使用 <code class="docutils literal notranslate"><span class="pre">SpinalEnumEncoding</span></code></span><a class="headerlink" href="#id2" title="此代码块的永久链接"></a></div>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">fsm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">StateMachine</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">setEncoding</span><span class="p">(</span><span class="n">binaryOneHot</span><span class="p">)</span>
 
@@ -1328,20 +1328,20 @@
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>当使用“graySequential”枚举编码时，不会进行任何检查来验证 FSM 转换仅在状态向量中产生单位变化。编码是根据状态定义的顺序完成的，设计者必须确保仅在需要时进行有效的转换。</p>
+<p>当使用 <code class="docutils literal notranslate"><span class="pre">graySequential</span></code> 枚举编码时，不会进行任何检查以验证FSM转换是否只在状态向量中产生单比特的变化。编码是根据状态定义的顺序完成的，设计者必须确保仅在需要时进行有效的转换。</p>
 </div>
 </section>
 </section>
 <section id="states">
 <h2>状态<a class="headerlink" href="#states" title="此标题的永久链接"></a></h2>
-<p>可以使用多种状态：</p>
+<p>可以使用多种类型的状态：</p>
 <ul class="simple">
-<li><p>“状态”（基础状态）</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">状态延迟</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">国家自由主义</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">状态并行Fsm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">State</span></code> （基础状态）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">StateDelay</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">StateFsm</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">StateParallelFsm</span></code></p></li>
 </ul>
-<p>它们每个都提供以下函数来定义与其关联的逻辑：</p>
+<p>它们每个都提供了以下函数来定义与之相关的逻辑：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 9%" />
@@ -1359,7 +1359,7 @@
 </pre></div>
 </div>
 </td>
-<td><p>当状态机不处于“state”并且在下一个周期将处于“state”时，应用“yourStatements”</p></td>
+<td><p>当状态机不在 <code class="docutils literal notranslate"><span class="pre">state</span></code> 状态，并且在下一个周期将处于 <code class="docutils literal notranslate"><span class="pre">state</span></code> 状态时，执行 <code class="docutils literal notranslate"><span class="pre">yourStatements</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">state</span><span class="p">.</span><span class="n">onExit</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">yourStatements</span>
@@ -1367,7 +1367,7 @@
 </pre></div>
 </div>
 </td>
-<td><p>当状态机处于“state”时应用“yourStatements”，并且在下一个周期将处于另一个状态</p></td>
+<td><p>当状态机在 <code class="docutils literal notranslate"><span class="pre">state</span></code> 状态时执行 <code class="docutils literal notranslate"><span class="pre">yourStatements</span></code> ，并且在下一个周期将处于另一个状态</p></td>
 </tr>
 <tr class="row-even"><td><div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">state</span><span class="p">.</span><span class="n">whenIsActive</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">yourStatements</span>
@@ -1375,7 +1375,7 @@
 </pre></div>
 </div>
 </td>
-<td><p>当状态机处于“state”时应用“yourStatements”</p></td>
+<td><p>当状态机在 <code class="docutils literal notranslate"><span class="pre">state</span></code> 状态时执行 <code class="docutils literal notranslate"><span class="pre">yourStatements</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">state</span><span class="p">.</span><span class="n">whenIsNext</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">yourStatements</span>
@@ -1383,11 +1383,11 @@
 </pre></div>
 </div>
 </td>
-<td><p>当状态机在下一个周期处于“state”时（即使它已经在其中），“yourStatements”被执行</p></td>
+<td><p>当状态机在下一个周期处于 <code class="docutils literal notranslate"><span class="pre">state</span></code> 状态时， <code class="docutils literal notranslate"><span class="pre">yourStatements</span></code> 被执行（即使它已经处于该状态）</p></td>
 </tr>
 </tbody>
 </table>
-<p>“state.” 隐含在“new State” 块中：</p>
+<p><code class="docutils literal notranslate"><span class="pre">state.</span></code> 隐含在 <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">State</span></code> 块中：</p>
 <a class="reference internal image-reference" href="../../_images/fsm_stateb.svg"><img alt="../../_images/fsm_stateb.svg" class="align-center" src="../../_images/fsm_stateb.svg" width="300" /></a>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">stateB</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">onEntry</span><span class="p">(</span><span class="n">counter</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
@@ -1402,8 +1402,8 @@
 </pre></div>
 </div>
 <section id="statedelay">
-<h3>状态延迟<a class="headerlink" href="#statedelay" title="此标题的永久链接"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">StateDelay</span></code> allows you to create a state which waits for a fixed number of cycles before executing statements in <code class="docutils literal notranslate"><span class="pre">whenCompleted</span> <span class="pre">{...}</span></code>. The preferred way to use it is:</p>
+<h3>StateDelay（状态延迟）<a class="headerlink" href="#statedelay" title="此标题的永久链接"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">StateDelay</span></code> 允许您创建一个状态，该状态在执行 <code class="docutils literal notranslate"><span class="pre">whenCompleted</span> <span class="pre">{...}</span></code> 中的语句之前等待固定数量的周期。首选的使用方式是：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">stateG</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">State</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">StateDelay</span><span class="p">(</span><span class="n">cyclesCount</span><span class="o">=</span><span class="mi">40</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">whenCompleted</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">goto</span><span class="p">(</span><span class="n">stateH</span><span class="p">)</span>
@@ -1417,9 +1417,9 @@
 </div>
 </section>
 <section id="statefsm">
-<h3>国家FSM<a class="headerlink" href="#statefsm" title="此标题的永久链接"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">StateFsm</span></code> allows you to describe a state containing a nested state machine. When the nested state machine is done (exited), statements in <code class="docutils literal notranslate"><span class="pre">whenCompleted</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> are executed.</p>
-<p>有一个 StateFsm 定义的示例：</p>
+<h3>StateFsm<a class="headerlink" href="#statefsm" title="此标题的永久链接"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">StateFsm</span></code> 允许您描述一个包含嵌套状态机的状态。当嵌套状态机完成（退出）时，执行 <code class="docutils literal notranslate"><span class="pre">whenCompleted</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> 中的语句。</p>
+<p>这是一个StateFsm定义的示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// internalFsm is a function defined below</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">stateC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">StateFsm</span><span class="p">(</span><span class="n">fsm</span><span class="o">=</span><span class="n">internalFsm</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">whenCompleted</span><span class="w"> </span><span class="p">{</span>
@@ -1448,11 +1448,11 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>在上面的示例中，“exit()”使状态机跳转到引导状态（内部隐藏状态）。这通知“StateFsm”有关内部状态机的完成。</p>
+<p>在上面的示例中， <code class="docutils literal notranslate"><span class="pre">exit()</span></code> 使状态机跳转到启动状态（内部隐藏状态）。这将通知 <code class="docutils literal notranslate"><span class="pre">StateFsm</span></code> 其内部状态机已经完成。</p>
 </section>
 <section id="stateparallelfsm">
-<h3>状态并行FSM<a class="headerlink" href="#stateparallelfsm" title="此标题的永久链接"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">StateParallelFsm</span></code> allows you to handle multiple nested state machines. When all nested state machine are done, statements in <code class="docutils literal notranslate"><span class="pre">whenCompleted</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> are executed.</p>
+<h3>StateParallelFsm<a class="headerlink" href="#stateparallelfsm" title="此标题的永久链接"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">StateParallelFsm</span></code> 允许您处理多个嵌套状态机。当所有嵌套状态机完成时，执行 <code class="docutils literal notranslate"><span class="pre">whenCompleted</span> <span class="pre">{</span> <span class="pre">...</span> <span class="pre">}</span></code> 中的语句。</p>
 <p>示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">stateD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">StateParallelFsm</span><span class="w"> </span><span class="p">(</span><span class="n">internalFsmA</span><span class="p">(),</span><span class="w"> </span><span class="n">internalFsmB</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="n">whenCompleted</span><span class="w"> </span><span class="p">{</span>
@@ -1463,17 +1463,17 @@
 </div>
 </section>
 <section id="notes-about-the-entry-state">
-<h3>关于进入状态的注释<a class="headerlink" href="#notes-about-the-entry-state" title="此标题的永久链接"></a></h3>
-<p>上面定义进入状态的方式使得在复位和第一次时钟采样之间，状态机处于引导状态。只有在第一次时钟采样之后，定义的进入状态才会变为活动状态。这允许正确进入进入状态（在“onEntry”中应用语句），并允许嵌套状态机。</p>
+<h3>关于入口状态的注释<a class="headerlink" href="#notes-about-the-entry-state" title="此标题的永久链接"></a></h3>
+<p>上面定义入口状态的方式使得在复位和第一次时钟采样之间，状态机处于启动状态。只有在第一次时钟采样之后，定义的入口状态才会变为活动状态。这保证了能正确进入入口状态（在 <code class="docutils literal notranslate"><span class="pre">onEntry</span></code> 中应用语句），并支持嵌套状态机。</p>
 <p>虽然它很有用，但也可以绕过该功能并直接让状态机启动到用户状态。</p>
-<p>为此，请使用“makeInstantEntry()”而不是定义“new State”。该函数返回启动状态，复位后直接激活。</p>
+<p>为此，请使用 <cite>makeInstantEntry()</cite> 而不是定义 <code class="docutils literal notranslate"><span class="pre">new</span> <span class="pre">State</span></code> 。该函数返回启动状态，复位后直接激活。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>该状态的“onEntry”仅在从另一个状态转换到此状态时才会被调用，而不是在引导期间。</p>
+<p>该状态的 <code class="docutils literal notranslate"><span class="pre">onEntry</span></code> 仅在从另一个状态转换到该状态时调用，而不是在启动期间。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>在仿真过程中，启动状态始终命名为“BOOT”。</p>
+<p>在仿真过程中，启动状态始终命名为 <code class="docutils literal notranslate"><span class="pre">BOOT</span></code> 。</p>
 </div>
 <p>示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// State sequance: IDLE, STATE_A, STATE_B, ...</span>
@@ -1516,7 +1516,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="fragment.html" class="btn btn-neutral float-left" title="分段" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="fragment.html" class="btn btn-neutral float-left" title="片段" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="vexriscv.html" class="btn btn-neutral float-right" title="VexRiscv（RV32IM CPU）" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
