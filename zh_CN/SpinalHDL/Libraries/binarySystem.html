@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>二元系统 &mdash; SpinalHDL  文档</title>
+  <title>二进制系统 &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
@@ -230,7 +230,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Data%20types/bits.html">Bits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Data%20types/bits.html">位</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Data%20types/bits.html#declaration">声明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Data%20types/bits.html#operators">运算符</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Data%20types/bits.html#logic">逻辑运算</a></li>
@@ -695,20 +695,20 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="fiber.html">纤程框架</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="fiber.html#simple-dummy-example">简单的虚拟示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fiber.html#handle-t">手柄[T]</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="fiber.html#soon-handle">很快（处理）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fiber.html#simple-dummy-example">简单的示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fiber.html#handle-t">Handle[T]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fiber.html#soon-handle">soon(handle)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">二元系统</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">二进制系统</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#specification">规范</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#string-to-int-long-bigint">字符串到 Int/Long/BigInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#int-long-bigint-to-string">Int/Long/BigInt 到 String</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#int-long-bigint-to-binary-list">Int/Long/BigInt 到二进制列表</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#binary-list-to-int-long-bigint">二进制列表到 Int/Long/BigInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bigint-enricher">BigInt 丰富器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#string-to-int-long-bigint">String转为Int/Long/BigInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#int-long-bigint-to-string">Int/Long/BigInt转为String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#int-long-bigint-to-binary-list">Int/Long/BigInt转为二进制列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#binary-list-to-int-long-bigint">二进制列表转为Int/Long/BigInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bigint-enricher">BigInt放大器</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="regIf.html">寄存器接口</a><ul>
@@ -732,7 +732,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Bus/index.html">总线</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Bus/amba3/ahblite3.html">AHB-Lite3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Bus/amba3/ahblite3.html#configuration-and-instanciation">配置和实例化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Bus/amba3/ahblite3.html#variations">变化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus/amba3/ahblite3.html#variations">变体</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Bus/amba3/apb3.html">Apb3</a><ul>
@@ -740,38 +740,38 @@
 <li class="toctree-l4"><a class="reference internal" href="Bus/amba3/apb3.html#functions-and-operators">函数和运算符</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Bus/amba4/axi4.html">轴4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Bus/amba4/axi4.html">Axi4</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Bus/amba4/axi4.html#configuration-and-instanciation">配置和实例化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Bus/amba4/axi4.html#variations">变化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus/amba4/axi4.html#variations">变体</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Bus/amba4/axi4.html#functions-and-operators">函数和运算符</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Bus/avalon/avalonmm.html">阿瓦隆MM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Bus/avalon/avalonmm.html">AvalonMM</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Bus/avalon/avalonmm.html#configuration-and-instanciation">配置和实例化</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="Bus/tilelink/tilelink.html">瓦联</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Bus/tilelink/tilelink.html">Tilelink</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink.html#configuration-and-instanciation">配置和实例化</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html">tilelink.fabric.Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-toplevel">顶层示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-gpiofiber">GPIOFiber 示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-ramfiber">RamFiber 示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-cpufiber">CPU 光纤示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-widthadapter">宽度适配器示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-gpiofiber">GPIOFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-ramfiber">RamFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-cpufiber">CpuFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bus/tilelink/tilelink_fabric.html#example-widthadapter">位宽适配器(WidthAdapter)示例</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Com/index.html">康姆</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Com/index.html">通信接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="Com/uart.html">串口</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Com/uart.html#bus-definition">总线定义</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Com/uart.html#uartctrl">UartCtrl</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Com/usb_device.html">USB设备</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Com/usb_device.html#architecture">建筑学</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Com/usb_device.html#architecture">架构</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Com/usb_device.html#registers">寄存器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Com/usb_device.html#descriptors">描述符</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Com/usb_device.html#usage">用法</a></li>
@@ -783,8 +783,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="IO/index.html">IO</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="IO/readableOpenDrain.html">可读漏极开路</a></li>
+<li class="toctree-l2"><a class="reference internal" href="IO/index.html">IO口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="IO/readableOpenDrain.html">可读开漏IO(ReadableOpenDrain)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="IO/tristate.html">三态</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="IO/tristate.html#id1">三态</a></li>
 <li class="toctree-l4"><a class="reference internal" href="IO/tristate.html#tristatearray">三态阵列</a></li>
@@ -805,24 +805,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="EDA/index.html">电子设计自动化</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="EDA/index.html">自动设计工具(EDA)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="EDA/altera/qsysify.html">QSysify</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="EDA/altera/qsysify.html#example">示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="EDA/altera/qsysify.html#tags">标签</a></li>
-<li class="toctree-l4"><a class="reference internal" href="EDA/altera/qsysify.html#adding-new-interface-support">添加新接口支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EDA/altera/qsysify.html#adding-new-interface-support">添加新的接口支持</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="EDA/altera/quartus_flow.html">QuartusFlow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="EDA/altera/quartus_flow.html#for-a-single-rtl-file">对于单个 rtl 文件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="EDA/altera/quartus_flow.html#for-an-existing-project">对于现有项目</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EDA/altera/quartus_flow.html#for-a-single-rtl-file">对于单个rtl文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="EDA/altera/quartus_flow.html#for-an-existing-project">对于一个现有项目</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Misc/index.html">杂项</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Misc/PLIC/plic_mapper.html">Plic Mapper</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Misc/PLIC/plic_mapper.html">Plic映射器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="Misc/PLIC/plic_mapper.html#plicmapper-apply"><code class="docutils literal notranslate"><span class="pre">PlicMapper.apply</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="Misc/PLIC/plic_mapper.html#plicmapping-sifive"><code class="docutils literal notranslate"><span class="pre">PlicMapping.si</span> <span class="pre">Five</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="Misc/PLIC/plic_mapper.html#plicmapping-sifive"><code class="docutils literal notranslate"><span class="pre">PlicMapping.sifive</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="Misc/PLIC/plic_mapper.html#plicmapping-light"><code class="docutils literal notranslate"><span class="pre">PlicMapping.light</span></code></a></li>
 </ul>
 </li>
@@ -1000,18 +1000,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../Legacy/index.html">历史遗留</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Legacy/riscv.html">瑞斯克病毒</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Legacy/riscv.html#features">特征</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Legacy/riscv.html#base-fpga-project">基础 FPGA 项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Legacy/riscv.html">RiscV</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Legacy/riscv.html#features">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Legacy/riscv.html#base-fpga-project">基础FPGA项目</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Legacy/riscv.html#how-to-generate-the-cpu-vhdl">如何生成CPU VHDL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Legacy/riscv.html#how-to-debug">如何调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Legacy/riscv.html#todo">去做</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Legacy/riscv.html#todo">Todo</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Legacy/pinsec/index.html">针秒</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Legacy/pinsec/index.html">pinsec</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Legacy/pinsec/introduction.html">简介</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/introduction.html#id1">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/introduction.html#board-support">董事会支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/introduction.html#board-support">板级支持</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Legacy/pinsec/hardware.html">硬件</a><ul>
@@ -1019,22 +1019,22 @@
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware.html#riscv">RISCV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware.html#axi4">AXI4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware.html#apb3">APB3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware.html#generate-the-rtl">生成 RTL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware.html#generate-the-rtl">生成RTL</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html">SoC 顶层 (Pinsec)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html">SoC顶层(Pinsec)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#defining-all-io">定义所有IO</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#clock-and-resets">时钟和重置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#main-components">主要成分</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#peripherals">周边设备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#clock-and-resets">时钟和复位</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#main-components">主要组件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#peripherals">外设</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#bus-interconnects">总线互连</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/hardware_toplevel.html#misc">杂项</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Legacy/pinsec/software.html">软件</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/software.html#riscv-tool-chain">RISCV工具链</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/software.html#openocd-gdb-eclipse-configuration">OpenOCD/GDB/Eclipse 配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Legacy/pinsec/software.html#openocd-gdb-eclipse-configuration">OpenOCD/GDB/Eclipse配置</a></li>
 </ul>
 </li>
 </ul>
@@ -1129,7 +1129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../Developers%20area/types.html#masked-comparison">掩码过滤结果比较</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#bits">Bits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#bits">位</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#uint-sint">UInt、SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#bool-bits-uint-sint">Bool, Bits, UInt, SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Developers%20area/types.html#vec">Vec</a></li>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="index.html">模块库</a></li>
-      <li class="breadcrumb-item active">二元系统</li>
+      <li class="breadcrumb-item active">二进制系统</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Libraries/binarySystem.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1176,11 +1176,11 @@
 
 
   <section id="binarysystem">
-<h1>二元系统<a class="headerlink" href="#binarysystem" title="此标题的永久链接"></a></h1>
+<h1>二进制系统<a class="headerlink" href="#binarysystem" title="此标题的永久链接"></a></h1>
 <section id="specification">
 <h2>规范<a class="headerlink" href="#specification" title="此标题的永久链接"></a></h2>
 <div class="line-block">
-<div class="line">这里的东西与HDL无关，但是它们在数字系统中很常见，特别是算法参考模型被广泛使用。此外，它还用于构建测试平台。</div>
+<div class="line">这里的对象与HDL无关，但是它们在数字系统中很常见，尤其是算法参考模型被广泛使用。此外，它们还用于testbench的编写。</div>
 </div>
 <table class="docutils align-default">
 <colgroup>
@@ -1195,116 +1195,116 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><strong>字符串</strong>.asHex</p></td>
-<td><p>HexString 到 BigInt == BigInt(string, 16)</p></td>
+<tr class="row-even"><td><p><strong>String</strong>.asHex</p></td>
+<td><p>十六进制字符串转为BigInt == BigInt(string, 16)</p></td>
 <td><p>BigInt</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>字符串</strong>.asDec</p></td>
-<td><p>十进制字符串转 BigInt == BigInt(string, 10)</p></td>
+<tr class="row-odd"><td><p><strong>String</strong>.asDec</p></td>
+<td><p>十进制字符串转为BigInt == BigInt(string, 10)</p></td>
 <td><p>BigInt</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>字符串</strong>.asOct</p></td>
-<td><p>八进制字符串转 BigInt == BigInt(string, 8)</p></td>
+<tr class="row-even"><td><p><strong>String</strong>.asOct</p></td>
+<td><p>八进制字符串转为BigInt == BigInt(string, 8)</p></td>
 <td><p>BigInt</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>字符串</strong>.asBin</p></td>
-<td><p>二进制字符串转 BigInt == BigInt(string, 2)</p></td>
+<tr class="row-odd"><td><p><strong>String</strong>.asBin</p></td>
+<td><p>二进制字符串转为BigInt == BigInt(string, 2)</p></td>
 <td><p>BigInt</p></td>
 </tr>
 <tr class="row-even"><td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><strong>字节|Int|Long|BigInt</strong>.hexString()</p></td>
+<tr class="row-odd"><td><p><strong>Byte|Int|Long|BigInt</strong>.hexString()</p></td>
 <td><p>转为十六进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>字节|Int|Long|BigInt</strong>.octString()</p></td>
-<td><p>转换为十进制字符串</p></td>
+<tr class="row-even"><td><p><strong>Byte|Int|Long|BigInt</strong>.octString()</p></td>
+<td><p>转为十进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>字节|Int|Long|BigInt</strong>.binString()</p></td>
-<td><p>到 Bin 字符串</p></td>
+<tr class="row-odd"><td><p><strong>Byte|Int|Long|BigInt</strong>.binString()</p></td>
+<td><p>转为二进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>字节|Int|Long|BigInt</strong>.hexString(bitSize)</p></td>
-<td><p>首先与位大小对齐，然后与十六进制字符串对齐</p></td>
+<tr class="row-even"><td><p><strong>Byte|Int|Long|BigInt</strong>.hexString(bitSize)</p></td>
+<td><p>首先对齐位大小，然后转为十六进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>字节|Int|Long|BigInt</strong>.oct 字符串(biteSize)</p></td>
-<td><p>首先与位大小对齐，然后与八进制字符串对齐</p></td>
+<tr class="row-odd"><td><p><strong>Byte|Int|Long|BigInt</strong>.octString(bitSize)</p></td>
+<td><p>首先对齐位大小，然后转为八进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>字节|Int|Long|BigInt</strong>.binString(bitSize)</p></td>
-<td><p>首先与位大小对齐，然后与 Bin String 对齐</p></td>
+<tr class="row-even"><td><p><strong>Byte|Int|Long|BigInt</strong>.binString(bitSize)</p></td>
+<td><p>首先对齐位大小，然后转为二进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
 <tr class="row-odd"><td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><strong>字节|Int|Long|BigInt</strong>.toBinInts()</p></td>
-<td><p>到二进制列表</p></td>
+<tr class="row-even"><td><p><strong>Byte|Int|Long|BigInt</strong>.toBinInts()</p></td>
+<td><p>转为二进制列表(BinaryList)</p></td>
 <td><p>List[Int]</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>字节|Int|Long|BigInt</strong>.toDecInts()</p></td>
-<td><p>到十进制列表</p></td>
+<tr class="row-odd"><td><p><strong>Byte|Int|Long|BigInt</strong>.toDecInts()</p></td>
+<td><p>转为十进制列表(DecimalList)</p></td>
 <td><p>List[Int]</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>字节|Int|Long|BigInt</strong>.toOctInts()</p></td>
-<td><p>到八进制列表</p></td>
+<tr class="row-even"><td><p><strong>Byte|Int|Long|BigInt</strong>.toOctInts()</p></td>
+<td><p>转为八进制列表(OctalList)</p></td>
 <td><p>List[Int]</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>字节|Int|Long|BigInt</strong>.toBinInts(num)</p></td>
-<td><p>到BinaryList，对齐到num大小并填充0</p></td>
+<tr class="row-odd"><td><p><strong>Byte|Int|Long|BigInt</strong>.toBinInts(num)</p></td>
+<td><p>转为二进制列表(BinaryList)，对齐到num参数大小并填充0</p></td>
 <td><p>List[Int]</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>字节|Int|Long|BigInt</strong>.toDecInts(num)</p></td>
-<td><p>到DecimalList，对齐到num大小并填充0</p></td>
+<tr class="row-even"><td><p><strong>Byte|Int|Long|BigInt</strong>.toDecInts(num)</p></td>
+<td><p>转为十进制列表(DecimalList)，对齐到num参数大小并填充0</p></td>
 <td><p>List[Int]</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>字节|Int|Long|BigInt</strong>.toOctInts(num)</p></td>
-<td><p>到 OctalList，对齐到 num 大小并填充 0</p></td>
+<tr class="row-odd"><td><p><strong>Byte|Int|Long|BigInt</strong>.toOctInts(num)</p></td>
+<td><p>转为八进制列表(OctalList)，对齐到num参数大小并填充0</p></td>
 <td><p>List[Int]</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>“3F2A”</strong>.hexToBinInts</p></td>
-<td><p>十六进制字符串到二进制列表</p></td>
+<td><p>十六进制字符串转为二进制列表</p></td>
 <td><p>List[Int]</p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>“3F2A”</strong>.hexToBinIntsAlign</p></td>
-<td><p>十六进制字符串到 BinaryList 对齐到 4 的倍数</p></td>
+<td><p>十六进制字符串转为二进制列表，并对齐到4的倍数大小</p></td>
 <td><p>List[Int]</p></td>
 </tr>
 <tr class="row-even"><td></td>
 <td></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><strong>列表(1,0,1,0,…)</strong>.binIntsToHex</p></td>
-<td><p>二进制列表到十六进制字符串</p></td>
+<tr class="row-odd"><td><p><strong>List(1,0,1,0,…)</strong>.binIntsToHex</p></td>
+<td><p>二进制列表转为十六进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>列表(1,0,1,0,…)</strong>.binIntsToOct</p></td>
-<td><p>BinaryList 到 OctString</p></td>
+<tr class="row-even"><td><p><strong>List(1,0,1,0,…)</strong>.binIntsToOct</p></td>
+<td><p>二进制列表转为八进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>列表(1,0,1,0,…)</strong>.binIntsToHexAlignHigh</p></td>
-<td><p>BinaryList 大小对齐到 4 倍（填充 0），然后对齐到 HexString</p></td>
+<tr class="row-odd"><td><p><strong>List(1,0,1,0,…)</strong>.binIntsToHexAlignHigh</p></td>
+<td><p>二进制列表大小对齐到4的倍数（填充 0），然后转为十六进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>列表(1,0,1,0,…)</strong>.binIntsToOctAlignHigh</p></td>
-<td><p>BinaryList 大小对齐到 3 倍（填充 0），然后对齐到 HexString</p></td>
+<tr class="row-even"><td><p><strong>List(1,0,1,0,…)</strong>.binIntsToOctAlignHigh</p></td>
+<td><p>二进制列表大小对齐到3的倍数（填充 0），然后转为十六进制字符串</p></td>
 <td><p>String</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>列表(1,0,1,0,…)</strong>.binIntsToInt</p></td>
-<td><p>BinaryList (maxSize 32) 转 Int</p></td>
+<tr class="row-odd"><td><p><strong>List(1,0,1,0,…)</strong>.binIntsToInt</p></td>
+<td><p>二进制列表(最大数目为32)转为Int</p></td>
 <td><p>Int</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>列表(1,0,1,0,…)</strong>.binIntsToLong</p></td>
-<td><p>BinaryList (maxSIZE 64) 到 Long</p></td>
-<td><p>长的</p></td>
+<tr class="row-even"><td><p><strong>List(1,0,1,0,…)</strong>.binIntsToLong</p></td>
+<td><p>二进制列表(最大数目为64)转为Long</p></td>
+<td><p>Long</p></td>
 </tr>
-<tr class="row-odd"><td><p><strong>列表(1,0,1,0,…)</strong>.binIntsToBigInt</p></td>
-<td><p>BinaryList（大小无限制）到 BigInt</p></td>
+<tr class="row-odd"><td><p><strong>List(1,0,1,0,…)</strong>.binIntsToBigInt</p></td>
+<td><p>二进制列表（数目无限制）转为BigInt</p></td>
 <td><p>BigInt</p></td>
 </tr>
 <tr class="row-even"><td></td>
@@ -1315,7 +1315,7 @@
 <td><p>32.toBigInt == BigInt(32)</p></td>
 <td><p>BigInt</p></td>
 </tr>
-<tr class="row-even"><td><p><strong>长</strong>.toBigInt</p></td>
+<tr class="row-even"><td><p><strong>Long</strong>.toBigInt</p></td>
 <td><p>3233113232L.toBigInt == BigInt(3233113232L)</p></td>
 <td><p>BigInt</p></td>
 </tr>
@@ -1327,7 +1327,7 @@
 </table>
 </section>
 <section id="string-to-int-long-bigint">
-<h2>字符串到 Int/Long/BigInt<a class="headerlink" href="#string-to-int-long-bigint" title="此标题的永久链接"></a></h2>
+<h2>String转为Int/Long/BigInt<a class="headerlink" href="#string-to-int-long-bigint" title="此标题的永久链接"></a></h2>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">core</span><span class="p">.</span><span class="nn">lib</span><span class="p">.</span><span class="n">_</span>
 
 <span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;32FF190&quot;</span><span class="p">.</span><span class="n">asHex</span>
@@ -1341,7 +1341,7 @@
 </div>
 </section>
 <section id="int-long-bigint-to-string">
-<h2>Int/Long/BigInt 到 String<a class="headerlink" href="#int-long-bigint-to-string" title="此标题的永久链接"></a></h2>
+<h2>Int/Long/BigInt转为String<a class="headerlink" href="#int-long-bigint-to-string" title="此标题的永久链接"></a></h2>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">core</span><span class="p">.</span><span class="nn">lib</span><span class="p">.</span><span class="n">_</span>
 
 <span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;32FF190&quot;</span><span class="p">.</span><span class="n">asHex</span><span class="p">.</span><span class="n">hexString</span><span class="p">()</span>
@@ -1360,7 +1360,7 @@
 </div>
 </section>
 <section id="int-long-bigint-to-binary-list">
-<h2>Int/Long/BigInt 到二进制列表<a class="headerlink" href="#int-long-bigint-to-binary-list" title="此标题的永久链接"></a></h2>
+<h2>Int/Long/BigInt转为二进制列表<a class="headerlink" href="#int-long-bigint-to-binary-list" title="此标题的永久链接"></a></h2>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">core</span><span class="p">.</span><span class="nn">lib</span><span class="p">.</span><span class="n">_</span>
 
 <span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">.</span><span class="n">toBinInts</span>
@@ -1377,7 +1377,7 @@
 <span class="nc">List</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>align to a fixed width</p>
+<p>对齐到固定位宽</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">core</span><span class="p">.</span><span class="nn">lib</span><span class="p">.</span><span class="n">_</span>
 
 <span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="p">.</span><span class="n">toBinInts</span><span class="p">()</span>
@@ -1388,7 +1388,7 @@
 </div>
 </section>
 <section id="binary-list-to-int-long-bigint">
-<h2>二进制列表到 Int/Long/BigInt<a class="headerlink" href="#binary-list-to-int-long-bigint" title="此标题的永久链接"></a></h2>
+<h2>二进制列表转为Int/Long/BigInt<a class="headerlink" href="#binary-list-to-int-long-bigint" title="此标题的永久链接"></a></h2>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nn">spinal</span><span class="p">.</span><span class="nn">core</span><span class="p">.</span><span class="nn">lib</span><span class="p">.</span><span class="n">_</span>
 
 <span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">).</span><span class="n">binIntsToInt</span>
@@ -1411,7 +1411,7 @@
 </div>
 </section>
 <section id="bigint-enricher">
-<h2>BigInt 丰富器<a class="headerlink" href="#bigint-enricher" title="此标题的永久链接"></a></h2>
+<h2>BigInt放大器<a class="headerlink" href="#bigint-enricher" title="此标题的永久链接"></a></h2>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">.</span><span class="n">toBigInt</span>
 <span class="mi">32</span>
 <span class="n">$</span><span class="p">:</span><span class="w"> </span><span class="il">3211323244L</span><span class="p">.</span><span class="n">toBigInt</span>

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SoC 顶层 (Pinsec) &mdash; SpinalHDL  文档</title>
+  <title>SoC顶层(Pinsec) &mdash; SpinalHDL  文档</title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
@@ -230,7 +230,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/bits.html">Bits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/bits.html">位</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/bits.html#declaration">声明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/bits.html#operators">运算符</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Data%20types/bits.html#logic">逻辑运算</a></li>
@@ -695,20 +695,20 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/fiber.html">纤程框架</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fiber.html#simple-dummy-example">简单的虚拟示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fiber.html#handle-t">手柄[T]</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/fiber.html#soon-handle">很快（处理）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fiber.html#simple-dummy-example">简单的示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fiber.html#handle-t">Handle[T]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/fiber.html#soon-handle">soon(handle)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/binarySystem.html">二元系统</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/binarySystem.html">二进制系统</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#specification">规范</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#string-to-int-long-bigint">字符串到 Int/Long/BigInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#int-long-bigint-to-string">Int/Long/BigInt 到 String</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#int-long-bigint-to-binary-list">Int/Long/BigInt 到二进制列表</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#binary-list-to-int-long-bigint">二进制列表到 Int/Long/BigInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#bigint-enricher">BigInt 丰富器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#string-to-int-long-bigint">String转为Int/Long/BigInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#int-long-bigint-to-string">Int/Long/BigInt转为String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#int-long-bigint-to-binary-list">Int/Long/BigInt转为二进制列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#binary-list-to-int-long-bigint">二进制列表转为Int/Long/BigInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#bigint-enricher">BigInt放大器</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/regIf.html">寄存器接口</a><ul>
@@ -732,7 +732,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/Bus/index.html">总线</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html">AHB-Lite3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html#configuration-and-instanciation">配置和实例化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html#variations">变化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html#variations">变体</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba3/apb3.html">Apb3</a><ul>
@@ -740,38 +740,38 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/apb3.html#functions-and-operators">函数和运算符</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html">轴4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html">Axi4</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html#configuration-and-instanciation">配置和实例化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html#variations">变化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html#variations">变体</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html#functions-and-operators">函数和运算符</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/avalon/avalonmm.html">阿瓦隆MM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/avalon/avalonmm.html">AvalonMM</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/avalon/avalonmm.html#configuration-and-instanciation">配置和实例化</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink.html">瓦联</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink.html">Tilelink</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink.html#configuration-and-instanciation">配置和实例化</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html">tilelink.fabric.Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-toplevel">顶层示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-gpiofiber">GPIOFiber 示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-ramfiber">RamFiber 示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-cpufiber">CPU 光纤示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-widthadapter">宽度适配器示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-gpiofiber">GPIOFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-ramfiber">RamFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-cpufiber">CpuFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-widthadapter">位宽适配器(WidthAdapter)示例</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/Com/index.html">康姆</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/Com/index.html">通信接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Com/uart.html">串口</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/uart.html#bus-definition">总线定义</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/uart.html#uartctrl">UartCtrl</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Com/usb_device.html">USB设备</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#architecture">建筑学</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#architecture">架构</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#registers">寄存器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#descriptors">描述符</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#usage">用法</a></li>
@@ -783,8 +783,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/IO/index.html">IO</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/IO/readableOpenDrain.html">可读漏极开路</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/IO/index.html">IO口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/IO/readableOpenDrain.html">可读开漏IO(ReadableOpenDrain)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/IO/tristate.html">三态</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/IO/tristate.html#id1">三态</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/IO/tristate.html#tristatearray">三态阵列</a></li>
@@ -805,24 +805,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/EDA/index.html">电子设计自动化</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/EDA/index.html">自动设计工具(EDA)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html">QSysify</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html#example">示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html#tags">标签</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html#adding-new-interface-support">添加新接口支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html#adding-new-interface-support">添加新的接口支持</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html">QuartusFlow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html#for-a-single-rtl-file">对于单个 rtl 文件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html#for-an-existing-project">对于现有项目</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html#for-a-single-rtl-file">对于单个rtl文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html#for-an-existing-project">对于一个现有项目</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/Misc/index.html">杂项</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html">Plic Mapper</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html">Plic映射器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html#plicmapper-apply"><code class="docutils literal notranslate"><span class="pre">PlicMapper.apply</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html#plicmapping-sifive"><code class="docutils literal notranslate"><span class="pre">PlicMapping.si</span> <span class="pre">Five</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html#plicmapping-sifive"><code class="docutils literal notranslate"><span class="pre">PlicMapping.sifive</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html#plicmapping-light"><code class="docutils literal notranslate"><span class="pre">PlicMapping.light</span></code></a></li>
 </ul>
 </li>
@@ -1000,18 +1000,18 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">历史遗留</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../riscv.html">瑞斯克病毒</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../riscv.html#features">特征</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../riscv.html#base-fpga-project">基础 FPGA 项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../riscv.html">RiscV</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../riscv.html#features">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../riscv.html#base-fpga-project">基础FPGA项目</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../riscv.html#how-to-generate-the-cpu-vhdl">如何生成CPU VHDL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../riscv.html#how-to-debug">如何调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../riscv.html#todo">去做</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../riscv.html#todo">Todo</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">针秒</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">pinsec</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="introduction.html#id1">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="introduction.html#board-support">董事会支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="introduction.html#board-support">板级支持</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="hardware.html">硬件</a><ul>
@@ -1019,22 +1019,22 @@
 <li class="toctree-l4"><a class="reference internal" href="hardware.html#riscv">RISCV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware.html#axi4">AXI4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware.html#apb3">APB3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hardware.html#generate-the-rtl">生成 RTL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hardware.html#generate-the-rtl">生成RTL</a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">SoC 顶层 (Pinsec)</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">SoC顶层(Pinsec)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#defining-all-io">定义所有IO</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#clock-and-resets">时钟和重置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#main-components">主要成分</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#peripherals">周边设备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clock-and-resets">时钟和复位</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main-components">主要组件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#peripherals">外设</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bus-interconnects">总线互连</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#misc">杂项</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="software.html">软件</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="software.html#riscv-tool-chain">RISCV工具链</a></li>
-<li class="toctree-l4"><a class="reference internal" href="software.html#openocd-gdb-eclipse-configuration">OpenOCD/GDB/Eclipse 配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="software.html#openocd-gdb-eclipse-configuration">OpenOCD/GDB/Eclipse配置</a></li>
 </ul>
 </li>
 </ul>
@@ -1129,7 +1129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Developers%20area/types.html#masked-comparison">掩码过滤结果比较</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bits">Bits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bits">位</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#uint-sint">UInt、SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bool-bits-uint-sint">Bool, Bits, UInt, SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#vec">Vec</a></li>
@@ -1163,8 +1163,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">历史遗留</a></li>
-          <li class="breadcrumb-item"><a href="index.html">针秒</a></li>
-      <li class="breadcrumb-item active">SoC 顶层 (Pinsec)</li>
+          <li class="breadcrumb-item"><a href="index.html">pinsec</a></li>
+      <li class="breadcrumb-item active">SoC顶层(Pinsec)</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Legacy/pinsec/hardware_toplevel.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
       </li>
@@ -1177,14 +1177,13 @@
 
 
   <section id="soc-toplevel-pinsec">
-<span id="pinsec-hardware-toplevel"></span><h1>SoC 顶层 (Pinsec)<a class="headerlink" href="#soc-toplevel-pinsec" title="此标题的永久链接"></a></h1>
+<span id="pinsec-hardware-toplevel"></span><h1>SoC顶层(Pinsec)<a class="headerlink" href="#soc-toplevel-pinsec" title="此标题的永久链接"></a></h1>
 <section id="introduction">
 <h2>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h2>
-<p>“Pinsec”是一个专为 FPGA 设计的小型 SoC。它可以在 SpinalHDL 库中找到，并且可以在 &lt;pinsec_introduction&gt; 中找到一些文档：ref:`</p>
-<p>Its toplevel implementation is an interesting example, because it is a mix some design patterns that make it very easy to modify. Adding a new master or a new peripheral to the bus fabric could be done with little effort.</p>
-<p>The toplevel implementation could be consulted at the links here :
-<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/master/lib/src/main/scala/spinal/lib/soc/pinsec/Pinsec.scala">https://github.com/SpinalHDL/SpinalHDL/blob/master/lib/src/main/scala/spinal/lib/soc/pinsec/Pinsec.scala</a></p>
-<p>This is the Pinsec toplevel hardware diagram :</p>
+<p><code class="docutils literal notranslate"><span class="pre">Pinsec</span></code> 是一个专为FPGA设计的小型 SoC。它可以在SpinalHDL库中找到，并且可以在 <a class="reference internal" href="introduction.html#pinsec-introduction"><span class="std std-ref">这里</span></a> 找到一些文档</p>
+<p>它的顶层实现是一个有趣的例子，因为它混合了一些设计模式，使其非常容易修改。可以轻松实现向总线结构添加新的主设备或新的外设。</p>
+<p>可以在以下链接中查阅顶层实现：<a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/master/lib/src/main/scala/spinal/lib/soc/pinsec/Pinsec.scala">https://github.com/SpinalHDL/SpinalHDL/blob/master/lib/src/main/scala/spinal/lib/soc/pinsec/Pinsec.scala</a></p>
+<p>这是Pinsec顶层硬件图：</p>
 <img alt="../../../_images/pinsec_hardware.svg" class="align-center" src="../../../_images/pinsec_hardware.svg" /></section>
 <section id="defining-all-io">
 <h2>定义所有IO<a class="headerlink" href="#defining-all-io" title="此标题的永久链接"></a></h2>
@@ -1208,45 +1207,45 @@
 </div>
 </section>
 <section id="clock-and-resets">
-<h2>时钟和重置<a class="headerlink" href="#clock-and-resets" title="此标题的永久链接"></a></h2>
-<p>Pinsec 有三个时钟输入：</p>
+<h2>时钟和复位<a class="headerlink" href="#clock-and-resets" title="此标题的永久链接"></a></h2>
+<p>Pinsec有三个时钟输入：</p>
 <ul class="simple">
-<li><p>轴时钟</p></li>
-<li><p>显卡时钟</p></li>
+<li><p>axiClock</p></li>
+<li><p>vgaClock</p></li>
 <li><p>jtag.tck</p></li>
 </ul>
 <p>以及一个复位输入：</p>
 <ul class="simple">
-<li><p>异步重置</p></li>
+<li><p>asyncReset</p></li>
 </ul>
-<p>最终将给出 5 个 ClockDomain （时钟/重置对）：</p>
+<p>最终将给出5个时钟域(ClockDomain)（时钟/复位对）：</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>钟</p></th>
+<th class="head"><p>时钟</p></th>
 <th class="head"><p>描述</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>重置Ctrl时钟域</p></td>
-<td><p>轴时钟</p></td>
-<td><p>由复位控制器使用，该时钟域的Flops由FPGA比特流初始化</p></td>
+<tr class="row-even"><td><p>resetCtrlClockDomain</p></td>
+<td><p>axiClock</p></td>
+<td><p>由复位控制器使用，该时钟域的触发器由FPGA比特流初始化</p></td>
 </tr>
-<tr class="row-odd"><td><p>axi时钟域</p></td>
-<td><p>轴时钟</p></td>
-<td><p>由连接到 AXI 和 APB 互连的所有组件使用</p></td>
+<tr class="row-odd"><td><p>axiClockDomain</p></td>
+<td><p>axiClock</p></td>
+<td><p>由连接到AXI和APB互连的所有组件使用</p></td>
 </tr>
-<tr class="row-even"><td><p>核心时钟域</p></td>
-<td><p>轴时钟</p></td>
-<td><p>与 axiClockDomain 的唯一区别是调试模块也可以断言复位</p></td>
+<tr class="row-even"><td><p>coreClockDomain</p></td>
+<td><p>axiClock</p></td>
+<td><p>与axiClockDomain的唯一区别是，复位也可以通过调试模块控制</p></td>
 </tr>
-<tr class="row-odd"><td><p>vga时钟域</p></td>
-<td><p>显卡时钟</p></td>
-<td><p>由 VGA 控制器后端用作像素时钟</p></td>
+<tr class="row-odd"><td><p>vgaClockDomain</p></td>
+<td><p>vgaClock</p></td>
+<td><p>被VGA控制器后端用作像素时钟</p></td>
 </tr>
-<tr class="row-even"><td><p>jtag时钟域</p></td>
+<tr class="row-even"><td><p>jtagClockDomain</p></td>
 <td><p>jtag.tck</p></td>
-<td><p>用于为 JTAG 控制器的前端提供时钟</p></td>
+<td><p>用于为JTAG控制器的前端提供时钟</p></td>
 </tr>
 </tbody>
 </table>
@@ -1292,7 +1291,7 @@
 </section>
 <section id="clock-domain-setup-for-each-system">
 <h3>每个系统的时钟域设置<a class="headerlink" href="#clock-domain-setup-for-each-system" title="此标题的永久链接"></a></h3>
-<p>Now that the reset controller is implemented, we can define clock domain for all sub-systems of Pinsec :</p>
+<p>现在复位控制器已经实现，我们可以为Pinsec的所有子系统定义时钟域：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">axiClockDomain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">ClockDomain</span><span class="p">(</span>
 <span class="w">  </span><span class="n">clock</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">io</span><span class="p">.</span><span class="n">axiClk</span><span class="p">,</span>
 <span class="w">  </span><span class="n">reset</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">resetCtrl</span><span class="p">.</span><span class="n">axiReset</span><span class="p">,</span>
@@ -1314,7 +1313,7 @@
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>此外，Pinsec 的所有核心系统都将被定义为“axi”时钟区域：</p>
+<p>此外，Pinsec的所有核心系统都将在一个 <code class="docutils literal notranslate"><span class="pre">axi</span></code> 时钟域里定义：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">axi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">ClockingArea</span><span class="p">(</span><span class="n">axiClockDomain</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">//Here will come the rest of Pinsec</span>
 <span class="p">}</span>
@@ -1323,17 +1322,17 @@
 </section>
 </section>
 <section id="main-components">
-<h2>主要成分<a class="headerlink" href="#main-components" title="此标题的永久链接"></a></h2>
-<p>Pinsec 主要由 4 个主要组件构成：</p>
+<h2>主要组件<a class="headerlink" href="#main-components" title="此标题的永久链接"></a></h2>
+<p>Pinsec主要由4个主要组件构成：</p>
 <ul class="simple">
 <li><p>1个RISCV CPU</p></li>
 <li><p>1个SDRAM控制器</p></li>
-<li><p>一个片上存储器</p></li>
+<li><p>1个片上存储器</p></li>
 <li><p>1个JTAG控制器</p></li>
 </ul>
 <section id="riscv-cpu">
-<h3>精简指令集计算机<a class="headerlink" href="#riscv-cpu" title="此标题的永久链接"></a></h3>
-<p>Pinsec 中使用的 RISCV CPU 具有多种参数化可能性：</p>
+<h3>RISCV CPU<a class="headerlink" href="#riscv-cpu" title="此标题的永久链接"></a></h3>
+<p>Pinsec中使用的RISCV CPU具有多种参数化可能性：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">core</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coreClockDomain</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">coreConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">CoreConfig</span><span class="p">(</span>
 <span class="w">    </span><span class="n">pcWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
@@ -1380,9 +1379,8 @@
 </section>
 <section id="on-chip-ram">
 <h3>片上RAM<a class="headerlink" href="#on-chip-ram" title="此标题的永久链接"></a></h3>
-<p>The instantiation of the AXI4 on chip RAM is very simple.</p>
-<p>In fact it’s not an AXI4 but an Axi4Shared, which mean that a ARW channel replace the AR and AW ones.
-This solution uses less area while being fully interoperable with full AXI4.</p>
+<p>AXI4片上RAM的实例化非常简单。</p>
+<p>事实上，它不是AXI4，而是Axi4Shared，这意味着ARW通道取代了AR和AW通道。该解决方案占用的面积更少，同时可与完整的AXI4实现完全互操作。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">ram</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Axi4SharedOnChipRam</span><span class="p">(</span>
 <span class="w">  </span><span class="n">dataWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
 <span class="w">  </span><span class="n">byteCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="nc">KiB</span><span class="p">,</span>
@@ -1393,7 +1391,7 @@ This solution uses less area while being fully interoperable with full AXI4.</p>
 </section>
 <section id="sdram-controller">
 <h3>SDRAM控制器<a class="headerlink" href="#sdram-controller" title="此标题的永久链接"></a></h3>
-<p>首先，您需要定义 SDRAM 设备的布局和时序。在 DE1-SOC 上，SDRAM 设备是 IS42x320D。</p>
+<p>首先，您需要定义SDRAM设备的布局和时序。在DE1-SOC上，SDRAM型号是IS42x320D。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">object</span><span class="w"> </span><span class="nc">IS42x320D</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">layout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">SdramLayout</span><span class="p">(</span>
 <span class="w">    </span><span class="n">bankWidth</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
@@ -1418,7 +1416,7 @@ This solution uses less area while being fully interoperable with full AXI4.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>然后您可以使用这些定义来参数化 SDRAM 控制器实例化。</p>
+<p>然后您可以使用这些定义来参数化SDRAM控制器实例。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">sdramCtrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Axi4SharedSdramCtrl</span><span class="p">(</span>
 <span class="w">  </span><span class="n">axiDataWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
 <span class="w">  </span><span class="n">axiIdWidth</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
@@ -1431,7 +1429,7 @@ This solution uses less area while being fully interoperable with full AXI4.</p>
 </section>
 <section id="jtag-controller">
 <h3>JTAG控制器<a class="headerlink" href="#jtag-controller" title="此标题的永久链接"></a></h3>
-<p>JTAG 控制器可用于从 PC 访问存储器并调试 CPU。</p>
+<p>JTAG控制器可用于在PC访问存储器并调试CPU。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">jtagCtrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">JtagAxi4SharedDebugger</span><span class="p">(</span><span class="nc">SystemDebuggerConfig</span><span class="p">(</span>
 <span class="w">  </span><span class="n">memAddressWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
 <span class="w">  </span><span class="n">memDataWidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
@@ -1443,16 +1441,16 @@ This solution uses less area while being fully interoperable with full AXI4.</p>
 </section>
 </section>
 <section id="peripherals">
-<h2>周边设备<a class="headerlink" href="#peripherals" title="此标题的永久链接"></a></h2>
-<p>Pinsec has some integrated peripherals :</p>
+<h2>外设<a class="headerlink" href="#peripherals" title="此标题的永久链接"></a></h2>
+<p>Pinsec有一些集成的外设：</p>
 <ul class="simple">
-<li><p>通用输入输出接口</p></li>
+<li><p>GPIO</p></li>
 <li><p>计时器</p></li>
 <li><p>串口</p></li>
 <li><p>VGA</p></li>
 </ul>
 <section id="gpio">
-<h3>通用输入输出接口<a class="headerlink" href="#gpio" title="此标题的永久链接"></a></h3>
+<h3>GPIO<a class="headerlink" href="#gpio" title="此标题的永久链接"></a></h3>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">gpioACtrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Apb3Gpio</span><span class="p">(</span>
 <span class="w">  </span><span class="n">gpioWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span>
 <span class="p">)</span>
@@ -1465,20 +1463,20 @@ This solution uses less area while being fully interoperable with full AXI4.</p>
 </section>
 <section id="timer">
 <h3>计时器<a class="headerlink" href="#timer" title="此标题的永久链接"></a></h3>
-<p>The Pinsec timer module consists of :</p>
+<p>Pinsec定时器模块包括：</p>
 <ul class="simple">
-<li><p>1 个预分频器</p></li>
+<li><p>1个预分频器</p></li>
 <li><p>1个32位定时器</p></li>
 <li><p>三个16位定时器</p></li>
 </ul>
-<p>所有这些都被打包到 PinsecTimerCtrl 组件中。</p>
+<p>所有这些都被打包到PinsecTimerCtrl组件中。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">timerCtrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">PinsecTimerCtrl</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="uart-controller">
-<h3>串口控制器<a class="headerlink" href="#uart-controller" title="此标题的永久链接"></a></h3>
-<p>首先我们需要为 UART 控制器定义一个配置：</p>
+<h3>UART控制器<a class="headerlink" href="#uart-controller" title="此标题的永久链接"></a></h3>
+<p>首先我们需要为UART控制器定义一个配置：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">uartCtrlConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UartCtrlMemoryMappedConfig</span><span class="p">(</span>
 <span class="w">  </span><span class="n">uartCtrlConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">UartCtrlGenerics</span><span class="p">(</span>
 <span class="w">    </span><span class="n">dataWidthMax</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
@@ -1499,7 +1497,7 @@ This solution uses less area while being fully interoperable with full AXI4.</p>
 </section>
 <section id="vga-controller">
 <h3>VGA控制器<a class="headerlink" href="#vga-controller" title="此标题的永久链接"></a></h3>
-<p>首先我们需要定义 VGA 控制器的配置：</p>
+<p>首先我们需要定义VGA控制器的配置：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">vgaCtrlConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Axi4VgaCtrlGenerics</span><span class="p">(</span>
 <span class="w">  </span><span class="n">axiAddressWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
 <span class="w">  </span><span class="n">axiDataWidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
@@ -1521,13 +1519,13 @@ This solution uses less area while being fully interoperable with full AXI4.</p>
 <h2>总线互连<a class="headerlink" href="#bus-interconnects" title="此标题的永久链接"></a></h2>
 <p>共有三个互连组件：</p>
 <ul class="simple">
-<li><p>AXI4 交叉开关</p></li>
-<li><p>AXI4 至 APB3 桥接器</p></li>
+<li><p>AXI4交叉开关(crossbar)</p></li>
+<li><p>AXI4桥接到APB3</p></li>
 <li><p>APB3解码器</p></li>
 </ul>
 <section id="axi4-to-apb3-bridge">
-<h3>AXI4 至 APB3 桥接器<a class="headerlink" href="#axi4-to-apb3-bridge" title="此标题的永久链接"></a></h3>
-<p>该桥将用于将低带宽外设连接到 AXI 交叉开关。</p>
+<h3>AXI4桥接到APB3<a class="headerlink" href="#axi4-to-apb3-bridge" title="此标题的永久链接"></a></h3>
+<p>该桥将用于将低带宽外设连接到AXI交叉开关。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">apbBridge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Axi4SharedToApb3Bridge</span><span class="p">(</span>
 <span class="w">  </span><span class="n">addressWidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
 <span class="w">  </span><span class="n">dataWidth</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span>
@@ -1537,16 +1535,14 @@ This solution uses less area while being fully interoperable with full AXI4.</p>
 </div>
 </section>
 <section id="axi4-crossbar">
-<h3>AXI4 交叉开关<a class="headerlink" href="#axi4-crossbar" title="此标题的永久链接"></a></h3>
-<p>The AXI4 crossbar that interconnect AXI4 masters and slaves together is generated by using an factory.
-The concept of this factory is to create it, then call many function on it to configure it, and finaly call
-the <code class="docutils literal notranslate"><span class="pre">build</span></code> function to ask the factory to generate the corresponding hardware :</p>
+<h3>AXI4交叉开关(crossbar)<a class="headerlink" href="#axi4-crossbar" title="此标题的永久链接"></a></h3>
+<p>将AXI4主端和从端互连在一起的AXI4交叉开关是使用生成器(factory)生成的。这个生成器的概念是先创建它，然后调用它的许多函数来配置，最后调用 <code class="docutils literal notranslate"><span class="pre">build</span></code> 函数来使生成器生成相应的硬件：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">axiCrossbar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Axi4CrossbarFactory</span><span class="p">()</span>
 <span class="c1">// Where you will have to call function the the axiCrossbar factory to populate its configuration</span>
 <span class="n">axiCrossbar</span><span class="p">.</span><span class="n">build</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>首先，您需要填充从属接口：</p>
+<p>首先，您需要添加从端接口：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">//          Slave  -&gt; (base address,  size) ,</span>
 
 <span class="n">axiCrossbar</span><span class="p">.</span><span class="n">addSlaves</span><span class="p">(</span>
@@ -1556,7 +1552,7 @@ the <code class="docutils literal notranslate"><span class="pre">build</span></c
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Then you need to populate a matrix of interconnections between slaves and masters (this sets up visibility) :</p>
+<p>然后，您需要添加从端和主端之间的互连矩阵（这展现可见性）：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">//         Master -&gt; List of slaves which are accessible</span>
 
 <span class="n">axiCrossbar</span><span class="p">.</span><span class="n">addConnections</span><span class="p">(</span>
@@ -1567,12 +1563,12 @@ the <code class="docutils literal notranslate"><span class="pre">build</span></c
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>然后，为了减少组合路径长度并拥有良好的设计 FMax，您可以要求工厂在给定的主设备或从设备之间插入流水线阶段：</p>
+<p>然后，为了减少组合路径长度并拥有良好的设计FMax，您可以要求生成器在给定的主端或从端之间插入流水线级：</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
 <div class="line-block">
-<div class="line">以下代码中的``halfPipe`` / &gt;&gt; / &lt;&lt; / &gt;/-&gt;由Stream总线库提供。</div>
-<div class="line">可以在 &lt;stream&gt; 中找到一些文档。简而言之，这只是一些管道和互连的东西。</div>
+<div class="line">以下代码中的 <code class="docutils literal notranslate"><span class="pre">halfPipe</span></code> / &gt;&gt; / &lt;&lt; / &gt;/-&gt; 由反压流(Stream)总线库提供。</div>
+<div class="line">可以在 <a class="reference internal" href="../../Libraries/stream.html#stream"><span class="std std-ref">这里</span></a> 找到一些文档。简而言之，这只是一些流水线和互连的东西。</div>
 </div>
 </div>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">//Pipeline the connection between the crossbar and the apbBridge.io.axi</span>
@@ -1595,7 +1591,7 @@ the <code class="docutils literal notranslate"><span class="pre">build</span></c
 </section>
 <section id="apb3-decoder">
 <h3>APB3解码器<a class="headerlink" href="#apb3-decoder" title="此标题的永久链接"></a></h3>
-<p>APB3 桥和所有外设之间的互连是通过 APB3Decoder 完成的：</p>
+<p>APB3桥和所有外设之间的互连是通过APB3Decoder完成的：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">apbDecoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Apb3Decoder</span><span class="p">(</span>
 <span class="w">  </span><span class="n">master</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">apbBridge</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">apb</span><span class="p">,</span>
 <span class="w">  </span><span class="n">slaves</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span>
@@ -1613,7 +1609,7 @@ the <code class="docutils literal notranslate"><span class="pre">build</span></c
 </section>
 <section id="misc">
 <h2>杂项<a class="headerlink" href="#misc" title="此标题的永久链接"></a></h2>
-<p>要将所有顶级 IO 连接到组件，需要以下代码：</p>
+<p>要将所有顶层IO连接到组件，需要以下代码：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">io</span><span class="p">.</span><span class="n">gpioA</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">axi</span><span class="p">.</span><span class="n">gpioACtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">gpio</span>
 <span class="n">io</span><span class="p">.</span><span class="n">gpioB</span><span class="w"> </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">axi</span><span class="p">.</span><span class="n">gpioBCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">gpio</span>
 <span class="n">io</span><span class="p">.</span><span class="n">jtag</span><span class="w">  </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">axi</span><span class="p">.</span><span class="n">jtagCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">jtag</span>
@@ -1622,7 +1618,7 @@ the <code class="docutils literal notranslate"><span class="pre">build</span></c
 <span class="n">io</span><span class="p">.</span><span class="n">vga</span><span class="w">   </span><span class="o">&lt;&gt;</span><span class="w"> </span><span class="n">axi</span><span class="p">.</span><span class="n">vgaCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">vga</span>
 </pre></div>
 </div>
-<p>最后需要组件之间的一些连接，例如中断和核心调试模块重置</p>
+<p>最后需要组件之间的一些连接，例如中断和核心调试模块复位</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">core</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">interrupt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">uartCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">interrupt</span>
 <span class="n">core</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">interrupt</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">timerCtrl</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">interrupt</span>
 

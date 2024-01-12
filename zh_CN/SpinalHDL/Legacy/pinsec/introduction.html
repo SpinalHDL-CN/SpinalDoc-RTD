@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
     <link rel="next" title="硬件" href="hardware.html" />
-    <link rel="prev" title="针秒" href="index.html" />
+    <link rel="prev" title="pinsec" href="index.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -230,7 +230,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/bits.html">Bits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Data%20types/bits.html">位</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/bits.html#declaration">声明</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Data%20types/bits.html#operators">运算符</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Data%20types/bits.html#logic">逻辑运算</a></li>
@@ -695,20 +695,20 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/fiber.html">纤程框架</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fiber.html#simple-dummy-example">简单的虚拟示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fiber.html#handle-t">手柄[T]</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/fiber.html#soon-handle">很快（处理）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fiber.html#simple-dummy-example">简单的示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/fiber.html#handle-t">Handle[T]</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/fiber.html#soon-handle">soon(handle)</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/binarySystem.html">二元系统</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/binarySystem.html">二进制系统</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#specification">规范</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#string-to-int-long-bigint">字符串到 Int/Long/BigInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#int-long-bigint-to-string">Int/Long/BigInt 到 String</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#int-long-bigint-to-binary-list">Int/Long/BigInt 到二进制列表</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#binary-list-to-int-long-bigint">二进制列表到 Int/Long/BigInt</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#bigint-enricher">BigInt 丰富器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#string-to-int-long-bigint">String转为Int/Long/BigInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#int-long-bigint-to-string">Int/Long/BigInt转为String</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#int-long-bigint-to-binary-list">Int/Long/BigInt转为二进制列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#binary-list-to-int-long-bigint">二进制列表转为Int/Long/BigInt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/binarySystem.html#bigint-enricher">BigInt放大器</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/regIf.html">寄存器接口</a><ul>
@@ -732,7 +732,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/Bus/index.html">总线</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html">AHB-Lite3</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html#configuration-and-instanciation">配置和实例化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html#variations">变化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/ahblite3.html#variations">变体</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba3/apb3.html">Apb3</a><ul>
@@ -740,38 +740,38 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba3/apb3.html#functions-and-operators">函数和运算符</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html">轴4</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html">Axi4</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html#configuration-and-instanciation">配置和实例化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html#variations">变化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html#variations">变体</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/amba4/axi4.html#functions-and-operators">函数和运算符</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/avalon/avalonmm.html">阿瓦隆MM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/avalon/avalonmm.html">AvalonMM</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/avalon/avalonmm.html#configuration-and-instanciation">配置和实例化</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink.html">瓦联</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink.html">Tilelink</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink.html#configuration-and-instanciation">配置和实例化</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html">tilelink.fabric.Node</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-toplevel">顶层示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-gpiofiber">GPIOFiber 示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-ramfiber">RamFiber 示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-cpufiber">CPU 光纤示例</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-widthadapter">宽度适配器示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-gpiofiber">GPIOFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-ramfiber">RamFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-cpufiber">CpuFiber示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Bus/tilelink/tilelink_fabric.html#example-widthadapter">位宽适配器(WidthAdapter)示例</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/Com/index.html">康姆</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/Com/index.html">通信接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Com/uart.html">串口</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/uart.html#bus-definition">总线定义</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/uart.html#uartctrl">UartCtrl</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/Com/usb_device.html">USB设备</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#architecture">建筑学</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#architecture">架构</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#registers">寄存器</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#descriptors">描述符</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Com/usb_device.html#usage">用法</a></li>
@@ -783,8 +783,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/IO/index.html">IO</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/IO/readableOpenDrain.html">可读漏极开路</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/IO/index.html">IO口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/IO/readableOpenDrain.html">可读开漏IO(ReadableOpenDrain)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/IO/tristate.html">三态</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/IO/tristate.html#id1">三态</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/IO/tristate.html#tristatearray">三态阵列</a></li>
@@ -805,24 +805,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../Libraries/EDA/index.html">电子设计自动化</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Libraries/EDA/index.html">自动设计工具(EDA)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html">QSysify</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html#example">示例</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html#tags">标签</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html#adding-new-interface-support">添加新接口支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/qsysify.html#adding-new-interface-support">添加新的接口支持</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html">QuartusFlow</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html#for-a-single-rtl-file">对于单个 rtl 文件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html#for-an-existing-project">对于现有项目</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html#for-a-single-rtl-file">对于单个rtl文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/EDA/altera/quartus_flow.html#for-an-existing-project">对于一个现有项目</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Libraries/Misc/index.html">杂项</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html">Plic Mapper</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html">Plic映射器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html#plicmapper-apply"><code class="docutils literal notranslate"><span class="pre">PlicMapper.apply</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html#plicmapping-sifive"><code class="docutils literal notranslate"><span class="pre">PlicMapping.si</span> <span class="pre">Five</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html#plicmapping-sifive"><code class="docutils literal notranslate"><span class="pre">PlicMapping.sifive</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Libraries/Misc/PLIC/plic_mapper.html#plicmapping-light"><code class="docutils literal notranslate"><span class="pre">PlicMapping.light</span></code></a></li>
 </ul>
 </li>
@@ -1000,18 +1000,18 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">历史遗留</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../riscv.html">瑞斯克病毒</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../riscv.html#features">特征</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../riscv.html#base-fpga-project">基础 FPGA 项目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../riscv.html">RiscV</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../riscv.html#features">特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../riscv.html#base-fpga-project">基础FPGA项目</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../riscv.html#how-to-generate-the-cpu-vhdl">如何生成CPU VHDL</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../riscv.html#how-to-debug">如何调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../riscv.html#todo">去做</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../riscv.html#todo">Todo</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">针秒</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">pinsec</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id1">简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#board-support">董事会支持</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#board-support">板级支持</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="hardware.html">硬件</a><ul>
@@ -1019,22 +1019,22 @@
 <li class="toctree-l4"><a class="reference internal" href="hardware.html#riscv">RISCV</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware.html#axi4">AXI4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware.html#apb3">APB3</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hardware.html#generate-the-rtl">生成 RTL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hardware.html#generate-the-rtl">生成RTL</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="hardware_toplevel.html">SoC 顶层 (Pinsec)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hardware_toplevel.html">SoC顶层(Pinsec)</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#introduction">简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#defining-all-io">定义所有IO</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#clock-and-resets">时钟和重置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#main-components">主要成分</a></li>
-<li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#peripherals">周边设备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#clock-and-resets">时钟和复位</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#main-components">主要组件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#peripherals">外设</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#bus-interconnects">总线互连</a></li>
 <li class="toctree-l4"><a class="reference internal" href="hardware_toplevel.html#misc">杂项</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="software.html">软件</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="software.html#riscv-tool-chain">RISCV工具链</a></li>
-<li class="toctree-l4"><a class="reference internal" href="software.html#openocd-gdb-eclipse-configuration">OpenOCD/GDB/Eclipse 配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="software.html#openocd-gdb-eclipse-configuration">OpenOCD/GDB/Eclipse配置</a></li>
 </ul>
 </li>
 </ul>
@@ -1129,7 +1129,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Developers%20area/types.html#masked-comparison">掩码过滤结果比较</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bits">Bits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bits">位</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#uint-sint">UInt、SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#bool-bits-uint-sint">Bool, Bits, UInt, SInt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Developers%20area/types.html#vec">Vec</a></li>
@@ -1163,7 +1163,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">历史遗留</a></li>
-          <li class="breadcrumb-item"><a href="index.html">针秒</a></li>
+          <li class="breadcrumb-item"><a href="index.html">pinsec</a></li>
       <li class="breadcrumb-item active">简介</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/SpinalHDL/SpinalDoc-RTD/blob/master/source/SpinalHDL/Legacy/pinsec/introduction.rst" class="fa fa-github"> 在 GitHub 上编辑</a>
@@ -1180,36 +1180,34 @@
 <span id="pinsec-introduction"></span><h1>简介<a class="headerlink" href="#introduction" title="此标题的永久链接"></a></h1>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>This page only documents the SoC implemented with the first generation of RISC-V CPU created in SpinalHDL.
-This page does not document the VexRiscV CPU, which is the second generation of this SoC (and CPU) is available
-<a class="reference external" href="https://github.com/SpinalHDL/VexRiscv">here</a> and offers better perforance/area/features.</p>
+<p>本页仅记录使用SpinalHDL创造的第一代用RISC-V CPU实现的SoC。本页面未记录VexRiscV CPU，这是该 SoC（和 CPU）的第二代，可在 <a class="reference external" href="https://github.com/SpinalHDL/VexRiscv">这里</a> 获得，并提供更好的性能/面积/功能。</p>
 </div>
 <section id="id1">
 <h2>简介<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
-<p>Pinsec 是完全用 SpinalHDL 编写的小型 FPGA SoC 的名称。该项目的目标有多个：</p>
+<p>Pinsec是完全用SpinalHDL编写的一个小型FPGA SoC的名称。该项目有多个目的：</p>
 <ul class="simple">
-<li><p>证明 SpinalHDL 是重要项目中可行的 HDL 替代方案。</p></li>
-<li><p>在具体项目中展示 SpinalHDL 元硬件描述功能的优势。</p></li>
+<li><p>证明SpinalHDL是重要项目中可行的HDL替代方案。</p></li>
+<li><p>在具体项目中展示SpinalHDL元硬件描述功能的优势。</p></li>
 <li><p>提供完全开源的SoC。</p></li>
 </ul>
 <p>Pinsec具有以下硬件特性：</p>
 <ul class="simple">
-<li><p>用于高速总线的 AXI4 互连</p></li>
-<li><p>用于外设的 APB3 互连</p></li>
-<li><p>具有指令缓存、MUL/DIV 扩展和中断控制器的 RISCV CPU</p></li>
-<li><p>用于加载二进制文件和调试 CPU 的 JTAG 桥</p></li>
-<li><p>SDRAM SDR 控制器</p></li>
+<li><p>用于高速总线的AXI4互连</p></li>
+<li><p>用于外设的APB3互连</p></li>
+<li><p>具有指令缓存、MUL/DIV扩展和中断控制器的RISCV CPU</p></li>
+<li><p>用于加载二进制文件和调试CPU的JTAG桥</p></li>
+<li><p>SDRAM SDR控制器</p></li>
 <li><p>片上内存</p></li>
 <li><p>1个UART控制器</p></li>
 <li><p>1个VGA控制器</p></li>
 <li><p>一些定时器模块</p></li>
 <li><p>一些GPIO</p></li>
 </ul>
-<p>顶级代码解释可以在 &lt;pinsec_hardware_toplevel&gt; 找到：ref:`</p>
+<p>顶层代码的解释可以在 :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>这里 &lt;pinsec_hardware_toplevel&gt;`找到</p>
 </section>
 <section id="board-support">
-<h2>董事会支持<a class="headerlink" href="#board-support" title="此标题的永久链接"></a></h2>
-<p>A DE1-SOC FPGA project can be find <a class="reference external" href="https://drive.google.com/drive/folders/0B-CqLXDTaMbKOGhIU0JGdHVVSk0?usp=sharing">here</a> with some demo binaries.</p>
+<h2>板级支持<a class="headerlink" href="#board-support" title="此标题的永久链接"></a></h2>
+<p>DE1-SOC FPGA项目可以在 <a class="reference external" href="https://drive.google.com/drive/folders/0B-CqLXDTaMbKOGhIU0JGdHVVSk0?usp=sharing">这里</a> 找到，其中包含一些二进制文件demo。</p>
 </section>
 </section>
 
@@ -1224,7 +1222,7 @@ This page does not document the VexRiscV CPU, which is the second generation of 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="index.html" class="btn btn-neutral float-left" title="针秒" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="pinsec" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="hardware.html" class="btn btn-neutral float-right" title="硬件" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
