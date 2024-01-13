@@ -1340,7 +1340,7 @@
 </section>
 <section id="new-clockdomain">
 <h2>新时钟域<a class="headerlink" href="#new-clockdomain" title="此标题的永久链接"></a></h2>
-<p>如果您的顶层模块中定义了一些未直接集成到其 <code class="docutils literal notranslate"><span class="pre">ClockDomain``中的时钟和复位，您可以直接在测试平台中定义其相应的</span> <span class="pre">``ClockDomain</span></code> ：</p>
+<p>如果您的顶层模块中定义了一些未直接集成到其 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> 中的时钟和复位，您可以直接在测试平台中定义其相应的 <code class="docutils literal notranslate"><span class="pre">ClockDomain</span></code> ：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// In the testbench</span>
 <span class="nc">ClockDomain</span><span class="p">(</span><span class="n">dut</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">coreClk</span><span class="p">,</span><span class="w"> </span><span class="n">dut</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">coreReset</span><span class="p">).</span><span class="n">forkStimulus</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>

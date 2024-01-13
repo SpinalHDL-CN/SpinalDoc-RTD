@@ -1257,7 +1257,7 @@
 <p>您可以在 <a class="reference internal" href="../Getting%20Started/Scala%20Guide/interaction.html#hardware-type"><span class="std std-ref">硬件类型页面</span></a> 上获取有关如何管理硬件数据类型的更多信息。</p>
 <div class="admonition note">
 <p class="admonition-title">备注</p>
-<p>如果你在 <code class="docutils literal notranslate"><span class="pre">Bundle``上使用</span> <span class="pre">``cloneOf</span></code> 函数，这个 <code class="docutils literal notranslate"><span class="pre">Bundle</span></code> 应该是一个 <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">class</span></code> ，否则应该在内部重写clone函数。</p>
+<p>如果你在 <code class="docutils literal notranslate"><span class="pre">Bundle</span></code> 上使用 <code class="docutils literal notranslate"><span class="pre">cloneOf</span></code> 函数，这个 <code class="docutils literal notranslate"><span class="pre">Bundle</span></code> 应该是一个 <code class="docutils literal notranslate"><span class="pre">case</span> <span class="pre">class</span></code> ，否则应该在内部重写clone函数。</p>
 </div>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// An example of a regular &#39;class&#39; with &#39;override def clone()&#39; function</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">MyBundle</span><span class="p">(</span><span class="n">ppp</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
