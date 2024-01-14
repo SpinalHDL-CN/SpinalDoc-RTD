@@ -1177,7 +1177,7 @@
 
   <section id="a-simple-example">
 <span id="simple-example"></span><h1>一个简单的例子<a class="headerlink" href="#a-simple-example" title="此标题的永久链接"></a></h1>
-<p>以下是来自 <cite>入门 &lt;https://github.com/SpinalHDL/SpinalTemplateSbt&gt;</cite> 仓库的简单硬件描述。</p>
+<p>以下是来自 <a class="reference external" href="https://github.com/SpinalHDL/SpinalTemplateSbt">入门</a> 仓库的简单硬件描述。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyTopLevel</span><span class="p">()</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">cond0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="nc">Bool</span><span class="p">()</span>
@@ -1200,7 +1200,7 @@
 <p>它在本节中被分成多个块进行解释。</p>
 <section id="component">
 <h2>Component<a class="headerlink" href="#component" title="此标题的永久链接"></a></h2>
-<p>首先，这里有一个 SpinalHDL``Component`` 的结构。</p>
+<p>首先，这里有一个 SpinalHDL <code class="docutils literal notranslate"><span class="pre">Component</span></code> 的结构。</p>
 <p>组件是一段逻辑，可以根据需要多次实例化（粘贴），外部仅可通过输入和输出信号（io）对其访问。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">case</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MyTopLevel</span><span class="p">()</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">io</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Bundle</span><span class="w"> </span><span class="p">{</span>
