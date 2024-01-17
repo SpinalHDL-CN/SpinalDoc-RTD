@@ -33,7 +33,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="用于仿真的 SBT 设置" href="install/index.html" />
-    <link rel="prev" title="Plic映射器" href="../Libraries/Misc/PLIC/plic_mapper.html" />
+    <link rel="prev" title="Plugin" href="../Libraries/Misc/service_plugin.html" />
      
     <!-- source/_templates/layout.html -->
     
@@ -765,6 +765,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Libraries/Com/index.html">通信接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Com/spiXdr.html">SPI XDR</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Com/spiXdr.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Com/spiXdr.html#software-driver">Software Driver</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Com/uart.html">串口</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Com/uart.html#bus-definition">总线定义</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Com/uart.html#uartctrl">UartCtrl</a></li>
@@ -819,11 +824,39 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/Pipeline/index.html">Pipeline</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html">Introduction</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#simple-example">Simple example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#payload">Payload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#node">Node</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#links">Links</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#directlink">DirectLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#stagelink">StageLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#s2mlink">S2mLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#ctrllink">CtrlLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#other-links">Other Links</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#your-custom-link">Your custom Link</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#builder">Builder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#composability">Composability</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#retiming-variable-lenth">Retiming / Variable lenth</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../Libraries/Misc/index.html">杂项</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Misc/PLIC/plic_mapper.html">Plic映射器</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Misc/PLIC/plic_mapper.html#plicmapper-apply"><code class="docutils literal notranslate"><span class="pre">PlicMapper.apply</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Misc/PLIC/plic_mapper.html#plicmapping-sifive"><code class="docutils literal notranslate"><span class="pre">PlicMapping.sifive</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Misc/PLIC/plic_mapper.html#plicmapping-light"><code class="docutils literal notranslate"><span class="pre">PlicMapping.light</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Misc/service_plugin.html">Plugin</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Misc/service_plugin.html#introduction">Introduction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Misc/service_plugin.html#execution-order">Execution order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Misc/service_plugin.html#simple-example">Simple example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Misc/service_plugin.html#interlocking-ordering">Interlocking / Ordering</a></li>
 </ul>
 </li>
 </ul>
@@ -1201,7 +1234,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
-        <a href="../Libraries/Misc/PLIC/plic_mapper.html" class="btn btn-neutral float-left" title="Plic映射器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../Libraries/Misc/service_plugin.html" class="btn btn-neutral float-left" title="Plugin" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
         <a href="install/index.html" class="btn btn-neutral float-right" title="用于仿真的 SBT 设置" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
