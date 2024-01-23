@@ -766,8 +766,8 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">通信接口</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">SPI XDR</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#software-driver">Software Driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#configuration">配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#software-driver">软件驱动</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="uart.html">串口</a><ul>
@@ -825,8 +825,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Pipeline/index.html">Pipeline</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Pipeline/introduction.html">Introduction</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Pipeline/introduction.html#simple-example">Simple example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Pipeline/introduction.html">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Pipeline/introduction.html#simple-example">简单示例</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Pipeline/introduction.html#payload">Payload</a></li>
@@ -852,11 +852,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../Misc/PLIC/plic_mapper.html#plicmapping-light"><code class="docutils literal notranslate"><span class="pre">PlicMapping.light</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../Misc/service_plugin.html">Plugin</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Misc/service_plugin.html#introduction">Introduction</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Misc/service_plugin.html#execution-order">Execution order</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Misc/service_plugin.html#simple-example">Simple example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Misc/service_plugin.html#interlocking-ordering">Interlocking / Ordering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Misc/service_plugin.html">插件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Misc/service_plugin.html#introduction">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Misc/service_plugin.html#execution-order">执行顺序</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Misc/service_plugin.html#simple-example">简单示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Misc/service_plugin.html#interlocking-ordering">联锁/排序</a></li>
 </ul>
 </li>
 </ul>
@@ -1211,17 +1211,17 @@
 
   <section id="spi-xdr">
 <h1>SPI XDR<a class="headerlink" href="#spi-xdr" title="此标题的永久链接"></a></h1>
-<p>There is a SPI controller which support :</p>
+<p>这是一个SPI控制器，它支持：</p>
 <ul class="simple">
-<li><p>half/full duplex</p></li>
-<li><p>single/dual/quad SPI</p></li>
-<li><p>SDR/DDR/.. data rate</p></li>
+<li><p>半双工/全双工</p></li>
+<li><p>单线/双线/四线 SPI</p></li>
+<li><p>SDR/DDR/.. 数据速率</p></li>
 </ul>
-<p>You can find its APB3 implementation here :</p>
+<p>您可以在此处找到其APB3实现：</p>
 <p><a class="reference external" href="https://github.com/SpinalHDL/SpinalHDL/blob/68b6158700fc2440ea7980406f927262c004faca/lib/src/main/scala/spinal/lib/com/spi/xdr/Apb3SpiXdrMasterCtrl.scala#L43">https://github.com/SpinalHDL/SpinalHDL/blob/68b6158700fc2440ea7980406f927262c004faca/lib/src/main/scala/spinal/lib/com/spi/xdr/Apb3SpiXdrMasterCtrl.scala#L43</a></p>
 <section id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="此标题的永久链接"></a></h2>
-<p>Here is an example.</p>
+<h2>配置<a class="headerlink" href="#configuration" title="此标题的永久链接"></a></h2>
+<p>这是一个示例。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">Apb3SpiXdrMasterCtrl</span><span class="p">(</span>
 <span class="w">  </span><span class="nc">SpiXdrMasterCtrl</span><span class="p">.</span><span class="nc">MemoryMappingParameters</span><span class="p">(</span>
 <span class="w">    </span><span class="nc">SpiXdrMasterCtrl</span><span class="p">.</span><span class="nc">Parameters</span><span class="p">(</span>
@@ -1251,8 +1251,8 @@
 </div>
 </section>
 <section id="software-driver">
-<h2>Software Driver<a class="headerlink" href="#software-driver" title="此标题的永久链接"></a></h2>
-<p>See :</p>
+<h2>软件驱动<a class="headerlink" href="#software-driver" title="此标题的永久链接"></a></h2>
+<p>看：</p>
 <p><a class="reference external" href="https://github.com/SpinalHDL/SaxonSoc/blob/dev-0.3/software/standalone/driver/spi.h">https://github.com/SpinalHDL/SaxonSoc/blob/dev-0.3/software/standalone/driver/spi.h</a>
 <a class="reference external" href="https://github.com/SpinalHDL/SaxonSoc/blob/dev-0.3/software/standalone/spiDemo/src/main.c">https://github.com/SpinalHDL/SaxonSoc/blob/dev-0.3/software/standalone/spiDemo/src/main.c</a></p>
 </section>
