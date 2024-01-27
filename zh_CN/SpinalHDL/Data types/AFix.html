@@ -1245,7 +1245,7 @@
 <span class="k">new</span><span class="w"> </span><span class="nc">AFix</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">exp</span><span class="p">)</span><span class="w">       </span><span class="c1">// [8 to 16, 2^2]</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">maxValue</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minValue</span></code> 保存可表示的整数值。这些值表示乘以 <code class="docutils literal notranslate"><span class="pre">2^exp</span></code> 后的真实定点值。</p>
+<p>在定点数表示法中， <code class="docutils literal notranslate"><span class="pre">maxValue</span></code> 和 <code class="docutils literal notranslate"><span class="pre">minValue</span></code> 变量用于存储可表示的最大和最小整数值。这些数值是在进行 <a href="#id1"><span class="problematic" id="id2">``</span></a>2^exp``（即2的exp次方）的乘法运算后得到的定点数的实际值。</p>
 <p><code class="docutils literal notranslate"><span class="pre">AFix.U(2</span> <span class="pre">exp,</span> <span class="pre">-1</span> <span class="pre">exp)</span></code> 可以表示：<code class="docutils literal notranslate"><span class="pre">0,</span> <span class="pre">0.5,</span> <span class="pre">1.0,</span> <span class="pre">1.5,</span> <span class="pre">2,</span> <span class="pre">2.5,</span> <span class="pre">3,</span> <span class="pre">3.5</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">AFix.S(2</span> <span class="pre">exp,</span> <span class="pre">-2</span> <span class="pre">exp)</span></code> 可以表示：<code class="docutils literal notranslate"><span class="pre">-2.0,</span> <span class="pre">-1.75,</span> <span class="pre">-1.5,</span> <span class="pre">-1.25,</span> <span class="pre">-1,</span> <span class="pre">-0.75,</span> <span class="pre">-0.5,</span> <span class="pre">-0.25,</span> <span class="pre">0,</span> <span class="pre">0.25,</span> <span class="pre">0.5,</span> <span class="pre">0.75,</span> <span class="pre">1,</span> <span class="pre">1.25,</span> <span class="pre">1.5,</span> <span class="pre">1.75</span></code></p>
 <p>指数值大于 0 是允许的，用来表示该数值大于 1 。</p>
@@ -1271,7 +1271,7 @@
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">AFix</span></code> 支持无范围扩展的操作。它通过从每个输入中选择对齐的最大和最小范围来实现此目的。</p>
-<p><code class="docutils literal notranslate"><span class="pre">+|</span></code> 用于不带扩展的加法。 <code class="docutils literal notranslate"><span class="pre">-|</span></code> 进行不带扩展的减法。</p>
+<p><code class="docutils literal notranslate"><span class="pre">+|</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-|</span></code> 分别代表加法和减法操作，这两种操作在执行时不会对数值进行扩展。</p>
 </section>
 <section id="inequality-operations">
 <h2>不等式运算<a class="headerlink" href="#inequality-operations" title="此标题的永久链接"></a></h2>
@@ -1343,7 +1343,7 @@
 <span class="nc">RoundType</span><span class="p">.</span><span class="nc">ROUNDTOODD</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">saturation</span></code> 标志将指定的数据值饱和化，设置为数据类型的边界值。</p>
+<p>当设置 <code class="docutils literal notranslate"><span class="pre">saturation</span></code> 标志时，系统会在数值超出指定数据类型的界限时，自动将其调整至该类型的有效范围，以防止溢出。</p>
 <p><code class="docutils literal notranslate"><span class="pre">overflow</span></code> 标志将允许在舍入后直接赋值，而不进行范围检查。</p>
 <p>将精度较高的值分配给精度较低的值时，始终需要进行舍入。</p>
 </section>

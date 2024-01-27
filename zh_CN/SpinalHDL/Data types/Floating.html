@@ -1240,14 +1240,14 @@
 </section>
 <section id="denormalized-values">
 <h4>非规范化值<a class="headerlink" href="#denormalized-values" title="此标题的永久链接"></a></h4>
-<p>非规范化值的编码方式与普通浮点小数相同。不同的是，尾数发生了位移，以便第一个尾数变成隐式的。指数编码为 107（十进制）加上一个索引，这个索引是最高位设置为 1 的值。</p>
+<p>在浮点数表示中，非规范化数值的编码方式与规范化数值相同。尾数部分会进行位移，使得最左边的1位成为隐含的，而指数部分则由107（十进制）加上最左边1位的位置索引来计算。这样的编码确保了非规范化数值能够正确表示。</p>
 </section>
 <section id="normalized-values">
 <h4>标准化值<a class="headerlink" href="#normalized-values" title="此标题的永久链接"></a></h4>
 <p>标准化值的重新编码尾数与原始 IEEE-754 尾数完全相同。重新编码的指数被编码为 130（十进制）加上原始指数值。</p>
 </section>
 <section id="infinity">
-<h4>无穷<a class="headerlink" href="#infinity" title="此标题的永久链接"></a></h4>
+<h4>无穷大<a class="headerlink" href="#infinity" title="此标题的永久链接"></a></h4>
 <p>此时，重新编码的尾数值被视为无关紧要。重新编码的指数三位最高位是6（十进制），其余指数可以视为不关心。</p>
 </section>
 <section id="nan">
