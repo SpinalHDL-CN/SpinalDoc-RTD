@@ -842,6 +842,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#builder">Builder</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#composability">Composability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#retiming-variable-lenth">Retiming / Variable lenth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#simple-cpu-example">Simple CPU example</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Libraries/Misc/index.html">Misc</a><ul>
@@ -1247,6 +1248,14 @@
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">report</span><span class="p">(</span><span class="nc">L</span><span class="s">&quot;miaou $a $b $c $d&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>You can display the current simulation time using the REPORT_TIME object</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="n">report</span><span class="p">(</span><span class="nc">L</span><span class="s">&quot;miaou $REPORT_TIME&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>will result in:</p>
+<div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="nb">$display</span><span class="p">(</span><span class="s">&quot;NOTE miaou %t&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">$time</span><span class="p">);</span>
+</pre></div>
+</div>
 </section>
 
     <script type="text/javascript">
@@ -1278,7 +1287,7 @@
     <!-- source/_templates/footer.html -->
     
     <div class="doc-footer-current-version"><p>
-    Version: master git~7eff6f28 2024-01-23
+    Version: master git~89e4ac50 2024-01-27
     </p></div>
     
 

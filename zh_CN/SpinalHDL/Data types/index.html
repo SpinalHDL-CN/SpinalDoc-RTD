@@ -638,7 +638,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/utils.html#special-utilities">特殊工具</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/stream.html">反压流</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/stream.html">Stream</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#functions">函数</a></li>
@@ -659,14 +659,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/flow.html">数据流</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/flow.html">Flow</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/flow.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/flow.html#code-example">代码示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/flow.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/fragment.html">片段</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/fragment.html">Fragment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/fragment.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/fragment.html#functions">函数</a></li>
 </ul>
@@ -711,7 +711,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/binarySystem.html#bigint-enricher">BigInt放大器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/regIf.html">寄存器接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/regIf.html">RegIf</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/regIf.html#automatic-allocation">自动分配</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/regIf.html#access-types">28种访问类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/regIf.html#automatic-documentation-generation">自动生成文档</a></li>
@@ -836,13 +836,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#stagelink">StageLink</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#s2mlink">S2mLink</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#ctrllink">CtrlLink</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#other-links">Other Links</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#your-custom-link">Your custom Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#other-links">其他链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#your-custom-link">您的自定义链接</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#builder">Builder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#composability">Composability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#retiming-variable-lenth">Retiming / Variable lenth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#composability">组合能力（Composability）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#retiming-variable-lenth">重定时/可变长度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#simple-cpu-example">简单的CPU示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Libraries/Misc/index.html">杂项</a><ul>
@@ -1221,10 +1222,15 @@
 <li><p><a class="reference internal" href="AFix.html#afix"><span class="std std-ref">Auto-range Fixed-point</span></a> 自动范围定点小数（支持加法、减法、乘法 ）</p></li>
 <li><p><a class="reference internal" href="Floating.html#floating"><span class="std std-ref">Floating-point</span></a> 浮点小数（实验性支持）</p></li>
 </ul>
+<p>此外，如果您想为某些硬件分配一个 “不关心 “值，例如提供一个默认值，可以使用 assignDontCare API 来实现。</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">myBits</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
+<span class="n">myBits</span><span class="p">.</span><span class="n">assignDontCare</span><span class="p">()</span><span class="w"> </span><span class="c1">// Will assign all the bits to &#39;x&#39;</span>
+</pre></div>
+</div>
 <p>最后，还有一种特殊类型可用于检查 BitVector 是否符合位常量的指定模式，该模式包含像位掩码一样定义的空洞（位的位置不通过等式进行比较）。</p>
 <p>下面是一个示例，展示如何实现此目的（注意使用“M”前缀）：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">myBits</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)</span>
-<span class="kd">val</span><span class="w"> </span><span class="n">itMatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myBits</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nc">M</span><span class="s">&quot;00--10--&quot;</span><span class="w"> </span><span class="c1">// - don&#39;t care value</span>
+<span class="kd">val</span><span class="w"> </span><span class="n">itMatch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myBits</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nc">M</span><span class="s">&quot;00--10--&quot;</span><span class="w"> </span><span class="c1">// - for don&#39;t care value</span>
 </pre></div>
 </div>
 <div class="toctree-wrapper compound">

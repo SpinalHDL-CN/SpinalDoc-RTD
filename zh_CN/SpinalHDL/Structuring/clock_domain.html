@@ -638,7 +638,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/utils.html#special-utilities">特殊工具</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/stream.html">反压流</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/stream.html">Stream</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#functions">函数</a></li>
@@ -659,14 +659,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/stream.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/flow.html">数据流</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/flow.html">Flow</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/flow.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/flow.html#code-example">代码示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/flow.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/fragment.html">片段</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/fragment.html">Fragment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/fragment.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/fragment.html#functions">函数</a></li>
 </ul>
@@ -711,7 +711,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/binarySystem.html#bigint-enricher">BigInt放大器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../Libraries/regIf.html">寄存器接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Libraries/regIf.html">RegIf</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/regIf.html#automatic-allocation">自动分配</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/regIf.html#access-types">28种访问类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/regIf.html#automatic-documentation-generation">自动生成文档</a></li>
@@ -836,13 +836,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#stagelink">StageLink</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#s2mlink">S2mLink</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#ctrllink">CtrlLink</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#other-links">Other Links</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#your-custom-link">Your custom Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#other-links">其他链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#your-custom-link">您的自定义链接</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#builder">Builder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#composability">Composability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#retiming-variable-lenth">Retiming / Variable lenth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#composability">组合能力（Composability）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#retiming-variable-lenth">重定时/可变长度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Libraries/Pipeline/introduction.html#simple-cpu-example">简单的CPU示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Libraries/Misc/index.html">杂项</a><ul>
@@ -1720,6 +1721,10 @@
 <span class="w">  </span><span class="p">).</span><span class="n">generateVhdl</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="nc">TopLevel</span><span class="p">)</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>SlowArea 中使用的时钟信号与父区域相同。而 SlowArea 会添加一个时钟启用信号，以减慢其内部的采样率。换句话说，<code class="docutils literal notranslate"><span class="pre">ClockDomain.current.readClockWire</span></code> 将返回快速（父域）时钟。要获取时钟使能信号，请使用 <code class="docutils literal notranslate"><span class="pre">ClockDomain.current.readClockEnableWire</span></code></p>
 </div>
 </section>
 <section id="bootreset">

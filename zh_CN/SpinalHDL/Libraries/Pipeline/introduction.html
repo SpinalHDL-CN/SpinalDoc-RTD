@@ -638,7 +638,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../utils.html#special-utilities">特殊工具</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../stream.html">反压流</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../stream.html">Stream</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../stream.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../stream.html#semantics">语义</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../stream.html#functions">函数</a></li>
@@ -659,14 +659,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../stream.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../flow.html">数据流</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flow.html">Flow</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../flow.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../flow.html#functions">函数</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../flow.html#code-example">代码示例</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../flow.html#simulation-support">仿真支持</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../fragment.html">片段</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../fragment.html">Fragment</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../fragment.html#specification">规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../fragment.html#functions">函数</a></li>
 </ul>
@@ -711,7 +711,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../binarySystem.html#bigint-enricher">BigInt放大器</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../regIf.html">寄存器接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../regIf.html">RegIf</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../regIf.html#automatic-allocation">自动分配</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../regIf.html#access-types">28种访问类型</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../regIf.html#automatic-documentation-generation">自动生成文档</a></li>
@@ -836,13 +836,14 @@
 <li class="toctree-l4"><a class="reference internal" href="#stagelink">StageLink</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#s2mlink">S2mLink</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ctrllink">CtrlLink</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other-links">Other Links</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#your-custom-link">Your custom Link</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-links">其他链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#your-custom-link">您的自定义链接</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#builder">Builder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#composability">Composability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#retiming-variable-lenth">Retiming / Variable lenth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composability">组合能力（Composability）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#retiming-variable-lenth">重定时/可变长度</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#simple-cpu-example">简单的CPU示例</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Misc/index.html">杂项</a><ul>
@@ -1225,7 +1226,7 @@
 <li><p>Builder：生成整个管道所需的硬件</p></li>
 <li><p>Payload：用于获取流水线的节点上的硬件信号</p></li>
 </ul>
-<p>重要的是，Payload不是硬件数据/信号实例，而是用于检索流水线在节点中数据/信号的关键，并且流水线构建器随后将在节点之间的每次给定有效载荷出现时自动互连/流水线。</p>
+<p>重要的是，Payload不是硬件数据/信号实例，而是用于检索流水线在节点中数据/信号的关键，并且流水线构建器随后将在节点之间的每次给定Payload出现时自动互连/流水线。</p>
 <p>以下是一个用于阐述的例子：</p>
 <a class="reference internal image-reference" href="../../../_images/intro_pip.png"><img alt="../../../_images/intro_pip.png" src="../../../_images/intro_pip.png" style="width: 251.99999999999997px; height: 331.79999999999995px;" /></a>
 <p>以下是关于此API的视频：</p>
@@ -1343,7 +1344,7 @@
 </section>
 <section id="payload">
 <h1>Payload<a class="headerlink" href="#payload" title="此标题的永久链接"></a></h1>
-<p>Payload对象用于引用可以通过管道的数据。从技术上讲，Payload是一个HardType，它有一个名字，并被用作在管道某个级中检索信号的“键”。</p>
+<p>Payload对象用于引用可以通过流水线的数据。从技术上讲，Payload是一个HardType，它有一个名字，并被用作在流水线某个级中检索信号的“键”。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="nc">PC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Payload</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">32</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="nc">PC_PLUS_4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Payload</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">32</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 
@@ -1379,44 +1380,41 @@
 </tr>
 <tr class="row-odd"><td><p>node.ready</p></td>
 <td><p>RW</p></td>
-<td><p>Is the signal which specifies if the node’s transaction can proceed downstream. It is driven by the downstream to create backpresure. The signal has no meaning when there is no transaction (node.valid being deasserted)</p></td>
+<td><p>指定节点的事务是否可以向下游进行的信号。它是由下游驱动以创建反压。当没有事务（node.valid被置0）时，该信号无意义</p></td>
 </tr>
 <tr class="row-even"><td><p>node.cancel</p></td>
 <td><p>RW</p></td>
-<td><p>Is the signal which specifies if the node’s transaction in being canceled from the pipeline. It is driven by the downstream. The signal has no meaning when there is no transaction (node.valid being deasserted)</p></td>
+<td><p>指定节点的事务是否正在从流水线中取消的信号。它由下游驱动。当没有事务时（node.valid被置0），该信号没有意义</p></td>
 </tr>
 <tr class="row-odd"><td><p>node.isValid</p></td>
 <td><p>RO</p></td>
-<td><p>node.valid’s read only accessor</p></td>
+<td><p>node.valid的只读访问器</p></td>
 </tr>
 <tr class="row-even"><td><p>node.isReady</p></td>
 <td><p>RO</p></td>
-<td><p>node.ready’s read only accessor</p></td>
+<td><p>node.ready的只读访问器</p></td>
 </tr>
 <tr class="row-odd"><td><p>node.isCancel</p></td>
 <td><p>RO</p></td>
-<td><p>node.cancel’s read only accessor</p></td>
+<td><p>node.cancel的只读访问器</p></td>
 </tr>
 <tr class="row-even"><td><p>node.isFiring</p></td>
 <td><p>RO</p></td>
-<td><p>True when the node transaction is successfuly moving futher (valid &amp;&amp; ready &amp;&amp; !cancel). Useful to commit state changes.</p></td>
+<td><p>当节点事务成功继续进行时为True（valid &amp;&amp; ready &amp;&amp; !cancel）。用于提交状态更改。</p></td>
 </tr>
 <tr class="row-odd"><td><p>node.isMoving</p></td>
 <td><p>RO</p></td>
-<td><p>True when the node transaction will not be present anymore on the node (starting from the next cycle),
-either because downstream is ready to take the transaction,
-or because the transaction is canceled from the pipeline. (valid &amp;&amp; (ready || cancel)). Useful to “reset” states.</p></td>
+<td><p>当节点事务将不再存在于节点上时（从下一周期开始）为True，要么是因为下游准备好接收事务，要么是因为事务已从流水线中取消。（valid &amp;&amp; (ready || cancel)）用于“复位”(reset)状态。</p></td>
 </tr>
 <tr class="row-even"><td><p>node.isCanceling</p></td>
 <td><p>RO</p></td>
-<td><p>True when the node transaction is being canceled. Meaning that it will not appear anywhere in the pipeline in future cycles.</p></td>
+<td><p>当节点事务正在被取消时为True。这意味着在将来的周期中它不会出现在流水线中的任何地方。</p></td>
 </tr>
 </tbody>
 </table>
-<p>Note that the node.valid/node.ready signals follows the same conventions than the <a class="reference internal" href="../stream.html"><span class="doc">反压流</span></a>’s ones .</p>
-<p>The Node controls (valid/ready/cancel) and status (isValid, isReady, isCancel, isFiring, …) signals are created on demande.
-So for instance you can create pipeline with no backpresure by never refering to the ready signal. That’s why it is important to use status signals when you want to read the status of something and only use control signals when you to drive something.</p>
-<p>Here is a list of arbitration cases you can have on a node. valid/ready/cancel define the state we are in, while isFiring/isMoving result of those :</p>
+<p>请注意，node.valid/node.ready信号遵循与 <a class="reference internal" href="../stream.html"><span class="doc">Stream</span></a> 中相同的规范。</p>
+<p>Node的控制信号（valid/ready/cancel）和状态信号（isValid、isReady、isCancel、isFiring等）是按需创建的。因此，例如，您可以通过永远不引用ready信号来创建没有反压的流水线。这就是在想要读取某物的状态时使用状态信号，仅在想要驱动某物时使用控制信号的重要性所在。</p>
+<p>以下是节点上可能出现的仲裁情况列表。valid/ready/cancel定义了我们所处的状态，而isFiring/isMoving是这些状态的结果：</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>valid</p></th>
@@ -1431,35 +1429,35 @@ So for instance you can create pipeline with no backpresure by never refering to
 <tr class="row-even"><td><p>0</p></td>
 <td><p>X</p></td>
 <td><p>X</p></td>
-<td><p>No transaction</p></td>
+<td><p>无事务</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
 </tr>
 <tr class="row-odd"><td><p>1</p></td>
 <td><p>1</p></td>
 <td><p>0</p></td>
-<td><p>Going through</p></td>
+<td><p>正在进行</p></td>
 <td><p>1</p></td>
 <td><p>1</p></td>
 </tr>
 <tr class="row-even"><td><p>1</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
-<td><p>Blocked</p></td>
+<td><p>阻塞</p></td>
 <td><p>0</p></td>
 <td><p>0</p></td>
 </tr>
 <tr class="row-odd"><td><p>1</p></td>
 <td><p>X</p></td>
 <td><p>1</p></td>
-<td><p>Canceled</p></td>
+<td><p>取消</p></td>
 <td><p>0</p></td>
 <td><p>1</p></td>
 </tr>
 </tbody>
 </table>
-<p>Note that if you want to model things like for instance a CPU stage which can block and flush stuff, take a look a the CtrlLink, as it provides the API to do such things.</p>
-<p>You can access signals referenced by a Payload via:</p>
+<p>请注意，如果您想要建模诸如CPU级可能的阻塞和刷新的情况，可以查看 CtrlLink，因为它提供了执行此类操作的 API。</p>
+<p>您可以通过以下方式访问由Payload引用的信号：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
@@ -1472,13 +1470,13 @@ So for instance you can create pipeline with no backpresure by never refering to
 </thead>
 <tbody>
 <tr class="row-even"><td><p>node(Payload)</p></td>
-<td><p>Return the corresponding hardware signal</p></td>
+<td><p>返回对应的硬件信号</p></td>
 </tr>
 <tr class="row-odd"><td><p>node(Payload, Any)</p></td>
-<td><p>Same as above, but include a second argument which is used as a “secondary key”. This eases the construction of multi-lane hardware. For instance, when you have a multi issue CPU pipeline, you can use the lane Int id as secondary key</p></td>
+<td><p>与上述相同，但包括一个用作“次要键”的第二个参数。这有助于构建多通道硬件。例如，当您有一个多发射CPU流水线时，您可以使用通道Int id作为次要键</p></td>
 </tr>
 <tr class="row-even"><td><p>node.insert(Data)</p></td>
-<td><p>Return a new Payload instance which is connected to the given Data hardware signal</p></td>
+<td><p>返回一个新的Payload实例，该实例连接到给定的Data硬件信号</p></td>
 </tr>
 </tbody>
 </table>
@@ -1492,7 +1490,7 @@ So for instance you can create pipeline with no backpresure by never refering to
 <span class="n">when</span><span class="p">(</span><span class="n">n1</span><span class="p">(</span><span class="nc">SOMETHING</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mh">0xFFAA</span><span class="p">){</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
 </pre></div>
 </div>
-<p>While you can manualy drive/read the arbitration/data of the first/last stage of your pipeline, there is a few utilities to connect its boundaries.</p>
+<p>虽然您可以手动驱动/读取流水线的第一个/最后一级的仲裁/数据，但有一些实用工具可以连接其边界。</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 50%" />
@@ -1505,28 +1503,28 @@ So for instance you can create pipeline with no backpresure by never refering to
 </thead>
 <tbody>
 <tr class="row-even"><td><p>node.arbitrateFrom(Stream[T]])</p></td>
-<td><p>Drive a node arbitration from a stream.</p></td>
+<td><p>由反压流驱动节点仲裁。</p></td>
 </tr>
 <tr class="row-odd"><td><p>node.arbitrateFrom(Flow[T]])</p></td>
-<td><p>Drive a node arbitration from the Flow.</p></td>
+<td><p>由数据流驱动节点仲裁。</p></td>
 </tr>
 <tr class="row-even"><td><p>node.arbitrateTo(Stream[T]])</p></td>
-<td><p>Drive a stream arbitration from the node.</p></td>
+<td><p>由节点驱动反压流仲裁。</p></td>
 </tr>
 <tr class="row-odd"><td><p>node.arbitrateTo(Flow[T]])</p></td>
-<td><p>Drive a Flow arbitration from the node.</p></td>
+<td><p>由节点驱动数据流仲裁。</p></td>
 </tr>
 <tr class="row-even"><td><p>node.driveFrom(Stream[T]])((Node, T) =&gt; Unit)</p></td>
-<td><p>Drive a node from a stream. The provided lambda function can be use to connect the data</p></td>
+<td><p>由反压流驱动节点。提供的lambda函数可以用于连接数据</p></td>
 </tr>
 <tr class="row-odd"><td><p>node.driveFrom(Flow[T]])((Node, T) =&gt; Unit)</p></td>
-<td><p>Same as above but for Flow</p></td>
+<td><p>与上述类似，但适用于Flow</p></td>
 </tr>
 <tr class="row-even"><td><p>node.driveTo(Stream[T]])((T, Node) =&gt; Unit)</p></td>
-<td><p>Drive a stream from the node. The provided lambda function can be use to connect the data</p></td>
+<td><p>由节点驱动反压流。提供的lambda函数可以用于连接数据</p></td>
 </tr>
 <tr class="row-odd"><td><p>node.driveTo(Flow[T]])((T, Node) =&gt; Unit)</p></td>
-<td><p>Same as above but for Flow</p></td>
+<td><p>与上述类似，但适用于Flow</p></td>
 </tr>
 </tbody>
 </table>
@@ -1545,14 +1543,14 @@ So for instance you can create pipeline with no backpresure by never refering to
 <span class="n">n2</span><span class="p">.</span><span class="n">driveTo</span><span class="p">(</span><span class="n">down</span><span class="p">)((</span><span class="n">payload</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">payload</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">self</span><span class="p">(</span><span class="nc">OUT</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>In order to reduce verbosity, there is a set of implicit conversions between Payload toward their data representation which can be used when you are in the context of a Node :</p>
+<p>为了减少冗长，在Payload与其数据表示之间有一组隐式转换，可在Node下使用：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="nc">VALUE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Payload</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">Node</span><span class="p">{</span>
 <span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nc">PLUS_ONE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="nc">VALUE</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// VALUE is implicitly converted into its n1(VALUE) representation</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>You can also use those implicit conversions by importing them :</p>
+<p>您还可以通过导入它们来使用这些隐式转换：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="nc">VALUE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Payload</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Node</span><span class="p">()</span>
 
@@ -1562,7 +1560,7 @@ So for instance you can create pipeline with no backpresure by never refering to
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>There is also an API which alows you to create new Area which provide the whole API of a given node instance (including implicit convertion) without import :</p>
+<p>还有一个API，它允许你创建新的Area，这个Area提供了给定节点实例的全部API（包括隐式转换），而无需导入：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">n1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Node</span><span class="p">()</span>
 <span class="kd">val</span><span class="w"> </span><span class="nc">VALUE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Payload</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
 
@@ -1571,38 +1569,36 @@ So for instance you can create pipeline with no backpresure by never refering to
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Such feature is very useful when you have parametrizable pipeline locations for your hardware (see retiming example).</p>
+<p>当硬件具有可参数化的流水线位置时，这样的功能非常有用（请参阅重定时示例）。</p>
 </section>
 <section id="links">
 <h1>Links<a class="headerlink" href="#links" title="此标题的永久链接"></a></h1>
-<p>There is few different Links already implemented (but you could also create your own custom one).
-The idea of Links is to connect two nodes together in various ways.
-They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
+<p>目前已经实现了一些不同的Links（但您也可以创建自己的自定义Links）。Links的思想是以各种方式将两个节点连接在一起，它们通常有一个 <cite>up</cite> 节点和一个 <cite>down</cite> 节点。</p>
 <section id="directlink">
 <h2>DirectLink<a class="headerlink" href="#directlink" title="此标题的永久链接"></a></h2>
-<p>Very simple, it connect two nodes with wires only. Here is an example :</p>
+<p>非常简单，它只使用导线连接两个节点。以下是一个示例：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">c01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">DirectLink</span><span class="p">(</span><span class="n">n0</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="stagelink">
 <h2>StageLink<a class="headerlink" href="#stagelink" title="此标题的永久链接"></a></h2>
-<p>This connect two nodes using registers on the data / valid signals and some arbitration on the ready.</p>
+<p>这使用data/valid信号上的寄存器和ready信号上的一些仲裁连接了两个节点。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">c01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StageLink</span><span class="p">(</span><span class="n">n0</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="s2mlink">
 <h2>S2mLink<a class="headerlink" href="#s2mlink" title="此标题的永久链接"></a></h2>
-<p>This connect two nodes using registers on the ready signal, which can be useful to improve backpresure combinatorial timings.</p>
+<p>这使用ready信号上的寄存器连接两个节点，这对于改进反压组合时序非常有用。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">c01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">S2mLink</span><span class="p">(</span><span class="n">n0</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="ctrllink">
 <h2>CtrlLink<a class="headerlink" href="#ctrllink" title="此标题的永久链接"></a></h2>
-<p>This is kind of a special Link, as connect two nodes with optional flow control / bypass logic. Its API should be flexible enough to implement a CPU stage with it.</p>
-<p>Here is its flow control API (The Bool arguments enable the features) :</p>
+<p>这是一种特殊的 Link，用于连接两个节点，具有可选的流量控制/旁路逻辑。它的应用程序接口应该足够灵活，可以用它来实现 CPU 流水级。</p>
+<p>以下是其流量控制 API（Bool 参数启用了相关功能）：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
@@ -1615,26 +1611,26 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>haltWhen(Bool)</p></td>
-<td><p>Allows to block the current transaction (clear up.ready down.valid)</p></td>
+<td><p>允许阻止当前传输事务（清除 up.ready down.valid）</p></td>
 </tr>
 <tr class="row-odd"><td><p>throwWhen(Bool)</p></td>
-<td><p>Allows to cancel the current transaction from the pipeline (clear down.valid and make the transaction driver forget its current state)</p></td>
+<td><p>允许从流水线中取消当前事务（清除 down.valid，使事务驱动逻辑忘记其当前状态）</p></td>
 </tr>
 <tr class="row-even"><td><p>forgetOneWhen(Bool)</p></td>
-<td><p>Allows to request the upstream to forget its current transaction  (but doesn’t clear the down.valid)</p></td>
+<td><p>允许请求上游节点忘记其当前事务（但不会清除 down.valid）</p></td>
 </tr>
 <tr class="row-odd"><td><p>ignoreReadyWhen(Bool)</p></td>
-<td><p>Allows to ignore the downstream ready (set up.ready)</p></td>
+<td><p>允许忽略下游节点ready（设置 up.ready 为1）</p></td>
 </tr>
 <tr class="row-even"><td><p>duplicateWhen(Bool)</p></td>
-<td><p>Allows to duplicate the current transaction (clear up.ready)</p></td>
+<td><p>允许复制当前传输事务（清零 up.ready）</p></td>
 </tr>
 <tr class="row-odd"><td><p>terminateWhen(Bool)</p></td>
-<td><p>Allows to hide the current transaction from downstream (clear down.valid)</p></td>
+<td><p>允许下游节点隐藏当前传输事务（清零 down.valid）</p></td>
 </tr>
 </tbody>
 </table>
-<p>Also note that if you want to do flow control in a conditional scope (ex in a when statement), you can call the following functions :</p>
+<p>还要注意的是，如果要在条件作用域（例如在 when 语句中）进行通信流控制，可以调用以下函数 ：</p>
 <ul class="simple">
 <li><p>haltIt(), duplicateIt(), terminateIt(), forgetOneNow(), ignoreReadyNow(), throwIt()</p></li>
 </ul>
@@ -1647,8 +1643,8 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>You can retrieve which nodes are connected to the Link using node.up / node.down.</p>
-<p>The CtrlLink also provide an API to access Payload :</p>
+<p>您可以使用 node.up / node.down 查看哪些节点连接到了链接。</p>
+<p>CtrlLink 还提供了访问Payload的 API：</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
@@ -1661,16 +1657,16 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>link(Payload)</p></td>
-<td><p>Same as Link.down(Payload)</p></td>
+<td><p>与 Link.down(Payload) 相同</p></td>
 </tr>
 <tr class="row-odd"><td><p>link(Payload, Any)</p></td>
-<td><p>Same as Link.down(Payload, Any)</p></td>
+<td><p>与 Link.down(Payload, Any) 相同</p></td>
 </tr>
 <tr class="row-even"><td><p>link.insert(Data)</p></td>
-<td><p>Same as Link.down.insert(Data)</p></td>
+<td><p>与 Link.down.insert(Data) 相同</p></td>
 </tr>
 <tr class="row-odd"><td><p>link.bypass(Payload)</p></td>
-<td><p>Allows to conditionaly override a Payload value between link.up -&gt; link.down. This can be used to fix data hazard in CPU pipelines for instance.</p></td>
+<td><p>允许在 link.up -&gt; link.down 之间有条件地覆盖 Payload 值。例如，这可用于修复 CPU 流水线中的数据冲突。</p></td>
 </tr>
 </tbody>
 </table>
@@ -1689,7 +1685,7 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="c1">// c01(DATA) and below will get the hazard patch</span>
 </pre></div>
 </div>
-<p>Note that if you create a CtrlLink without node arguments, it will create its own nodes internally.</p>
+<p>请注意，如果创建的 CtrlLink 不带节点参数，它将在内部创建自己的节点。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">decode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">CtrlLink</span><span class="p">()</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">execute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">CtrlLink</span><span class="p">()</span>
 
@@ -1698,12 +1694,12 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 </div>
 </section>
 <section id="other-links">
-<h2>Other Links<a class="headerlink" href="#other-links" title="此标题的永久链接"></a></h2>
-<p>There is also a JoinLink / ForkLink implemented.</p>
+<h2>其他链接<a class="headerlink" href="#other-links" title="此标题的永久链接"></a></h2>
+<p>此外，还实现了 JoinLink / ForkLink。</p>
 </section>
 <section id="your-custom-link">
-<h2>Your custom Link<a class="headerlink" href="#your-custom-link" title="此标题的永久链接"></a></h2>
-<p>You can implement your custom links by implementing the Link base class.</p>
+<h2>您的自定义链接<a class="headerlink" href="#your-custom-link" title="此标题的永久链接"></a></h2>
+<p>您可以通过实现 Link 基类来实现自定义链接。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">trait</span><span class="w"> </span><span class="nc">Link</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Area</span><span class="p">{</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">ups</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">Seq</span><span class="p">[</span><span class="nc">Node</span><span class="p">]</span>
 <span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">downs</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="nc">Seq</span><span class="p">[</span><span class="nc">Node</span><span class="p">]</span>
@@ -1714,12 +1710,12 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>But that API may change a bit, as it is still fresh.</p>
+<p>不过，由于 API 还很新，后面可能会有一些变化。</p>
 </section>
 </section>
 <section id="builder">
 <h1>Builder<a class="headerlink" href="#builder" title="此标题的永久链接"></a></h1>
-<p>To generate the hardware of your pipeline, you need to give a list of all the Links used in your pipeline.</p>
+<p>要生成流水线硬件，您需要提供流水线中使用的所有链接列表。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Let&#39;s define 3 Nodes for our pipeline</span>
 <span class="kd">val</span><span class="w"> </span><span class="n">n0</span><span class="p">,</span><span class="w"> </span><span class="n">n1</span><span class="p">,</span><span class="w"> </span><span class="n">n2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Node</span><span class="p">()</span>
 
@@ -1731,8 +1727,8 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="nc">Builder</span><span class="p">(</span><span class="n">s01</span><span class="p">,</span><span class="w"> </span><span class="n">s12</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>There is also a set of “all in one” builders that you can instanciate to help yourself.</p>
-<p>For instance there is the NodesBuilder class which can be used to create sequentially staged pipelines :</p>
+<p>此外，还有一套 “一体化 “的构建工具，您可以利用它来帮助你自己。</p>
+<p>例如，有一个 NodesBuilder 类，可用于创建按顺序分级的流水线：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="kd">val</span><span class="w"> </span><span class="n">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nc">NodesBuilder</span><span class="p">()</span>
 
 <span class="c1">// Let&#39;s define a few nodes</span>
@@ -1744,10 +1740,10 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 </div>
 </section>
 <section id="composability">
-<h1>Composability<a class="headerlink" href="#composability" title="此标题的永久链接"></a></h1>
-<p>One good thing about the API is that it easily allows to compose a pipeline with multiple parallel things. What i mean by “compose” is that sometime the pipeline you need to design has parallel processing to do.</p>
-<p>Imagine you need to do floating point multiplication on 4 pairs of numbers (to later sum them). If those 4 pairs a provided at the same time by a single stream of data, then you don’t want 4 different pipelines to multiply them, instead you want to process them all in parallel in the same pipeline.</p>
-<p>The example below show a pattern which composes a pipeline with multiple lanes to process them in parallel.</p>
+<h1>组合能力（Composability）<a class="headerlink" href="#composability" title="此标题的永久链接"></a></h1>
+<p>该API的一个优点是，它可以轻松地将多个并行事物组成一个流水线。这里的 “组成 “是指有时你设计的流水线需要进行并行处理。</p>
+<p>试想一下，如果您需要对 4 对数字进行浮点乘法运算（稍后求和）。并且这 4 对数字是由一个数据流同时提供的，那么就不需要 4 条不同的流水线来进行乘法运算，而需要在同一条流水线上并行处理。</p>
+<p>下面的示例展示了一种模式，它将多个通道组成一个流水线，来并行处理它们。</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// This area allows to take a input value and do +1 +1 +1 over 3 stages.</span>
 <span class="c1">// I know that&#39;s useless, but let&#39;s pretend that instead it does a multiplication between two numbers over 3 stages (for FMax reasons)</span>
 <span class="k">class</span><span class="w"> </span><span class="nc">Plus3</span><span class="p">(</span><span class="nc">INPUT</span><span class="p">:</span><span class="w"> </span><span class="nc">Payload</span><span class="p">[</span><span class="nc">UInt</span><span class="p">],</span><span class="w"> </span><span class="n">stage1</span><span class="p">:</span><span class="w"> </span><span class="nc">Node</span><span class="p">,</span><span class="w"> </span><span class="n">stage2</span><span class="p">:</span><span class="w"> </span><span class="nc">Node</span><span class="p">,</span><span class="w"> </span><span class="n">stage3</span><span class="p">:</span><span class="w"> </span><span class="nc">Node</span><span class="p">)</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Area</span><span class="w"> </span><span class="p">{</span>
@@ -1788,14 +1784,14 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This will produce the following data path (assuming lanesCount = 2), abitration not being shown :</p>
+<p>这将产生以下数据路径（假设 lanesCount = 2），仲裁器没有显示：</p>
 <a class="reference internal image-reference" href="../../../_images/composable_lanes.png"><img alt="../../../_images/composable_lanes.png" src="../../../_images/composable_lanes.png" style="width: 406.0px; height: 630.0px;" /></a>
 </section>
 <section id="retiming-variable-lenth">
-<h1>Retiming / Variable lenth<a class="headerlink" href="#retiming-variable-lenth" title="此标题的永久链接"></a></h1>
-<p>Sometime you want to design a pipeline, but you don’t really know where the critical paths will be and what the right balance between stages is. And often you can’t rely on the synthesis tool doing a good job with automatic retiming.</p>
-<p>So, you kind of need a easy way to move the logic of your pipeline around.</p>
-<p>Here is how it can be done with this pipelining API :</p>
+<h1>重定时/可变长度<a class="headerlink" href="#retiming-variable-lenth" title="此标题的永久链接"></a></h1>
+<p>有时，你想设计一个流水线，但你并不真正知道关键路径在哪里，也不知道各阶段之间如何平衡。而且通常情况下，你无法依赖综合工具做好自动重定时工作。</p>
+<p>因此，你需要一种简单的方法来构建流水线逻辑。</p>
+<p>下面介绍如何使用此流水线 API：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="c1">// Define a component which will take a input stream of RGB value</span>
 <span class="c1">// Process (~(R + G + B)) * 0xEE</span>
 <span class="c1">// And provide that result into an output stream</span>
@@ -1854,7 +1850,7 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>If then you generate this component like this :</p>
+<p>如果像这样生成该组件：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">SpinalVerilog</span><span class="p">(</span>
 <span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="nc">RgbToSomething</span><span class="p">(</span>
 <span class="w">    </span><span class="n">addAt</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
@@ -1865,9 +1861,9 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>You will get a 4 stages separated by 3 layer of flip flop doing your processing :</p>
+<p>您将获得由 3 层寄存器（flip flop）分隔的 4 个处理阶段：</p>
 <a class="reference internal image-reference" href="../../../_images/rgbToSomething.png"><img alt="../../../_images/rgbToSomething.png" src="../../../_images/rgbToSomething.png" style="width: 114.8px; height: 392.0px;" /></a>
-<p>Note the generated hardware verilog is kinda clean (by my standards at least :P) :</p>
+<p>请注意，生成的硬件 verilog 还算干净（至少按我的标准来说是这样 :P）：</p>
 <div class="highlight-verilog notranslate"><div class="highlight"><pre><span></span><span class="c1">// Generator : SpinalHDL dev    git head : 1259510dd72697a4f2c388ad22b269d4d2600df7</span>
 <span class="c1">// Component : RgbToSomething</span>
 <span class="c1">// Git hash  : 63da021a1cd082d22124888dd6c1e5017d4a37b2</span>
@@ -1979,7 +1975,7 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="k">endmodule</span>
 </pre></div>
 </div>
-<p>Also, you can easily tweak how many stages and where you want the processing to be done, for instance you may want to move the inversion hardware in the same stage as the adder. This can be done the following way :</p>
+<p>此外，您还可以轻松调整处理的级数和位置，例如，您可能希望将翻转的硬件逻辑移到与加法器相同级上。具体方法如下：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">SpinalVerilog</span><span class="p">(</span>
 <span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="nc">RgbToSomething</span><span class="p">(</span>
 <span class="w">    </span><span class="n">addAt</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
@@ -1990,7 +1986,7 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>Then you may want to remove the output register stage :</p>
+<p>那么您可能需要移除输出寄存器级：</p>
 <div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">SpinalVerilog</span><span class="p">(</span>
 <span class="w">  </span><span class="k">new</span><span class="w"> </span><span class="nc">RgbToSomething</span><span class="p">(</span>
 <span class="w">    </span><span class="n">addAt</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
@@ -1999,6 +1995,102 @@ They generally have a <cite>up</cite> Node and a <cite>down</cite> Node.</p>
 <span class="w">    </span><span class="n">resultAt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
 <span class="w">  </span><span class="p">)</span>
 <span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="simple-cpu-example">
+<h1>简单的CPU示例<a class="headerlink" href="#simple-cpu-example" title="此标题的永久链接"></a></h1>
+<p>下面是一个简单的 8 位 CPU 示例：</p>
+<ul class="simple">
+<li><p>三级流水线（fetch, decode, execute）</p></li>
+<li><p>嵌入的获取存储器</p></li>
+<li><p>add / jump / led /delay 指令</p></li>
+</ul>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Cpu</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nc">Component</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">fetch</span><span class="p">,</span><span class="w"> </span><span class="n">decode</span><span class="p">,</span><span class="w"> </span><span class="n">execute</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">CtrlLink</span><span class="p">()</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">f2d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StageLink</span><span class="p">(</span><span class="n">fetch</span><span class="p">.</span><span class="n">down</span><span class="p">,</span><span class="w"> </span><span class="n">decode</span><span class="p">.</span><span class="n">up</span><span class="p">)</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">d2e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">StageLink</span><span class="p">(</span><span class="n">decode</span><span class="p">.</span><span class="n">down</span><span class="p">,</span><span class="w"> </span><span class="n">execute</span><span class="p">.</span><span class="n">up</span><span class="p">)</span>
+
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nc">PC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Payload</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="nc">INSTRUCTION</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Payload</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">16</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span>
+
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">led</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">out</span><span class="p">(</span><span class="nc">Reg</span><span class="p">(</span><span class="nc">Bits</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">)))</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">fetcher</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">fetch</span><span class="p">.</span><span class="nc">Area</span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">pcReg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">PC</span><span class="p">)</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="n">up</span><span class="p">(</span><span class="nc">PC</span><span class="p">)</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">pcReg</span>
+<span class="w">    </span><span class="n">up</span><span class="p">.</span><span class="n">valid</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nc">True</span>
+<span class="w">    </span><span class="n">when</span><span class="p">(</span><span class="n">up</span><span class="p">.</span><span class="n">isFiring</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">pcReg</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nc">PC</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">mem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Mem</span><span class="p">.</span><span class="n">fill</span><span class="p">(</span><span class="mi">256</span><span class="p">)(</span><span class="nc">INSTRUCTION</span><span class="p">).</span><span class="n">simPublic</span>
+<span class="w">    </span><span class="nc">INSTRUCTION</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">mem</span><span class="p">.</span><span class="n">readAsync</span><span class="p">(</span><span class="nc">PC</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">decoder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">decode</span><span class="p">.</span><span class="nc">Area</span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">opcode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">INSTRUCTION</span><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="n">downto</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nc">IS_ADD</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="n">opcode</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mh">0x1</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nc">IS_JUMP</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="n">opcode</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mh">0x2</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nc">IS_LED</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="n">opcode</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mh">0x3</span><span class="p">)</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nc">IS_DELAY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">insert</span><span class="p">(</span><span class="n">opcode</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mh">0x4</span><span class="p">)</span>
+<span class="w">  </span><span class="p">}</span>
+
+
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">alu</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">execute</span><span class="p">.</span><span class="nc">Area</span><span class="p">{</span>
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">regfile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">flush</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">False</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">stage</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nc">List</span><span class="p">(</span><span class="n">fetch</span><span class="p">,</span><span class="w"> </span><span class="n">decode</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">stage</span><span class="p">.</span><span class="n">throwWhen</span><span class="p">(</span><span class="n">flush</span><span class="p">,</span><span class="w"> </span><span class="n">usingReady</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="n">delayCounter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">Reg</span><span class="p">(</span><span class="nc">UInt</span><span class="p">(</span><span class="mi">8</span><span class="w"> </span><span class="n">bits</span><span class="p">))</span><span class="w"> </span><span class="n">init</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="w">    </span><span class="n">when</span><span class="p">(</span><span class="n">isValid</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">when</span><span class="p">(</span><span class="n">decoder</span><span class="p">.</span><span class="nc">IS_ADD</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">regfile</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">regfile</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nc">U</span><span class="p">(</span><span class="nc">INSTRUCTION</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="n">downto</span><span class="w"> </span><span class="mi">8</span><span class="p">))</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="n">when</span><span class="p">(</span><span class="n">decoder</span><span class="p">.</span><span class="nc">IS_JUMP</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">flush</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nc">True</span>
+<span class="w">        </span><span class="n">fetcher</span><span class="p">.</span><span class="n">pcReg</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nc">U</span><span class="p">(</span><span class="nc">INSTRUCTION</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="n">downto</span><span class="w"> </span><span class="mi">8</span><span class="p">))</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="n">when</span><span class="p">(</span><span class="n">decoder</span><span class="p">.</span><span class="nc">IS_LED</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">led</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nc">B</span><span class="p">(</span><span class="n">regfile</span><span class="p">)</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="n">when</span><span class="p">(</span><span class="n">decoder</span><span class="p">.</span><span class="nc">IS_DELAY</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">delayCounter</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">delayCounter</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">        </span><span class="n">when</span><span class="p">(</span><span class="n">delayCounter</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nc">U</span><span class="p">(</span><span class="nc">INSTRUCTION</span><span class="p">(</span><span class="mi">15</span><span class="w"> </span><span class="n">downto</span><span class="w"> </span><span class="mi">8</span><span class="p">)))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="n">delayCounter</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="n">otherwise</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="n">execute</span><span class="p">.</span><span class="n">haltIt</span><span class="p">()</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="nc">Builder</span><span class="p">(</span><span class="n">fetch</span><span class="p">,</span><span class="w"> </span><span class="n">decode</span><span class="p">,</span><span class="w"> </span><span class="n">execute</span><span class="p">,</span><span class="w"> </span><span class="n">f2d</span><span class="p">,</span><span class="w"> </span><span class="n">d2e</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>下面是一个简单的测试平台，它实现了一个循环，使 led 计数值上升。</p>
+<div class="highlight-scala notranslate"><div class="highlight"><pre><span></span><span class="nc">SimConfig</span><span class="p">.</span><span class="n">withFstWave</span><span class="p">.</span><span class="n">compile</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="nc">Cpu</span><span class="p">).</span><span class="n">doSim</span><span class="p">(</span><span class="n">seed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">){</span><span class="w"> </span><span class="n">dut</span><span class="w"> </span><span class="o">=&gt;</span>
+<span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">nop</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">BigInt</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">value</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">BigInt</span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">))</span>
+<span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">jump</span><span class="p">(</span><span class="n">target</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">BigInt</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">target</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">))</span>
+<span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">led</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">BigInt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">  </span><span class="k">def</span><span class="w"> </span><span class="nf">delay</span><span class="p">(</span><span class="n">cycles</span><span class="p">:</span><span class="w"> </span><span class="nc">Int</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nc">BigInt</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">cycles</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="mi">8</span><span class="p">))</span>
+<span class="w">  </span><span class="kd">val</span><span class="w"> </span><span class="n">mem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dut</span><span class="p">.</span><span class="n">fetcher</span><span class="p">.</span><span class="n">mem</span>
+<span class="w">  </span><span class="n">mem</span><span class="p">.</span><span class="n">setBigInt</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">nop</span><span class="p">())</span>
+<span class="w">  </span><span class="n">mem</span><span class="p">.</span><span class="n">setBigInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">nop</span><span class="p">())</span>
+<span class="w">  </span><span class="n">mem</span><span class="p">.</span><span class="n">setBigInt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">add</span><span class="p">(</span><span class="mh">0x1</span><span class="p">))</span>
+<span class="w">  </span><span class="n">mem</span><span class="p">.</span><span class="n">setBigInt</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">led</span><span class="p">())</span>
+<span class="w">  </span><span class="n">mem</span><span class="p">.</span><span class="n">setBigInt</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">delay</span><span class="p">(</span><span class="mi">16</span><span class="p">))</span>
+<span class="w">  </span><span class="n">mem</span><span class="p">.</span><span class="n">setBigInt</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">jump</span><span class="p">(</span><span class="mh">0x2</span><span class="p">))</span>
+
+<span class="w">  </span><span class="n">dut</span><span class="p">.</span><span class="n">clockDomain</span><span class="p">.</span><span class="n">forkStimulus</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="w">  </span><span class="n">dut</span><span class="p">.</span><span class="n">clockDomain</span><span class="p">.</span><span class="n">waitSampling</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </section>
