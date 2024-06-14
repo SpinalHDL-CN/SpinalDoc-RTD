@@ -1442,6 +1442,24 @@
 <td><p>Stream[T]</p></td>
 <td><p>0</p></td>
 </tr>
+<tr class="row-even"><td><p>x.translateWith(that : T2)</p></td>
+<td><div class="line-block">
+<div class="line">Return a Stream with payload <cite>that</cite></div>
+<div class="line">Modify the payload of the <cite>x</cite> stream, while preserving the <cite>valid</cite> and <cite>ready</cite> signals</div>
+</div>
+</td>
+<td><p>Stream[T]</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>x.translateBy(drive: (T) =&gt; T2)</p></td>
+<td><div class="line-block">
+<div class="line">Return a Stream with payload calculated by drive function</div>
+<div class="line">Modify the payload of the <cite>x</cite> stream by the <cite>drive</cite> function, while preserving the <cite>valid</cite> and <cite>ready</cite> signals</div>
+</div>
+</td>
+<td><p>Stream[T]</p></td>
+<td><p>0</p></td>
+</tr>
 </tbody>
 </table>
 <p>以下代码将创建此逻辑：</p>
