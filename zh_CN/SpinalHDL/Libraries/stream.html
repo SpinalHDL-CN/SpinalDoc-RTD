@@ -1451,10 +1451,10 @@
 <td><p>Stream[T]</p></td>
 <td><p>0</p></td>
 </tr>
-<tr class="row-odd"><td><p>x.translateBy(drive: (T) =&gt; T2)</p></td>
+<tr class="row-odd"><td><p>x.map(translate: (T) =&gt; T2)</p></td>
 <td><div class="line-block">
-<div class="line">返回包含 <cite>drive</cite> 函数计算的有效载荷的流</div>
-<div class="line">修改 <cite>x</cite> 流的有效载荷为 <cite>drive</cite> 函数返回值，同时保留 <cite>valid</cite> 和 <cite>ready</cite> 信号</div>
+<div class="line">Return a Stream with payload calculated by translate function</div>
+<div class="line">修改 <cite>x</cite> 流的有效载荷，同时保留 <cite>valid</cite> 和 <cite>ready</cite> 信号</div>
 </div>
 </td>
 <td><p>Stream[T]</p></td>
